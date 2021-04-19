@@ -4,11 +4,11 @@ widget: pages
 headless: true
 weight: 20
 
-title: Latest News
+title: Codes
 subtitle:
 
 content:
-  count: 5
+  count: 10
   filters:
     author: ""
     category: ""
@@ -18,7 +18,8 @@ content:
   offset: 0
   order: desc
   page_type: post
+  
 design:
-  view: 3
+  view: 2
   columns: "1"
 ---
