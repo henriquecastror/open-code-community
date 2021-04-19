@@ -1,7 +1,7 @@
 
 ---
 # Display name
-title: Gerson Junior
+title: Gerson Junior (member since 2021/04)
 
 # Username (this should match the folder name)
 authors:

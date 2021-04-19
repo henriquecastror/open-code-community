@@ -1,6 +1,6 @@
 ---
 # Display name
-title: Henrique Castro Martins
+title: Henrique Castro Martins (member since 2021/04)
 
 # Username (this should match the folder name)
 authors:
