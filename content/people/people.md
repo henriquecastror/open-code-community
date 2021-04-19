@@ -23,7 +23,6 @@ user_groups:
   - Administration
   - Visitors
   - Alumni
-
 design:
   show_interests: false
   show_role: true

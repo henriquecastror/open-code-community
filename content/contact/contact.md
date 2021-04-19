@@ -17,16 +17,17 @@ content:
   autolink: false
   
   # Email form provider
-  form:
-    provider: 
-    formspree:
-      id:
-    netlify:
+#  form:
+#    provider: 
+#    formspree:
+#      id:
+#    netlify:
       # Enable CAPTCHA challenge to reduce spam?
-      captcha: false
+#      captcha: false
 
 design:
   columns: '1'
+
 ---
 
 We are open for contributions for anyone willing to help us. If you want to have your code posted in this website and your name in the Collaborators section, send us your codes.
