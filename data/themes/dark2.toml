@@ -5,10 +5,10 @@ name = "Dark"
 light = false
 
 # Primary
-primary = "#241c75"
+primary = "#fff"
 
 # Menu
-menu_primary = "rgb(20, 22, 34)"
+menu_primary = "rgb(61, 54, 99)"
 menu_text = "rgba(255,255,255,0.6)"
 menu_text_active = "#241c75"
 menu_title = "#fff"
