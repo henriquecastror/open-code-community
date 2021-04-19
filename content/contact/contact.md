@@ -30,16 +30,16 @@ design:
 
 ---
 
-We are open for contributions for anyone willing to help us. If you want to have your code posted in this website and your name in the Collaborators section, send us your codes.
+This project is and will always be open for contributions from anyone willing to help. If you want to have your code posted on this website and your name in the Collaborators section, send us your codes.
 
-Because we do not have assitencial staff, please use the templates below to create your own material. 
+Because we do not have staff, please use the templates below to create your own material. 
 
 
 Follow these steps:
 
 1) Download the following files: (Template for author section), (template of code).
 
-2) In (template of code), you have several comments. Include your text and your code in the appropriated spaces.
+2) In (template of code), you have several comments. Include your text and your code in the appropriate  spaces.
 
 3) Send your code to the email: 
 
