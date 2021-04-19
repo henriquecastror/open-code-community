@@ -14,7 +14,7 @@
   #weight = 20
 
 [[main]]
-  name = "collaborators"
+  name = "Collaborators"
   url = "people"
   weight = 30
 
@@ -29,6 +29,6 @@
   #weight = 50
 
 [[main]]
-  #name = "Contact"
-  #url = "contact"
-  #weight = 60
+  name = "Contribute"
+  url = "contact"
+  weight = 60
