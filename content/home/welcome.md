@@ -24,4 +24,4 @@ advanced:
   css_class:
 ---
 
-The Wowchemy Research Group has been a center of excellence for Artificial Intelligence research, teaching, and practice since its founding in 2016.
+We are a group of researchers and programming enthusiasts who aim to share code for free with the community. Our goal is to help doctoral students, masters, and professionals with exercises and steps. If you have a code that you think is interesting for the community, share it with us.
