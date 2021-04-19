@@ -4,7 +4,7 @@ title: Henrique Castro Martins
 
 # Username (this should match the folder name)
 authors:
-- admin
+- HenriqueCastroMartins
 
 
 # Is this the primary user of the site?
@@ -48,6 +48,10 @@ education:
 #   form "mailto:your-email@example.com" or "#contact" for contact widget.
 
 social:
+- icon: browser
+  icon_pack: fas
+  link: https://henriquemartins.net/
+  
 - icon: envelope
   icon_pack: fas
   link: 'mailto:hcm@iag.puc-rio.br'
@@ -84,16 +88,12 @@ social:
   icon_pack: fab
   link: https://www.linkedin.com/in/henriquecastror/
   label: My LinkedIn
-  display:
-    header: true
 
 - icon: youtube
   icon_pack: fab
   link: https://www.youtube.com/channel/UCS9ws4WEedza36NRimBZXeg?view_as=subscriber
   label: Youtube
-  display:
-    header: true
-  
+
 # - icon: twitter
 #  icon_pack: fab
 #  link: https://twitter.com/henriquecastror

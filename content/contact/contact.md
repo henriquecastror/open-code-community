@@ -14,7 +14,7 @@ subtitle:
 
 content:
   # Automatically link email and phone or display as text?
-  autolink: true
+  autolink: false
   
   # Email form provider
   form:
@@ -29,4 +29,18 @@ design:
   columns: '1'
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer tempus augue non tempor egestas. Proin nisl nunc, dignissim in accumsan dapibus, auctor ullamcorper neque. Quisque at elit felis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Aenean eget elementum odio. Cras interdum eget risus sit amet aliquet. In volutpat, nisl ut fringilla dignissim, arcu nisl suscipit ante, at accumsan sapien nisl eu eros.
+We are open for contributions for anyone willing to help us. If you want to have your code posted in this website and your name in the Collaborators section, send us your codes.
+
+Because we do not have assitencial staff, please use the templates below to create your own material. 
+
+
+Follow these steps:
+
+1) Download the following files: (Template for author section), (template of code).
+
+2) In (template of code), you have several comments. Include your text and your code in the appropriated spaces.
+
+3) Send your code to the email: 
+
+
+All submitted codes will be evaluated by one contributor. If you want to be in the Collaborators section, we count on you to evaluate at least one submitted code. 
