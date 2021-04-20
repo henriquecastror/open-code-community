@@ -39,6 +39,8 @@ authors:
 
 ---
 
+ç á é í ó ú ã à â ê ô û ã õ ü 
+
 This is another work by [Gerson](https://scholar.google.com/citations?user=bbgB49g0N2cC&hl=pt-BR). He made all the codes this time, and I just wrote these few words here. Again, this is part of our project to foster Open Science in our research community and make coding more accessible. 
 
 First, install and load these packages. You may need to update your R to version 4.02.
