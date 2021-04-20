@@ -8,7 +8,7 @@ authors:
 
 
 # Is this the primary user of the site?
-superuser: true
+superuser: false
 
 # Role/position
 role: Economics Intern at Gávea Investimentos
@@ -46,7 +46,6 @@ social:
 - icon: linkedin
   icon_pack: fab
   link: https://www.linkedin.com/in/gabriel-boechat/
-  label: My LinkedIn
 
  - icon: twitter
   icon_pack: fab
@@ -76,7 +75,7 @@ highlight_name: false
 #   Set this to `[]` or comment out if you are not using People widget.
 
 user_groups:
-- Researchers
+- Colaboradores
 
 
 ---
