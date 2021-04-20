@@ -41,7 +41,7 @@ Follow these steps:
 
 2) Crie seu codigo utilizando o seguinte template:  (template of code).
 
-3) Crie sua pagina de autor utilizando o seguinte template: {{% staticref "files/_index.xlsx" "newtab" %}} here {{% /staticref %}}.
+3) Crie sua pagina de autor utilizando o seguinte template: {{% staticref "files/_index.md" "newtab" %}} here {{% /staticref %}}.
 
 4) Send your code to the email: 
 
