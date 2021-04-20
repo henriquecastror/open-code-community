@@ -6,7 +6,6 @@ title: Gabriel Boechat (member since 2021/04)
 authors:
 - GabrielBoechat
 
-
 # Is this the primary user of the site?
 superuser: false
 
@@ -38,11 +37,6 @@ education:
 #   form "mailto:your-email@example.com" or "#contact" for contact widget.
 
 social:
-
-#- icon: scopus
-#  icon_pack: ai
-#  link: https://www.scopus.com/authid/detail.uri?authorId=56179864100
-
 - icon: linkedin
   icon_pack: fab
   link: https://www.linkedin.com/in/gabriel-boechat/
@@ -50,14 +44,6 @@ social:
  - icon: twitter
   icon_pack: fab
   link: https://twitter.com/gab_boechat
-  
-# - icon: cv
-#  icon_pack: ai
-#  link: http://lattes.cnpq.br/6076997472159785
-  
-  
-# https://jpswalsh.github.io/academicons/
-
   
 # Link to a PDF of your resume/CV from the About widget.
 # To enable, copy your resume/CV to `static/files/cv.pdf` and uncomment the lines below.
@@ -71,12 +57,8 @@ email: ""
 # Highlight the author in author lists? (true/false)
 highlight_name: false
 
-# Organizational groups that you belong to (for People widget)
-#   Set this to `[]` or comment out if you are not using People widget.
-
 user_groups:
 - Colaboradores
-
 
 ---
 
