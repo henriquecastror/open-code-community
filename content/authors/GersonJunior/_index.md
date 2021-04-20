@@ -27,8 +27,8 @@ Interesses:
 - Finanças Comportamentais
 - Portfolio management
 
-Educação:
-  Curso:
+education:
+  courses:
   - course: Doutorando em Finanças
     institution: PUC-Rio
     year: 2022
