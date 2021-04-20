@@ -9,7 +9,7 @@
 
 # Uncomment the lines below to configure your website in a second language.
 [pt]
-  languageCode = "pt-br"
+  languageCode = "pt"
   contentDir = "content/pt"
   title = "Site em Português"
   [pt.params]
