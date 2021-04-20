@@ -1,6 +1,10 @@
 ---
+# Display name
+title: Víctor Henriques (member since 2021/04)
+
+# Username (this should match the folder name)
 authors:
-- VictorHenriques (member since 2021/04)
+- VictorHenriques
 
 education:
   courses:
