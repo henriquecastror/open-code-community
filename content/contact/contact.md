@@ -9,7 +9,7 @@ headless: false
 # Order that this section appears on the page.
 weight: 10
 
-title: Join us
+title: Junte-se a nós
 subtitle:
 
 content:
@@ -30,20 +30,23 @@ design:
 
 ---
 
-This project is and will always be open for contributions from anyone willing to help. If you want to have your code posted on this website and your name in the Collaborators section, send us your codes.
+Essa comunidade é aberta a quem quiser ajudar no seu desenvolvimento e compartilhar códigos. Se você quer ter seu nome incluído na lista de Colaboradores, mande para nós seu código.
 
-Because we do not have staff, please use the templates below to create your own material. 
+Nós não temos staff e fazemos toda a administração de forma pró-bono. Assim, se você quiser compartilhar códigos, precisamos que crie seu material utilizando os templates abaixo. Se você desviar significativamente desse template, teremos dificuldade de publicar seu material. 
+
+Por favor, siga os passos abaixo:
+
+1) Leia as instruções em: (arquivo .txt explicativo).
+
+2) Crie seu código utilizando o seguinte template: (template of code).
+
+3) Crie sua página de autor utilizando o seguinte template: {{% staticref "files/_index.md" %}} here {{% /staticref %}}.
+
+4) Separe uma foto que gostaria de incluir. Por favor, dê preferência para fotos com tamanho pequeno.
+
+5) Nos envie esses arquivos para o email abaixo.
+
+Nossa expectativa de resposta é até 2 dias. Para garantir que os códigos postados estejam corretos, um colaborador antigo irá validar seu código. Assim, para manter seu nome na lista de colaboladores, contamos com sua ajuda em avaliar alguns códigos enviados.
 
 
-Follow these steps:
 
-1) Leia as intrucoes em: (arquivo .txt explicativo).
-
-2) Crie seu codigo utilizando o seguinte template:  (template of code).
-
-3) Crie sua pagina de autor utilizando o seguinte template: {{% staticref "files/_index.md" "newtab" %}} here {{% /staticref %}}.
-
-4) Send your code to the email: 
-
-
-All submitted codes will be evaluated by one contributor. If you want to be in the Collaborators section, we count on you to evaluate at least one submitted code. 
