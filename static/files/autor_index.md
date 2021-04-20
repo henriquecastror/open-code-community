@@ -17,7 +17,6 @@ organizations:
 - name: Pontifícia Universidade Católica do Rio de Janeiro (PUC-Rio)
   url: "https://www.puc-rio.br"
 
-# Short bio (displayed in user profile at end of posts)
 bio:
 
 interests:
