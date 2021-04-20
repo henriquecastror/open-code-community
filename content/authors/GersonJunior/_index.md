@@ -22,7 +22,7 @@ organizations:
 # Short bio (displayed in user profile at end of posts)
 bio: 
 
-Interesses:
+interests:
 - Asset pricing
 - Finanças Comportamentais
 - Portfolio management
