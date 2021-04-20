@@ -1,4 +1,4 @@
----
+--
 # Display name
 title: Henrique Castro Martins (membro desde 2021/03)
 
@@ -7,7 +7,7 @@ authors:
 - HenriqueCastroMartins
 
 # Is this the primary user of the site?
-superuser: false
+superuser: true
 
 # Role/position
 role: Professor de Finanças
@@ -96,6 +96,9 @@ social:
   icon_pack: fab
   link: https://facebook.com/henriquecastror
   
+# Enter email to display Gravatar (if Gravatar enabled in Config)
+email: ""
+
 # Highlight the author in author lists? (true/false)
 highlight_name: false
 
@@ -105,4 +108,3 @@ user_groups:
 ---
 
 Atualmente, sou Professor de Finanças do Quadro Principal do Departamento de Administração [IAG PUC-Rio](https://iag.puc-rio.br/) (Rio de Janeiro, Brasil). Eu ensino finanças corporativas, governança corporativa, e políticas financeiras em todos os níveis de ensino. Se você quiser saber mais sobre mim, você pode me contatar em hcm@iag.puc-rio.br ou você pode visitar meu site pessoal https://henriquemartins.net/.
-

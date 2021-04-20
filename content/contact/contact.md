@@ -38,9 +38,9 @@ Por favor, siga os passos abaixo:
 
 1) Leia as instruções em: (arquivo .txt explicativo).
 
-2) Crie seu código utilizando o seguinte template: (template of code).
+2) Crie seu código utilizando o seguinte template: (template of code). 
 
-3) Crie sua página de autor utilizando o seguinte template: {{% staticref "files/autor_index.md" %}} here {{% /staticref %}}.
+3) Crie sua página de autor utilizando o seguinte template: {{% staticref "author_template.txt" "newtab" %}} here {{% /staticref %}}. 
 
 4) Separe uma foto que gostaria de incluir. Por favor, dê preferência para fotos com tamanho pequeno.
 
