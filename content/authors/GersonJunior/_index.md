@@ -43,7 +43,7 @@ social:
   icon_pack: ai
   link: https://scholar.google.com/citations?user=bbgB49g0N2cC&hl=pt-BR
 
- - icon: twitter
+- icon: twitter
   icon_pack: fab
   link: https://twitter.com/_GJunior_
   
