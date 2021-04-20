@@ -79,13 +79,11 @@ social:
 - icon: linkedin
   icon_pack: fab
   link: https://www.linkedin.com/in/henriquecastror/
-  label: My LinkedIn
-
+  
 - icon: youtube
   icon_pack: fab
   link: https://www.youtube.com/channel/UCS9ws4WEedza36NRimBZXeg?view_as=subscriber
-  label: Youtube
-
+  
 - icon: twitter
   icon_pack: fab
   link: https://twitter.com/henriquecastror
