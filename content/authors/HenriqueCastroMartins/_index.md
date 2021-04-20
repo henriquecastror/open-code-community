@@ -6,7 +6,6 @@ title: Henrique Castro Martins (membro desde 2021/03)
 authors:
 - HenriqueCastroMartins
 
-
 # Is this the primary user of the site?
 superuser: true
 
@@ -43,9 +42,6 @@ education:
 
 
 # Social/Academic Networking
-# For available icons, see: https://sourcethemes.com/academic/docs/page-builder/#icons
-#   For an email link, use "fas" icon pack, "envelope" icon, and a link in the
-#   form "mailto:your-email@example.com" or "#contact" for contact widget.
 
 social:
 - icon: browser
@@ -63,10 +59,6 @@ social:
 - icon: google-scholar
   icon_pack: ai
   link: https://scholar.google.com.br/citations?user=7gIfkRMAAAAJ&hl=pt-BR&oi=ao
-
-#- icon: scopus
-#  icon_pack: ai
-#  link: https://www.scopus.com/authid/detail.uri?authorId=56179864100
 
 - icon: orcid
   icon_pack: ai
@@ -94,9 +86,9 @@ social:
   link: https://www.youtube.com/channel/UCS9ws4WEedza36NRimBZXeg?view_as=subscriber
   label: Youtube
 
-# - icon: twitter
-#  icon_pack: fab
-#  link: https://twitter.com/henriquecastror
+- icon: twitter
+  icon_pack: fab
+  link: https://twitter.com/henriquecastror
   
 - icon: instagram
   icon_pack: fab
@@ -106,34 +98,16 @@ social:
   icon_pack: fab
   link: https://facebook.com/henriquecastror
   
-# - icon: cv
-#  icon_pack: ai
-#  link: http://lattes.cnpq.br/6076997472159785
-  
-  
-# https://jpswalsh.github.io/academicons/
-
-  
-# Link to a PDF of your resume/CV from the About widget.
-# To enable, copy your resume/CV to `static/files/cv.pdf` and uncomment the lines below.
-# - icon: cv
-#   icon_pack: ai
-#   link: files/cv.pdf
-
 # Enter email to display Gravatar (if Gravatar enabled in Config)
 email: ""
 
 # Highlight the author in author lists? (true/false)
 highlight_name: false
 
-# Organizational groups that you belong to (for People widget)
-#   Set this to `[]` or comment out if you are not using People widget.
-
 user_groups:
 - Colaboradores
 
-
 ---
 
-I hold a Ph.D. in Finance, and I am currently an Assistant Professor at [IAG PUC-Rio](https://iag.puc-rio.br/) (Rio de Janeiro, Brazil). I teach corporate finance, corporate governance and financial analysis at the undergraduate, MBA, Master, and Ph.D. levels. I am currently working on several projects on these topics. If you have any questions about my research or if you want to work with me, contact me at hcm@iag.puc-rio.br or check my website https://henriquemartins.net/.
+Atualmente, sou Professor de Finanças do Quadro Principal do Departamento de Administração [IAG PUC-Rio](https://iag.puc-rio.br/) (Rio de Janeiro, Brasil). Eu ensino finanças corporativas, governança corporativa, e políticas financeiras em todos os níveis de ensino. Se você quiser saber mais sobre mim, você pode me contatar em hcm@iag.puc-rio.br ou você pode visitar meu site pessoal https://henriquemartins.net/.
 
