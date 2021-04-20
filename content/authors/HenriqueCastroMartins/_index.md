@@ -1,6 +1,6 @@
 ---
 # Display name
-title: Henrique Castro Martins (member since 2021/04)
+title: Henrique Castro Martins (membro desde 2021/03)
 
 # Username (this should match the folder name)
 authors:
@@ -11,33 +11,33 @@ authors:
 superuser: true
 
 # Role/position
-role: Assistant Professor of Finance
+role: Professor de Finanças
 
 # Organizations/Affiliations
 organizations:
-- name: Pontifical Catholic University of Rio de Janeiro (PUC-Rio)
+- name: Pontifícia Universidade Católica do Rio de Janeiro (PUC-Rio)
   url: "https://www.puc-rio.br"
 
 # Short bio (displayed in user profile at end of posts)
 bio:
 
 interests:
-- Corporate Finance
-- Corporate Governance
-- Financial policies
-- Empirical methods in finance
+- Finanças Corporativas
+- Governança Corporativa
+- Políticas Financeiras
+- Métodos Empíricos em Finanças
 
 education:
   courses:
-  - course: PhD in Finance
+  - course: Doutorado Finanças
     institution: UFRGS
     year: 2016
     
-  - course: Master Finance
+  - course: Mestrado Finanças
     institution: UFRGS
     year: 2012
     
-  - course: BSc in Management
+  - course: Graduação Administração
     institution: PUCRS
     year: 2010
 
@@ -130,7 +130,7 @@ highlight_name: false
 #   Set this to `[]` or comment out if you are not using People widget.
 
 user_groups:
-- Researchers
+- Colaboradores
 
 
 ---
