@@ -1,7 +1,7 @@
 ---
 authors:
-- admin
-bio:
+- VictorHenriques (member since 2021/04)
+
 education:
   courses:
   - course: Master's Degree in Applied Economics
@@ -11,12 +11,14 @@ education:
     institution: Universidade Federal de Viçosa
     year: 2016
 email: "victorhenriquesoliv@gmail.com"
+
 interests:
 - Stochastic Processes
 - Econometrics
 - Empirical Finance
 - Financial Econometrics
 name: Víctor Henriques
+
 organizations:
 - name: Fundação Getúlio Vargas
   
