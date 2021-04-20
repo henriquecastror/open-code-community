@@ -9,7 +9,7 @@ headless: true  # This file represents a page section.
 
 weight: 10  # Order that this section will appear.
 
-title: "Open Coding Community"
+title: "Open Code Community"
 
 subtitle: ""
 
