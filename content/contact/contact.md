@@ -37,11 +37,13 @@ Because we do not have staff, please use the templates below to create your own 
 
 Follow these steps:
 
-1) Download the following files: (Template for author section), (template of code).
+1) Leia as intrucoes em: (arquivo .txt explicativo).
 
-2) In (template of code), you have several comments. Include your text and your code in the appropriate  spaces.
+2) Crie seu codigo utilizando o seguinte template:  (template of code).
 
-3) Send your code to the email: 
+3) Crie sua pagina de autor utilizando o seguinte template: {{% staticref "files/_index.xlsx" "newtab" %}} here {{% /staticref %}}.
+
+4) Send your code to the email: 
 
 
 All submitted codes will be evaluated by one contributor. If you want to be in the Collaborators section, we count on you to evaluate at least one submitted code. 

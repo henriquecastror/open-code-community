@@ -14,7 +14,7 @@
   #weight = 20
 
 [[main]]
-  name = "Collaborators"
+  name = "Colaboradores"
   url = "people"
   weight = 30
 
@@ -29,6 +29,6 @@
   #weight = 50
 
 [[main]]
-  name = "Contribute"
+  name = "Contribua"
   url = "contact"
   weight = 60
