@@ -25,13 +25,13 @@ bio:
 Interesses:
 - Asset pricing
 - Finanças Comportamentais
--Portfolio management.
+- Portfolio management
 
 Educação:
   Curso:
   - course: Doutorando em Finanças
-    Instituição: PUC-Rio
-    Ano: 2022
+    institution: PUC-Rio
+    year: 2022
 
 # Social/Academic Networking
 # For available icons, see: https://sourcethemes.com/academic/docs/page-builder/#icons
