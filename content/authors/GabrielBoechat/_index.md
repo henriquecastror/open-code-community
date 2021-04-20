@@ -36,7 +36,7 @@ social:
   icon_pack: fab
   link: https://www.linkedin.com/in/gabriel-boechat/
 
- - icon: twitter
+- icon: twitter
   icon_pack: fab
   link: https://twitter.com/gab_boechat
   
