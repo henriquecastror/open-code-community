@@ -9,7 +9,7 @@ headless: true  # This file represents a page section.
 
 weight: 10  # Order that this section will appear.
 
-title: "Open Coding Research Group"
+title: "Open Coding Community"
 
 subtitle: ""
 
@@ -24,4 +24,4 @@ advanced:
   css_class:
 ---
 
-We are a group of researchers and programming enthusiasts who aim to share code for free with the community. Our goal is to help doctoral students, masters, and professionals with exercises and steps. If you have a code that you think is interesting for the community, share it with us.
+Somos um grupo de pesquisadores, programadores e acadêmicos, entusiastas por programação e Ciência Aberta, que têm o objetivo de compartilhar códigos de forma livre para toda a comunidade. Nosso objetivo é ajudar estudantes de doutorado, de mestrado e profissionais de mercado com a elaboração de seus códigos e análises. Se você deseja contribuir ao projeto, compartilhe seu código.
