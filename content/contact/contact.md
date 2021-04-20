@@ -48,7 +48,7 @@ Por favor, siga os passos abaixo:
 
 6) Nos envie esses arquivos para o email abaixo.
 
-Nossa expectativa de resposta é de alguns dias. Para garantir que os códigos postados estejam corretos, um colaborador antigo irá validar seu código. Assim, para manter seu nome na lista de colaboladores, contamos com sua ajuda em avaliar alguns códigos enviados.
+Nossa expectativa de resposta é de alguns dias. Para garantir que os códigos postados estejam corretos, um colaborador antigo irá validar seu código. Assim, para manter seu nome na lista de colaboradores, contamos com sua ajuda em avaliar alguns códigos enviados.
 
 
 
