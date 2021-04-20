@@ -38,15 +38,17 @@ Por favor, siga os passos abaixo:
 
 1) Leia as instruções em: (arquivo .txt explicativo).
 
-2) Crie seu código utilizando o seguinte template: (template of code). 
+2) Crie seu código utilizando o seguinte template: (template of code). {{% staticref "files/post_index.md" "newtab" %}} here{{% /staticref %}}. Você pode nos enviar esse documento em txt ou em .md (nossa preferência é por .md).
 
-3) Crie sua página de autor utilizando o seguinte template: and {{% staticref "files/autor_index.md" "newtab" %}} here{{% /staticref %}}. Você pode nos enviar esse documento em txt ou em .md (nossa preferência é por .md).
+3) Crie sua página de autor utilizando o seguinte template: {{% staticref "files/autor_index.md" "newtab" %}} here{{% /staticref %}}. Você pode nos enviar esse documento em txt ou em .md (nossa preferência é por .md).
 
-4) Separe uma foto que gostaria de incluir. Por favor, dê preferência para fotos com tamanho pequeno.
+4) Nos envie todas as imagens que seu codigo gerar em formato .png
 
-5) Nos envie esses arquivos para o email abaixo.
+5) Separe uma foto que gostaria de incluir em formato .png. Por favor, dê preferência para fotos com tamanho pequeno.
 
-Nossa expectativa de resposta é até 2 dias. Para garantir que os códigos postados estejam corretos, um colaborador antigo irá validar seu código. Assim, para manter seu nome na lista de colaboladores, contamos com sua ajuda em avaliar alguns códigos enviados.
+6) Nos envie esses arquivos para o email abaixo.
+
+Nossa expectativa de resposta é de alguns dias. Para garantir que os códigos postados estejam corretos, um colaborador antigo irá validar seu código. Assim, para manter seu nome na lista de colaboladores, contamos com sua ajuda em avaliar alguns códigos enviados.
 
 
 
