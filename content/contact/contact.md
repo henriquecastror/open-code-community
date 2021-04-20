@@ -38,9 +38,9 @@ Por favor, siga os passos abaixo:
 
 1) Leia as instruções em: (arquivo .txt explicativo).
 
-2) Crie seu código utilizando o seguinte template: (template of code). {{% staticref "files/post_index.md" "newtab" %}} here{{% /staticref %}}. Você pode nos enviar esse documento em txt ou em .md (nossa preferência é por .md).
+2) Crie seu código utilizando o seguinte {{% staticref "files/post_index.md" "newtab" %}} template{{% /staticref %}}. Você pode nos enviar esse documento em txt ou em .md (nossa preferência é por .md).
 
-3) Crie sua página de autor utilizando o seguinte template: {{% staticref "files/autor_index.md" "newtab" %}} here{{% /staticref %}}. Você pode nos enviar esse documento em txt ou em .md (nossa preferência é por .md).
+3) Crie sua página de autor utilizando o seguinte {{% staticref "files/autor_index.md" "newtab" %}} template{{% /staticref %}}. Você pode nos enviar esse documento em txt ou em .md (nossa preferência é por .md).
 
 4) Nos envie todas as imagens que seu codigo gerar em formato .png
 
