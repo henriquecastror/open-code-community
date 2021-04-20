@@ -1,7 +1,7 @@
 
 ---
 # Display name
-title: Gerson Junior (member since 2021/04)
+title: Gerson Júnior (membro desde 2021/03)
 
 # Username (this should match the folder name)
 authors:
@@ -12,24 +12,26 @@ authors:
 superuser: false
 
 # Role/position
-role: PhD Candidate
+role: Doutorando
 
 # Organizations/Affiliations
 organizations:
-- name: Pontifical Catholic University of Rio de Janeiro (PUC-Rio)
+- name: Pontifícia Universidade Católica do Rio de Janeiro(PUC-Rio)
   url: "https://iag.puc-rio.br/"
 
 # Short bio (displayed in user profile at end of posts)
-bio:
+bio: 
 
-interests:
+Interesses:
+- Asset pricing
+- Finanças Comportamentais
+-Portfolio management.
 
-education:
-  courses:
-  - course: PhD Candidate in Finance
-    institution: PUC-Rio
-    year: 2022
-
+Educação:
+  Curso:
+  - course: Doutorando em Finanças
+    Instituição: PUC-Rio
+    Ano: 2022
 
 # Social/Academic Networking
 # For available icons, see: https://sourcethemes.com/academic/docs/page-builder/#icons
@@ -41,7 +43,14 @@ social:
   icon_pack: ai
   link: https://scholar.google.com/citations?user=bbgB49g0N2cC&hl=pt-BR
 
-
+ - icon: twitter
+  icon_pack: fab
+  link: https://twitter.com/_GJunior_
+  
+- icon: linkedin
+  icon_pack: fab
+  link: https://www.linkedin.com/in/gersondesouzaraimundojunior/
+  label: My LinkedIn
   
 # Highlight the author in author lists? (true/false)
 highlight_name: false
@@ -50,8 +59,8 @@ highlight_name: false
 #   Set this to `[]` or comment out if you are not using People widget.
 
 user_groups:
-- Researchers
+- Colaboradores
 
 ---
 
-
+Atualmente sou um Doutorando em Finanças pela PUC-Rio e Membro do Centro de Pesquisas em Finanças da PUC-Rio (FINE). Fui Pesquisador Visitante do IÉSEG - Paris. Publiquei artigos em revistas internacionais: Finance Research Letters, Journal of Behavioral Finance, Applied Economics Letters e tenho projetos de divulgação de conteúdo para código aberto. Ministrei disciplinas, workshops e palestras sobre finanças.
