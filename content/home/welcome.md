@@ -24,4 +24,4 @@ advanced:
   css_class:
 ---
 
-Somos um grupo de pesquisadores, programadores e acadêmicos, entusiastas por programação e Ciência Aberta, que têm o objetivo de compartilhar códigos de forma livre para toda a comunidade. Nosso objetivo é ajudar estudantes de doutorado, de mestrado e profissionais de mercado com a elaboração de seus códigos e análises. Se você deseja contribuir ao projeto, compartilhe seu código.
+Somos um grupo de pesquisadores e programadores, entusiastas por Ciência Aberta, com o objetivo de compartilhar códigos de forma livre para toda a comunidade. Nosso objetivo é ajudar estudantes de doutorado, mestrado e profissionais de mercado com a elaboração de seus códigos e análises. Se você deseja contribuir ao projeto, compartilhe seu código.
