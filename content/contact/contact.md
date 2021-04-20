@@ -48,6 +48,8 @@ Por favor, siga os passos abaixo:
 
 6) Nos envie esses arquivos para o email abaixo.
 
+*Importante*: Preencha apenas os termos que estão em portugês nos templates. Não traduza termos como "role", "interests", "education" e assemelhados.
+
 Nossa expectativa de resposta é de alguns dias. Para garantir que os códigos postados estejam corretos, um colaborador antigo irá validar seu código. Assim, para manter seu nome na lista de colaboradores, contamos com sua ajuda em avaliar alguns códigos enviados.
 
 
