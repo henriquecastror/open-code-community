@@ -10,7 +10,7 @@ authors:
 superuser: false
 
 # Role/position
-role: Economics Intern at Gávea Investimentos
+role: Economics Intern at Gavea Investimentos
 
 # Organizations/Affiliations
 organizations:
