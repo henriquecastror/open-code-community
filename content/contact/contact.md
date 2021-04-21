@@ -36,19 +36,19 @@ Nós não temos staff e fazemos toda a administração de forma pro-bono. Assim,
 
 Por favor, siga os passos abaixo:
 
-1) Leia as instruções em: (arquivo .txt explicativo).
+1) Crie seu código utilizando o seguinte {{% staticref "files/post_index.md" "newtab" %}} template{{% /staticref %}}. Você pode nos enviar esse documento em .txt ou em .md (nossa preferência é por .md).
 
-2) Crie seu código utilizando o seguinte {{% staticref "files/post_index.md" "newtab" %}} template{{% /staticref %}}. Você pode nos enviar esse documento em .txt ou em .md (nossa preferência é por .md).
+2) Crie sua página de autor utilizando o seguinte {{% staticref "files/autor_index.md" "newtab" %}} template{{% /staticref %}}. Você pode nos enviar esse documento em .txt ou em .md (nossa preferência é por .md).
 
-3) Crie sua página de autor utilizando o seguinte {{% staticref "files/autor_index.md" "newtab" %}} template{{% /staticref %}}. Você pode nos enviar esse documento em .txt ou em .md (nossa preferência é por .md).
+3) Envie todas as imagens que seu código gerar em formato .png.
 
-4) Envie todas as imagens que seu código gerar em formato .png.
+4) Separe uma foto que gostaria de incluir em formato .png. Por favor, dê preferência para fotos com tamanho pequeno.
 
-5) Separe uma foto que gostaria de incluir em formato .png. Por favor, dê preferência para fotos com tamanho pequeno.
-
-6) Nos envie esses arquivos para o email abaixo.
+5) Nos envie esses arquivos para o email abaixo.
 
 **Importante**: Preencha apenas os termos que estão em português nos templates. Não traduza termos como "*role*", "*interests*", "*education*" e assemelhados.
+
+Pelo momento, estamos aceitando c�digos em R e Stata. Voc� pode escrever o texto dos seus materiais em ingl�s, mas nossa prefer�ncia � que seja escrito em portugu�s para maximizar a ajuda de estudantes ainda n�o perfeitamente familiarizados com a l�ngua inglesa.
 
 Nossa expectativa de resposta é de alguns dias. Para garantir que os códigos postados estejam corretos, um colaborador antigo irá validar o código enviado por você. Assim, para manter seu nome na lista de colaboradores, contamos com sua ajuda em avaliar alguns códigos enviados.
 
