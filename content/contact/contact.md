@@ -30,27 +30,27 @@ design:
 
 ---
 
-Essa comunidade Ã© aberta a quem quiser ajudar no seu desenvolvimento e compartilhar cÃ³digos. Se vocÃª quer ter seu nome incluÃ­do na lista de Colaboradores, mande seu cÃ³digo para nÃ³s.
+Essa comunidade é aberta a quem quiser ajudar no seu desenvolvimento e compartilhar códigos. Se você quer ter seu nome incluído na lista de Colaboradores, mande seu código para nós.
 
-NÃ³s nÃ£o temos staff e fazemos toda a administraÃ§Ã£o de forma pro-bono. Assim, se vocÃª quiser compartilhar cÃ³digos, precisamos que crie seu material utilizando os templates abaixo. Se vocÃª desviar significativamente desse template, teremos dificuldade de publicar seu material. 
+Nós não temos staff e fazemos toda a administração de forma pro-bono. Assim, se você quiser compartilhar códigos, precisamos que crie seu material utilizando os templates abaixo. Se você desviar significativamente desse template, teremos dificuldade de publicar seu material. 
 
 Por favor, siga os passos abaixo:
 
-1) Crie seu cÃ³digo utilizando o seguinte {{% staticref "files/post_index.md" "newtab" %}} template{{% /staticref %}}. VocÃª pode nos enviar esse documento em .txt ou em .md (nossa preferÃªncia Ã© por .md).
+1) Crie seu código utilizando o seguinte {{% staticref "files/post_index.md" "newtab" %}} template{{% /staticref %}}. Você pode nos enviar esse documento em .txt ou em .md (nossa preferência é .md).
 
-2) Crie sua pÃ¡gina de autor utilizando o seguinte {{% staticref "files/autor_index.md" "newtab" %}} template{{% /staticref %}}. VocÃª pode nos enviar esse documento em .txt ou em .md (nossa preferÃªncia Ã© por .md).
+2) Crie sua página de autor utilizando o seguinte {{% staticref "files/autor_index.md" "newtab" %}} template{{% /staticref %}}.  Você pode nos enviar esse documento em .txt ou em .md (nossa preferência é .md).
 
-3) Envie todas as imagens que seu cÃ³digo gerar em formato .png.
+3) Envie todas as imagens que seu código gerar em formato .png.
 
-4) Separe uma foto que gostaria de incluir em formato .png. Por favor, dÃª preferÃªncia para fotos com tamanho pequeno.
+4) Separe uma foto que gostaria de incluir em formato .png. Por favor, dê preferência para fotos com tamanho pequeno.
 
 5) Nos envie esses arquivos para o email abaixo.
 
-**Importante**: Preencha apenas os termos que estÃ£o em portuguÃªs nos templates. NÃ£o traduza termos como "*role*", "*interests*", "*education*" e assemelhados.
+**Importante**: Preencha apenas os termos que estão em português nos templates. Não traduza termos como "*role*", "*interests*", "*education*" e assemelhados.
 
 Pelo momento, estamos aceitando códigos em R e Stata. Você pode escrever o texto dos seus materiais em inglês, mas nossa preferência é que seja escrito em português para maximizar a ajuda de estudantes ainda não perfeitamente familiarizados com a língua inglesa.
 
-Nossa expectativa de resposta Ã© de alguns dias. Para garantir que os cÃ³digos postados estejam corretos, um colaborador antigo irÃ¡ validar o cÃ³digo enviado por vocÃª. Assim, para manter seu nome na lista de colaboradores, contamos com sua ajuda em avaliar alguns cÃ³digos enviados.
+Nossa expectativa de resposta é de alguns dias. Para garantir que os códigos postados estejam corretos, um colaborador antigo atual validar o código enviado por você. Assim, para manter seu nome na lista de colaboradores, contamos com sua ajuda em avaliar alguns códigos enviados.
 
 
-   
+ 
