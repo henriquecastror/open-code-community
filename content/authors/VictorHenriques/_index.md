@@ -1,8 +1,9 @@
 ---
-authors:
-- VictorHenriques (membro desde 2021/03)
 
-bio:
+title: Víctor Henriques (membro desde 2021/03)
+
+authors:
+- VictorHenriques
 
 education:
   courses:
@@ -13,18 +14,16 @@ education:
     institution: Universidade Federal de Viçosa
     year: 2016
 
-
-
 interests:
 - Econometrics
 - Empirical Finance
 - Financial Econometrics
 
-name: Víctor Henriques
 organizations:
 - name: Fundação Getúlio Vargas
   
 role: Doutorando em Economia
+
 social:
 - icon: envelope
   icon_pack: fas
@@ -53,7 +52,7 @@ user_groups:
 
 ---
 
-Olá, eu sou Víctor, um cara que compartilha um grande interesse por economia e finanças. À primeira vista, alguem pode-se pensar que pode ser difícil entender a matemática usada nessas áreas, embora eu possa garantir que é ainda pior quando você gasta muito tempo lidando esses assuntos. Não sou muito bom em matemática, nem em estatística e, para ser franco, às vezes fico meio perdido estudando um determinado assunto.
+Olá, eu sou Víctor, um cara que compartilha um grande interesse por economia e finanças. À primeira vista, alguém pode pensar que pode ser difícil entender a matemática usada nessas áreas, embora eu possa garantir que é ainda pior quando você gasta muito tempo lidando esses assuntos. Não sou muito bom em matemática, nem em estatística e, para ser franco, às vezes fico meio perdido estudando um determinado assunto.
 
 Então, por que alguém decide aprender essas coisas? Bem, a resposta se torna muito mais fácil quando se pode ver o que se está realmente fazendo usando ferramentas interativas para resolver problemas reais. Como estudante de graduação, fiquei intrigado com a primeira vez que escrevi um código de regressão em ** R ** e, desde então, aprendi muito sobre o universo ** R **.
 
