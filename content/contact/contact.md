@@ -9,7 +9,7 @@ headless: true
 # Order that this section appears on the page.
 weight: 10
 
-title: Junte-se a nÃ³s
+title: Junte-se a nós
 subtitle:
 
 content:
