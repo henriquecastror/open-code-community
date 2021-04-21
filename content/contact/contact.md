@@ -53,4 +53,4 @@ Pelo momento, estamos aceitando códigos em R e Stata. Você pode escrever o tex
 Nossa expectativa de resposta Ã© de alguns dias. Para garantir que os cÃ³digos postados estejam corretos, um colaborador antigo irÃ¡ validar o cÃ³digo enviado por vocÃª. Assim, para manter seu nome na lista de colaboradores, contamos com sua ajuda em avaliar alguns cÃ³digos enviados.
 
 
- 
+   
