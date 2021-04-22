@@ -36,7 +36,7 @@ authors:
 
 Nesse post, vou mostrar como estimar um breve exemplo de _Regression Discontinuity Design (RDD)_.
 
-Primeiro, baixe os dados {{% staticref "RDD.xlsx.xlsx" "newtab" %}} here {{% /staticref %}} 
+Primeiro, baixe os dados {{% staticref "files/RDD.xlsx" "newtab" %}} aqui {{% /staticref %}} 
 
     library(readxl)
     library(ggplot2)
@@ -44,7 +44,7 @@ Primeiro, baixe os dados {{% staticref "RDD.xlsx.xlsx" "newtab" %}} here {{% /st
     rm(list = ls())
     dataRDD  <- read_excel("RDD.xlsx")
 
-Veja o gr�fico abaixo. Ao que parece, ha uma discontinuidade nos dados em torno de x = 100. Isso sugere que, se ignorarmos essa discontinuidade, a associacao entre x e y eh positiva. 
+Veja o gráfico abaixo. Ao que parece, ha uma discontinuidade nos dados em torno de x = 100. Isso sugere que, se ignorarmos essa discontinuidade, a associação entre x e y é positiva. 
       
       # Generate a line graph - Including all observations together
       ggplot(dataRDD, aes(x, y))  + 
@@ -64,7 +64,7 @@ Veja o gr�fico abaixo. Ao que parece, ha uma discontinuidade nos dados em torno 
 
 
 
-Vamos entao separar as observacoes em dois grupos utilizando o valor de x = 100 como criterio de corte.
+Vamos então separar as observações em dois grupos utilizando o valor de x = 100 como critério de corte.
 
       # Creating  groupS
       dataRDD$treated <- 0
@@ -84,9 +84,9 @@ Vamos entao separar as observacoes em dois grupos utilizando o valor de x = 100 
 
 {{< figure src="RDD_Fig2.png" width="80%" >}}
 
-Agora, fica claro que a associacao, em cada grupo de forma separada, e negativa.
+Agora, fica claro que a associação, em cada grupo de forma separada, é negativa.
 
-Vamos olhar, entao, mais perto os valores proximos do corte.
+Vamos olhar, então, mais perto os valores próximos do corte.
 
 
 
@@ -114,12 +114,12 @@ Vamos olhar, entao, mais perto os valores proximos do corte.
       geom_smooth(method = "lm", fill = NA)
 
 
-Olhando apenas 50 observacoes acima e abaixo do corte, a associacao antes do corte se torna positiva. Isso e algo que vamos querer levar em consideracao em nosso modelo RDD.
+Olhando apenas 50 observações antes e após o corte, a associação antes do corte se torna positiva. Isso é algo que vamos querer levar em consideração em nosso modelo RDD.
 
 {{< figure src="RDD_Fig3.png" width="80%" >}}
 
 
-Vamos entao estiamr o RDD.
+Vamos então estimar o RDD.
 
 
     # Regression  - not RDD yet (this is the result of the first graph)
@@ -137,15 +137,15 @@ Vamos entao estiamr o RDD.
     summary(rdd2)
 
 
-# Interpretacao
+# Interpretaçã
 
-Veja os coeficientes de cada regressao acima. No primeiro caso, o coeficiente de x � positivo de 0.47, com t-stat igual a 13.72.
+Veja os coeficientes de cada regressão acima (você vai precisar rodar no seu computador). No primeiro caso, o coeficiente de x é positivo de 0.47, com t-stat igual a 13.72.
 
-No segundo caso, o coeficiente de x, antes do cut e de 0.29 (t-stat 5.45) e apos o cut de -0.51 (t-stat -6.75). Tambem temos o coeficiente do tratamento, que e medido pelo "salto" que ocorre perto do cut: coeficiente estimado de 28.9 (t-stat 13.11). Se esse fosse um exemplo real, esse seria o efeito causal de se ter recebido o tratamento (i.e., estar alem do cut). 
+No segundo caso, o coeficiente de x, antes do cut e de 0.29 (t-stat 5.45) e após o cut de -0.51 (t-stat -6.75). Também temos o coeficiente do tratamento, que é medido pelo "salto" que ocorre perto do cut: coeficiente estimado de 28.9 (t-stat 13.11). Se esse fosse um exemplo real, esse seria o efeito causal de se ter recebido o tratamento (i.e., estar além do cut). 
 
-Aqui temos um caso bem simples e, acredito, bastante didatico. Percebam que pode haver variacoes dessa equacao estimada. Mas isso e conversa para outro post.
+Aqui temos um caso bem simples e, acredito, bastante didático. Percebam que pode haver variações dessa equação estimada. Mas isso é conversa para outro post.
 
-Abracos.
+Abraços.
 
 
 
