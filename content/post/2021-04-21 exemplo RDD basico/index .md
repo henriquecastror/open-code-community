@@ -59,7 +59,7 @@ Veja o gráfico abaixo. Ao que parece, há uma discontinuidade nos dados em torn
         geom_smooth(method = "lm", fill = NA)
 
 
-{{< figure library="true" src="files/RDD_Fig1.png" width="80%" >}}   
+{{< figure library="true" src="RDD_Fig1.png" width="80%" >}}   
 
 
 
@@ -82,7 +82,7 @@ Vamos então separar as observações em dois grupos utilizando o valor de x = 1
               legend.key.size = unit(2, "cm")) +
         geom_smooth(method = "lm", fill = NA)
 
-{{< figure src="files/RDD_Fig2.png" width="80%" >}}
+{{< figure src="media/RDD_Fig2.png" width="80%" >}}
 
 Agora, fica claro que a associação, em cada grupo de forma separada, é negativa.
 
@@ -116,7 +116,7 @@ Vamos olhar, então, mais perto os valores próximos do corte.
 
 Olhando apenas 50 observações antes e após o corte, a associação antes do corte se torna positiva. Isso é algo que vamos querer levar em consideração em nosso modelo RDD.
 
-{{< figure src="files/RDD_Fig3.png" width="80%" >}}
+{{< figure src="img/RDD_Fig3.png" width="80%" >}}
 
 
 Vamos então estimar o RDD.
