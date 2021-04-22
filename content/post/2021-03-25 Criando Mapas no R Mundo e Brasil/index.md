@@ -125,7 +125,7 @@ Primeiro, instale e carregue esses pacotes.
     library(RColorBrewer)
     library(dplyr)
 
-Em seguida, crie manualmente os dados (por exemplo, PIB per capita) para cada estado. Você pode fazer o download usando algum código aberto, mas para simplificar, vamos fazer isso manualmente. Se algum colaborador ter um code para obter o PIB per Capita para cada estado. Por favor envie email para o [autor desse post](gersondesouzajunior00@gmail.com) 
+Em seguida, crie manualmente os dados (por exemplo, PIB per capita) para cada estado. Você pode fazer o download usando algum código aberto, mas para simplificar, vamos fazer isso manualmente. Se algum colaborador ter um code para obter o PIB per Capita para cada estado, por favor, envie email para nós. 
     
     dados <- structure(
     list(X = 1:27, 
