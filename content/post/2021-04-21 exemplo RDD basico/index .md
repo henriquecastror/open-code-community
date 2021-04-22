@@ -59,7 +59,7 @@ Veja o gráfico abaixo. Ao que parece, há uma discontinuidade nos dados em torn
         geom_smooth(method = "lm", fill = NA)
 
 
-{{< figure src="files/RDD_Fig1.png" width="80%" >}}   
+{{< figure library="true" src="files/RDD_Fig1.png" width="80%" >}}   
 
 
 
