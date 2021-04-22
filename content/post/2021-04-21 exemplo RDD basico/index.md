@@ -1,6 +1,6 @@
 ---
 
-title: "Um breve exemplo de Regression Discontinuity Design"
+title: "Um breve exemplo de Regression Discontinuity Design (RDD)"
 
 categories: []
 
@@ -34,10 +34,9 @@ authors:
 ---
 
 
-Nesse post, vou mostrar como estimar um breve exemplo de _Regression Discontinuity Design_.
+Nesse post, vou mostrar como estimar um breve exemplo de _Regression Discontinuity Design (RDD)_.
 
-Primeiro, baixe os dados [aqui]().
-
+Primeiro, baixe os dados {{% staticref "RDD.xlsx.xlsx" "newtab" %}} here {{% /staticref %}} 
 
     library(readxl)
     library(ggplot2)
@@ -45,7 +44,7 @@ Primeiro, baixe os dados [aqui]().
     rm(list = ls())
     dataRDD  <- read_excel("RDD.xlsx")
 
-Veja o grafico abaixo. Ao que parece, ha uma discontinuidade nos dados em torno de x = 100. Isso sugere que, se ignorarmos essa discontinuidade, a associacao entre x e y eh positiva. 
+Veja o gráfico abaixo. Ao que parece, ha uma discontinuidade nos dados em torno de x = 100. Isso sugere que, se ignorarmos essa discontinuidade, a associacao entre x e y eh positiva. 
       
       # Generate a line graph - Including all observations together
       ggplot(dataRDD, aes(x, y))  + 
