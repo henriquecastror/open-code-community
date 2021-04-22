@@ -41,6 +41,10 @@ VOCE ESCREVE TEXTO AQUI.
 
 VOCE INCLUI FIGURAS COMO NA LINHA ABAIXO:
 
-{{< figure src="FIG1.png" width="80%" >}}    
+{{< figure library="true" src="Fig1.png" width="80%" >}}   
 
 
+
+VOCE INCLUI ARQUIVOS PARA DOWNLOAD COMO NA LINHA ABAIXO:
+
+{{% staticref "files/ARQUIVO1.xlsx" "newtab" %}} aqui{{% /staticref %}}. 

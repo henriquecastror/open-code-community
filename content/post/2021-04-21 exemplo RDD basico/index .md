@@ -36,7 +36,7 @@ authors:
 
 Nesse post, vou mostrar como estimar um breve exemplo de _Regression Discontinuity Design (RDD)_.
 
-Primeiro, baixe os dados {{% staticref "files/RDD.xlsx" "newtab" %}} aqui {{% /staticref %}}. 
+Primeiro, baixe os dados {{% staticref "files/RDD.xlsx" "newtab" %}} aqui{{% /staticref %}}. 
 
     library(readxl)
     library(ggplot2)
