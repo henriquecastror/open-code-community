@@ -1,0 +1,318 @@
+---
+output:
+  word_document: default
+  html_document: default
+  pdf_document: default
+---
+# Exercises 
+
+
+
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+## Master coding marathon (2020 Oct)
+
+**This is part of my Master course: Empirical Corporate Finance and Governance**
+
+**Before we start, load the following packages**
+
+```{r message=FALSE}
+library(plm)       
+library(tseries)   
+library(haven)
+library(readxl)
+library(AER)
+library(ggplot2)
+```
+
+### Exercise 1
+
+**1) Using the dataset CRIME2.dta, provide an estimation and a THOROUGH interpretation of the following model:**
+
+$$crimes_{i,t}  = β_1+ β_2 Pop_{i,t}+β_3 unem+β_4 officers+γ_i+ε_t$$
+
+**Where γ_i = Area fixed effects**
+
+
+**The solution is:**
+
+```{r}
+rm(list = ls())
+data <- read_dta("files/CRIME2.DTA")
+datapanel <- pdata.frame(data, index=c("area","year"))
+EX_1 <- plm(crimes ~ pop + unem + officers , data=datapanel, model="within")
+summary(EX_1)
+```
+
+**Fundamental interpretation:** 
+
+- An increase of 1 person in population is associated with an increase of 0.09 points of crime. The significance is at the 3% level.
+- The number of officers is positively associated with crime. The significance is at the 8 % level.
+- The remaining two variables are not significant. 
+- R-squared seems ok, around 19%
+
+
+
+
+
+### Exercise 2
+
+**2) Repeat exercise 1 using a first difference model.**
+
+**The solution is**
+
+```{r}
+EX_2 <- plm(crimes ~ pop +unem +officers , data=datapanel, model="fd")
+summary(EX_2)
+```
+
+
+**Fundamental interpretation:** 
+
+- Now, unemployment is significant. The association is positive. Significance at the 3% level.
+- Pop and Officers are not significant
+- R-squared increases to 25%
+- Notice the number of observations. It is half the number if Exercise 1. This is because Exercise 2 is the first difference. You lose 1 observation per individual.
+
+
+
+
+
+
+
+
+
+### Exercise 3
+
+**3)	Using the dataset DiD.xlsx, provide an estimation and a THOROUGH interpretation of a difference-in-difference model:**
+
+- Where: 
+    - Treated: A and B groups
+    - Control: C to G groups
+    - The exogenous shock occurred in 2010
+    - Covariates: x1, x2 and x3.
+    - All variables are in levels (not logarithms)
+
+**The solution is:**
+
+```{r}
+rm(list = ls())
+
+dataDiD  <- read_excel("files/DiD.xlsx")
+
+# Creating a dummy (binary) variable to indicate time (post and before treatment)
+dataDiD$time  <- as.numeric(dataDiD$year >= 2010)
+
+# Creating a dummy to indicate treatment
+dataDiD$treated <- 0
+dataDiD$treated[dataDiD$group == "A"] <- 1  
+dataDiD$treated[dataDiD$group == "B"] <- 1  
+
+#* Generating the interaction between treated and time
+dataDiD$did = dataDiD$time*dataDiD$treated
+
+# Estimating the DD 
+did11 <- lm(y  ~ time + treated + did + x1 + x2 + x3, data = dataDiD)
+summary(did11)
+```
+
+
+**Fundamental interpretation:** 
+
+- The treated group seem to have higher Y than the control group. The variable _treated_ is significant at the 0.01% level.
+- The shock does not seem to affect the treated group. The variable _did_ is not significant.
+- All covariates are significant at the 1% level.
+- Overall, the conclusion is that the shock does not "work", since _did_ is not significant.
+
+
+
+
+
+
+### Exercise 4 
+
+**Using the dataset FERTIL2.rdata, provide an estimation and a THOROUGH interpretation of the following model by OLS:**
+
+$$children = β_1+ β_2 educ+β_3 age+β_4 age^2+μ $$
+
+**Additional comments:**
+
+- The variable frsthalf is a dummy marking if the woman was born during the first semester of a given year. Assuming that frsthalf is uncorrelated with the error term of eq. 1, check whether it is a reasonable IV for educ.
+- Estimate the model above, using frsthalf as an IV for educ. Compare the estimations with eq. 1.
+- Provide a comparison between the coefficients of educ in the OLS and the IV models
+
+
+
+
+
+```{r}
+rm(list = ls())
+
+load("files/FERTIL2.RData")
+
+# OLS Model
+iv_1 <- lm(children ~ educ + age + agesq , data=FERTIL2)
+summary(iv_1)     
+```
+
+
+**Fundamental interpretation:** 
+
+- One additional year of education is associated with 0.09 fewer children.
+- Age shows a non-linear relationship with children. The curve is inverted U-shaped
+
+
+```{r}
+# 2SLS estimation  - two-step
+# Fist-stage
+iv2_1stage <- lm(educ ~ age + agesq + frsthalf  , data = FERTIL2)
+summary(iv2_1stage)
+
+# Predict Y hat
+Y2hat <- fitted(iv2_1stage)
+
+# Second-stage
+iv2_2stage <- lm(children ~ Y2hat + age + agesq, data = FERTIL2)
+summary(iv2_2stage)
+```
+
+**Fundamental interpretation:** 
+
+- In the first-stage, when women were born during the first semester of a year, they receive less education. The IV seems good.
+- In the second-stage, one additional year of education is associated with 0.17 fewer children. This is a magnitude almost twice higher than the OLS results.
+
+
+
+
+```{r}
+# ivreg - one-step estimation
+iv_2 <- ivreg(children ~ educ + age + agesq  | age + agesq + frsthalf  , data = FERTIL2)
+summary(iv_2)
+
+```
+
+**Important: The results are the same as those obtained in the second-step estimation. However, std. errors are different. This is not a problem here because it does not change the main interpretation. It could be a problem in other cases.** 
+
+
+
+
+
+
+### Exercise 5
+
+
+**5)	Using the dataset RDD.xlsx, provide an estimation and a THOROUGH interpretation of regression discontinuity design.**
+
+- **Hints:**
+    - Check for a discontinuity. 
+    - Use 50 observations of each side of the cut. 
+    - Check if both sides have similar trends.
+
+**This is the solution**
+
+```{r}
+rm(list = ls())
+dataRDD  <- read_excel("files/RDD.xlsx")
+
+# Generate a line graph - Including all observations together
+ggplot(dataRDD, aes(x, y))  + 
+  geom_point( size=1.25) + 
+  labs(y = "", x="", title = "Evolution of Y - Control and Treatment groups")+
+  theme(plot.title = element_text(color="black", size=25, face="bold"),
+        panel.background = element_rect(fill = "grey95", colour = "grey95"),
+        axis.text.y = element_text(face="bold", color="black", size = 16),
+        axis.text.x = element_text(face="bold", color="black", size = 16),
+        legend.title = element_blank(),
+        legend.key.size = unit(2, "cm")) + 
+  geom_smooth(method = "lm", fill = NA)
+```
+
+**It seems we have an abrupt discontinuity here. The cut seems to be when X = 100. This graph suggests that, ignoring the discontinuity, the association between X and Y is positive.**
+
+
+**Let's split the observations into two groups now, using X=100 as threshold:** 
+```{r pressure, echo=FALSE}
+# Creating  groupS
+dataRDD$treated <- 0
+dataRDD$treated[dataRDD$x >= 101] <- 1  
+
+# Generate a line graph - two groups
+ggplot(dataRDD, aes(x, y, group=treated, color = factor(treated)))  + 
+  geom_point( size=1.25) + 
+  labs(y = "", x="", title = "RDD example")+
+  theme(plot.title = element_text(color="black", size=25, face="bold"),
+        panel.background = element_rect(fill = "grey95", colour = "grey95"),
+        axis.text.y = element_text(face="bold", color="black", size = 16),
+        axis.text.x = element_text(face="bold", color="black", size = 16),
+        legend.title = element_blank(),
+        legend.key.size = unit(2, "cm")) +
+  geom_smooth(method = "lm", fill = NA)
+```
+
+**It becomes clear that, within each group, the association is negative.**
+
+**Let's look only for the observations close to the cut for a moment:**
+
+```{r}
+# define cut
+cut <- 100
+
+# define the bandwidth - using 50 observations each side
+band <- 50
+xlow = cut - band
+xhigh = cut + band
+
+# subset the data for the bandwidth
+data <- subset(dataRDD, x > xlow & x <= xhigh, select=c(x, y,  treated))
+
+# Generate a line graph - two groups
+ggplot(data, aes(x, y, group=treated, color = factor(treated)))  + 
+  geom_point( size=1.25) + 
+  labs(y = "", x="", title = "RDD example")+
+  theme(plot.title = element_text(color="black", size=25, face="bold"),
+        panel.background = element_rect(fill = "grey95", colour = "grey95"),
+        axis.text.y = element_text(face="bold", color="black", size = 16),
+        axis.text.x = element_text(face="bold", color="black", size = 16),
+        legend.title = element_blank(),
+        legend.key.size = unit(2, "cm")) +
+  geom_smooth(method = "lm", fill = NA)
+```
+
+**It seems that, close to the cut, the associations are different: it is positive when X < cut, and negative when X>cut. We may use this finding to define our RDD model below.**
+
+
+**Let's estimate the RDD now:**
+
+```{r}
+# Regression  - not RDD yet (this is the result of the first graph)
+rdd1 <- lm(y  ~ x   , data = data)
+summary(rdd1)
+
+# Generating xhat - Now we are going to the RDD
+data$xhat <- data$x - cut
+
+# Generating xhat * treated to allow different inclinations (we will use the findings of the last graph, i.e. that each group has a different trend.)
+data$xhat_treated <- data$xhat * data$treated
+
+# RDD Assuming different trends
+rdd2 <- lm(y  ~ xhat + treated  + xhat_treated, data = data)
+summary(rdd2)
+```
+
+
+**Fundamental interpretation:** 
+
+- The treated group (i.e. the group at the right of the cut) shows 29 units of Y more than control group. This is a significant difference, suggesting that the treatment "works" 
+- The trend is positive when X<cut. The coefficient is 0.29 and is significant.
+- The trend is negative when X>cut. The coefficient is -0.51 and is significant.
+
+
+
+### Conclusion
+
+**If you have any thoughts, let me know! Thanks for passing by!**
