@@ -4,7 +4,7 @@ title: "Resampling the Efficient Frontier: An Illustration During the Codiv-19 P
 
 categories: []
 
-date: '2021-04-08T00:00:00Z'
+date: '2021-04-23T00:00:00Z'
 
 draft: no
 
