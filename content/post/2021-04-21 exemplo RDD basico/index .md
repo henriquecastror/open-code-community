@@ -137,7 +137,7 @@ Vamos então estimar o RDD.
     summary(rdd2)
 
 
-# Interpretaçã
+# Interpretação
 
 Veja os coeficientes de cada regressão acima (você vai precisar rodar no seu computador). No primeiro caso, o coeficiente de x é positivo de 0.47, com t-stat igual a 13.72.
 
