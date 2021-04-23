@@ -28,7 +28,9 @@ education:
 social:
 - icon: twitter
   icon_pack: fab
-  link: https://twitter.com/henriquecastror
+  link: https://twitter.com/opencodecom
+  display:
+    header: true
   
 # Enter email to display Gravatar (if Gravatar enabled in Config)
 email: "opencodecom@gmail.com"
