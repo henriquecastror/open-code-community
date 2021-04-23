@@ -4,7 +4,7 @@ title: "Como fazer Reshape no R - um exemplo com os dados da DR"
 
 categories: []
 
-date: '2021-04-08T00:00:00Z'
+date: '2021-04-22T00:00:00Z'
 
 draft: no
 
@@ -37,7 +37,7 @@ authors:
 
 ## Comandos Gerais
 
-Como fazer um reshape long to wide, respahe wide to long. Utilizaremos o pacote tidyr. Baixaremos os dados do GetDFPData2 do [Marcelo Perlin](https://www.msperlin.com/blog/) para termos os dados da DR. No caso iremos usar apenas a empresa petrobras como dado. 
+Como fazer um reshape long to wide, respahe wide to long. Utilizaremos o pacote tidyr. Baixaremos os dados do GetDFPData2 do [Marcelo Perlin](https://www.msperlin.com/blog/) para termos os dados da DR. No caso iremos usar apenas a empresa PetrobrÃ¡s como dado. 
 
 Baixando os Dados 
 
@@ -55,11 +55,11 @@ Baixando os Dados
       do_shiny_progress = FALSE
     )
 
-Selecionando a demonstração do Resultado
+Selecionando a demonstraÃ§Ã£o do Resultado
 
-    df_DR = df$`DF Consolidado - Demonstração do Resultado`
+    df_DR = df$`DF Consolidado - DemonstraÃ§Ã£o do Resultado`
 
-Filtrando a empresa, no caso a Petrobras e selecionando as colunas que nos interessam
+Filtrando a empresa, no caso a PetrobrÃ¡s e selecionando as colunas que nos interessam
 
     df_DR_petrobras = df_DR %>% filter(DENOM_CIA == "PETROLEO BRASILEIRO S.A. PETROBRAS")  %>%  select(DT_FIM_EXERC,DENOM_CIA,CD_CONTA,VL_CONTA)
     
