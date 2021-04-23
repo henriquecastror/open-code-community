@@ -44,17 +44,7 @@ title: Marcelo S. Perlin (membro desde 2021/04)
 user_groups:
 - Colaboradores
 
-
 ---
-
-<div class="alert alert-danger">
-  I recently published the revised second edition of my R book "Analyzing Financial and Economic Data with R". See this <a href = "https://www.msperlin.com/blog/post/2021-02-28-afedr-revision-2021/">blog post</a> for more details.
-</div>
-
-<div class="alert alert-info">
-  A terceira edição do livro "Análise de Dados Financeiros e Econômicos com o R" foi recém lançada. Maiores detalhes no <a href = "https://www.msperlin.com/blog/publication/2021_book-adfer-pt/">site</a>.
-</div>
-
 
 I work as an associate professor of Finance at Federal University of Rio Grande do Sul (UFRGS), south of Brazil. Details about my past and current work are available in section [Publications](/blog/publication) and [Code](/blog/code). My CV is available as [pdf](/blog/files/cv.pdf) and [Lattes link](http://lattes.cnpq.br/3262699324398819). 
 

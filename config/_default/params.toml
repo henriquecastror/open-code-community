@@ -123,7 +123,7 @@ contact_links = [
 sharing_image = ""
 
 # Twitter username (without @). Used when a visitor shares your site on Twitter.
-twitter = ""
+twitter = "opencodecom"
 
 ############################
 ## Regional Settings
