@@ -38,6 +38,9 @@ Nesse post, vou mostrar como estimar um breve exemplo de _Regression Discontinui
 
 Primeiro, baixe os dados {{% staticref "files/RDD.xlsx" "newtab" %}} aqui{{% /staticref %}}. 
 
+
+Primeiro, baixe os dados {{% staticref "RDD.xlsx" "newtab" %}} aqui{{% /staticref %}}. 
+
     library(readxl)
     library(ggplot2)
     
