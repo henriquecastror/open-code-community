@@ -39,7 +39,6 @@ Nesse post, vou mostrar como estimar um breve exemplo de _Regression Discontinui
 Primeiro, baixe os dados {{% staticref "files/RDD.xlsx" "newtab" %}} aqui{{% /staticref %}}. 
 
 
-Primeiro, baixe os dados {{% staticref "RDD.xlsx" "newtab" %}} aqui{{% /staticref %}}. 
 
     library(readxl)
     library(ggplot2)
@@ -61,9 +60,7 @@ Veja o gráfico abaixo. Ao que parece, há uma discontinuidade nos dados em torn
               legend.key.size = unit(2, "cm")) + 
         geom_smooth(method = "lm", fill = NA)
 
-{{< figure src="1.png" width="80%" >}}
-
-
+{{< figure src="RDD_1.png" width="80%" >}}
 
 
 Vamos então separar as observações em dois grupos utilizando o valor de x = 100 como critério de corte.
@@ -84,7 +81,7 @@ Vamos então separar as observações em dois grupos utilizando o valor de x = 1
               legend.key.size = unit(2, "cm")) +
         geom_smooth(method = "lm", fill = NA)
 
-{{< figure src="2.png" width="80%" >}}
+{{< figure src="RDD_2.png" width="80%" >}}
 
 Agora, fica claro que a associação, em cada grupo de forma separada, é negativa.
 
@@ -118,7 +115,7 @@ Vamos olhar, então, mais perto os valores próximos do corte.
 
 Olhando apenas 50 observações antes e após o corte, a associação antes do corte se torna positiva. Isso é algo que vamos querer levar em consideração em nosso modelo RDD.
 
-{{< figure src="3.png" width="80%" >}}
+{{< figure src="RDD_3.png" width="80%" >}}
 
 
 
