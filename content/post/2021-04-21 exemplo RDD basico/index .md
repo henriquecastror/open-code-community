@@ -42,7 +42,6 @@ Primeiro, baixe os dados {{% staticref "files/RDD.xlsx" "newtab" %}} aqui{{% /st
 
     library(readxl)
     library(ggplot2)
-    
     rm(list = ls())
     dataRDD  <- read_excel("RDD.xlsx")
 
@@ -51,7 +50,7 @@ Veja o gráfico abaixo. Ao que parece, há uma discontinuidade nos dados em torn
       # Generate a line graph - Including all observations together
       ggplot(dataRDD, aes(x, y))  + 
         geom_point( size=1.25) + 
-        labs(y = "", x="", title = "Evolution of Y - Control and Treatment groups")+
+        labs(y = "", x="", title = "Evolution of Y")+
         theme(plot.title = element_text(color="black", size=25, face="bold"),
               panel.background = element_rect(fill = "grey95", colour = "grey95"),
               axis.text.y = element_text(face="bold", color="black", size = 16),
