@@ -38,8 +38,6 @@ Nesse post, vou mostrar como estimar um breve exemplo de _Regression Discontinui
 
 Primeiro, baixe os dados {{% staticref "files/RDD.xlsx" "newtab" %}} aqui{{% /staticref %}}. 
 
-
-
     library(readxl)
     library(ggplot2)
     rm(list = ls())
@@ -47,17 +45,19 @@ Primeiro, baixe os dados {{% staticref "files/RDD.xlsx" "newtab" %}} aqui{{% /st
 
 Veja o gráfico abaixo. Ao que parece, há uma discontinuidade nos dados em torno de x = 100. Isso sugere que, se ignorarmos essa discontinuidade, a associação entre x e y é positiva. 
       
-      # Generate a line graph - Including all observations together
-      ggplot(dataRDD, aes(x, y))  + 
-        geom_point( size=1.25) + 
-        labs(y = "", x="", title = "Evolution of Y")+
-        theme(plot.title = element_text(color="black", size=25, face="bold"),
-              panel.background = element_rect(fill = "grey95", colour = "grey95"),
-              axis.text.y = element_text(face="bold", color="black", size = 16),
-              axis.text.x = element_text(face="bold", color="black", size = 16),
-              legend.title = element_blank(),
-              legend.key.size = unit(2, "cm")) + 
+    # Generate a line graph - Including all observations together
+    ggplot(dataRDD, aes(x, y))  + 
+      geom_point( size=1.25) + 
+      labs(y = "", x="", title = "Evolution of Y")+
+      theme(plot.title = element_text(color="black", size=25, face="bold"),
+            panel.background = element_rect(fill = "grey95", colour = "grey95"),
+            axis.text.y = element_text(face="bold", color="black", size = 16),
+            axis.text.x = element_text(face="bold", color="black", size = 16),
+            legend.title = element_blank(),
+            legend.key.size = unit(2, "cm")) + 
         geom_smooth(method = "lm", fill = NA)
+
+Teste
 
 {{< figure src="RDD_1.png" width="80%" >}}
 {{< figure src="RDD1.png" width="80%" >}}
