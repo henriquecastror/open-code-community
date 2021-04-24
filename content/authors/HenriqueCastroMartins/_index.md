@@ -72,9 +72,9 @@ social:
   icon_pack: ai
   link: https://www.researchgate.net/profile/Henrique_Castro_Martins
 
-- icon: dataverse
-  icon_pack: ai
-  link: https://dataverse.harvard.edu/dataverse/henrique
+#- icon: dataverse
+#  icon_pack: ai
+#  link: https://dataverse.harvard.edu/dataverse/henrique
   
 - icon: linkedin
   icon_pack: fab
@@ -88,13 +88,13 @@ social:
   icon_pack: fab
   link: https://twitter.com/henriquecastror
   
-- icon: instagram
-  icon_pack: fab
-  link: https://instagram.com/henriquecastror
+#- icon: instagram
+#  icon_pack: fab
+#  link: https://instagram.com/henriquecastror
 
-- icon: facebook
-  icon_pack: fab
-  link: https://facebook.com/henriquecastror
+#- icon: facebook
+#  icon_pack: fab
+#  link: https://facebook.com/henriquecastror
   
 # Enter email to display Gravatar (if Gravatar enabled in Config)
 email: ""

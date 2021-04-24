@@ -36,6 +36,7 @@ authors:
 
 Nesse post, vou mostrar como estimar um breve exemplo de _Regression Discontinuity Design (RDD)_.
 
+Primeiro, baixe os dados {{% staticref "files/RDD.xlsx" "newtab" %}} aqui{{% /staticref %}}. 
 
     library(readxl)
     library(ggplot2)
@@ -55,6 +56,8 @@ Veja o gráfico abaixo. Ao que parece, há uma discontinuidade nos dados em torn
             legend.title = element_blank(),
             legend.key.size = unit(2, "cm")) + 
         geom_smooth(method = "lm", fill = NA)
+
+Figura {{% staticref "files/RDD1.png" "newtab" %}} aqui{{% /staticref %}}.
 
 {{< figure src="RDD_1.png" width="80%" >}}
 {{< figure src="RDD1.png" width="80%" >}}
@@ -77,6 +80,8 @@ Vamos então separar as observações em dois grupos utilizando o valor de x = 1
               legend.title = element_blank(),
               legend.key.size = unit(2, "cm")) +
         geom_smooth(method = "lm", fill = NA)
+
+Figura {{% staticref "files/RDD2.png" "newtab" %}} aqui{{% /staticref %}}.
 
 {{< figure src="RDD_2.png" width="80%" >}}
 {{< figure src="RDD2.png" width="80%" >}}
@@ -113,6 +118,8 @@ Vamos olhar, então, mais perto os valores próximos do corte.
 
 
 Olhando apenas 50 observações antes e após o corte, a associação antes do corte se torna positiva. Isso é algo que vamos querer levar em consideração em nosso modelo RDD.
+
+Figura {{% staticref "files/RDD3.png" "newtab" %}} aqui{{% /staticref %}}.
 
 {{< figure src="RDD_3.png" width="80%" >}}
 {{< figure src="RDD3.png" width="80%" >}}
