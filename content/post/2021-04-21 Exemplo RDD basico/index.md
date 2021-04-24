@@ -58,6 +58,8 @@ Veja o gráfico abaixo. Ao que parece, há uma discontinuidade nos dados em torn
 
 Figura {{% staticref "files/RDD1.png" "newtab" %}} aqui{{% /staticref %}}.
 
+{{< figure src="RDD1.png" width="80%" >}}
+
 Vamos então separar as observações em dois grupos utilizando o valor de x = 100 como critério de corte.
 
       # Creating  groupS
