@@ -36,7 +36,6 @@ authors:
 
 Nesse post, vou mostrar como estimar um breve exemplo de _Regression Discontinuity Design (RDD)_.
 
-Primeiro, baixe os dados {{% staticref "files/RDD.xlsx" "newtab" %}} aqui{{% /staticref %}}. 
 
     library(readxl)
     library(ggplot2)
@@ -56,8 +55,6 @@ Veja o gráfico abaixo. Ao que parece, há uma discontinuidade nos dados em torn
             legend.title = element_blank(),
             legend.key.size = unit(2, "cm")) + 
         geom_smooth(method = "lm", fill = NA)
-
-Teste
 
 {{< figure src="RDD_1.png" width="80%" >}}
 {{< figure src="RDD1.png" width="80%" >}}
