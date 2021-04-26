@@ -106,7 +106,7 @@ Organizando os resultados para visualizarmos graficamente
                                    value = "Acertos",
                                    -Iteração)
                             
-Visualização gráfica (utilizando ggplot2) 
+Visualização gráfica (utilizando ggplot2)
 
     ggplot(data = df_resultados_gather, mapping = aes(x = Iteração,           # Número do jogo em X
                                                       y = Acertos,            # Valor da probabilidade de acerto em Y
