@@ -67,14 +67,13 @@ Filtrando a empresa, no caso a Petrobrás e selecionando as colunas que nos inte
 Reshape long to wide
 
     df_pivot_wide =  df_DR_petrobras %>%  pivot_wider(names_from = CD_CONTA, values_from = VL_CONTA)
-      
-{{< figure src="1.png" width="70%" >}}
-
     
+{{< figure src="2.png" width="110%" >}}
+
+      
 E depois retornando - reshape wide to long 
 
     df_pivt_long = df_pivot_wide  %>% pivot_longer(!DT_FIM_EXERC & !DENOM_CIA , names_to = "DS_CONTA", values_to = "VL_CONTA")
 
-
-{{< figure src="2.png" width="100%" >}}
+{{< figure src="1.png" width="70%" >}}
 
