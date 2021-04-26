@@ -11,8 +11,7 @@ authors:
 superuser: false
 
 # Role/position
-role:  Professor de FinanÃ§as
-
+role: Professor de FinanÃ§as
 # Organizations/Affiliations
 organizations:
 - name:  Professor, IÃSEG School of Management, France
