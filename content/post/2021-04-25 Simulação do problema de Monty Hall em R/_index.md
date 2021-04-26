@@ -24,9 +24,9 @@ subtitle: null
 summary: null
 
 tags:
-- Reshape 
-- Pivot Wider
-- Pivot Longer
+- Ggplot2
+- Simulation
+- Monty Hall
 - Research
 
 authors:
