@@ -11,7 +11,7 @@ authors:
 superuser: false
 
 # Role/position
-role:  Professor na IÃ‰SEG School of Management
+role:  Professor de Finanças
 
 # Organizations/Affiliations
 organizations:
@@ -22,10 +22,10 @@ organizations:
 bio:
 
 interests:
-- quant finance
-- financial econometrics
-- empirical asset pricing
-- portfolio management
+- Quant Finance
+- Financial Econometrics
+- Empirical Asset Pricing
+- Portfolio Management
 
 education:
   courses:
