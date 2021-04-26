@@ -56,8 +56,9 @@ $$
 \begin{equation}
 \min _{x_{t}^{t}} \sum_{t=1}^{T}\left(x_{t}-x_{t}^{t}\right)^{2}+\lambda \sum_{t=2}^{T-1}\left[\left(x_{t+1}^{t}-x_{t}^{t}\right)-\left(x_{t}^{t}-x_{t-1}^{t}\right)\right]^{2}
 \end{equation}
-onde o primeiro termo corresponde aos desvios ao quadrado de $x_{t}$ em relação a $x_{t}^{t}$, e o segundo termo é uma penalização que restringe a segunda diferença de $x_{t}^{t}$, e o parâmetro $\lambda$ controla a suavidade da série $x_{t}^{t}$.
 $$
+onde o primeiro termo corresponde aos desvios ao quadrado de $x_{t}$ em relação a $x_{t}^{t}$, e o segundo termo é uma penalização que restringe a segunda diferença de $x_{t}^{t}$, e o parâmetro $\lambda$ controla a suavidade da série $x_{t}^{t}$.
+
 
 Antes de começar a análise, é necessário que os pacotes abaixo sejam carregados. O pacote **BETS** é uma ótima alternativa para importar os dados direto do SIstema de Geneciamento (SGS), do Banco Central do Brasil (BCB). Tidyverse é uma coleção The tidyverse de pacotes do **R** projetados para data science. O pacote **ggplot2** permite a criação amigável de gráficos para a séries econômicas. Por último, o pacote **mFilter** será utilizado para implementação do filtro HP.
 
