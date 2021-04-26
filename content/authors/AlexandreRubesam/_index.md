@@ -11,7 +11,7 @@ authors:
 superuser: false
 
 # Role/position
-role:  Professor de Finanças
+role:  Professor de FinanÃ§as
 
 # Organizations/Affiliations
 organizations:
