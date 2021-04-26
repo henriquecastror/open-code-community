@@ -1,6 +1,6 @@
 ---
 
-title: "Simulação do problema de Monty Hall em R"
+title: "SimulaÃ§Ã£o do problema de Monty Hall em R"
 
 categories: []
 
@@ -37,32 +37,32 @@ authors:
 
 ## Comandos Gerais
 
-O problema de Monty Hall surgiu e foi nomeado pelo nome do apresentador de um programa de televisão dos anos 70, nos EUA, similar com o que vemos no Sílvio Santos aqui no Brasil. Pelo nome pode não lembrar, mas deve lembrar pela cena do excelente filme ["Quebrando a Banca"](https://www.youtube.com/watch?v=B6kYbt4LyLA). (caso não tenha visto, recomendamos bastante!)
+O problema de Monty Hall surgiu e foi nomeado pelo nome do apresentador de um programa de televisÃ£o dos anos 70, nos EUA, similar com o que vemos no SÃ­lvio Santos aqui no Brasil. Pelo nome pode nÃ£o lembrar, mas deve lembrar pela cena do excelente filme ["Quebrando a Banca"](https://www.youtube.com/watch?v=B6kYbt4LyLA). (caso nÃ£o tenha visto, recomendamos bastante!)
 
-Você tem 3 portas na sua frente: uma com um carro e outras duas com bodes, apenas não sabe quais são. Logo após você escolher uma porta, Monty, que sabe qual tem o carro, abre uma com um bode por trás, e pergunta: "Você gostaria de manter ou trocar a porta escolhida?"
+VocÃª tem 3 portas na sua frente: uma com um carro e outras duas com bodes, apenas nÃ£o sabe quais sÃ£o. Logo apÃ³s vocÃª escolher uma porta, Monty, que sabe qual tem o carro, abre uma com um bode por trÃ¡s, e pergunta: "VocÃª gostaria de manter ou trocar a porta escolhida?"
 
-Algo parece estranho... Se você troca a porta, existe 50% de chance de ter um bode ou de ter um carro, torna-se aleatório, certo? Na verdade, não. Como você escolheu uma porta ao acaso, há maior chance de ter inicialmente escolhido com um bode atrás (2 possibilidades em 3, ou 2/3 = 67%) e, como Monty Hall mostra a porta que tem um bode, você tem mais chance de trocar para uma que realmente tenha o prêmio. 
+Algo parece estranho... Se vocÃª troca a porta, existe 50% de chance de ter um bode ou de ter um carro, torna-se aleatÃ³rio, certo? Na verdade, nÃ£o. Como vocÃª escolheu uma porta ao acaso, hÃ¡ maior chance de ter inicialmente escolhido com um bode atrÃ¡s (2 possibilidades em 3, ou 2/3 = 67%) e, como Monty Hall mostra a porta que tem um bode, vocÃª tem mais chance de trocar para uma que realmente tenha o prÃªmio. 
 
-Assim, a estratégia de manter a porta te dá 1/3 de chance de acertar, enquanto trocando suas chances dobram, indo para 2/3!
+Assim, a estratÃ©gia de manter a porta te dÃ¡ 1/3 de chance de acertar, enquanto trocando suas chances dobram, indo para 2/3!
 
-Como podemos achar essas probabilidades simulando vários jogos? É isso que vamos explorar a seguir:
+Como podemos achar essas probabilidades simulando vÃ¡rios jogos? Ã‰ isso que vamos explorar a seguir:
 
-Iniciando as variáveis do jogo
+Iniciando as variÃ¡veis do jogo
 
-    library(tidyverse) # Pacote para limpeza e visualização de dados
-    library(grid)      # Nos auxiliará para fazer anotações nos gráficos
-    library(ggpubr)    # Temas já personalizados
+    library(tidyverse) # Pacote para limpeza e visualizaÃ§Ã£o de dados
+    library(grid)      # Nos auxiliarÃ¡ para fazer anotaÃ§Ãµes nos grÃ¡ficos
+    library(ggpubr)    # Temas jÃ¡ personalizados
     
-    set.seed(1970) # Homenagem à década que o programa foi ao ar
-                   # Ter o mesmo valor permite que tenha os mesmos resultados do código abaixo
+    set.seed(1970) # Homenagem Ã  dÃ©cada que o programa foi ao ar
+                   # Ter o mesmo valor permite que tenha os mesmos resultados do cÃ³digo abaixo
     
-    n <- 5000 # Número de programas que simularemos
+    n <- 5000 # NÃºmero de programas que simularemos
     
     resultados <- matrix(data = NA, # Matriz vazia; usaremos para preenchermos os resultados 
-                         ncol = 3,  # Três colunas: número do jogo e se acerta mantendo ou trocando a porta
+                         ncol = 3,  # TrÃªs colunas: nÃºmero do jogo e se acerta mantendo ou trocando a porta
                          nrow = n)  # Quantidade de jogos, um em cada linha
                         
-    resultados[,1] <- 1:n # Enumerando os jogos, de 1 até n (5000 nesse caso)                    
+    resultados[,1] <- 1:n # Enumerando os jogos, de 1 atÃ© n (5000 nesse caso)                    
 
 Modelando o desenrolar do jogo
 
@@ -71,17 +71,17 @@ Modelando o desenrolar do jogo
       
       portas = rep(NA, 3) # Novas portas
       
-      portas[sample(1:3, 1)] = 1 # Apenas uma delas contém o prêmio, designada ao acaso
+      portas[sample(1:3, 1)] = 1 # Apenas uma delas contÃ©m o prÃªmio, designada ao acaso
       
-      portas[is.na(portas) == TRUE] = 0 # Quais não contém prêmio são aquelas que tem bodes
+      portas[is.na(portas) == TRUE] = 0 # Quais nÃ£o contÃ©m prÃªmio sÃ£o aquelas que tem bodes
       
       jogador = sample(1:3, 1) # Jogador escolhe uma das 3 portas ao acaso
       
-      jogo = matrix(data = c( portas, c(1:3) ), nrow = 2, byrow = TRUE) # Apenas juntando as informações do jogo até aqui
+      jogo = matrix(data = c( portas, c(1:3) ), nrow = 2, byrow = TRUE) # Apenas juntando as informaÃ§Ãµes do jogo atÃ© aqui
       
-      jogo_apresentador = jogo[1,] # O apresentador, porém, conhece o jogo e qual a porta vencedora
+      jogo_apresentador = jogo[1,] # O apresentador, porÃ©m, conhece o jogo e qual a porta vencedora
       
-      jogo_apresentador[jogador] = "NÃO USAR"  # Obviamente, o apresentador não abrirá a porta que o jogador tenha escolhido
+      jogo_apresentador[jogador] = "NÃƒO USAR"  # Obviamente, o apresentador nÃ£o abrirÃ¡ a porta que o jogador tenha escolhido
       
       reveal = which(jogo_apresentador %in% "0") # Sabendo que existe outra porta com o bode, o apresentador a escolhe
       
@@ -92,41 +92,41 @@ Modelando o desenrolar do jogo
       }
       
 
-Arrumando os resultados para visualizarmos graficamente
+Organizando os resultados para visualizarmos graficamente 
 
     df_resultados <- as.data.frame(resultados) # Transformando em data.frame
 
-    names(df_resultados) <- c("Iteração", "Mantém", "Troca") # Modificando os nomes
+    names(df_resultados) <- c("IteraÃ§Ã£o", "MantÃ©m", "Troca") # Modificando os nomes
 
-    df_resultados$Mantém <- cummean(df_resultados$Mantém) # Observando a média de acertos ao longo dos jogos 
+    df_resultados$MantÃ©m <- cummean(df_resultados$MantÃ©m) # Observando a mÃ©dia de acertos ao longo dos jogos 
     df_resultados$Troca <- cummean(df_resultados$Troca)
 
     df_resultados_gather <- gather(df_resultados,       # Organizando os dados num formato longo
-                                   key = "Estratégia",  # Colocar "Mantém" e "Troca" numa coluna apenas
+                                   key = "EstratÃ©gia",  # Colocar "MantÃ©m" e "Troca" numa coluna apenas
                                    value = "Acertos",
-                                   -Iteração)
+                                   -IteraÃ§Ã£o)
                             
-Visualização gráfica (utilizando ggplot2)
+VisualizaÃ§Ã£o grÃ¡fica (utilizando ggplot2)
 
-    ggplot(data = df_resultados_gather, mapping = aes(x = Iteração,           # Número do jogo em X
+    ggplot(data = df_resultados_gather, mapping = aes(x = IteraÃ§Ã£o,           # NÃºmero do jogo em X
                                                       y = Acertos,            # Valor da probabilidade de acerto em Y
-                                                      colour = Estratégia)) + # Colorindo as curvas por tipo de estratégia
-    geom_line() + # Fazendo o gráfico das curvas
+                                                      colour = EstratÃ©gia)) + # Colorindo as curvas por tipo de estratÃ©gia
+    geom_line() + # Fazendo o grÃ¡fico das curvas
     geom_hline(yintercept = 1/3,
                lty = 2,
-               lwd = 0.5) + # Colocando no gráfico a probabilidade verdadeira de ganhar não trocando
+               lwd = 0.5) + # Colocando no grÃ¡fico a probabilidade verdadeira de ganhar nÃ£o trocando
     geom_hline(yintercept = 2/3,
                lty = 2,
-               lwd = 0.5) + # Colocando no gráfico a probabilidade verdadeira de ganhar trocando
-    geom_text(data = subset(df_resultados_gather, Iteração == n),
-            aes(label = Estratégia, 
-                colour = Estratégia, 
+               lwd = 0.5) + # Colocando no grÃ¡fico a probabilidade verdadeira de ganhar trocando
+    geom_text(data = subset(df_resultados_gather, IteraÃ§Ã£o == n),
+            aes(label = EstratÃ©gia, 
+                colour = EstratÃ©gia, 
                 x = n, 
-                y = Acertos + 0.05)) + # Marcando no gráfico os nomes das curvas
-    ggpubr::theme_classic2() + # Tema já pronto para uso
+                y = Acertos + 0.05)) + # Marcando no grÃ¡fico os nomes das curvas
+    ggpubr::theme_classic2() + # Tema jÃ¡ pronto para uso
     scale_y_continuous(labels = scales::percent_format()) + # Colocando o eixo Y em percentual
     labs(x = NULL,
          y = "Probabilidade de vencer",
-         title = "Problema de Monty Hall") + # Trocando os títulos dos eixos
+         title = "Problema de Monty Hall") + # Trocando os tÃ­tulos dos eixos
     theme(legend.position = "none") + # Retirando a legenda
     scale_color_manual(values = c("green", "red")) # Mudando manualmente as cores das curvas
