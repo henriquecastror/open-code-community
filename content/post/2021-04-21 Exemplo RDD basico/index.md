@@ -140,8 +140,4 @@ Aqui temos um caso bem simples e, acredito, bastante didático. Percebam que pod
 Abraços.
 
 
-Se tiver comentários ou perguntas, veja o thread no Twitter: 
-
-{{< tweet 1383448861474103305 >}}
-
 
