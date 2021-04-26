@@ -11,10 +11,10 @@ authors:
 superuser: false
 
 # Role/position
-role: Professor de FinanÃ§as
+role: Professor de Finanças
 # Organizations/Affiliations
 organizations:
-- name:  Professor, IÃSEG School of Management, France
+- name:  Professor, IÉSEG School of Management, France
   url: "https://www.ieseg.fr/"
 
 # Short bio (displayed in user profile at end of posts)
