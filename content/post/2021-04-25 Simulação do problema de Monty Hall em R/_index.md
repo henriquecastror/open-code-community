@@ -35,7 +35,7 @@ authors:
 
 ---
 
-## Comandos Gerais
+## Simulação do problema de Monty Hall em R
 
 O problema de Monty Hall surgiu e foi nomeado pelo nome do apresentador de um programa de televisão dos anos 70, nos EUA, similar com o que vemos no Sílvio Santos aqui no Brasil. Pelo nome pode não lembrar, mas deve lembrar pela cena do excelente filme ["Quebrando a Banca"](https://www.youtube.com/watch?v=B6kYbt4LyLA). (caso não tenha visto, recomendamos bastante!)
 
