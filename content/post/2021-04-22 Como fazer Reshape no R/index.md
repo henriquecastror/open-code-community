@@ -37,7 +37,7 @@ authors:
 
 ## Comandos Gerais
 
-Como fazer um reshape long to wide, respahe wide to long. Utilizaremos o pacote tidyr. Baixaremos os dados do GetDFPData2 do [Marcelo Perlin](https://www.msperlin.com/blog/) para termos os dados da DR. No caso iremos usar apenas a empresa Petrobrás como dado. 
+Neste post iremos ensinar como fazer um reshape long to wide, reshape wide to long. Utilizaremos o pacote tidyr. Baixaremos os dados do GetDFPData2 do [Marcelo Perlin](https://www.msperlin.com/blog/) para termos os dados da DR. No caso iremos usar apenas a empresa Petrobrás como dado. 
 
 Baixando os Dados 
 
@@ -67,10 +67,14 @@ Filtrando a empresa, no caso a Petrobrás e selecionando as colunas que nos inte
 Reshape long to wide
 
     df_pivot_wide =  df_DR_petrobras %>%  pivot_wider(names_from = CD_CONTA, values_from = VL_CONTA)
+      
+{{< figure src="1.png" width="80%" >}}
+
     
 E depois retornando - reshape wide to long
 
     df_pivt_long = df_pivot_wide  %>% pivot_longer(!DT_FIM_EXERC & !DENOM_CIA , names_to = "DS_CONTA", values_to = "VL_CONTA")
 
 
+{{< figure src="2.png" width="80%" >}}
 
