@@ -12,7 +12,7 @@ authors:
 superuser: false
 
 # Role/position
-role: Doutorando
+role: Doutorando em Finanças
 
 # Organizations/Affiliations
 organizations:
