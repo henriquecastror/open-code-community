@@ -130,3 +130,6 @@ Visualização gráfica (utilizando ggplot2)
          title = "Problema de Monty Hall") + # Trocando os títulos dos eixos
     theme(legend.position = "none") + # Retirando a legenda
     scale_color_manual(values = c("green", "red")) # Mudando manualmente as cores das curvas
+    
+   
+{{< figure src="1.png" width="80%" >}}    
