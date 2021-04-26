@@ -71,7 +71,7 @@ Reshape long to wide
 {{< figure src="1.png" width="80%" >}}
 
     
-E depois retornando - reshape wide to long
+E depois retornando - reshape wide to long 
 
     df_pivt_long = df_pivot_wide  %>% pivot_longer(!DT_FIM_EXERC & !DENOM_CIA , names_to = "DS_CONTA", values_to = "VL_CONTA")
 
