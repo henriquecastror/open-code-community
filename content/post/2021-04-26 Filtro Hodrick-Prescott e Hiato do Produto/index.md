@@ -137,8 +137,8 @@ gdp_s %>%
 Usualmente, o parâmetro de suavização $\lambda$ do filtro HP, de Hodrick e Prescott, pode ser definido de acordo com a frequência da série temporal:
 
 
-    $$
-    \begin{equation}
+$$
+\begin{equation}
       \begin{array}{lr}\hline
         \text{Dados} & \text{Frequência}\\\hline    
         \text{Mensal} & \text{14.400}\\
