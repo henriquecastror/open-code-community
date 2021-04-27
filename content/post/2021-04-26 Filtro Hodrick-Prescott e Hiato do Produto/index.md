@@ -136,7 +136,7 @@ gdp_s %>%
 
 Usualmente, o parâmetro de suavização $\lambda$ do filtro HP, de Hodrick e Prescott, pode ser definido de acordo com a frequência da série temporal:
 
-
+$$
 \begin{table}
     \centering
     \begin{tabular}{lr}\hline
@@ -146,7 +146,7 @@ Usualmente, o parâmetro de suavização $\lambda$ do filtro HP, de Hodrick e Pr
     Anual & 100\\\hline
     \end{tabular}
 \end{table}
-
+$$
 Como a análise considera uma série com frequência trimestral, $\lambda = 1.600$.Por hora, seguiremos apenas com o PIB trimestral do Brasil, com ajuste sazonal. Considere a estimação do filtro HP:  
 
 ```{r filtro hp, cache=TRUE}
