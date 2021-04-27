@@ -100,9 +100,9 @@ gdp %>%
   labs(title = "Produto Interno Bruto (PIB) trimestral - sem ajuste sazonal",
        y = "Indice base (1995 = 100)" , x = 'data') + 
   theme_gray()
-
+```
 {{< figure src="1.png" width="80%" >}}
-
+```
 gdp_s %>% 
   ggplot(aes(x = date, y = value)) +
   geom_line() +
