@@ -101,6 +101,8 @@ gdp %>%
        y = "Indice base (1995 = 100)" , x = 'data') + 
   theme_gray()
 
+{{< figure src="1.png" width="80%" >}}
+
 gdp_s %>% 
   ggplot(aes(x = date, y = value)) +
   geom_line() +
@@ -108,6 +110,8 @@ gdp_s %>%
        y = "Indice base (1995 = 100)" , x = 'data') + 
   theme_gray()
 ```
+{{< figure src="2.png" width="80%" >}}
+
 Para visualização das taxas de crescimento trimestral do PIB, considere os seguintes gráficos de barras:
 ```{r growth_plot, cache=TRUE}
 gdp %>% 
@@ -116,7 +120,9 @@ gdp %>%
   labs(title = "Taxa de crescimento trimestral do PIB - sem ajuste sazonal",
        y = "% mesmo trimestre do ano anterior", x = 'data') + 
   theme_grey()
-
+```
+{{< figure src="3.png" width="80%" >}}
+```
 gdp_s %>% 
   ggplot(aes(x = date, y = dlgdp_s)) +
   geom_col() +
@@ -125,11 +131,12 @@ gdp_s %>%
   theme_grey()
 
 ```
-
+{{< figure src="4.png" width="80%" >}}
 # Filtro Hodrick-Prescott
 
 Usualmente, o parâmetro de suavização $\lambda$ do filtro HP, de Hodrick e Prescott, pode ser definido de acordo com a frequência da série temporal:
 
+$$
 \begin{equation}
   \begin{array}{lr}\hline
     \text{Dados} & \text{Frequência}\\\hline    
@@ -138,7 +145,7 @@ Usualmente, o parâmetro de suavização $\lambda$ do filtro HP, de Hodrick e Pr
     \text{Anual} & \text{100}\\\hline
   \end{array}
 \end{equation}
-
+$$
 Como a análise considera uma série com frequência trimestral, $\lambda = 1.600$.Por hora, seguiremos apenas com o PIB trimestral do Brasil, com ajuste sazonal. Considere a estimação do filtro HP:  
 
 ```{r filtro hp, cache=TRUE}
@@ -160,7 +167,7 @@ gdp_s_filter %>%
   geom_line() +
   theme_grey()
 ```
-
+{{< figure src="5.png" width="80%" >}}
 Conforme discutido no ínício da análise, o componente de tendência de longo prazo da série do PIB trimestral pode ser tomado como o PIB potencial brasileiro. Para contrastar, considere a comparação da série com o PIB realizado 
 ```{r trend, cache=TRUE}
 gdp_s_filter %>% 
@@ -172,7 +179,7 @@ gdp_s_filter %>%
   geom_line() +
   theme_grey()
 ```
-
+{{< figure src="6.png" width="80%" >}}
 De acordo com a teoria macroeconômica, o hiato do produto é definido pela diferença entre o PIB observado e PIB potencial. Coincidentemente, o componente cíclico estimado pelo fltro determina exatamente essa diferença. Logo, para visualização do componente cíclico da série do logaritmo do PIB trimestral, considere o seguinte gráfico de linhas:
 ```{r ciclico, cache=TRUE}
 gdp_s_filter %>% 
@@ -184,3 +191,4 @@ gdp_s_filter %>%
   geom_line() +
   theme_grey()
 ```
+{{< figure src="7.png" width="80%" >}}
