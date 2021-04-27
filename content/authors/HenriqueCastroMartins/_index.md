@@ -60,9 +60,9 @@ social:
   icon_pack: ai
   link: https://scholar.google.com.br/citations?user=7gIfkRMAAAAJ&hl=pt-BR&oi=ao
 
-- icon: orcid
-  icon_pack: ai
-  link: https://orcid.org/0000-0002-3186-4245
+#- icon: orcid
+#  icon_pack: ai
+#  link: https://orcid.org/0000-0002-3186-4245
 
 - icon: publons
   icon_pack: ai
