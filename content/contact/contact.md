@@ -50,7 +50,7 @@ Por favor, siga os passos abaixo:
 
 Pelo momento, estamos aceitando códigos em R e Stata. Você pode escrever o texto dos seus materiais em inglês, mas nossa preferência é que seja escrito em português para maximizar a ajuda de estudantes ainda não perfeitamente familiarizados com a língua inglesa.
 
-Nossa expectativa de resposta é de alguns dias. Para garantir que os códigos postados estejam corretos, um colaborador antigo atual validar o código enviado por você. Assim, para manter seu nome na lista de colaboradores, contamos com sua ajuda em avaliar alguns códigos enviados.
+Nossa expectativa de resposta é de alguns dias. Para garantir que os códigos postados estejam corretos, um colaborador antigo atual irá validar o código enviado por você. Assim, para manter seu nome na lista de colaboradores, contamos com sua ajuda em avaliar alguns códigos enviados.
 
 
  
