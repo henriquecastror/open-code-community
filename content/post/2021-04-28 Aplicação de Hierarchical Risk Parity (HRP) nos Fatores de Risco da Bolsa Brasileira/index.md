@@ -275,7 +275,7 @@ Abaixo, alguns gráficos sobre a alocação e os resultados em 2018.
     library(gridExtra)
     grid.arrange(plot_series, plot_weights, ncol = 2)
 
-{{< figure library="true" src="plot2.png" width="80%" >}}  
+{{< figure library="true" src="plot2.png" width="100%" >}}  
 
 Calculando a média de retornos e de volatilidade, observa-se que os
 retornos do portfolio perdem apenas para o fator Momentum e possui a
