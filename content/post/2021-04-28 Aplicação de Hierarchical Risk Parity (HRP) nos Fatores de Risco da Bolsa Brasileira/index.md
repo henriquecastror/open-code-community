@@ -45,7 +45,7 @@ históricas dos fatores de risco da bolsa brasileira, sendo eles:
 - WML -&gt; Momentum  
 - IML -&gt; Liquidez
 
-Através da biblioteca {nefindata} do Marcelo Perlin, é possível obter
+Através da biblioteca {nefindata} do [Fernando Martinello Ramacciotti](https://github.com/fernandoramacciotti/nefindata), é possível obter
 essas séries históricas no R.
     
     devtools::install_github('fernandoramacciotti/nefindata/R-package')
