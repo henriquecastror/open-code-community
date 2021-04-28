@@ -37,7 +37,7 @@ authors:
 
 ## Fatores de Risco
 
-O NEFIN (Núcleo de Pesquisa em Economia Financeira) disponibiliza séries
+O [NEFIN](http://www.nefin.com.br/people.html)(Núcleo de Pesquisa em Economia Financeira) disponibiliza séries
 históricas dos fatores de risco da bolsa brasileira, sendo eles:  
 - Rm\_minus\_Rf -&gt; Fator de mercado  
 - SMB -&gt; Tamanho  
