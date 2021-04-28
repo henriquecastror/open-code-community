@@ -1,8 +1,8 @@
- q---
+---
 
 title: "Aplicação de Hierarchical Risk Parity (HRP) nos Fatores de Risco da Bolsa Brasileira"
 
-categories: [Factor Investing, Asset Allocation]
+categories: []
 
 date: '2021-04-28T00:00:00Z' 
 
@@ -34,7 +34,6 @@ authors:
 
 
 ---
-
 
 ## Fatores de Risco
 
