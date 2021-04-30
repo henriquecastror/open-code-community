@@ -435,9 +435,10 @@ Now that the dynamics of the GGR pairs trading is a bit clearer, let's move on t
     num_open_pairs_w1d <- xts(matrix(0, nrow = total_days, ncol = n_trading), 
                               order.by = dates)
 
-# Create indices of months in sample
-first_day <- c(1, (month(dates[2 : total_days]) != month(dates[1 : (total_days - 1)])))
-month_id <- cumsum(first_day)
+    # Create indices of months in sample
+    first_day <- c(1, (month(dates[2 : total_days]) != month(dates[1 : (total_days - 1)])))
+    month_id <- cumsum(first_day)
+
 Next comes the main loop to calculate the returns on the six overlapping portfolios over the entire sample period. This code hasn't really been optimized, but it's clear that it could easily be parallelized, as each overlapping portfolio is independent. In addition, trades in each trading period are also independent of previous formation and trading periods. In any case, the code doesn't take very long (about 9-10 minutes per portfolio for a 58-year backtest with daily data on an AMD Ryzen 7 3700X, not bad).
 
     for (i_port in (1 : n_trading)){
@@ -581,7 +582,7 @@ Zooming in to the post-GGR period allows us to see the decline in the profitabil
 
 {{< figure src="8.png" width="80%" >}}
 
-I repeat these steps without the one-day waiting period (the code is omitted), and then create an object with all the returns. The graph below shows the log of the cumulative returns of all the strategies over the entire sample period.
+I repeat these steps without the one-day waiting period (the code is omitted), and then   an object with all the returns. The graph below shows the log of the cumulative returns of all the strategies over the entire sample period.
 
     pts_returns <- merge(m_cc_w0d, m_fi_w0d, m_cc_w1d, m_fi_w1d)
     colnames(pts_returns) <- c("No waiting, committed capital",
