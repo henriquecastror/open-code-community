@@ -434,7 +434,7 @@ Now that the dynamics of the GGR pairs trading is a bit clearer, let's move on t
     num_open_pairs_w1d <- xts(matrix(0, nrow = total_days, ncol = n_trading), 
                               order.by = dates)
 
-# create indices of months in sample
+# Create indices of months in sample
 first_day <- c(1, (month(dates[2 : total_days]) != month(dates[1 : (total_days - 1)])))
 month_id <- cumsum(first_day)
 Next comes the main loop to calculate the returns on the six overlapping portfolios over the entire sample period. This code hasn't really been optimized, but it's clear that it could easily be parallelized, as each overlapping portfolio is independent. In addition, trades in each trading period are also independent of previous formation and trading periods. In any case, the code doesn't take very long (about 9-10 minutes per portfolio for a 58-year backtest with daily data on an AMD Ryzen 7 3700X, not bad).
