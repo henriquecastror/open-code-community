@@ -68,7 +68,7 @@ Essa parte iremos decidir quais paises iremos usar.  Vamos manter o simples por 
 
 
 
-Também precisaremos da lista de códigos ISO. Você pode encontrar os códigos ISO [aqui](https://www.iban.com/country-codes)
+Também precisaremos da lista de códigos ISO. Você pode encontrar os códigos ISO [aqui](https://www.iban.com/country-codes).
 
     Countries_iso3  <- c("BRA","ARG","CHL","RUS", "USA","CHN","DEU","AUS","ZAF","CAN","IND","EGY","GBR")
 
@@ -110,7 +110,7 @@ Finalmente, a parte divertida. Criando o mapa usando o código a seguir.
     
       hc
 
-Isso é o que você precisa encontrar [aqui]( https://henriquemartins.net/html/highchart_map.html)
+Isso é o que você precisa encontrar [aqui]( https://henriquemartins.net/html/highchart_map.html).
 
 
 ## 2° Mapa PIB per Capita Brasileiro por estado.
