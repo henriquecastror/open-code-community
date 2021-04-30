@@ -130,7 +130,7 @@ Em seguida, crie manualmente os dados (por exemplo, PIB per capita) para cada es
     dados <- structure(
     list(X = 1:27, 
        uf = c("Acre", "Alagoas", "Amapá", 
-              "Amazónas", "Bahia", "Ceará", "Distrito Federal", "Espírito Santo", 
+              "Amazônas", "Bahia", "Ceará", "Distrito Federal", "Espírito Santo", 
               "Goiás", "Maranhão", "Mato Grosso do Sul", "Mato Grosso", "Minas Gerais", 
               "Paraíba", "Paraná", "Pará", "Pernambuco", "Piauí", "Rio de Janeiro", 
               "Rio Grande do Norte", "Rio Grande do Sul", "Rondônia", "Roraima", 
@@ -297,3 +297,5 @@ A parte mais divertida do code, a criação do gif.
 {{< figure library="true" src="explicit_my3.gif" width="80%"  >}}
 
 Esperamos que tenha gostado. Caso tenha algum code que julgue interessante, compartilhe conosco. Nosso trabalho depende necessariamente da interação da comunidade.
+
+Ps. Obrigado ao [Gabriel](https://www.linkedin.com/in/gabrielreisrodrigues/) por ter achado um typo em uma versão anterior do código desse post.
