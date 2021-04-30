@@ -26,6 +26,7 @@ summary: null
 tags:
 - Pairs Trading
 - Financial Econometrics
+- Quantitative trading
 
 
 authors:
