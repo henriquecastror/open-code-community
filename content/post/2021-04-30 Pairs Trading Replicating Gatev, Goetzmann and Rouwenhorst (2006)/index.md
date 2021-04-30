@@ -4,7 +4,7 @@ title: "Pairs Trading: Replicating Gatev, Goetzmann and Rouwenhorst (2006)"
 
 categories: []
 
-date: '2021-04-21T00:00:00Z'
+date: '2021-04-30T00:00:00Z'
 
 draft: no
 
@@ -65,7 +65,7 @@ $$
 x_{pt}=w_{1,t}r_{1}^{L}+w_{2,t}r_{2}^{s}
 \end{equation}
 $$
-where $w_{1,t}$ and $w_{2,t}$ are initially equal to 1, and evolve after that according to the changes in the value of each stock, i.e., $w_{i,t} = w_{i,t-1}(1+r_{i,t-1}$. The returns calculated in this way essentially mimic the evolution of the profit and loss (pnl) of a portfolio with a $1 long and $1 short on each stock. To calculate the returns on a portfolio of pairs, we need some more assumptions about how capital is allocated to open pairs. GGR suggest two alternatives, the committed capital and the fully invested approaches. Both of these are equally-weighted approaches, in the sense that each pair is always allocated the same amount of money. In the committed capital approach, the full capital of the fund is equally allocated among the 20 pairs, regardless of whether a position is open. In the fully invested approach, the fund's capital at each day is equally allocated among the pairs with open trades. It is important to note that these assumptions are not very realistic: they would require frequent (essentially, daily) rebalancing of the pairs trades. A more realistic approach is to simulate a fund with a given starting capital, and open trades on day t using the capital available, keeping the number of shares of the stocks for a pair trade fixed throughout the life of the trade, and accounting for transaction costs in a more direct fashion.
+where $w_{1,t}$ and $w_{2,t}$ are initially equal to 1, and evolve after that according to the changes in the value of each stock, i.e., $w_{i,t} = w_{i,t-1}(1+r_{i,t-1)}$. The returns calculated in this way essentially mimic the evolution of the profit and loss (pnl) of a portfolio with a $1 long and $1 short on each stock. To calculate the returns on a portfolio of pairs, we need some more assumptions about how capital is allocated to open pairs. GGR suggest two alternatives, the committed capital and the fully invested approaches. Both of these are equally-weighted approaches, in the sense that each pair is always allocated the same amount of money. In the committed capital approach, the full capital of the fund is equally allocated among the 20 pairs, regardless of whether a position is open. In the fully invested approach, the fund's capital at each day is equally allocated among the pairs with open trades. It is important to note that these assumptions are not very realistic: they would require frequent (essentially, daily) rebalancing of the pairs trades. A more realistic approach is to simulate a fund with a given starting capital, and open trades on day t using the capital available, keeping the number of shares of the stocks for a pair trade fixed throughout the life of the trade, and accounting for transaction costs in a more direct fashion.
 
 Now that that the strategy is fully explained, let's go to the implementation.
 
