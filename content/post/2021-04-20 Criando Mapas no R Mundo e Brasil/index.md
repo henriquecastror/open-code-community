@@ -278,8 +278,6 @@ Você pode criar coisas mais sofisticadas com o mesmo código. Vamos pular a exp
     plot(p3)
 
 A parte mais divertida do code, a criação do gif.
-
-#GIF
     
     require(gridExtra)
     grid.arrange(p1,p2,p3,nrow = 1)
