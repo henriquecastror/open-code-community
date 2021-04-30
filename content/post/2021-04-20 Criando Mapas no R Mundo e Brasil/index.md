@@ -156,7 +156,7 @@ Finalmente, crie o mapa.
       xlab("") +  ylab("") +geom_sf_label(aes(label = abbrev_state),label.padding = unit(0.5, "mm"),size = 3) 
     
     
-    p = p +   labs(title = "GDP per Capita by State",caption  = "Authors: Gerson J???nior e Henrique Martins.") +
+    p = p +   labs(title = "GDP per Capita by State",caption  = "Authors: Gerson Júnior e Henrique Martins.") +
       theme(plot.caption = element_text(hjust = 0, face= "italic"), 
             plot.title.position = "plot", 
             plot.caption.position =  "plot") 
