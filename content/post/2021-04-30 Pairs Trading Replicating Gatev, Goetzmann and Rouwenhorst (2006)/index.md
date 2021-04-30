@@ -47,7 +47,7 @@ In this short article, I replicate the original GGR pairs trading strategy, usin
 The GGR pairs trading strategy is implemented using a 12-month period to select pairs, and a 6-month trading period, where the 20 pairs (an arbitrary number) with the smallest squared distances are traded. Because of the 6-month trading period, GGR suggest using 6 overlapping portfolios, each starting one month after the other, similarly to the approach use by [Jegadeesh and Titman (1993)](https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1540-6261.1993.tb04702.x) for momentum. The return of the pairs trading strategy on each period is the average return from the six pairs portfolios.
 
 ## Pair Selection
-GGR select pairs with minimum "minimum distance between normalized historical prices". In practice, this entails creating a synthetic time series of prices for each stock, starting at the value of $1, from the time series of total returns, including dividends. In order to be eligible, a stock needs to have valid return data for the entire formation period, to ensure that the stocks used for pairs formation will be reasonably liquid. Once the universe of eligible stocks for a formation period is defined, we calculate the distances between the normalized prices of all possible pairs of stocks, and select the 20 pairs with the minimum distance. This can be computationally intensive: if there are 1,000 eligible stocks, for example, we need to calculate (1,000×999)/2=499,500 distances.
+GGR select pairs with minimum "minimum distance between normalized historical prices". In practice, this entails creating a synthetic time series of prices for each stock, starting at the value of $1, from the time series of total returns, including dividends. In order to be eligible, a stock needs to have valid return data for the entire formation period, to ensure that the stocks used for pairs formation will be reasonably liquid. Once the universe of eligible stocks for a formation period is defined, we calculate the distances between the normalized prices of all possible pairs of stocks, and select the 20 pairs with the minimum distance. This can be computationally intensive: if there are 1,000 eligible stocks, for example, we need to calculate (1,000 x 999)/2 = 499,500 distances.
 
 It should be noted that this minimum distance criterion is not the only way to select pairs. Other typical approaches use cointegration or copulas to define the pairs. See for example [Rad, Low, and Faff, R. (2016).](https://www.tandfonline.com/doi/abs/10.1080/14697688.2016.1164337?journalCode=rquf20)
 
@@ -58,7 +58,7 @@ A pair is closed if the spread converges (i.e. crosses zero), or if the end of t
 
 ## Calculation of Returns
 
-As mentioned by GGR, calculating the return of a portfolio of pairs is not a straightforward task, as in principle, the portfolio can have a net position of zero. In addition, multiple positions in any given pair can be opened and closed during the trading period, depending on trading opportunities. A simple and sensible way to obtain reasonable estimates for the daily return on a single pair is to assume that a trade is initiated with $1 long and $1 short positions on the first day of the trade, and update this amount according to the returns on each leg. That is, the return on a pair on day t is given by
+As mentioned by GGR, calculating the return of a portfolio of pairs is not a straightforward task, as in principle, the portfolio can have a net position of zero. In addition, multiple positions in any given pair can be opened and closed during the trading period, depending on trading opportunities. A simple and sensible way to obtain reasonable estimates for the daily return on a single pair is to assume that a trade is initiated with \$1 long and \$1 short positions on the first day of the trade, and update this amount according to the returns on each leg. That is, the return on a pair on day t is given by
 
 $$
 \begin{equation}
@@ -101,7 +101,7 @@ The full data set starting in 1962 has about 69 million lines and contains 7 var
     # variables
     colnames(dcrsp)
 
-Next, I would like to work with data in matrix format. I create T×N matrices for the returns and volumes, i.e., each row represents one day, and each column, a stock. A ridiculously convenient way to do is is by using the dcast function, which can reshape my long matrix into a wide matrix by putting each PERMNO in a column. After I do this, I then convert the matrices to an xts object, so I can easily work with specific date ranges. I substitute any returns lower than -1 by that value.
+Next, I would like to work with data in matrix format. I create TÃ—N matrices for the returns and volumes, i.e., each row represents one day, and each column, a stock. A ridiculously convenient way to do is is by using the dcast function, which can reshape my long matrix into a wide matrix by putting each PERMNO in a column. After I do this, I then convert the matrices to an xts object, so I can easily work with specific date ranges. I substitute any returns lower than -1 by that value.
 
     # daily volumes
     vol <- dcast(dcrsp, DATE ~ PERMNO, value.var = "VOL", fill = NA)
@@ -671,7 +671,7 @@ Finally, for the post-GFC period, returns decrease dramatically, and range betwe
 Covid-19 Market Stress (January to March 2020)
 {{< figure src="13.png" width="80%" >}}
 
-##Concluding Remarks
+## Concluding Remarks
 
 In this post, I replicate some results from the simple distance-based pairs trading strategy of [Gatev, Goetzmann and Rouwenhorst (2006)](https://academic.oup.com/rfs/article-abstract/19/3/797/1646694?redirectedFrom=fulltext) and [Do and Faff (2010)](https://www.tandfonline.com/doi/abs/10.2469/faj.v66.n4.1), extending the sample to the end of 2020. I show that the profitability of the strategy has decreased to essentially zero after 2009. Therefore, we can safely assume that this simple pairs trading strategy is no longer profitable after this period. I hope this code will be useful to researchers exploring this type of strategy.
 
