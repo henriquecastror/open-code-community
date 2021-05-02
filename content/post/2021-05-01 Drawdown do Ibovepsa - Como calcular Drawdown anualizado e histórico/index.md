@@ -37,7 +37,7 @@ authors:
 ## Fatores de Risco
 
 
- "_"Drawdown"_" é uma medida que mensura a queda máxima em relação a um topo anterior. Portanto iremos calcular no post 2  "_"drawdowns"_": o drawdown em cada momento (t) e o drawdown anualizado, nas seguintes formulas:
+ _Drawdown_ é uma medida que mensura a queda máxima em relação a um topo anterior. Portanto iremos calcular no post 2  _drawdowns_: o drawdown em cada momento (t) e o drawdown anualizado, nas seguintes formulas:
 
 $$ \begin{equation} Drawdown_{anualizado}= \frac{mínimo{ano}}{máximo_{ano}} \end{equation} $$
 
