@@ -49,26 +49,26 @@ Iremos analisar o Ibovespa usando o package quantmod para obtenção de dados, i
     library(quantmod)
     library(PerformanceAnalytics)
     library(lubridate)
-Precisaremos de dados então vamos pegar os dados a partir de 2020 e do Ibovespa (^BVSP).
+Precisaremos de dados então vamos pegar os dados do Ibovespa (^BVSP) a partir de 2020.
 
     from.date <- as.Date("01/01/2020", format="%m/%d/%y")
     getSymbols("^BVSP", from = from.date)
 
-Transformando o XTS em Data.frame
+Transformando o XTS em Data.frame.
 
     BVSP = data.frame(BVSP)
-Esse  passo é para filtrar os NA's
+Esse passo é para filtrar os NA's.
 
     BVSP = BVSP %>% mutate(Return_day = ROC(BVSP.Close))  %>%  filter(BVSP.Close!="NA")
 Transformando o nomes das linhas em colunas, dado que os nomes das linhas são as datas.
 
     BVSP <- cbind(Date = rownames(BVSP), BVSP)
 
-Criando uma coluna com o ano da data.
+Criando uma coluna com o ano. 
 
     BVSP$year = year(BVSP$Date)
 
-Calculando o Drawdown anualizado
+Calculando o Drawdown anualizado.
 
     BVSP %>%
       group_by(year) %>%
@@ -79,7 +79,7 @@ Calculando o Drawdown anualizado
     1  2020                -0.468
     2  2021                -0.12
 
-Podemos ver que o drawdown anualizado de 2020 foi de -0.46. Uma extrema queda, decorrente da crise do COVID-19. Era de esperar que esse ano tivesse um alto drawdown.
+Podemos ver que o drawdown anualizado de 2020 foi de -0.46. Um alto drawdown, decorrente da crise do COVID-19. 
 Agora vamos calcular o Drawdown histórico.
 
     draw_downs_Bovespa <- c()
@@ -97,7 +97,7 @@ Agora vamos calcular o Drawdown histórico.
     draw_downs_Bovespa$date = as.Date(draw_downs_Bovespa$date , format =  "%Y-%m-%d")
     draw_downs_Bovespa$draw_down = as.numeric(draw_downs_Bovespa$draw_down)
     
-Plotando o gráfico
+Plotando o gráfico.
 
     g1 = ggplot(data = draw_downs_Bovespa, aes(x = date, y = draw_down)) + geom_area(fill="red4") +   scale_x_date(breaks = seq(as.Date("2000-01-01"), as.Date("2020-01-01"), by="2 year"),labels=date_format("%Y")) +theme(plot.title = element_text(color="darkblue", size=40, face="bold"),  panel.background = element_rect(fill = "grey95", colour = "grey95"),axis.title=element_text(size=14,face="bold"),title=element_text(size=14,face="bold", color="darkblue"),axis.text.y = element_text(face = "bold", color = "darkblue", size = 15),axis.text.x = element_text(face = "bold", color = "darkblue", size = 15))
     g1 = g1 + ggtitle("Drawdown Ibovepsa") +     theme(plot.title = element_text(size = 15, face = "bold"))
