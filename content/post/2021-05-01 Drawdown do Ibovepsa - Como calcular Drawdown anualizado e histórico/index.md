@@ -37,13 +37,13 @@ authors:
 ## Fatores de Risco
 
 
-Drawdown é uma medida que mensura a queda máxima em relação a um topo anterior. Portanto iremos calcular no post 2 drawdown, o drawdown em cada momento (t) e o drawdown anual, nas seguintes formulas.
+Drawdown é uma medida que mensura a queda máxima em relação a um topo anterior. Portanto iremos calcular no post 2 drawdown, o drawdown em cada momento (t) e o drawdown anual, nas seguintes formulas:
 
 Drawdown  anual = (mínimo do ano / máximo do ano) -1
 
 Drawdown no momento (t) = (preço no momento / máximo histórico até o momento t)-1
 
-Iremos analisar do Ibovespa usando o package quantmod, iremos utilizar a data 2020 para cá apenas como forma de exercício. Drawdown dos fundos é uma importante medida a ser analisada. Muitos fundos são extramemnte alavancados. Alavancagem é um recurso legítimo, mas drawdown excessivos mostra a falta de gestão de risco. O exercício é apenas para IBOV, mas recomendo faze-lo para os fundos que você tem interesse de virar cotista
+Iremos analisar do Ibovespa usando o package quantmod, iremos utilizar a data 2020 para cá apenas como forma de exercício. Drawdown dos fundos é uma importante medida a ser analisada. Muitos fundos são extramemnte alavancados. Alavancagem é um recurso legítimo, mas drawdown excessivos mostra a falta de gestão de risco. O exercício é apenas para IBOV, mas recomendo faze-lo para os fundos que você tem interesse de virar cotista.
 
         
     library(quantmod)
