@@ -41,7 +41,7 @@ authors:
 
 $$ \begin{equation} Drawdown_{anualizado}= \frac{mínimo_{ano}}{máximo_{ano}} \end{equation} $$
 
-$$ \begin{equation}Drawdown_{t}= \frac{indíce{t}}{\text{máximo histórico no momento}{t}} \end{equation} $$
+$$ \begin{equation}Drawdown_{t}= \frac{indíce_{t}}{\text{máximo histórico no momento}_{t}} \end{equation} $$
 
 Iremos analisar o Ibovespa usando o package quantmod para obtenção de dados, iremos utilizar os dados de 2020 até a ultima observação como forma de exercício. O  _drawdown_ dos fundos é uma importante medida a ser analisada. Muitos fundos são extramemnte alavancados. Alavancagem é um recurso legítimo, mas  _drawdown_ excessivos mostra a falta de gestão de risco. O exercício é apenas para IBOV, mas recomendo a análise para os fundos que você tem interesse de virar cotista.
 
