@@ -1,6 +1,6 @@
 ---
 
-title: "Drawdown do Ibovepsa - Como calcular Drawdown anualizado e histÛrico"
+title: "Drawdown do Ibovepsa - Como calcular Drawdown anualizado e hist√≥rico"
 
 categories: []
 
@@ -37,19 +37,19 @@ authors:
 ## Fatores de Risco
 
 
-Drawdown È uma medida que mensura a queda m·xima em relaÁ„o a um topo anterior. Portanto iremos calcular no post 2 drawdown, o drawdown em cada momento (t) e o drawdown anual, nas seguintes formulas.
+Drawdown √© uma medida que mensura a queda m√°xima em rela√ß√£o a um topo anterior. Portanto iremos calcular no post 2 drawdown, o drawdown em cada momento (t) e o drawdown anual, nas seguintes formulas.
 
-Drawdown  anual = (mÌnimo do ano / m·ximo do ano) -1
+Drawdown  anual = (m√≠nimo do ano / m√°ximo do ano) -1
 
-Drawdown no momento (t) = (preÁo no momento / m·ximo histÛrico atÈ o momento t)-1
+Drawdown no momento (t) = (pre√ßo no momento / m√°ximo hist√≥rico at√© o momento t)-1
 
-Iremos analisar do Ibovespa usando o package quantmod, iremos utilizar a data 2020 para c· apenas como forma de exercÌcio. Drawdown dos fundos È uma importante medida a ser analisada. Muitos fundos s„o extramemnte alavancados. Alavancagem È um recurso legÌtimo, mas drawdown excessivos mostra a falta de gest„o de risco. O exercÌcio È apenas para IBOV, mas recomendo faze-lo para os fundos que vocÍ tem interesse de virar cotista
+Iremos analisar do Ibovespa usando o package quantmod, iremos utilizar a data 2020 para c√° apenas como forma de exerc√≠cio. Drawdown dos fundos √© uma importante medida a ser analisada. Muitos fundos s√£o extramemnte alavancados. Alavancagem √© um recurso leg√≠timo, mas drawdown excessivos mostra a falta de gest√£o de risco. O exerc√≠cio √© apenas para IBOV, mas recomendo faze-lo para os fundos que voc√™ tem interesse de virar cotista
 
         
     library(quantmod)
     library(PerformanceAnalytics)
     library(lubridate)
-Precisaremos de dados ent„o vamos pegar os dados a partir de 2020 e do Ibovespa (^BVSP)
+Precisaremos de dados ent√£o vamos pegar os dados a partir de 2020 e do Ibovespa (^BVSP).
 
     from.date <- as.Date("01/01/2020", format="%m/%d/%y")
     getSymbols("^BVSP", from = from.date)
@@ -57,10 +57,10 @@ Precisaremos de dados ent„o vamos pegar os dados a partir de 2020 e do Ibovespa 
 Transformando o XTS em Data.frame
 
     BVSP = data.frame(BVSP)
-Esse  passo È para filtrar os NA's
+Esse  passo √© para filtrar os NA's
 
     BVSP = BVSP %>% mutate(Return_day = ROC(BVSP.Close))  %>%  filter(BVSP.Close!="NA")
-Transformando o nomes das linhas em colunas, dado que os nomes das linhas s„o as datas.
+Transformando o nomes das linhas em colunas, dado que os nomes das linhas s√£o as datas.
 
     BVSP <- cbind(Date = rownames(BVSP), BVSP)
 
@@ -80,7 +80,7 @@ Calculando o Drawdown anualizado
     2  2021                -0.12
 
 Podemos ver que o drawdown anualizado de 2020 foi de -0.46. Uma extrema queda, decorrente da crise do COVID-19. Era de esperar que esse ano tivesse um alto drawdown.
-Agora vamos calcular o Drawdown histÛrico.
+Agora vamos calcular o Drawdown hist√≥rico.
 
     draw_downs_Bovespa <- c()
     maxs_Bovespa <- c()
@@ -97,7 +97,7 @@ Agora vamos calcular o Drawdown histÛrico.
     draw_downs_Bovespa$date = as.Date(draw_downs_Bovespa$date , format =  "%Y-%m-%d")
     draw_downs_Bovespa$draw_down = as.numeric(draw_downs_Bovespa$draw_down)
     
-Plotando o gr·fico
+Plotando o gr√°fico
 
     g1 = ggplot(data = draw_downs_Bovespa, aes(x = date, y = draw_down)) + geom_area(fill="red4") +   scale_x_date(breaks = seq(as.Date("2000-01-01"), as.Date("2020-01-01"), by="2 year"),labels=date_format("%Y")) +theme(plot.title = element_text(color="darkblue", size=40, face="bold"),  panel.background = element_rect(fill = "grey95", colour = "grey95"),axis.title=element_text(size=14,face="bold"),title=element_text(size=14,face="bold", color="darkblue"),axis.text.y = element_text(face = "bold", color = "darkblue", size = 15),axis.text.x = element_text(face = "bold", color = "darkblue", size = 15))
     g1 = g1 + ggtitle("Drawdown Ibovepsa") +     theme(plot.title = element_text(size = 15, face = "bold"))
