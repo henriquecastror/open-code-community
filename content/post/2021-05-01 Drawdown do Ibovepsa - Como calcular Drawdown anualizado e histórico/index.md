@@ -39,9 +39,9 @@ authors:
 
  _Drawdown_ é uma medida que mensura a queda máxima em relação a um topo anterior. Portanto iremos calcular no post 2  _drawdowns_: o _drawdown_ em cada momento (t) e o _drawdown_ anualizado, nas seguintes formulas:
 
-$$ \begin{equation} Drawdown_{anualizado}= \frac{mínimo_{ano}}{máximo_{ano}} \end{equation} $$
+$$ \begin{equation} Drawdown_{anualizado}= \frac{mínimo_{ano}}{máximo_{ano}} - 1  \end{equation} $$
 
-$$ \begin{equation}Drawdown_{t}= \frac{indíce_{t}}{\text{máximo histórico no momento}_{t}} \end{equation} $$
+$$ \begin{equation}Drawdown_{t}= \frac{indíce_{t}}{\text{máximo histórico no momento}_{t}} - 1 \end{equation} $$
 
 Iremos analisar o Ibovespa usando o package quantmod para obtenção de dados, iremos utilizar os dados de 2020 até a ultima observação como forma de exercício. O  _drawdown_ dos fundos é uma importante medida a ser analisada. Muitos fundos são extramemnte alavancados. Alavancagem é um recurso legítimo, mas  _drawdown_ excessivos mostra a falta de gestão de risco. O exercício é apenas para IBOV, mas recomendo a análise para os fundos que você tem interesse de virar cotista.
 
