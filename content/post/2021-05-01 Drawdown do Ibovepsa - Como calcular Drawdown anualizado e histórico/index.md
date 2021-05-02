@@ -37,13 +37,13 @@ authors:
 ## Fatores de Risco
 
 
- _Drawdown_ é uma medida que mensura a queda máxima em relação a um topo anterior. Portanto iremos calcular no post 2  _drawdowns_: o drawdown em cada momento (t) e o drawdown anualizado, nas seguintes formulas:
+ _Drawdown_ é uma medida que mensura a queda máxima em relação a um topo anterior. Portanto iremos calcular no post 2  _drawdowns_: o _drawdown_ em cada momento (t) e o _drawdown_ anualizado, nas seguintes formulas:
 
 $$ \begin{equation} Drawdown_{anualizado}= \frac{mínimo_{ano}}{máximo_{ano}} \end{equation} $$
 
 $$ \begin{equation}Drawdown_{t}= \frac{indíce_no_momento_{t}}{máximo_histórico_no_momento{t}} \end{equation} $$
 
-Iremos analisar o Ibovespa usando o package quantmod para obtenção de dados, iremos utilizar os dados de 2020 até a ultima observação como forma de exercício. O  "_"drawdown"_" dos fundos é uma importante medida a ser analisada. Muitos fundos são extramemnte alavancados. Alavancagem é um recurso legítimo, mas  "_"drawdown"_" excessivos mostra a falta de gestão de risco. O exercício é apenas para IBOV, mas recomendo a análise para os fundos que você tem interesse de virar cotista.
+Iremos analisar o Ibovespa usando o package quantmod para obtenção de dados, iremos utilizar os dados de 2020 até a ultima observação como forma de exercício. O  _drawdown_ dos fundos é uma importante medida a ser analisada. Muitos fundos são extramemnte alavancados. Alavancagem é um recurso legítimo, mas  _drawdown_ excessivos mostra a falta de gestão de risco. O exercício é apenas para IBOV, mas recomendo a análise para os fundos que você tem interesse de virar cotista.
 
         
     library(quantmod)
@@ -68,7 +68,7 @@ Criando uma coluna com o ano.
 
     BVSP$year = year(BVSP$Date)
 
-Calculando o  "_"drawdown"_" anualizado.
+Calculando o  _drawdown_ anualizado.
 
     BVSP %>%
       group_by(year) %>%
@@ -79,8 +79,8 @@ Calculando o  "_"drawdown"_" anualizado.
     1  2020                -0.468
     2  2021                -0.12
 
-Podemos ver que o  "_"drawdown "_" anualizado de 2020 foi de -0.46. Um alto  "_"drawdown"_", decorrente da crise do COVID-19. 
-Agora vamos calcular o  "_"drawdown"_" histórico.
+Podemos ver que o  _drawdown_ anualizado de 2020 foi de -0.46. Um alto  _drawdown_, decorrente da crise do COVID-19. 
+Agora vamos calcular o _drawdown_ histórico.
 
     draw_downs_Bovespa <- c()
     maxs_Bovespa <- c()
