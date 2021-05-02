@@ -43,7 +43,7 @@ Drawdown  anual = (mínimo do ano / máximo do ano) -1
 
 Drawdown no momento (t) = (preço no momento / máximo histórico até o momento t)-1
 
-Iremos analisar do Ibovespa usando o package quantmod, iremos utilizar a data 2020 para cá apenas como forma de exercício. Drawdown dos fundos é uma importante medida a ser analisada. Muitos fundos são extramemnte alavancados. Alavancagem é um recurso legítimo, mas drawdown excessivos mostra a falta de gestão de risco. O exercício é apenas para IBOV, mas recomendo faze-lo para os fundos que você tem interesse de virar cotista.
+Iremos analisar o Ibovespa usando o package quantmod para obtenção de dados, iremos utilizar os dados de 2020 até a ultima observação como forma de exercício. O drawdown dos fundos é uma importante medida a ser analisada. Muitos fundos são extramemnte alavancados. Alavancagem é um recurso legítimo, mas drawdown excessivos mostra a falta de gestão de risco. O exercício é apenas para IBOV, mas recomendo a análise para os fundos que você tem interesse de virar cotista.
 
         
     library(quantmod)
