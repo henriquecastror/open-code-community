@@ -99,7 +99,7 @@ Agora vamos calcular o Drawdown histórico.
     
 Plotando o gráfico.
 
-    g1 = ggplot(data = draw_downs_Bovespa, aes(x = date, y = draw_down)) + geom_area(fill="red4") +   scale_x_date(breaks = seq(as.Date("2000-01-01"), as.Date("2020-01-01"), by="2 year"),labels=date_format("%Y")) +theme(plot.title = element_text(color="darkblue", size=40, face="bold"),  panel.background = element_rect(fill = "grey95", colour = "grey95"),axis.title=element_text(size=14,face="bold"),title=element_text(size=14,face="bold", color="darkblue"),axis.text.y = element_text(face = "bold", color = "darkblue", size = 15),axis.text.x = element_text(face = "bold", color = "darkblue", size = 15))
+    g1 = ggplot(data = draw_downs_Bovespa, aes(x = date, y = draw_down)) + geom_area(fill="red4") +   scale_x_date(breaks = seq(as.Date("2020-01-01"), as.Date("2021-05-01"), by="3 month"),labels=date_format("%m-%Y")) +theme(plot.title = element_text(color="darkblue", size=40, face="bold"),  panel.background = element_rect(fill = "grey95", colour = "grey95"),axis.title=element_text(size=14,face="bold"),title=element_text(size=14,face="bold", color="darkblue"),axis.text.y = element_text(face = "bold", color = "darkblue", size = 15),axis.text.x = element_text(face = "bold", color = "darkblue", size = 15))
     g1 = g1 + ggtitle("Drawdown Ibovepsa") +     theme(plot.title = element_text(size = 15, face = "bold"))
     g1
     
