@@ -12,7 +12,7 @@ featured: false
 gallery_item:
 
 image:
-  caption: https://unsplash.com/photos/8-X2_qeTdlQ
+  caption: 
   focal_point: right
   preview_only: false
 
@@ -50,7 +50,7 @@ First, load the following packages.
     library(gganimate)
    
    
-You need to download the data to your machine. Download it from {{% staticref "files/Randomization_data.xlsx" "newtab" %}} aqui{{% /staticref %}}. Then load the file as below.
+You need to download the data to your machine. Download it from {{% staticref "files/Randomization_data.xlsx" "newtab" %}} here{{% /staticref %}}. Then load the file as below.
 
     data  <- read_excel("Randomization_data.xlsx", range = "A1:C101")
 
