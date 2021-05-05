@@ -90,7 +90,7 @@ Uma outra análise que nós fizemos era sobre a palavra "futebol", nós esperamo
     g1 = g1 + ggtitle("Pesquisas da palavra Futebol") +     theme(plot.title = element_text(size = 15, face = "bold"))
     g1
 
-{{< figure src="Plot3.png" width="80%" >}}
+{{< figure src="Plot2.png" width="80%" >}}
 
 Além da hipótese ser confirmada, outro ponto importante é ver a queda brusca da busca por futebol no começo da pandemia em 2020, além do foco da população ter mudado, não havia jogos.
 
