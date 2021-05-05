@@ -34,7 +34,7 @@ authors:
 
 ## Google Trend - Buscas
 
-Nesse post, Henrique Martins e Gerson Júnior irão fazer uma rápida análise de tendências na pesquisa do Google. Primeira análise é fazer um comparativo das tendências de pesquisa de "Covid 19" versus "Vacina".
+Nesse post, Henrique Martins e Gerson Júnior irão fazer uma rápida análise de tendências na pesquisa do Google. Primeiro plot é um comparativo das tendências de pesquisa de "Covid 19" versus "Vacina".
 Primeiramente vamos carregar os pacotes necessários para o code.
 
     library(gtrendsR)
@@ -74,7 +74,7 @@ Fazendo um tratamento nos dados.
 
 Podemos reparar numa queda da tendência da busca da Covid, é plausível que o começo da pandemia além de assustar a população, fez com que ela procurasse conteúdo sobre sintomas, possíveis tratamentos, e com o tempo reduzisse essa busca. E por outro lado, com o começo da campanha de vacinação, parte da população buscou a palavra "vacinação" para acompanhamento da campanha e do calendário da vacinação.
 
-Uma outra análise que nós fizemos era sobre a palavra "futebol", nós esperamos que o final do ano tenha picos de busca da palavra,pois é quando o Campeonato Brasileiro, Copa do Brasil e Libertadores se encontra nas rodadas finais e decisivas.
+Uma outra análise que nós fizemos era sobre a palavra "futebol", nós esperamos que o final do ano tenha picos de busca da palavra,pois é quando o Campeonato Brasileiro, Copa do Brasil e Libertadores se encontram nas rodadas finais e decisivas.
 
     Futebol <-gtrends(keyword = "Futebol",geo = "BR",time = "2015-03-01 2021-05-05",gprop = c("web", "news", "images", "froogle", "youtube"),
                       category = 0,hl = "en-US",low_search_volume = FALSE,
