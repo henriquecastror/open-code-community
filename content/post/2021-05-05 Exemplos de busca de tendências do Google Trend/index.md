@@ -149,7 +149,7 @@ Hipótese confirmada. Novamente ressaltando a leitura do paper anterior.
     g4 = g4 + ggtitle("Pesquisas da palavra BBB") +     theme(plot.title = element_text(size = 15, face = "bold"))
     g4
 
-{{< figure src="Plot5.png" width="80%" >}}
+{{< figure src="Plot5.png" width="100%" >}}
 
 Podemos observer os picos no começo do ano, logicamente, pois é nessa época que ocorre o programa e principalmente o aumento na busca das duas últimas edições. Pelo visto, a Globo acertou em cheio.
  
