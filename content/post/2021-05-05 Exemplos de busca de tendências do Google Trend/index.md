@@ -1,6 +1,5 @@
- ---
-
-title: "Exemplos de busca de tendências do Google Trend"
+---
+title: "Exemplos de busca de tendÃªncias do Google Trend"
 
 categories: []
 
@@ -31,13 +30,12 @@ tags:
 authors:
 - HenriqueMartins
 - GersonJunior
-
-
 ---
+
 ## Google Trend - Buscas
 
-Nesse post, Henrique Martins e Gerson Júnior irão fazer uma rápida análise de tendências na pesquisa do Google. Primeira análise é fazer um comparativo das tendências de pesquisa de "Covid 19" versus "Vacina".
-Primeiramente vamos carregar os pacotes necessários para o code.
+Nesse post, Henrique Martins e Gerson JÃºnior irÃ£o fazer uma rÃ¡pida anÃ¡lise de tendÃªncias na pesquisa do Google. Primeira anÃ¡lise Ã© fazer um comparativo das tendÃªncias de pesquisa de "Covid 19" versus "Vacina".
+Primeiramente vamos carregar os pacotes necessÃ¡rios para o code.
 
     library(gtrendsR)
     library(ggplot2)
@@ -60,7 +58,7 @@ Fazendo um tratamento nos dados.
     Vacina   <-Vacina$interest_over_time$hits
     covid <-covid$interest_over_time$hits
     
-    e plotar o gráfico de uma tendência contra a outra.
+    e plotar o grÃ¡fico de uma tendÃªncia contra a outra.
     plot(covid~as.Date(x),type = "b",lty = 1,main = "",xlab = "",ylab = "",yaxt="none",
          col="darkgreen", cex=1.5,pch=16)
     par(new=TRUE)
@@ -69,14 +67,14 @@ Fazendo um tratamento nos dados.
     legend("topright", legend=c("Vacina", "Covid 19"),col=c("red", "darkgreen"), lty=1:1, cex=1.0)
     mtext(side=1, line=2, "Meses", col="black", font=2, cex=1.5)
     mtext(side=2, line=2, "Hits", col="black", font=2, cex=1.5)
-    mtext(side=3, line=2, "Pesquisa das palavra 'Vacina' e 'Covid-19' nos últimos 12 meses", col="black",font=2,cex=2.25)
+    mtext(side=3, line=2, "Pesquisa das palavra 'Vacina' e 'Covid-19' nos Ãºltimos 12 meses", col="black",font=2,cex=2.25)
     axis(2, seq(0,100),las=2, font=2, col="black")
     
 {{< figure src="Plot1.png" width="80%" >}}
 
-Podemos reparar numa queda da tendência da busca da Covid, é plausível que o começo da pandemia além de assustar a população, fez com que ela procurasse conteúdo sobre sintomas, possíveis tratamentos, e com o tempo reduzisse essa busca. E por outro lado, com o começo da campanha de vacinação, parte da população buscou a palavra "vacinação" para acompanhamento da campanha e do calendário da vacinação.
+Podemos reparar numa queda da tendÃªncia da busca da Covid, Ã© plausÃ­vel que o comeÃ§o da pandemia alÃ©m de assustar a populaÃ§Ã£o, fez com que ela procurasse conteÃºdo sobre sintomas, possÃ­veis tratamentos, e com o tempo reduzisse essa busca. E por outro lado, com o comeÃ§o da campanha de vacinaÃ§Ã£o, parte da populaÃ§Ã£o buscou a palavra "vacinaÃ§Ã£o" para acompanhamento da campanha e do calendÃ¡rio da vacinaÃ§Ã£o.
 
-Uma outra análise que nós fizemos era sobre a palavra "futebol", nós esperamos que o final do ano tenha picos de busca da palavra,pois é quando o Campeonato Brasileiro, Copa do Brasil e Libertadores se encontra nas rodadas finais e decisivas.
+Uma outra anÃ¡lise que nÃ³s fizemos era sobre a palavra "futebol", nÃ³s esperamos que o final do ano tenha picos de busca da palavra,pois Ã© quando o Campeonato Brasileiro, Copa do Brasil e Libertadores se encontra nas rodadas finais e decisivas.
 
     Futebol <-gtrends(keyword = "Futebol",geo = "BR",time = "2015-03-01 2021-05-05",gprop = c("web", "news", "images", "froogle", "youtube"),
                       category = 0,hl = "en-US",low_search_volume = FALSE,
@@ -94,9 +92,9 @@ Uma outra análise que nós fizemos era sobre a palavra "futebol", nós esperamos q
 
 {{< figure src="Plot3.png" width="80%" >}}
 
-Além da hipótese ser confirmada, outro ponto importante é ver a queda brusca da busca por futebol no começo da pandemia em 2020, além do foco da população ter mudado, não havia jogos.
+AlÃ©m da hipÃ³tese ser confirmada, outro ponto importante Ã© ver a queda brusca da busca por futebol no comeÃ§o da pandemia em 2020, alÃ©m do foco da populaÃ§Ã£o ter mudado, nÃ£o havia jogos.
 
-Se futebol ocorreu essa tendência de aumentar as buscas no final do ano. Nós ficamos curiosos para saber sobre a tendência de busca do maior clube da América. Por coincidência, também clube do coração do autor que está escrevendo esse post. Nesse caso, eu (Gerson) espero que o Flamengo tenha um ápice no final de 2019, ano que o clube venceu a copa libertadores e o brasileiro, vivenciando a época mais gloriosa da sua história.
+Se futebol ocorreu essa tendÃªncia de aumentar as buscas no final do ano. NÃ³s ficamos curiosos para saber sobre a tendÃªncia de busca do maior clube da AmÃ©rica. Por coincidÃªncia, tambÃ©m clube do coraÃ§Ã£o do autor que estÃ¡ escrevendo esse post. Nesse caso, eu (Gerson) espero que o Flamengo tenha um Ã¡pice no final de 2019, ano que o clube venceu a copa libertadores e o brasileiro, vivenciando a Ã©poca mais gloriosa da sua histÃ³ria.
     
     Flamengo <-gtrends(keyword = "Flamengo",geo = "BR",time = "2015-03-01 2021-05-05",gprop = c("web", "news", "images", "froogle", "youtube"),
                  category = 0,hl = "en-US",low_search_volume = FALSE,
@@ -114,8 +112,8 @@ Se futebol ocorreu essa tendência de aumentar as buscas no final do ano. Nós fic
 
 {{< figure library="true" src="Plot3.png" width="80%" >}}
 
-A hipótese foi confirmada, além de uma queda na busca no começo da pandemia, fenômeno com mesma explicação que a palavra futebol.
-A modalidade de negociação day-trade vem crescendo nas mídias sociais, essa é uma modalidade de muito risco, vale a leitura do paper de Fernando Chague e Bruno Giovannetti (É possível viver de day-trade?). Minha hipótese que vem crescendo o número de pesquisas sobre a palavra day-trade no google. 
+A hipÃ³tese foi confirmada, alÃ©m de uma queda na busca no comeÃ§o da pandemia, fenÃ´meno com mesma explicaÃ§Ã£o que a palavra futebol.
+A modalidade de negociaÃ§Ã£o day-trade vem crescendo nas mÃ­dias sociais, essa Ã© uma modalidade de muito risco, vale a leitura do paper de Fernando Chague e Bruno Giovannetti (Ã‰ possÃ­vel viver de day-trade?). Minha hipÃ³tese que vem crescendo o nÃºmero de pesquisas sobre a palavra day-trade no google. 
 
     Day_trade <-gtrends(keyword = "Day Trade",geo = "BR",time = "2015-03-01 2021-05-05",gprop = c("web", "news", "images", "froogle", "youtube"),
                       category = 0,hl = "en-US",low_search_volume = FALSE,
@@ -133,9 +131,9 @@ A modalidade de negociação day-trade vem crescendo nas mídias sociais, essa é um
 
 {{< figure src="Plot4.png" width="80%" >}}
 
-Hipótese confirmada. Novamente ressaltando a leitura do paper anterior.
+HipÃ³tese confirmada. Novamente ressaltando a leitura do paper anterior.
 
-É inegável que a mudança do BBB, mesclando celebridades com anônimos e a entrada de Tiago Leifertc como apresentador deu um novo gás ao programa. Mas será que as ultimas duas edições tiveram mais buscas pela palavra BBB?  Vamos aos dados.
+Ã‰ inegÃ¡vel que a mudanÃ§a do BBB, mesclando celebridades com anÃ´nimos e a entrada de Tiago Leifertc como apresentador deu um novo gÃ¡s ao programa. Mas serÃ¡ que as ultimas duas ediÃ§Ãµes tiveram mais buscas pela palavra BBB?  Vamos aos dados.
 
     BBB <-gtrends(keyword = "BBB",geo = "BR",time = "2010-01-01 2021-04-01",gprop = c("web", "news", "images", "froogle", "youtube"),
                         category = 0,hl = "en-US",low_search_volume = FALSE,
@@ -153,9 +151,9 @@ Hipótese confirmada. Novamente ressaltando a leitura do paper anterior.
 
 {{< figure src="Plot5.png" width="80%" >}}
 
-Podemos observer os picos no começo do ano, logicamente, pois é nessa época que ocorre o programa e principalmente o aumento na busca das duas últimas edições. Pelo visto, a Globo acertou em cheio.
+Podemos observer os picos no comeÃ§o do ano, logicamente, pois Ã© nessa Ã©poca que ocorre o programa e principalmente o aumento na busca das duas Ãºltimas ediÃ§Ãµes. Pelo visto, a Globo acertou em cheio.
  
-Ainda sobre o BBB, temos talvez o maior fenômeno entre os participantes, uma vitória na final com mais de 90%, vamos ver como foi a busca pela participante Juliete??
+Ainda sobre o BBB, temos talvez o maior fenÃ´meno entre os participantes, uma vitÃ³ria na final com mais de 90%, vamos ver como foi a busca pela participante Juliete??
 
     Juliette <-gtrends(keyword = "Juliette Freire",geo = "BR",time = "2021-02-01 2021-05-01",gprop = c("web", "news", "images", "froogle", "youtube"),
                   category = 0,hl = "en-US",low_search_volume = FALSE,
@@ -174,5 +172,5 @@ Ainda sobre o BBB, temos talvez o maior fenômeno entre os participantes, uma vit
 {{< figure src="Plot6.png" width="80%" >}}
 
 
-Enfim, você pode brincar, buscar outras palavras, fica ai nosso post. Querendo deixar que quem escreve o post (Gerson Júnior) é fã do Gil. Qualquer dúvida ou sugestão pode enviar email. 
+Enfim, vocÃª pode brincar, buscar outras palavras, fica ai nosso post. Querendo deixar que quem escreve o post (Gerson JÃºnior) Ã© fÃ£ do Gil. Qualquer dÃºvida ou sugestÃ£o pode enviar email. 
 
