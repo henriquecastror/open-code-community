@@ -113,7 +113,7 @@ Se futebol ocorreu essa tendência de aumentar as buscas no final do ano. Nós f
 {{< figure library="true" src="Plot3.png" width="80%" >}}
 
 A hipótese foi confirmada, além de uma queda na busca no começo da pandemia, fenômeno com mesma explicação que a palavra futebol.
-A modalidade de negociação day-trade vem crescendo nas mídias sociais, essa é uma modalidade de muito risco, vale a leitura do paper de [Fernando Chague e Bruno Giovannetti (É possível viver de day-trade?)](http://bibliotecadigital.fgv.br/ojs/index.php/rbfin/article/download/81949/78263/176074). Minha hipótese que vem crescendo o número de pesquisas sobre a palavra day-trade no google. 
+A modalidade de negociação day-trade vem crescendo nas mídias sociais, essa é uma modalidade de muito risco, vale a leitura do paper de [Fernando Chague e Bruno Giovannetti (É possível viver de day-trade?)](http://bibliotecadigital.fgv.br/ojs/index.php/rbfin/article/download/81949/78263/176074). Nossa hipótese é que vem crescendo o número de pesquisas sobre a palavra "day-trade" no google. 
 
     Day_trade <-gtrends(keyword = "Day Trade",geo = "BR",time = "2015-03-01 2021-05-05",gprop = c("web", "news", "images", "froogle", "youtube"),
                       category = 0,hl = "en-US",low_search_volume = FALSE,
