@@ -94,7 +94,7 @@ Uma outra análise que nós fizemos era sobre a palavra "futebol", nós esperamo
 
 Além da hipótese ser confirmada, outro ponto importante é ver a queda brusca da busca por futebol no começo da pandemia em 2020, além do foco da população ter mudado, não havia jogos.
 
-Se futebol ocorreu essa tendência de aumentar as buscas no final do ano. Nós ficamos curiosos para saber sobre a tendência de Flamengo. Nesse caso, nós esperamos que o Flamengo tenha um ápice no final de 2019, ano que o clube venceu a Copa Libertadores e o Brasileiro, vivenciando a época mais gloriosa da sua história. Mesmo fenômeno pode ser observado pelo Palmeiras em 2020, quando venceu Libertadores e Copa do Brasil (fica como exercício). 
+Se futebol ocorreu essa tendência de aumentar as buscas no final do ano. Nós ficamos curiosos para saber sobre a tendência de Flamengo. Nesse caso, nós esperamos que o Flamengo tenha um ápice no final de 2019, ano que o clube venceu a Copa Libertadores e o Brasileiro. Mesmo fenômeno pode ser observado pelo Palmeiras em 2020, quando venceu Libertadores e Copa do Brasil (fica como exercício). 
     
     Flamengo <-gtrends(keyword = "Flamengo",geo = "BR",time = "2015-03-01 2021-05-05",gprop = c("web", "news", "images", "froogle", "youtube"),
                  category = 0,hl = "en-US",low_search_volume = FALSE,
