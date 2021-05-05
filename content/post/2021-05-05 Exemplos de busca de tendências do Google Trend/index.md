@@ -94,7 +94,7 @@ Uma outra análise que nós fizemos era sobre a palavra "futebol", nós esperamo
 
 Além da hipótese ser confirmada, outro ponto importante é ver a queda brusca da busca por futebol no começo da pandemia em 2020, além do foco da população ter mudado, não havia jogos.
 
-Se futebol ocorreu essa tendência de aumentar as buscas no final do ano. Nós ficamos curiosos para saber sobre a tendência de busca do maior clube da América. Por coincidência, também clube do coração do autor que está escrevendo esse post. Nesse caso, eu (Gerson) espero que o Flamengo tenha um ápice no final de 2019, ano que o clube venceu a copa libertadores e o brasileiro, vivenciando a época mais gloriosa da sua história.
+Se futebol ocorreu essa tendência de aumentar as buscas no final do ano. Nós ficamos curiosos para saber sobre a tendência de Flamengo. Nesse caso, nós esperamos que o Flamengo tenha um ápice no final de 2019, ano que o clube venceu a copa libertadores e o brasileiro, vivenciando a época mais gloriosa da sua história. Mesmo fenomeno 
     
     Flamengo <-gtrends(keyword = "Flamengo",geo = "BR",time = "2015-03-01 2021-05-05",gprop = c("web", "news", "images", "froogle", "youtube"),
                  category = 0,hl = "en-US",low_search_volume = FALSE,
@@ -113,7 +113,7 @@ Se futebol ocorreu essa tendência de aumentar as buscas no final do ano. Nós f
 {{< figure library="true" src="Plot3.png" width="80%" >}}
 
 A hipótese foi confirmada, além de uma queda na busca no começo da pandemia, fenômeno com mesma explicação que a palavra futebol.
-A modalidade de negociação day-trade vem crescendo nas mídias sociais, essa é uma modalidade de muito risco, vale a leitura do paper de Fernando Chague e Bruno Giovannetti (É possível viver de day-trade?). Minha hipótese que vem crescendo o número de pesquisas sobre a palavra day-trade no google. 
+A modalidade de negociação day-trade vem crescendo nas mídias sociais, essa é uma modalidade de muito risco, vale a leitura do paper de [Fernando Chague e Bruno Giovannetti (É possível viver de day-trade?)](http://bibliotecadigital.fgv.br/ojs/index.php/rbfin/article/download/81949/78263/176074). Minha hipótese que vem crescendo o número de pesquisas sobre a palavra day-trade no google. 
 
     Day_trade <-gtrends(keyword = "Day Trade",geo = "BR",time = "2015-03-01 2021-05-05",gprop = c("web", "news", "images", "froogle", "youtube"),
                       category = 0,hl = "en-US",low_search_volume = FALSE,
@@ -133,7 +133,7 @@ A modalidade de negociação day-trade vem crescendo nas mídias sociais, essa �
 
 Hipótese confirmada. Novamente ressaltando a leitura do paper anterior.
 
-É inegável que a mudança do BBB, mesclando celebridades com anônimos e a entrada de Tiago Leifertc como apresentador deu um novo gás ao programa. Mas será que as ultimas duas edições tiveram mais buscas pela palavra BBB?  Vamos aos dados.
+É inegável que a mudança do BBB, mesclando celebridades com anônimos e a entrada de Tiago Leifert como apresentador deu um novo gás ao programa. Mas será que as ultimas duas edições tiveram mais buscas pela palavra BBB?  Vamos aos dados.
 
     BBB <-gtrends(keyword = "BBB",geo = "BR",time = "2010-01-01 2021-04-01",gprop = c("web", "news", "images", "froogle", "youtube"),
                         category = 0,hl = "en-US",low_search_volume = FALSE,
@@ -172,5 +172,5 @@ Ainda sobre o BBB, temos talvez o maior fenômeno entre os participantes, uma vi
 {{< figure src="Plot6.png" width="80%" >}}
 
 
-Enfim, você pode brincar, buscar outras palavras, fica ai nosso post. Querendo deixar que quem escreve o post (Gerson Júnior) é fã do Gil. Qualquer dúvida ou sugestão pode enviar email. 
+Enfim, você pode brincar, buscar outras palavras, fica ai nosso post. 
 
