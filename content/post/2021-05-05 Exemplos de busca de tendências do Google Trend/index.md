@@ -58,7 +58,8 @@ Fazendo um tratamento nos dados.
     Vacina   <-Vacina$interest_over_time$hits
     covid <-covid$interest_over_time$hits
     
-    e plotar o gráfico de uma tendência contra a outra.
+  Plotar o gráfico de uma tendência contra a outra.
+    
     plot(covid~as.Date(x),type = "b",lty = 1,main = "",xlab = "",ylab = "",yaxt="none",
          col="darkgreen", cex=1.5,pch=16)
     par(new=TRUE)
