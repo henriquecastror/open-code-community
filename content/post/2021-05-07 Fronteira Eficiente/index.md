@@ -95,7 +95,7 @@ Vamos passar os parâmetros de simulação
     
     num_portfolios = 200000
 
-# Vamos usar a função random para criar 10 pesos aleatórios
+Vamos usar a função random para criar 10 pesos aleatórios
 
     peso = np.random.random(num_assets)
     peso /= np.sum(peso)
