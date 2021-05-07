@@ -33,7 +33,7 @@ authors:
 ---
 
 Nesse post o Victor Gomes do [Trading com Dados](https://tradingcomdados.com/) estima a fronteira eficiente de ativos da bolsa brasileira.
-Importando bibliotecas
+Importando bibliotecas.
 
     import pandas as pd
     import numpy as np
@@ -41,7 +41,7 @@ Importando bibliotecas
     import matplotlib.pyplot as plt
     import seaborn as sns
 
-Selecionando ativos da carteira
+Selecionando ativos da carteira.
 
     ativos = ['ABEV3.SA', 'EQTL3.SA', 'LREN3.SA', 'CIEL3.SA', 'RADL3.SA', 'RENT3.SA', 'MDIA3.SA', 'WEGE3.SA', 'EZTC3.SA', 'FLRY3.SA']
 
@@ -52,7 +52,7 @@ Criando um dataframe que vai conter as cotações diárias dessas ações.
     for t in ativos:
       df[t] = wb.DataReader(t, data_source = 'yahoo', start = '2014-01-01', end = '2021-05-03')['Adj Close']
 
-Visualizando os preços
+Visualizando os preços.
 
     df.plot(figsize = (10,10))
 
@@ -138,7 +138,7 @@ Plotando o retorno da carteira.
     retorno_carteira.plot()
 {{< figure src="2.png" width="80%" >}}
 
-Retorno acumulado
+Retorno acumulado.
 
     returns_acm = (1 + retorno_carteira).cumprod()
     returns_acm.plot()
