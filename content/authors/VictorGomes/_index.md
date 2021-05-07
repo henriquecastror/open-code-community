@@ -11,19 +11,24 @@ authors:
 superuser: false
 
 # Role/position
-role: CEO & Co-founder (Trading com Dados)
+role: CEO (Trading com Dados)
 
 # Organizations/Affiliations
 organizations:
-- name: Trading com Dados
-  url: "https://tradingcomdados.com/"
+- name: Pontifícia Universidade Católica do Rio de Janeiro(PUC-Rio)
+  url: "https://iag.puc-rio.br/"
 
 # Short bio (displayed in user profile at end of posts)
 bio: 
 
+interests:
+- Finance
+- Data Science
+
+
 education:
   courses:
-  - course: Master's Degree 
+  - course: Mestrado em Engenharia Industrial
     institution: Northeastern University
     year: 2016
 
@@ -32,7 +37,7 @@ education:
 #   For an email link, use "fas" icon pack, "envelope" icon, and a link in the
 #   form "mailto:your-email@example.com" or "#contact" for contact widget.
 
-
+social:
 - icon: twitter
   icon_pack: fab
   link: https://twitter.com/tradingcomdados
@@ -53,4 +58,4 @@ user_groups:
 
 ---
 
-I graduated from Northeastern University from Boston (MA) with a Master's of Science in Industrial Engineering in May 2017. During my studies, I became particularly interested in Data Science and started specializing in that field. My capstone project was an application of Data Mining in the field of aviation, where I studied the relationships between airports and the cities they were in the US. I was also a Teaching Assistant for the Intro to Data Mining and Machine Learning class, which covered subjects such as linear and logistic regression, decision trees, Naive Bayes, dimensionality reduction, text mining and others. I believe machine learning and predictive analytics help businesses gain better insights into its operations and processes, thus allowing them to make better decisions. I am also the creator of blog Trading com Dados, which utilizes data science to find insights for the stock market - tradingcomdados.com (in Portuguese).
+I graduated from Northeastern University from Boston (MA) with a Master’s of Science in Industrial Engineering in May 2017. During my studies, I became particularly interested in Data Science and started specializing in that field. My capstone project was an application of Data Mining in the field of aviation, where I studied the relationships between airports and the cities they were in the US. I was also a Teaching Assistant for the Intro to Data Mining and Machine Learning class, which covered subjects such as linear and logistic regression, decision trees, Naive Bayes, dimensionality reduction, text mining and others. I believe machine learning and predictive analytics help businesses gain better insights into its operations and processes, thus allowing them to make better decisions. I am also the creator of blog Trading com Dados, which utilizes data science to find insights for the stock market - tradingcomdados.com (in Portuguese).
