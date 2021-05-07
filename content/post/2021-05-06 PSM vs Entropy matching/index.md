@@ -18,7 +18,7 @@ image:
 
 projects: []
 
-subtitle: Um exercÌcio simples de comparaÁ„o 
+subtitle: Um exerc√≠cio simples de compara√ß√£o 
 
 summary: 
 
@@ -32,27 +32,27 @@ title: Propensity-score matching (PSM) vs. Entropy matching
 ---
 
 
-Esse È um post r·pido para comparar os resultados de duas tÈcnicas de matching diferentes: Propensity-score matching (PSM) e Entropy matching.
+Esse √© um post r√°pido para comparar os resultados de duas t√©cnicas de matching diferentes: Propensity-score matching (PSM) e Entropy matching.
 
-Uma explicaÁ„o mais apurada das tÈcnicas est· fora do escopo desse post, mas de uma forma simples, vocÍ pode pensar da seguinte forma:
+Uma explica√ß√£o mais apurada das t√©cnicas est√° fora do escopo desse post, mas de uma forma simples, voc√™ pode pensar da seguinte forma:
 
-Propensity-score matching faz o pareamento entre unidades do grupo de controle e tratamento com base na propens„o de se receber o tratamento dado um conjunto de covariates. 
+Propensity-score matching faz o pareamento entre unidades do grupo de controle e tratamento com base na propens√£o de se receber o tratamento dado um conjunto de covariates. 
 
-Propensity-score È simplesmente um n˙mero que indica a probabilidade de se receber o tratamento. 
+Propensity-score √© simplesmente um n√∫mero que indica a probabilidade de se receber o tratamento. 
 
-Assim o pareamento com base em propensity-score È simplesmente o pareamento usando essa probabilidade como critÈrio fundamental.
+Assim o pareamento com base em propensity-score √© simplesmente o pareamento usando essa probabilidade como crit√©rio fundamental.
 
-Entropy matching, por sua vez, faz o pareamento com base em um ou mais momentos da distribuiÁ„o dos covariates. 
+Entropy matching, por sua vez, faz o pareamento com base em um ou mais momentos da distribui√ß√£o dos covariates. 
 
-Basicamente, vocÍ usa como critÈrio de pareamento: a mÈdia (1∫ momento), vari‚ncia (2∫ momento), skewness (3∫ momento)... 
+Basicamente, voc√™ usa como crit√©rio de pareamento: a m√©dia (1¬∫ momento), vari√¢ncia (2¬∫ momento), skewness (3¬∫ momento)... 
 
-O resultado È uma sub-amostra rebalanceada tal que os momentos dos covariates dos grupos de controle e tratamento s„o semelhantes.
+O resultado √© uma sub-amostra rebalanceada tal que os momentos dos covariates dos grupos de controle e tratamento s√£o semelhantes.
 
-De novo, essa È uma explicaÁ„o curta, apenas para entendermos o b·sico das diferenÁas entre os dois mÈtodos.
+De novo, essa √© uma explica√ß√£o curta, apenas para entendermos o b√°sico das diferen√ßas entre os dois m√©todos.
 
-Vamos agora ‡ estimaÁ„o. Dessa vez, vou utilizar o Stata. Esse cÛdigo È amplamente baseado nesse [artigo](https://dspace.mit.edu/bitstream/handle/1721.1/89819/hainmueller-2013-ebalance.pdf?sequence=1).
+Vamos agora √† estima√ß√£o. Dessa vez, vou utilizar o Stata. Esse c√≥digo √© amplamente baseado nesse [artigo](https://dspace.mit.edu/bitstream/handle/1721.1/89819/hainmueller-2013-ebalance.pdf?sequence=1).
 
-Se vocÍ quiser o do-file utilizado, pode baixar {{% staticref "files/2021-05-06 PSM vs Entropy matching.do" "newtab" %}} aqui{{% /staticref %}}.
+Se voc√™ quiser o do-file utilizado, pode baixar {{% staticref "files/2021-05-06 PSM vs Entropy matching.do" "newtab" %}} aqui{{% /staticref %}}.
 
 # PSM
 
@@ -61,98 +61,98 @@ Instale os pacotes "psmatch2" e "ebalance" e carregue a seguinte base:
     ssc install ebalance, all replace
     use cps1re74.dta, clear
 		
-Vamos comeÁar analisando os covariates "age", "black" e "educ" no grupo de controle e no de tratamento. A vari·vel de tratamento È "treat". 
+Vamos come√ßar analisando os covariates "age", "black" e "educ" no grupo de controle e no de tratamento. A vari√°vel de tratamento √© "treat". 
 
-Ao todo, temos 185 obs. de tratamento e 15,992 observaÁıes de controle.
+Ao todo, temos 185 obs. de tratamento e 15,992 observa√ß√µes de controle.
 
     qui estpost tabstat age black educ , by(treat) c(s) s(me v sk n) nototal
     esttab . 	,varwidth(20) cells("mean(fmt(3)) variance(fmt(3)) skewness(fmt(3)) count(fmt(0))") noobs nonumber compress 
     
 {{< figure src="Imagem1.png" width="100%" >}}
 
-Claramente, os dois grupos s„o diferentes entre si. O grupo de tratamento È 1) mais jovem, 2) majoritariamente black, e 3) menos escolarizados que o grupo de controle.
+Claramente, os dois grupos s√£o diferentes entre si. O grupo de tratamento √© 1) mais jovem, 2) majoritariamente black, e 3) menos escolarizados que o grupo de controle.
 
-Note tambÈm que a vari‚ncia e skewness das duas sub-amostras s„o consideravelmente diferentes.
+Note tamb√©m que a vari√¢ncia e skewness das duas sub-amostras s√£o consideravelmente diferentes.
 
-Se us·ssemos essas duas sub-amostras em alguma an·lise economÈtrica sem um prÈ-processamento para torn·-las compar·veis, terÌamos provavelmente coeficientes viesados por selection bias.		
+Se us√°ssemos essas duas sub-amostras em alguma an√°lise econom√©trica sem um pr√©-processamento para torn√°-las compar√°veis, ter√≠amos provavelmente coeficientes viesados por selection bias.		
 
-Assim, È importante executarmos algum mÈtodo de pareamento para que eventuais an·lises futuras n„o sofram desse viÈs.
+Assim, √© importante executarmos algum m√©todo de pareamento para que eventuais an√°lises futuras n√£o sofram desse vi√©s.
 
 	
-Vamos comeÁar pelo PSM usando o pacote psmatch2. Vamos usar o pareamento mais simples, isto È, sem usar nenhuma funÁ„o adicional.
+Vamos come√ßar pelo PSM usando o pacote psmatch2. Vamos usar o pareamento mais simples, isto √©, sem usar nenhuma fun√ß√£o adicional.
 
-H· v·rias funÁıes e critÈrios distintos que vocÍ pode utilizar (e.g., definindo commom support, diferentes estimadores, etc.) que podem melhorar seu pareamento.
+H√° v√°rias fun√ß√µes e crit√©rios distintos que voc√™ pode utilizar (e.g., definindo commom support, diferentes estimadores, etc.) que podem melhorar seu pareamento.
 
-Mas, para fins desse exercÌcio, vamos tomar o caminho mais simples e executar pareamento via Kernel, usando tipo default que È Epanechnikov kernel.
+Mas, para fins desse exerc√≠cio, vamos tomar o caminho mais simples e executar pareamento via Kernel, usando tipo default que √© Epanechnikov kernel.
 
-FaÁa o pareamento da seguinte forma:
+Fa√ßa o pareamento da seguinte forma:
 		
     psmatch2 treat age black educ , kernel
 
-ApÛs o pareamento, note que diversas vari·veis foram criadas com um "_" no inÌcio de seus nomes. 
+Ap√≥s o pareamento, note que diversas vari√°veis foram criadas com um "_" no in√≠cio de seus nomes. 
 
-A que mais nos importa È _weight que È o peso para rebalanceamento de cada observaÁ„o. 
+A que mais nos importa √© _weight que √© o peso para rebalanceamento de cada observa√ß√£o. 
 
-Veja que o peso de cada observaÁ„o varia entre [0,1]. Basicamente, quanto maior o peso, maior a similaridade entre a observaÁ„o do grupo de tratamento e a de controle. 
+Veja que o peso de cada observa√ß√£o varia entre [0,1]. Basicamente, quanto maior o peso, maior a similaridade entre a observa√ß√£o do grupo de tratamento e a de controle. 
 
-Pesos baixos indicam que a observaÁ„o de controle È diferente da observaÁ„o do grupo de tratamento.
+Pesos baixos indicam que a observa√ß√£o de controle √© diferente da observa√ß√£o do grupo de tratamento.
 
-Perceba tambÈm que as observaÁıes do grupo de tratamento tem peso 1, enquanto as demais (i.e., as de controle) tem pesos menores que 1.
+Perceba tamb√©m que as observa√ß√µes do grupo de tratamento tem peso 1, enquanto as demais (i.e., as de controle) tem pesos menores que 1.
 
     bys treat: sum _weight , d
 
-Podemos agora calcular a mÈdia, vari‚ncia e skewness das amostras pareadas.
+Podemos agora calcular a m√©dia, vari√¢ncia e skewness das amostras pareadas.
 
     qui estpost tabstat age black educ [aweight = _weight], by(treat) c(s) s(me v sk n) nototal
     esttab . 	,varwidth(20) cells("mean(fmt(3)) variance(fmt(3)) skewness(fmt(3)) count(fmt(0))") noobs  nonumber compress 
 
-Perceba que, de acordo com esse pareamento, os trÍs momentos n„o parecem semelhantes. 
+Perceba que, de acordo com esse pareamento, os tr√™s momentos n√£o parecem semelhantes. 
 
-N„o sabemos se as diferenÁas s„o estatisticamente significativas, mas visualmente, temos a impress„o que sim.
+N√£o sabemos se as diferen√ßas s√£o estatisticamente significativas, mas visualmente, temos a impress√£o que sim.
 
-Podemos fazer um teste da diferenÁa entre as mÈdias dos dois grupos via OLS da seguinte forma:
+Podemos fazer um teste da diferen√ßa entre as m√©dias dos dois grupos via OLS da seguinte forma:
 
     reg age   treat [aweight = _weight]
     reg black treat [aweight = _weight]
     reg educ  treat [aweight = _weight]
 
-Perceba que todos os coeficientes das vari·veis independentes s„o estatisticamente diferentes de zero, ou seja, as diferenÁas entre as mÈdias s„o significativas.
+Perceba que todos os coeficientes das vari√°veis independentes s√£o estatisticamente diferentes de zero, ou seja, as diferen√ßas entre as m√©dias s√£o significativas.
 
-Isso seria um indicativo que esse pareamento n„o cumpriu plenamente seu propÛsito de deixar as sub-amostras compar·veis.
+Isso seria um indicativo que esse pareamento n√£o cumpriu plenamente seu prop√≥sito de deixar as sub-amostras compar√°veis.
 
-… claro que fizemos o pareamento mais simples e eventualmente poderÌamos melhor·-lo. No entanto, nesse momento, temos a sugest„o de que as sub-amostras n„o foram bem pareadas.
+√â claro que fizemos o pareamento mais simples e eventualmente poder√≠amos melhor√°-lo. No entanto, nesse momento, temos a sugest√£o de que as sub-amostras n√£o foram bem pareadas.
 
 
 # Entropy
 
-Vamos agora rodar o pareamento via entropia. Vamos tambÈm usar a vers„o de pareamento mais simples. Vamos apenas solicitar que os trÍs momentos sejam usados como critÈrio. 
+Vamos agora rodar o pareamento via entropia. Vamos tamb√©m usar a vers√£o de pareamento mais simples. Vamos apenas solicitar que os tr√™s momentos sejam usados como crit√©rio. 
 				
     ebalance treat age black educ, targets(3)
 
-O prÛprio output da linha anterior mostra os momentos da distribuiÁ„o dos dois grupos, mas se vocÍ quiser, pode rodar novamente as seguintes linhas:
+O pr√≥prio output da linha anterior mostra os momentos da distribui√ß√£o dos dois grupos, mas se voc√™ quiser, pode rodar novamente as seguintes linhas:
 
     qui estpost tabstat age black educ [aweight = _webal], by(treat) c(s) s(me v sk n) nototal
     esttab . 	,varwidth(20) cells("mean(fmt(3)) variance(fmt(3)) skewness(fmt(3)) count(fmt(0))") noobs  nonumber compress 
 
 
-Vamos fazer o mesmo teste de averiguaÁ„o de diferenÁa de mÈdias usando OLS.
+Vamos fazer o mesmo teste de averigua√ß√£o de diferen√ßa de m√©dias usando OLS.
 
     reg age   treat [aweight = _webal]
     reg black treat [aweight = _webal]
     reg educ  treat [aweight = _webal]	
 
-Note agora que os trÍs coeficientes das vari·veis independentes n„o s„o significativos. 
+Note agora que os tr√™s coeficientes das vari√°veis independentes n√£o s√£o significativos. 
 
-Isso indica que as mÈdias dos covariates entre os grupos n„o s„o estatisticamente diferentes entre si.
+Isso indica que as m√©dias dos covariates entre os grupos n√£o s√£o estatisticamente diferentes entre si.
 
 
-# Conclus„o
+# Conclus√£o
 
-Ao que parece, o entropy matching È um mÈtodo que leva a resultados mais apurados de pareamento.
+Ao que parece, o entropy matching √© um m√©todo que leva a resultados mais apurados de pareamento.
 
-… claro, esse foi um exercÌcio simples. Mas para fins desse post, essa È a conclus„o que conseguimos ter.
+√â claro, esse foi um exerc√≠cio simples. Mas para fins desse post, essa √© a conclus√£o que conseguimos ter.
 
-Thanks for passing by.
+Thanks for passing by. 
 
 
 
