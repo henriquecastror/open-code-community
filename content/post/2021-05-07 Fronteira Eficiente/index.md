@@ -34,7 +34,7 @@ authors:
 
 
 ## Fatores de Risco
-
+Nesse post o Victor Gomes do [Trading com Dados](https://tradingcomdados.com/) estima a fronteira eficiente de ativos.
 Importando bibliotecas
 
     import pandas as pd
@@ -49,7 +49,7 @@ Selecionando ativos da carteira
 
 Criando um dataframe que vai conter as cotações diárias dessas ações.
 
-df = pd.DataFrame()
+    df = pd.DataFrame()
 
     for t in ativos:
       df[t] = wb.DataReader(t, data_source = 'yahoo', start = '2014-01-01', end = '2021-05-03')['Adj Close']
