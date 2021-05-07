@@ -34,7 +34,7 @@ authors:
 
 
 ## Fatores de Risco
-Nesse post o Victor Gomes do [Trading com Dados](https://tradingcomdados.com/) estima a fronteira eficiente de ativos.
+Nesse post o Victor Gomes do [Trading com Dados](https://tradingcomdados.com/) estima a fronteira eficiente de ativos da bolsa brasileira.
 Importando bibliotecas
 
     import pandas as pd
