@@ -15,8 +15,8 @@ role: CEO (Trading com Dados)
 
 # Organizations/Affiliations
 organizations:
-- name: Pontifícia Universidade Católica do Rio de Janeiro(PUC-Rio)
-  url: "https://iag.puc-rio.br/"
+- name: Trading com Dados.
+  url: "https://tradingcomdados.com/"
 
 # Short bio (displayed in user profile at end of posts)
 bio: 
