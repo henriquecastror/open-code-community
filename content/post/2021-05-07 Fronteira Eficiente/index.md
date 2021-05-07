@@ -1,4 +1,5 @@
-title: "Estimação da Fronteira Eficiente no Python"
+---
+title: "Fronteira Eficiente estimada por Python"
 
 categories: []
 
@@ -25,13 +26,10 @@ tags:
 - Open Data
 - Open Code
 - Fronteira Eficiente
+- Python
 
 authors:
 - VictorGomes
-
-
-
-
 ---
 
 
@@ -49,14 +47,14 @@ Selecionando ativos da carteira
 
     ativos = ['ABEV3.SA', 'EQTL3.SA', 'LREN3.SA', 'CIEL3.SA', 'RADL3.SA', 'RENT3.SA', 'MDIA3.SA', 'WEGE3.SA', 'EZTC3.SA', 'FLRY3.SA']
 
-Criando um dataframe que vai conter as cotações diárias dessas ações.
+Criando um dataframe que vai conter as cotaÃ§Ãµes diÃ¡rias dessas aÃ§Ãµes.
 
 df = pd.DataFrame()
 
     for t in ativos:
       df[t] = wb.DataReader(t, data_source = 'yahoo', start = '2014-01-01', end = '2021-05-03')['Adj Close']
 
-Visualizando os preços
+Visualizando os preÃ§os
 
     df.plot(figsize = (10,10))
 
@@ -64,7 +62,7 @@ Visualizando o dataframe
 
     df.head()
 
-Calculando retorno diário dos papéis e tratando os dados 
+Calculando retorno diÃ¡rio dos papÃ©is e tratando os dados 
 
     retorno_diario = df.pct_change()
 
@@ -75,7 +73,7 @@ Calculando retorno diário dos papéis e tratando os dados
 Calculando o retorno anual
     
     retorno_anual = retorno_diario.mean()*250
-Matriz de covariância 
+Matriz de covariÃ¢ncia 
     
     cov_diario = retorno_diario.cov()
     
@@ -83,7 +81,7 @@ Matriz de covariância
 
     cov_anual = cov_diario*250
 
-Aqui vamos criar 200 mil portfólios fictícios com esses papéis
+Aqui vamos criar 200 mil portfÃ³lios fictÃ­cios com esses papÃ©is
 
     port_returns = []
     
@@ -91,13 +89,13 @@ Aqui vamos criar 200 mil portfólios fictícios com esses papéis
     
     stock_weights = []
 
-Vamos passar os parâmetros de simulação
+Vamos passar os parÃ¢metros de simulaÃ§Ã£o
 
     num_assets = len(ativos)
     
     num_portfolios = 200000
 
-# Vamos usar a função random para criar 10 pesos aleatórios
+# Vamos usar a funÃ§Ã£o random para criar 10 pesos aleatÃ³rios
 
     peso = np.random.random(num_assets)
     peso /= np.sum(peso)
