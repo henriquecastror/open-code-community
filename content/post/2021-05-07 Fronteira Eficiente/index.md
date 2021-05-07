@@ -60,7 +60,7 @@ Visualizando o dataframe
 
     df.head()
 
-Calculando retorno diário dos papéis e tratando os dados 
+Calculando retorno diário dos papéis e tratando os dados. 
 
     retorno_diario = df.pct_change()
 
@@ -68,7 +68,7 @@ Calculando retorno diário dos papéis e tratando os dados
     retorno_diario = retorno_diario.iloc[1:]
     retorno_diario.head()
 
-Calculando o retorno anual
+Calculando o retorno anual.
     
     retorno_anual = retorno_diario.mean()*250
 Matriz de covariância 
@@ -79,7 +79,7 @@ Matriz de covariância
 
     cov_anual = cov_diario*250
 
-Aqui vamos criar 200 mil portfólios fictícios com esses papéis
+Aqui vamos criar 200 mil portfólios fictícios com esses papéis.
 
     port_returns = []
     
@@ -87,13 +87,13 @@ Aqui vamos criar 200 mil portfólios fictícios com esses papéis
     
     stock_weights = []
 
-Vamos passar os parâmetros de simulação
+Vamos passar os parâmetros de simulação.
 
     num_assets = len(ativos)
     
     num_portfolios = 200000
 
-Vamos usar a função random para criar 10 pesos aleatórios
+Vamos usar a função random para criar 10 pesos aleatórios.
 
     peso = np.random.random(num_assets)
     peso /= np.sum(peso)
@@ -133,7 +133,7 @@ Vamos usar a função random para criar 10 pesos aleatórios
     pesos = np.array(retorno_max)
     pesos
     retorno_carteira = retorno_diario*pesos
-Plotando o retorno da carteira    
+Plotando o retorno da carteira.
    
     retorno_carteira.plot()
 {{< figure src="2.png" width="80%" >}}
@@ -145,7 +145,7 @@ Retorno acumulado
 
 {{< figure src="3.png" width="80%" >}}
 
-Importando dados do IBOV para Benchmark
+Importando dados do IBOV para Benchmark.
 
     ibov = wb.DataReader('^BVSP', data_source = 'yahoo', start = '2014-01-01', end = '2021-05-03')['Adj Close']
     type(ibov)
@@ -160,5 +160,6 @@ Importando dados do IBOV para Benchmark
     
 {{< figure src="4.png" width="80%" >}}
 
-    
+Podemos observar que a carteira estimada pela fronteira eficiente teve um desempenho melhor que a carteira de mercado, que no caso do estudo foi o Ibovespa.
+
     
