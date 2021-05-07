@@ -56,7 +56,7 @@ Visualizando os preços.
 
     df.plot(figsize = (10,10))
 
-Visualizando o dataframe
+Visualizando o dataframe.
 
     df.head()
 
@@ -71,7 +71,8 @@ Calculando retorno diário dos papéis e tratando os dados.
 Calculando o retorno anual.
     
     retorno_anual = retorno_diario.mean()*250
-Matriz de covariância 
+
+Matriz de covariância. 
     
     cov_diario = retorno_diario.cov()
     
@@ -125,6 +126,7 @@ Vamos usar a função random para criar 10 pesos aleatórios.
     plt.title('Fronteira Eficiente')
     
     plt.show()
+    
 {{< figure src="1.png" width="80%" >}}
 
     retorno_max = retornos.iloc[:1]
@@ -133,9 +135,11 @@ Vamos usar a função random para criar 10 pesos aleatórios.
     pesos = np.array(retorno_max)
     pesos
     retorno_carteira = retorno_diario*pesos
+
 Plotando o retorno da carteira.
    
     retorno_carteira.plot()
+    
 {{< figure src="2.png" width="80%" >}}
 
 Retorno acumulado.
