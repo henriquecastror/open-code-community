@@ -69,7 +69,7 @@ Ao todo, temos 185 obs. de tratamento e 15,992 observações de controle.
     qui estpost tabstat age black educ , by(treat) c(s) s(me v sk n) nototal
     esttab . 	,varwidth(20) cells("mean(fmt(3)) variance(fmt(3)) skewness(fmt(3)) count(fmt(0))") noobs nonumber compress 
     
-{{< figure src="Imagem1.png" width="100%" >}}
+{{< figure src="Imagem1.png" width="80%" >}}
 
 Claramente, os dois grupos são diferentes entre si. O grupo de tratamento é 1) mais jovem, 2) majoritariamente black, e 3) menos escolarizados que o grupo de controle.
 
@@ -90,7 +90,7 @@ Faça o pareamento da seguinte forma:
 		
     psmatch2 treat age black educ , kernel
     
-{{< figure src="Imagem2.png" width="100%" >}}
+{{< figure src="Imagem2.png" width="80%" >}}
 
 Após o pareamento, note que diversas variáveis foram criadas com um "_" no início de seus nomes. 
 
@@ -104,14 +104,14 @@ Perceba também que as observações do grupo de tratamento tem peso 1, enquanto
 
     bys treat: sum _weight , d
     
-{{< figure src="Imagem3.png" width="100%" >}}
+{{< figure src="Imagem3.png" width="80%" >}}
 
 Podemos agora calcular a média, variância e skewness das amostras pareadas.
 
     qui estpost tabstat age black educ [aweight = _weight], by(treat) c(s) s(me v sk n) nototal
     esttab . 	,varwidth(20) cells("mean(fmt(3)) variance(fmt(3)) skewness(fmt(3)) count(fmt(0))") noobs  nonumber compress 
 
-{{< figure src="Imagem4.png" width="100%" >}}
+{{< figure src="Imagem4.png" width="80%" >}}
 
 Perceba que, de acordo com esse pareamento, os três momentos não parecem semelhantes. 
 
@@ -123,7 +123,7 @@ Podemos fazer um teste da diferença entre as médias dos dois grupos via OLS da
     reg black treat [aweight = _weight]
     reg educ  treat [aweight = _weight]
     
-{{< figure src="Imagem5.png" width="100%" >}}
+{{< figure src="Imagem5.png" width="80%" >}}
 
 Perceba que todos os coeficientes da variável independente "treat" são estatisticamente diferentes de zero, ou seja, as diferenças entre as médias dos grupos são significativas.
 
@@ -138,14 +138,14 @@ Vamos agora rodar o pareamento via entropia. Vamos também usar a versão de par
 				
     ebalance treat age black educ, targets(3)
     
-{{< figure src="Imagem6.png" width="100%" >}}
+{{< figure src="Imagem6.png" width="80%" >}}
 
 O próprio output da linha anterior mostra os momentos da distribuição dos dois grupos, mas se você quiser, pode rodar novamente as seguintes linhas:
 
     qui estpost tabstat age black educ [aweight = _webal], by(treat) c(s) s(me v sk n) nototal
     esttab . 	,varwidth(20) cells("mean(fmt(3)) variance(fmt(3)) skewness(fmt(3)) count(fmt(0))") noobs  nonumber compress 
 
-{{< figure src="Imagem7.png" width="100%" >}}
+{{< figure src="Imagem7.png" width="80%" >}}
 
 Vamos fazer o mesmo teste de averiguação de diferença de médias usando OLS.
 
@@ -153,7 +153,7 @@ Vamos fazer o mesmo teste de averiguação de diferença de médias usando OLS.
     reg black treat [aweight = _webal]
     reg educ  treat [aweight = _webal]	
 
-{{< figure src="Imagem8.png" width="100%" >}}
+{{< figure src="Imagem8.png" width="80%" >}}
 
 Note agora que os três coeficientes das variáveis independentes não são significativos. 
 
