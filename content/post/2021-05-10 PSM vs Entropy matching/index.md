@@ -35,19 +35,19 @@ title: Propensity-score matching (PSM) vs. Entropy matching
 
 Esse é um post rápido para comparar os resultados de duas técnicas de matching diferentes: Propensity-score matching (PSM) e Entropy matching.
 
-Uma explicação mais apurada das técnicas está fora do escopo desse post, mas de uma forma simples, você pode pensar da seguinte forma:
+Uma explicação mais apurada das técnicas está fora do escopo desse post, mas de uma forma simples, você pode pensar da seguinte forma.
 
-Propensity-score matching faz o pareamento entre unidades do grupo de controle e tratamento com base na propensão de se receber o tratamento dado um conjunto de covariates. 
+Propensity-score matching (PSM) faz o pareamento entre unidades do grupo de controle e tratamento com base na propensão de se receber o tratamento dado um conjunto de _covariates_. 
 
 Propensity-score é simplesmente um número que indica a probabilidade de se receber o tratamento. 
 
-Assim o pareamento com base em propensity-score é simplesmente o pareamento usando essa probabilidade como critério fundamental.
+Assim, o pareamento com base em propensity-score é simplesmente o pareamento usando essa probabilidade como critério fundamental.
 
-Entropy matching, por sua vez, faz o pareamento com base em um ou mais momentos da distribuição dos covariates. 
+Entropy matching, por sua vez, faz o pareamento com base em um ou mais momentos da distribuição dos _covariates_. 
 
 Basicamente, você usa como critério de pareamento: a média (1º momento), variância (2º momento), skewness (3º momento)... 
 
-O resultado é uma sub-amostra rebalanceada tal que os momentos dos covariates dos grupos de controle e tratamento são semelhantes.
+O resultado é uma sub-amostra rebalanceada tal que os momentos dos _covariates_ dos grupos de controle e tratamento são semelhantes.
 
 De novo, essa é uma explicação curta, apenas para entendermos o básico das diferenças entre os dois métodos.
 
@@ -62,7 +62,7 @@ Instale os pacotes "psmatch2" e "ebalance" e carregue a seguinte base:
     ssc install ebalance, all replace
     use cps1re74.dta, clear
 		
-Vamos começar analisando os covariates "age", "black" e "educ" no grupo de controle e no de tratamento. A variável de tratamento é "treat". 
+Vamos começar analisando os _covariates_ "age", "black" e "educ" no grupo de controle e no de tratamento. A variável de tratamento é "treat". 
 
 Ao todo, temos 185 obs. de tratamento e 15,992 observações de controle.
 
@@ -75,7 +75,7 @@ Claramente, os dois grupos são diferentes entre si. O grupo de tratamento é 1)
 
 Note também que a variância e skewness das duas sub-amostras são consideravelmente diferentes.
 
-Se usássemos essas duas sub-amostras em alguma análise econométrica sem um pré-processamento para torná-las comparáveis, teríamos provavelmente coeficientes viesados por selection bias.		
+Se usássemos essas duas sub-amostras em alguma análise econométrica sem um pré-processamento para torná-las comparáveis, teríamos provavelmente coeficientes viesados por _selection bias_.		
 
 Assim, é importante executarmos algum método de pareamento para que eventuais análises futuras não sofram desse viés.
 
@@ -84,7 +84,7 @@ Vamos começar pelo PSM usando o pacote psmatch2. Vamos usar o pareamento mais s
 
 Há várias funções e critérios distintos que você pode utilizar (e.g., definindo commom support, diferentes estimadores, etc.) que podem melhorar seu pareamento.
 
-Mas, para fins desse exercício, vamos tomar o caminho mais simples e executar pareamento via Kernel, usando tipo default que é Epanechnikov kernel.
+Mas, para fins desse exercício, vamos tomar o caminho mais simples e executar pareamento via Kernel, usando o default que é Epanechnikov kernel.
 
 Faça o pareamento da seguinte forma:
 		
@@ -115,7 +115,7 @@ Podemos agora calcular a média, variância e skewness das amostras pareadas.
 
 Perceba que, de acordo com esse pareamento, os três momentos não parecem semelhantes. 
 
-Não sabemos se as diferenças são estatisticamente significativas, mas visualmente, temos a impressão que sim.
+Não sabemos se as diferenças são estatisticamente significativas, mas visualmente, temos a impressão que sim na maioria dos casos.
 
 Podemos fazer um teste da diferença entre as médias dos dois grupos via OLS da seguinte forma:
 
@@ -125,7 +125,7 @@ Podemos fazer um teste da diferença entre as médias dos dois grupos via OLS da
     
 {{< figure src="Imagem5.png" width="100%" >}}
 
-Perceba que todos os coeficientes das variáveis independentes são estatisticamente diferentes de zero, ou seja, as diferenças entre as médias são significativas.
+Perceba que todos os coeficientes da variável independente "treat" são estatisticamente diferentes de zero, ou seja, as diferenças entre as médias dos grupos são significativas.
 
 Isso seria um indicativo que esse pareamento não cumpriu plenamente seu propósito de deixar as sub-amostras comparáveis.
 
@@ -134,7 +134,7 @@ Isso seria um indicativo que esse pareamento não cumpriu plenamente seu propós
 
 # Entropy
 
-Vamos agora rodar o pareamento via entropia. Vamos também usar a versão de pareamento mais simples. Vamos apenas solicitar que os três momentos sejam usados como critério. 
+Vamos agora rodar o pareamento via entropia. Vamos também usar a versão de pareamento mais simples. Vamos apenas solicitar que os três momentos sejam usados como critério para pareamento. 
 				
     ebalance treat age black educ, targets(3)
     
