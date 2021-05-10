@@ -4,7 +4,7 @@ authors:
 
 categories: []
 
-date: "2021-05-08T00:00:00Z"
+date: "2021-05-10T00:00:00Z"
 
 draft: false
 
@@ -57,7 +57,7 @@ Se você quiser o do-file utilizado, pode baixar {{% staticref "files/2021-05-06
 
 # PSM
 
-Instale os pacotes "psmatch2" e "ebalance" e carregue a seguinte base:
+Instale os pacotes "psmatch2" e "ebalance" e carregue a seguinte base (a base estará disponível após instalar o pacote):
 
     ssc install ebalance, all replace
     use cps1re74.dta, clear
