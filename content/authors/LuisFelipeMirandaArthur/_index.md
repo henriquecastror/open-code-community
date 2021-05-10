@@ -39,10 +39,10 @@ social:
   
 - icon: envelope
   icon_pack: fas
-  link: 'luisfelipedma@gmail.com'
+  link: 'mailto:luisfelipedma@gmail.com'
 
 - icon: linkedin
-  icon_pack: ai
+  icon_pack: fab
   link: https://www.linkedin.com/in/luis-felipe-de-miranda-arthur/
   
 - icon: github
@@ -58,4 +58,4 @@ user_groups:
 
 ---
 
-Atualmente, sou estudante de Ciências Econômicas na UNESP (São Paulo, Brasil) e estagiário na Pezco Economics. Tenho muito interesse em macroeconomia, mercados, finanças e programação. Conheça meus projetos de pesquisa no GitHub: https://github.com/luisfeldma
+Atualmente, sou estudante de Ciências Econômicas na UNESP (São Paulo, Brasil) e estagiário na Pezco Economics. Tenho muito interesse em macroeconomia, mercados, finanças e programação. Conheça meus projetos de pesquisa no GitHub: https://github.com/luisfeldma.
