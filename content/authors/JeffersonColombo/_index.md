@@ -81,4 +81,3 @@ user_groups:
 
 Possui graduação em economia, mestrado em administração e doutorado em economia aplicada pela Universidade Federal do Rio Grande do Sul (UFRGS), sendo o último parcialmente realizado na Universidade de Illinois em Urbana Champaign (UIUC). Atualmente, é professor da Escola de Economia de São Paulo da Fundação Getulio Vargas (FGV EESP). Foi professor de finanças no Instituto COPPEAD da Universidade Federal do Rio de Janeiro entre 2018 e 2019. É membro fundador do International Finance and Banking Society (IFABS) na América Latina. Tem experiência na área de economia financeira, com ênfase em finanças empíricas, mercado de capitais, e ciclos econômicos.
 
- 
