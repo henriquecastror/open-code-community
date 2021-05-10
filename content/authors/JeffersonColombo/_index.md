@@ -1,6 +1,6 @@
 ---
 # Display name
-title: Jéfferson Colombo (membro desde 2021/05)
+title: JÃ©fferson Colombo (membro desde 2021/05)
 
 # Username (this should match the folder name)
 authors:
@@ -10,19 +10,19 @@ authors:
 superuser: false
 
 # Role/position
-role: Professor de Finanças
+role: Professor de FinanÃ§as
 
 # Organizations/Affiliations
 organizations:
-- name: Escola de Economia de São Paulo (FGV-EESP)
+- name: Escola de Economia de SÃ£o Paulo (FGV-EESP)
   url: "https://eesp.fgv.br/integrante/jefferson-colombo"
 
 # Short bio (displayed in user profile at end of posts)
 bio:
 
 interests:
-- Ciclos Econômicos
-- Finanças Empíricas
+- Ciclos EconÃ´micos
+- FinanÃ§as EmpÃ­ricas
 - Mercado de Capitais
 
 education:
@@ -31,11 +31,11 @@ education:
     institution: UFRGS
     year: 2016
     
-#  - course: Mestrado FinanÃ§as
+#  - course: Mestrado FinanÃƒÂ§as
 #    institution: UFRGS
 #    year: 2012
     
-#  - course: GraduaÃ§Ã£o AdministraÃ§Ã£o
+#  - course: GraduaÃƒÂ§ÃƒÂ£o AdministraÃƒÂ§ÃƒÂ£o
 #    institution: PUCRS
 #    year: 2010
 
@@ -79,5 +79,6 @@ user_groups:
 
 ---
 
-Possui graduação em economia, mestrado em administração e doutorado em economia aplicada pela Universidade Federal do Rio Grande do Sul (UFRGS), sendo o último parcialmente realizado na Universidade de Illinois em Urbana Champaign (UIUC). Atualmente, é professor da Escola de Economia de São Paulo da Fundação Getulio Vargas (FGV EESP). Foi professor de finanças no Instituto COPPEAD da Universidade Federal do Rio de Janeiro entre 2018 e 2019. É membro fundador do International Finance and Banking Society (IFABS) na América Latina. Tem experiência na área de economia financeira, com ênfase em finanças empíricas, mercado de capitais, e ciclos econômicos.
+Possui graduaÃ§Ã£o em economia, mestrado em administraÃ§Ã£o e doutorado em economia aplicada pela Universidade Federal do Rio Grande do Sul (UFRGS), sendo o Ãºltimo parcialmente realizado na Universidade de Illinois em Urbana Champaign (UIUC). Atualmente, Ã© professor da Escola de Economia de SÃ£o Paulo da FundaÃ§Ã£o Getulio Vargas (FGV EESP). Foi professor de finanÃ§as no Instituto COPPEAD da Universidade Federal do Rio de Janeiro entre 2018 e 2019. Ã‰ membro fundador do International Finance and Banking Society (IFABS) na AmÃ©rica Latina. Tem experiÃªncia na Ã¡rea de economia financeira, com Ãªnfase em finanÃ§as empÃ­ricas, mercado de capitais, e ciclos econÃ´micos.
 
+ 
