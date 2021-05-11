@@ -39,6 +39,8 @@ A priori, a afirmação soa um tanto quanto estranha e duvidosa, afinal, como um
 
 Supondo composições de portfólios de 10 ações, se existem 100 ações no índice IBrX-100, vemos que mais de 17 trilhões de combinações diferentes são possíveis, um número estrondosamente alto. Dentre essas possibilidades, fiz uma simulação de 100 mil portfólios diferentes, compostos por 10 ações (não repetidas) escolhidas de maneira totalmente aleatória.
 
+Baixe os dados {{% staticref "files/2021-05-11 Simulando a performance de portfolios randomicos em 2020 ibrx2020.csv" "newtab" %}} aqui{{% /staticref %}} e {{% staticref "files/2021-05-11 Simulando a performance de portfolios randomicos em 2020 precos_yahoo.csv" "newtab" %}} aqui{{% /staticref %}}.
+
 ### Importo as bibliotecas necessárias
 
 
