@@ -3,7 +3,6 @@ title: Simulando a performance de portfólios randomicos em 2020
 
 categories: []
 
-# MUDE APENAS ANO DIA E MES PARA O DIA QUE VOCE NOS ENVIOU
 date: '2021-05-11T00:00:00Z' 
 
 draft: no
@@ -34,7 +33,9 @@ authors:
 
 ## Se no dia 1 de janeiro de 2020 você selecionasse aleatoriamente 10 ações do IBrX-100, quais seriam suas chances de bater o retorno do índice? Além disso, quais seriam as chances do seu portfólio bater o índice em Sharpe?
 
-Burton Malkiel, autor do livro A Random Walk Down Wall Street, argumenta em sua obra que até um macaco jogando dardos de olhos vendados em uma lista de ações seria capaz de gerar melhores performances que fundos gerenciados por profissionais. A argumentação tem forte embasamento na teoria de finanças comportamentais, e o autor utiliza diversas razões para explicá-la, sendo uma delas o fato do mercado se comportar como um “passeio aleatório”. A priori, a afirmação soa um tanto quanto estranha e duvidosa, afinal, como um primata de olhos vendados poderia de alguma forma ser um melhor gestor que um humano capacitado que passa anos de sua vida estudando os mercados? Essa indagação me motivou a fazer uma breve análise e levantar alguns questionamentos sobre a tal aleatoriedade no mercado de ações, especificamente o brasileiro.
+Burton Malkiel, autor do livro _A Random Walk Down Wall Street_, argumenta em sua obra que até um macaco jogando dardos de olhos vendados em uma lista de ações seria capaz de gerar melhores performances que fundos gerenciados por profissionais. A argumentação tem forte embasamento na teoria de finanças comportamentais, e o autor utiliza diversas razões para explicá-la, sendo uma delas o fato do mercado se comportar como um “passeio aleatório”. 
+
+A priori, a afirmação soa um tanto quanto estranha e duvidosa, afinal, como um primata de olhos vendados poderia de alguma forma ser um melhor gestor que um humano capacitado que passa anos de sua vida estudando os mercados? Essa indagação me motivou a fazer uma breve análise e levantar alguns questionamentos sobre a tal aleatoriedade no mercado de ações, especificamente o brasileiro.
 
 Supondo composições de portfólios de 10 ações, se existem 100 ações no índice IBrX-100, vemos que mais de 17 trilhões de combinações diferentes são possíveis, um número estrondosamente alto. Dentre essas possibilidades, fiz uma simulação de 100 mil portfólios diferentes, compostos por 10 ações (não repetidas) escolhidas de maneira totalmente aleatória.
 
