@@ -109,5 +109,15 @@ O código abaixo é para filtrar os fundos pela classificação anbima, filtrand
     
     # Filtrando os fundos por ação
     big_data = big_data  %>% filter(CLASSE_ANBIMA == "AÇÕES - ATIVO - LIVRE" | CLASSE_ANBIMA == "AÇÕES - ATIVO - VALOR / CRESCIMENTO"| CLASSE_ANBIMA == "AÇÕES - INVESTIMENTO NO EXTERIOR"|CLASSE_ANBIMA == "AÇÕES - MONO AÇÃO"| CLASSE_ANBIMA == "AÇÕES - FUNDOS FECHADOS"| CLASSE_ANBIMA == "AÇÕES - ATIVO - ÍNDICE ATIVO" | CLASSE_ANBIMA == "AÇÕES - ATIVO - SETORIAIS" |  CLASSE_ANBIMA == "AÇÕES - ATIVO - DIVIDENDOS" | CLASSE_ANBIMA =="AÇÕES - INDEXADO - ÍNDICE PASSIVO")
+    
+Frequência das classes dos fundos.
+
+    Freq = as.data.frame(table(big_data$CLASSE_ANBIMA))
+Um plot com o histograma das classes dos fundos. Observação, como a variável é discreta teremos que usar geom_bar, se fosse continua seria geom_histogram. 
+
+    ggplot(big_data, aes(CLASSE_ANBIMA)) + geom_bar() +  theme(text = element_text(size=8),
+                                                               axis.text.x = element_text(angle=70, hjust=1)) +ggtitle("Quantidade de Fundos seguindo a classificação anbima para fundos de ações")
+
+{{< figure src="1.png" width="70%" >}}
 
 Vamos começar a lançar uma série de posts sobre fundos, caso tenha alguma sugestão, envie para os autores.
