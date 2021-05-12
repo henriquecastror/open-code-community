@@ -83,7 +83,7 @@ Fazendo uma matriz com 12 observações. Usaremos 12 meses como exercício. No c
     #Selecionar as colunas 
     dados_2 = dados_2  %>% select(CNPJ_FUNDO,DENOM_SOCIAL,CLASSE_ANBIMA)
 
-Criando uma datalist para leitura de todos os csv, e depois fazendo um append em um dataframe com todos csv. Como baixamos cvs por mês, iremos baixar os dados diários do mês 05/21, depois iremos baixar 04/21, e fazer um append desses dados. Caso o leitor tenha uma forma mais eficiente para realizar essa tarefa, por favor envie uma mensagem para o autor desse post [Gerson](gersondesouzajunior00@gmail.com). Usaremos no for i in 1:2 para pegar esses mês e o mês anterior, usaremos apenas 2 meses como exercício, dado que o processo é lento. Iremos em próximos posts criar um maneira eficiente de baixar 1 vez os dados e apenas fazer o download da data mais recente.  
+Criando uma datalist para leitura de todos os csv, e depois fazendo um append em um dataframe com todos csv. Como baixamos cvs por mês, iremos baixar os dados diários do mês 05/21, depois iremos baixar 04/21, e fazer um append desses dados. Caso o leitor tenha uma forma mais eficiente para realizar essa tarefa, por favor envie uma mensagem para o autor desse post [Gerson](gersondesouzajunior00@gmail.com). Usaremos no for i in 1:2 para pegar esses mês e o mês anterior, usaremos apenas 2 meses como exercício, dado que o processo é lento. Iremos em próximos posts criar um maneira eficiente de baixar 1 vez os dados e apenas fazer o download da data mais recente.  Caso queira fazer do ano inteiro é só alterar i in 1:2 para i in 1:12.
 
     #Criar datalist
     datalist = list()
