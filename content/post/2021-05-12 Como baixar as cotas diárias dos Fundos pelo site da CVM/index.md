@@ -1,10 +1,9 @@
- ---
-
-title: "Como baixar as cotas diárias dos Fundos pelo site da CVM"
+---
+title: Como Baixar as cotas diárias dos Fundos via CVM
 
 categories: []
 
-date: '2021-05-12T00:00:00Z'
+date: '2021-05-12T00:00:00Z' 
 
 draft: no
 
@@ -14,8 +13,8 @@ gallery_item: null
 
 image:
   caption: 
-  focal_point: Top
-  preview_only: no
+  focal_point: 
+  preview_only:
 
 projects: []
 
@@ -25,13 +24,16 @@ summary: null
 
 tags: 
 - Open Data
-- Open Code
-- Fundos
+- Fundos 
 - CVM
+- Open Code
 
 authors:
 - IgorMoreira
-- GersonJunior
+- Gerson Júnior
+
+
+---
 
 
 ---
