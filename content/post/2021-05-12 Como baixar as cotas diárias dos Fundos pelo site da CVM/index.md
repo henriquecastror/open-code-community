@@ -39,12 +39,12 @@ authors:
 ---
 ## Introdução
 Nesse post iremos apresentar um code para baixar os dados dos fundos através do csv disponbilizados pela [CVM](http://dados.cvm.gov.br/dados/). Então os passos que serão aprendidos neste post são:
-1) Tratamento de dados
+1) Tratamento de datas
 2) Baixar csv através de links
-3) Fazer um append em um data.frame de diversos csv.
+3) Fazer um append em um data.frame de diversos csv
 4) Filtrar dados
 
-Primeiramente iremos baixar os pacotes utilizados no código
+Primeiramente iremos baixar os pacotes utilizados no código.
 
     rm(list = ls())
     
@@ -53,7 +53,7 @@ Primeiramente iremos baixar os pacotes utilizados no código
     library(tidyverse)
 
 
-Abaixo iremos tratar alguns formatos de datas.
+Iremos tratar os dados, alterando formatos de datas.
     
     #Data de hoje
     data = Sys.Date()
@@ -62,7 +62,7 @@ Abaixo iremos tratar alguns formatos de datas.
     # Data do Mês atual
     data_month = as.numeric(format(data,"%Y%m"))
 
-Fazendo uma matriz com 12 observações. Usaremos 12 como exercício, esses 12 serão 12 meses anteriores. No caso iremos fazer 12 meses anteriores a data de hoje. Exemplo: Hoje é 12/05/2021. Portanto,  o mês e ano será 05/21, como são 12 observações anteriores, teremos 04/21 e assim sucessivamente.
+Fazendo uma matriz com 12 observações. Usaremos 12 meses como exercício. No caso iremos fazer 12 meses anteriores a data de hoje. Exemplo: Hoje é 12/05/2021. Portanto,  o mês e ano será 05/21, como são 12 observações anteriores, teremos 04/21 e assim sucessivamente.
    
     # Matriz de 12 observações (12 meses)
     data_month_12= matrix(0,12,1)
@@ -83,7 +83,7 @@ Fazendo uma matriz com 12 observações. Usaremos 12 como exercício, esses 12 s
     #Selecionar as colunas 
     dados_2 = dados_2  %>% select(CNPJ_FUNDO,DENOM_SOCIAL,CLASSE_ANBIMA)
 
-Criando uma datalist para leitura de todos os csv, e depois fazendo um append em um dataframe com todos csv. Como baixamos cvs por mês, iremos baixar os dados diários do mês 05/21 de todos os fundos, depois iremos baixar 04/21, e fazer um append desses dados dos dados de 05/21 e assim por diante. Caso o leitor tenha uma forma mais eficiente para realizar essa tarefa, por favor envie uma mensagem para o autor desse post [Gerson](gersondesouzajunior00@gmail.com). Usaremos o for 1:2 para pegar esses mês e o mês anterior, usaremos 2 como exercício, dado que demora muito o processo. Iremos em próximos posts criar um maneira eficiente de baixar 1 vez os dados e apenas fazer o download da data mais recente. 
+Criando uma datalist para leitura de todos os csv, e depois fazendo um append em um dataframe com todos csv. Como baixamos cvs por mês, iremos baixar os dados diários do mês 05/21, depois iremos baixar 04/21, e fazer um append desses dados. Caso o leitor tenha uma forma mais eficiente para realizar essa tarefa, por favor envie uma mensagem para o autor desse post [Gerson](gersondesouzajunior00@gmail.com). Usaremos no for i in 1:2 para pegar esses mês e o mês anterior, usaremos apenas 2 meses como exercício, dado que o processo é lento. Iremos em próximos posts criar um maneira eficiente de baixar 1 vez os dados e apenas fazer o download da data mais recente.  
 
     #Criar datalist
     datalist = list()
@@ -105,7 +105,7 @@ Essa parte iremos fazer um join do dados dos fundos e do csv que apresenta o nom
     # Ordenando os vetores
     big_data = big_data[,c(1,10,11,2,3,4,5,6,7,8,9)]
 
-O código abaixo vamos filtrar os fundos pela classificação anbima, filtrando todas as classificações de FIA. Podemos reparar muitos fundos não tem classificação anbima e nome, esse fato se deve ao csv do fundo não ter correspondência, caso o leitor tenha alguma outra sugestão de realizar esse papo de uma melhor forma.
+O código abaixo é para filtrar os fundos pela classificação anbima, filtrando todas as classificações de FIA. Podemos reparar muitos fundos não tem classificação anbima e nome, esse fato se deve ao csv do fundo não ter correspondência, caso o leitor tenha alguma outra sugestão de realizar esse papo de uma melhor forma.
     
     # Filtrando os fundos por ação
     big_data = big_data  %>% filter(CLASSE_ANBIMA == "AÇÕES - ATIVO - LIVRE" | CLASSE_ANBIMA == "AÇÕES - ATIVO - VALOR / CRESCIMENTO"| CLASSE_ANBIMA == "AÇÕES - INVESTIMENTO NO EXTERIOR"|CLASSE_ANBIMA == "AÇÕES - MONO AÇÃO"| CLASSE_ANBIMA == "AÇÕES - FUNDOS FECHADOS"| CLASSE_ANBIMA == "AÇÕES - ATIVO - ÍNDICE ATIVO" | CLASSE_ANBIMA == "AÇÕES - ATIVO - SETORIAIS" |  CLASSE_ANBIMA == "AÇÕES - ATIVO - DIVIDENDOS" | CLASSE_ANBIMA =="AÇÕES - INDEXADO - ÍNDICE PASSIVO")
