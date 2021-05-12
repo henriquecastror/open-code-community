@@ -1,5 +1,5 @@
 ---
-title: Como Baixar as cotas diárias dos Fundos via CVM
+title: Como baixar as cotas diárias dos Fundos via CVM
 
 categories: []
 
@@ -113,7 +113,7 @@ O código abaixo é para filtrar os fundos pela classificação anbima, filtrand
 Frequência das classes dos fundos.
 
     Freq = as.data.frame(table(big_data$CLASSE_ANBIMA))
-Um plot com o histograma das classes dos fundos. Observação, como a variável é discreta teremos que usar geom_bar, se fosse continua seria geom_histogram. 
+Um plot com o histograma das classes dos fundos. Observação, como a variável é discreta teremos que usar geom_bar, se fosse continua, seria geom_histogram. 
 
     ggplot(big_data, aes(CLASSE_ANBIMA)) + geom_bar() +  theme(text = element_text(size=8),
                                                                axis.text.x = element_text(angle=70, hjust=1)) +ggtitle("Quantidade de Fundos seguindo a classificação anbima para fundos de ações")
