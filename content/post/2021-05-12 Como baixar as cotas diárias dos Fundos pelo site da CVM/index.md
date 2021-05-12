@@ -30,7 +30,7 @@ tags:
 
 authors:
 - IgorMoreira
-- Gerson Júnior
+- GersonJunior
 
 
 ---
