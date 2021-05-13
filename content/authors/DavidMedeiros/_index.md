@@ -61,4 +61,4 @@ user_groups:
 
 ---
 
-No momento sou Graduando em Economia e Assistente de Pesquisa do Professor Márcio Garcia (Ph.D., Stanford), ambos na [PUC-Rio](https://www.puc-rio.br/ ). Além disso sou Associado Junior da [Liga de Mercado Financeiro PUC-Rio](https://www.lmfpucrio.com/). Tenho interesse em Macroeconomia, Finanças e Métodos Matemáticos Aplicados a Economia e Finanças, além de Ciência de Dados.
+No momento sou Graduando em Economia e Assistente de Pesquisa do Professor Márcio Garcia (Ph.D., Stanford), ambos na [PUC-Rio](https://www.puc-rio.br/ ). Além disso sou Associado Júnior da [Liga de Mercado Financeiro PUC-Rio](https://www.lmfpucrio.com/).

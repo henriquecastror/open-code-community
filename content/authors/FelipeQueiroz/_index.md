@@ -35,8 +35,8 @@ education:
 # Social/Academic Networking
 
 social:
-- icon: browser
-  icon_pack: fas
+- icon: blogger
+  icon_pack: fab
   link: https://fqueiroz.blogspot.com/
   
 - icon: linkedin
@@ -51,4 +51,4 @@ user_groups:
 
 ---
 
-Estou no terceiro período de Economia na [PUC-Rio](https://www.puc-rio.br/) e sou trainee na [Liga de Mercado Financeiro PUC-Rio](https://www.lmfpucrio.com/). Tenho muito interesse nas áreas de finanças e macroeconomia. Ocasionalmente realizo valuations no meu blog.
+Estou no terceiro período de Economia na [PUC-Rio](https://www.puc-rio.br/) e sou trainee na [Liga de Mercado Financeiro PUC-Rio](https://www.lmfpucrio.com/). Tenho muito interesse nas áreas de finanças e macroeconomia. Ocasionalmente realizo valuations no meu [blog](https://fqueiroz.blogspot.com/).
