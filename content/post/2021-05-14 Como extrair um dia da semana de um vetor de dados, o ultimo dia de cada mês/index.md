@@ -1,8 +1,9 @@
-title: "Como extrair um dia da semana de um vetor de dados, o ultimo dia de cada mês."
+---
+title: "Como extrair um dia da semana de um vetor de dados, o ultimo dia de cada mÃªs"
 
 categories: []
 
-date: '2021-05-14T00:00:00Z'
+date: '2021-05-14T00:00:00Z' 
 
 draft: no
 
@@ -30,13 +31,15 @@ authors:
 - GersonJunior
 
 
+---
+
 
 
 ---
-Esse post foi motivado com duas dúvidas que ocorreram a mim no dia de ontem. A primeira dúvida foi postada na [comunidade do R programadores no facebook](https://www.facebook.com/groups/1410023525939155)* foi como  obtinha a ultima sexta feira do mês dado um vetor de dates. A outra dúvida foi de um colega de doutorado como ele obtinha o retorno semanal de uma Commodity, começando na terça-feira. Entendendo que essa dúvida era uma dúvida recorrente. Fiz esse post. Nele você aprenderá:
-1) Baixar dados a partir da função getSymbols (função já recorrente no blog)
+Esse post foi motivado com duas dÃºvidas que ocorreram a mim no dia de ontem. A primeira dÃºvida foi postada na [comunidade do R programadores no facebook](https://www.facebook.com/groups/1410023525939155)* foi como  obtinha a ultima sexta feira do mÃªs dado um vetor de dates. A outra dÃºvida foi de um colega de doutorado como ele obtinha o retorno semanal de uma Commodity, comeÃ§ando na terÃ§a-feira. Entendendo que essa dÃºvida era uma dÃºvida recorrente. Fiz esse post. Nele vocÃª aprenderÃ¡:
+1) Baixar dados a partir da funÃ§Ã£o getSymbols (funÃ§Ã£o jÃ¡ recorrente no blog)
 2) Tratar as datas 
-3) Fazer uma nova coluna de verdadeiro ou falso através de uma logica por uma data usando tidyverse.
+3) Fazer uma nova coluna de verdadeiro ou falso atravÃ©s de uma logica por uma data usando tidyverse.
 
 ## Trabalhando com dados
 Carregando os pacotes   
@@ -45,7 +48,7 @@ Carregando os pacotes
     library(data.table)
     library(tidyverse)
 
-#Filtrar todas as terças-feiras do mês e obter o retorno semanal
+#Filtrar todas as terÃ§as-feiras do mÃªs e obter o retorno semanal
 Baixando os dados, no caso iremos usar 8 ETFS: U.S. investment-grade bonds (BND), International, investment-grade bonds (IAGG), High-yield bonds (GHYG), U.S. equities (VTI),Developed equities (VXUS),Emerging market equities (VWO),Commodities (GSG),REITs (USRT).
 
     asset_names <- c("BND", "IAGG", "GHYG", "VTI", "VXUS", "VWO", "GSG", "USRT")
@@ -55,16 +58,16 @@ Baixando os dados, no caso iremos usar 8 ETFS: U.S. investment-grade bonds (BND)
 Juntando todos os xts em um dataframe. 
 
     prices.data <- data.frame(BND[,6], IAGG[,6], GHYG[,6], VTI[,6], VXUS[,6], VWO[,6], GSG[,6], USRT[,6])
-O nome da linha é a data, a função abaixo faz com que a data se torno uma coluna
+O nome da linha Ã© a data, a funÃ§Ã£o abaixo faz com que a data se torno uma coluna
 
     prices.data$date <- rownames(prices.data)
 Extraindo o dia da semana das datas e criando uma coluna.
   
     prices.data$Week = weekdays(as.Date(prices.data$date))
-Filtrando os dias da semana. Observação, meu R está em português, pode ser que o seu esteja em inglês.
+Filtrando os dias da semana. ObservaÃ§Ã£o, meu R estÃ¡ em portuguÃªs, pode ser que o seu esteja em inglÃªs.
 
-    prices.data = prices.data %>% filter(Week == "terça-feira")
-Pivot-longer. Eu também fiz um post explicando como fazer o pivot wider nesse [post](https://opencodecom.net/post/2021-04-22-como-fazer-reshape-no-r/)
+    prices.data = prices.data %>% filter(Week == "terÃ§a-feira")
+Pivot-longer. Eu tambÃ©m fiz um post explicando como fazer o pivot wider nesse [post](https://opencodecom.net/post/2021-04-22-como-fazer-reshape-no-r/)
 
     prices.data = prices.data  %>% pivot_longer(!date & !Week , names_to = "Assets", values_to = "Value")
 Obtendo uma nova coluna o retorno da semana. 
@@ -73,7 +76,7 @@ Obtendo uma nova coluna o retorno da semana.
 
 
 
-#Fazer uma coluna com a ultima sexta feira do mês, a ultima semana do mês e o ultimo dia do mês
+#Fazer uma coluna com a ultima sexta feira do mÃªs, a ultima semana do mÃªs e o ultimo dia do mÃªs
 Limpando a base
 
     rm(list = ls())
@@ -87,7 +90,7 @@ Limpando a base
     prices.data$Week = weekdays(as.Date(prices.data$date))
     prices.data = prices.data  %>% pivot_longer(!date & !Week , names_to = "Assets", values_to = "Value")
 
-Realizando 3 colunas: a resposta TRUE em LastWeekInMonth representa a ultima semana do mês, TRUE em LastFridayInMonth a ultima sexta do mês, e TRUE em LastDayInMonth representa o último dia do mês.
+Realizando 3 colunas: a resposta TRUE em LastWeekInMonth representa a ultima semana do mÃªs, TRUE em LastFridayInMonth a ultima sexta do mÃªs, e TRUE em LastDayInMonth representa o Ãºltimo dia do mÃªs.
 
     prices.data = prices.data %>% 
       mutate(year = year(date),month= month(date)) %>%
@@ -100,6 +103,9 @@ Realizando 3 colunas: a resposta TRUE em LastWeekInMonth representa a ultima sem
              LastFridayInMonth = Week =="sexta-feira" & LastWeekInMonth == 1) %>% 
       ungroup()
 
-Se filtrar TRUE em LastFridayInMonth você obterá o df de todos as sextas-feiras do mês, e assim por diante.
+Se filtrar TRUE em LastFridayInMonth vocÃª obterÃ¡ o df de todos as sextas-feiras do mÃªs, e assim por diante.
 
     prices.data = prices.data %>% filter(LastFridayInMonth == "TRUE")
+
+
+* Vale a pena entrar no grupo do facebook e do telegram do R programadores. Aprendi muito lÃ¡.
