@@ -89,7 +89,7 @@ Limpando a base
     prices.data$Week = weekdays(as.Date(prices.data$date))
     prices.data = prices.data  %>% pivot_longer(!date & !Week , names_to = "Assets", values_to = "Value")
 
-Realizando 3 colunas: a resposta TRUE em LastWeekInMonth representa a ultima semana do mês, TRUE em LastFridayInMonth a ultima sexta do mês, e TRUE em LastDayInMonth representa o último dia do mês.
+Obter 3 colunas: a resposta TRUE em LastWeekInMonth representa a ultima semana do mês, TRUE em LastFridayInMonth a ultima sexta do mês, e TRUE em LastDayInMonth representa o último dia do mês.
 
     prices.data = prices.data %>% 
       mutate(year = year(date),month= month(date)) %>%
