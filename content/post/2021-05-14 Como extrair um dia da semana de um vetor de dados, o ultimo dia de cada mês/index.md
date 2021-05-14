@@ -1,5 +1,5 @@
 ---
-title: "Como extrair um dia da semana de um vetor de dados, o ultimo dia de cada mês"
+title: "Como extrair um dia da semana, último dia do mês de um vetor de datas"
 
 categories: []
 
