@@ -67,18 +67,19 @@ Extraindo o dia da semana das datas e criando uma coluna.
 Filtrando os dias da semana. Observação, meu R está em português, pode ser que o seu esteja em inglês.
 
     prices.data = prices.data %>% filter(Week == "terça-feira")
-Pivot-longer. Eu expliquei como fazer o pivot wider e longer nesse [post](https://opencodecom.net/post/2021-04-22-como-fazer-reshape-no-r/).
+Realizando um Pivot-longer. Eu expliquei como fazer o pivot wider e longer nesse [post](https://opencodecom.net/post/2021-04-22-como-fazer-reshape-no-r/).
 
     prices.data = prices.data  %>% pivot_longer(!date & !Week , names_to = "Assets", values_to = "Value")
 Obtendo uma nova coluna o retorno da semana. 
 
     prices.data = prices.data %>% group_by(Assets) %>%  mutate(Return_week = ROC(Value))
 
-#Fazer uma coluna com a ultima sexta feira do mês, a ultima semana do mês e o ultimo dia do mês
+##Fazer uma coluna com a ultima sexta feira do mês, a ultima semana do mês e o ultimo dia do mês
 
 Limpando a base
    
     rm(list = ls())
+Baixando novamente os dados
 
     asset_names <- c("BND", "IAGG", "GHYG", "VTI", "VXUS", "VWO", "GSG", "USRT")
     from.date <- as.Date("01/01/17", format="%m/%d/%y")
@@ -89,7 +90,7 @@ Limpando a base
     prices.data$Week = weekdays(as.Date(prices.data$date))
     prices.data = prices.data  %>% pivot_longer(!date & !Week , names_to = "Assets", values_to = "Value")
 
-Obter 3 colunas: a resposta TRUE em LastWeekInMonth representa a ultima semana do mês, TRUE em LastFridayInMonth a ultima sexta do mês, e TRUE em LastDayInMonth representa o último dia do mês.
+Obtendo 3 colunas, onde resposta TRUE em LastWeekInMonth representa a ultima semana do mês, TRUE em LastFridayInMonth a ultima sexta do mês, e TRUE em LastDayInMonth representa o último dia do mês.
 
     prices.data = prices.data %>% 
       mutate(year = year(date),month= month(date)) %>%
