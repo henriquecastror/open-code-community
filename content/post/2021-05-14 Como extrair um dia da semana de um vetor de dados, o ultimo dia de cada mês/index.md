@@ -42,7 +42,7 @@ Esse post foi motivado com duas dúvidas que ocorreram a mim no dia de ontem. A 
 3) Fazer uma nova coluna de verdadeiro ou falso através de uma logica por uma data usando tidyverse.
 
 ## Trabalhando com dados
-Carregando os pacotes   
+Carregando os pacotes.   
    
     library(PerformanceAnalytics)
     library(data.table)
@@ -58,7 +58,7 @@ Baixando os dados, no caso iremos usar 8 ETFS: U.S. investment-grade bonds (BND)
 Juntando todos os xts em um dataframe. 
 
     prices.data <- data.frame(BND[,6], IAGG[,6], GHYG[,6], VTI[,6], VXUS[,6], VWO[,6], GSG[,6], USRT[,6])
-O nome da linha é a data, a função abaixo faz com que a data se torno uma coluna
+O nome da linha é a data, a função abaixo faz com que a data se torno uma coluna.
 
     prices.data$date <- rownames(prices.data)
 Extraindo o dia da semana das datas e criando uma coluna.
@@ -74,11 +74,10 @@ Obtendo uma nova coluna o retorno da semana.
 
     prices.data = prices.data %>% group_by(Assets) %>%  mutate(Return_week = ROC(Value))
 
-
-
 #Fazer uma coluna com a ultima sexta feira do mês, a ultima semana do mês e o ultimo dia do mês
-Limpando a base
 
+Limpando a base
+   
     rm(list = ls())
 
     asset_names <- c("BND", "IAGG", "GHYG", "VTI", "VXUS", "VWO", "GSG", "USRT")
