@@ -36,7 +36,7 @@ authors:
 
 
 ---
-A motivação desse post se deu por causa de dois pedidos: o primeiro pedido foi postado na [comunidade do R programadores no facebook](https://www.facebook.com/groups/1410023525939155), o autor gostaria de obter a ultima sexta feira do mês dado um vetor de datas. O outro pedido foi de um colega de doutorado,  ele gostaria de obter o retorno semanal de uma *Commodity*, começando a base de dados na terça-feira (retorno semanal de terça a terça). Entendendo que essa dúvida era uma recorrente. Fiz esse post. Nele você aprenderá:
+A motivação desse post se deu por causa de dois pedidos: o primeiro pedido foi postado na [comunidade do R programadores no facebook](https://www.facebook.com/groups/1410023525939155). O membro da comunidade gostaria de obter a ultima sexta feira do mês, sendo obtida de um vetor de datas. O outro pedido foi de um colega de doutorado,  ele gostaria de obter o retorno semanal de uma *Commodity*, começando a base de dados na terça-feira (retorno semanal de terça a terça). Entendendo que essa dúvida era uma recorrente. Fiz esse post. Nele você aprenderá:
 1) Baixar dados a partir da função getSymbols (função já recorrente no blog).
 2) Tratar as datas.
 3) Fazer uma nova coluna de verdadeiro ou falso através de uma logica por uma data usando tidyverse.
