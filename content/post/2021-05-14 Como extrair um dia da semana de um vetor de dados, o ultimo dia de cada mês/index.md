@@ -67,7 +67,7 @@ Extraindo o dia da semana das datas e criando uma coluna.
 Filtrando os dias da semana. Observação, meu R está em português, pode ser que o seu esteja em inglês.
 
     prices.data = prices.data %>% filter(Week == "terça-feira")
-Pivot-longer. Eu também fiz um post explicando como fazer o pivot wider nesse [post](https://opencodecom.net/post/2021-04-22-como-fazer-reshape-no-r/)
+Pivot-longer. Eu expliquei como fazer o pivot wider e longer nesse [post](https://opencodecom.net/post/2021-04-22-como-fazer-reshape-no-r/).
 
     prices.data = prices.data  %>% pivot_longer(!date & !Week , names_to = "Assets", values_to = "Value")
 Obtendo uma nova coluna o retorno da semana. 
