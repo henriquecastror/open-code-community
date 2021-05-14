@@ -41,7 +41,7 @@ Esse post foi motivado com duas perguntas que ocorreram a mim no dia de ontem. A
 2) Tratar as datas.
 3) Fazer uma nova coluna de verdadeiro ou falso através de uma logica por uma data usando tidyverse.
 
-## Filtrar toda terça da semana e retirar o retorno semanal.
+## Filtrar toda terça da semana e obter o retorno semanal.
 Carregando os pacotes.   
    
     library(PerformanceAnalytics)
