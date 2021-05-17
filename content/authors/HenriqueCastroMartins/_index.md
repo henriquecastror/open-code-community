@@ -32,13 +32,13 @@ education:
     institution: UFRGS
     year: 2016
     
-  - course: Mestrado Finanças
-    institution: UFRGS
-    year: 2012
+#  - course: Mestrado Finanças
+#    institution: UFRGS
+#    year: 2012
     
-  - course: Graduação Administração
-    institution: PUCRS
-    year: 2010
+#  - course: Graduação Administração
+#    institution: PUCRS
+#    year: 2010
 
 
 # Social/Academic Networking
@@ -68,9 +68,9 @@ social:
   icon_pack: ai
   link: https://publons.com/researcher/1215850/henrique-castro-martins/
 
-- icon: researchgate
-  icon_pack: ai
-  link: https://www.researchgate.net/profile/Henrique_Castro_Martins
+#- icon: researchgate
+#  icon_pack: ai
+#  link: https://www.researchgate.net/profile/Henrique_Castro_Martins
 
 #- icon: dataverse
 #  icon_pack: ai
@@ -84,9 +84,9 @@ social:
   icon_pack: fab
   link: https://www.youtube.com/channel/UCS9ws4WEedza36NRimBZXeg?view_as=subscriber
   
-- icon: twitter
-  icon_pack: fab
-  link: https://twitter.com/henriquecastror
+#- icon: twitter
+#  icon_pack: fab
+#  link: https://twitter.com/henriquecastror
   
 #- icon: instagram
 #  icon_pack: fab
