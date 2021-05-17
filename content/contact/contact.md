@@ -36,7 +36,7 @@ Nós não temos staff e fazemos toda a administração de forma pro-bono. Assim,
 
 Por favor, siga os passos abaixo:
 
-1) Crie seu código utilizando o seguinte {{% staticref "files/post_index.md" "newtab" %}} template{{% /staticref %}}. Você pode nos enviar esse documento em .txt ou em .md (nossa preferência é .md).
+1) Crie seu código utilizando o seguinte {{% staticref "files/post_index.md" "newtab" %}} template{{% /staticref %}}. Você pode nos enviar esse documento em .txt ou em .md (nossa preferência é .md). Infelizmente, n�o conseguimos aceitar .Rmd.
 
 2) Crie sua página de autor utilizando o seguinte {{% staticref "files/autor_index.md" "newtab" %}} template{{% /staticref %}}.  Você pode nos enviar esse documento em .txt ou em .md (nossa preferência é .md).
 
