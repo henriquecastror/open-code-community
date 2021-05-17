@@ -31,15 +31,6 @@ education:
     institution: UFRGS
     year: 2016
     
-  - course: Mestrado Finanças
-    institution: UFRGS
-    year: 2012
-    
-  - course: Graduação Administração
-    institution: PUCRS
-    year: 2010
-
-
 # Social/Academic Networking
 
 social:

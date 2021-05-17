@@ -15,8 +15,8 @@ gallery_item: null
 
 image:
   caption: 
-  focal_point: Top
-  preview_only: no
+  focal_point: 
+  preview_only: 
 
 projects: []
 
@@ -39,12 +39,6 @@ VOCE ESCREVE TEXTO AQUI.
 
     VOCE ESCREVE CODIGO AQUI. APERTE TAB DUAS VEZES PARA CRIAR O ESPAÇO NECESSÁRIO. É NECESSÁRIO UM ESPAÇO ENTRE O TEXTO ACIMA E ESSA LINHA DE CÓDIGO.
     
-
-VOCE INCLUI FIGURAS COMO NA LINHA ABAIXO:
-
-{{< figure library="true" src="Fig1.png" width="80%" >}}   
-
-
 
 VOCE INCLUI ARQUIVOS PARA DOWNLOAD COMO NA LINHA ABAIXO:
 
