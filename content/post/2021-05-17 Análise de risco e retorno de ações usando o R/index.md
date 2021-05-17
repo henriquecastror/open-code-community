@@ -1,10 +1,9 @@
- ---
-
-title: "Exemplos de busca de tendÍncias do Google Trend"
+---
+title: "An√°lise de risco e retorno de a√ß√µes usando o R"
 
 categories: []
 
-date: '2021-05-05T00:00:00Z'
+date: '2021-05-17T00:00:00Z' 
 
 draft: no
 
@@ -26,21 +25,26 @@ summary: null
 tags: 
 - Open Data
 - Open Code
-- Google Trends
+- Tratamento de Dados
+- Risco
+- Retorno
 
 authors:
-- HenriqueMartins
-- GersonJunior
+- VictorGomes
 
 
 ---
-##  An·lise de risco e retorno de aÁıes usando o R
 
-Nesse post iremos analisar a relaÁ„o de risco e retorno de aÁıes usando o R. A teoria de finanÁas prediz que quanto maior o risco de uma empresa, maior ser· seu retorno. Mas ser· que essa relaÁ„o È verificada nos dados? Nesse post iremos aprender:
-1) Baixar dados das empresas do pacote quantmod (pacote j· utilizado anteriomente)
-2) MudanÁa de xts para dataframe
-3) Realizar uma funÁ„o para completar NA's ('forward filling')
-4) Plotar diferentes gr·ficos: Candle, Retorno histÛrico e Risco-Retorno.
+
+
+---
+##  An√°lise de risco e retorno de a√ß√µes usando o R
+
+Nesse post iremos analisar a rela√ß√£o de risco e retorno de a√ß√µes usando o R. A teoria de finan√ßas prediz que quanto maior o risco de uma empresa, maior ser√° seu retorno. Mas ser√° que essa rela√ß√£o √© verificada nos dados? Nesse post iremos aprender:
+1) Baixar dados das empresas do pacote quantmod (pacote j√° utilizado anteriomente)
+2) Mudan√ßa de xts para dataframe
+3) Realizar uma fun√ß√£o para completar NA's ('forward filling')
+4) Plotar diferentes gr√°ficos: Candle, Retorno hist√≥rico e Risco-Retorno.
 
 
 Carregaremos as bibliotecas
@@ -52,7 +56,7 @@ Carregaremos as bibliotecas
     library(ggplot2)
     library(reshape2)
 
-Quais os papÈis queremos analisar?
+Quais os pap√©is queremos analisar?
 
     tickers = c('EQTL3.SA', 'PETR4.SA', 'VALE3.SA', 'WEGE3.SA', 'EMBR3.SA',
                 'CSNA3.SA', 'USIM5.SA','TOTS3.SA','ABEV3.SA','LREN3.SA', 
@@ -68,14 +72,14 @@ Retornos mensais e anuais
     monthlyReturn(apple_stock)
     yearlyReturn(apple_stock)
 
-Gr·fico de candle
+Gr√°fico de candle
     
     apple_stock = getSymbols.yahoo("AAPL", from = '2020-1-1', auto.assign = F)
     chartSeries(apple_stock)
 
 {{< figure src="1.png" width="80%" >}}
 
-Criando loop para retornar dados de v·rias aÁıes num sÛ data frame
+Criando loop para retornar dados de v√°rias a√ß√µes num s√≥ data frame
 
     precos_carteira = NULL
     
@@ -86,18 +90,18 @@ Criando loop para retornar dados de v·rias aÁıes num sÛ data frame
 
     precos_carteira = data.frame(precos_carteira)
 
-Modificando nome das colunas para ficar mais trabalh·vel
+Modificando nome das colunas para ficar mais trabalh√°vel
     colnames(precos_carteira) = c('EQTL3', 'PETR4', 'VALE3', 'WEGE3', 'EMBR3',
                                   'CSNA3', 'USIM5','TOTS3','ABEV3','LREN3', 
                                   'CIEL3', 'RADL3', 'RENT3', 'MDIA3', 
                                   'EZTC3', 'FLRY3', 'OIBR3', 'CVCB3'
     )
 
- Criando coluna com informaÁ„o da  data
+ Criando coluna com informa√ß√£o da  data
 
     precos_carteira$data = row.names(precos_carteira)
   
-FunÁ„o para fazer o 'forward filling' e dessa forma evitar os NAs nos dias em que n„o houve negociaÁ„o
+Fun√ß√£o para fazer o 'forward filling' e dessa forma evitar os NAs nos dias em que n√£o houve negocia√ß√£o
 
     replaceNaWithLatest = function( dfIn, nameColsNa = names(dfIn) ){ 
       dtTest <- data.table(dfIn) 
@@ -122,13 +126,13 @@ Verificando se ainda temos NAs
     colSums(is.na(precos_carteira))
     colSums(is.na(nova_carteira))
 
-Normalizar os preÁos dos papÈis
+Normalizar os pre√ßos dos pap√©is
 
     normalizado = data.frame(lapply(nova_carteira, function(x) x/x[1]))
     normalizado$data = precos_carteira$data
     normalizado$data = as.Date(normalizado$data, format = "%Y-%m-%d")
 
-Data prep para plotar v·rias aÁıes normalizadas num gr·fico sÛ                                
+Data prep para plotar v√°rias a√ß√µes normalizadas num gr√°fico s√≥                                
 
     d = melt(normalizado, id.vars = 'data')
 
@@ -138,27 +142,29 @@ Data prep para plotar v·rias aÁıes normalizadas num gr·fico sÛ
 {{< figure src="2.png" width="80%" >}}
 
 Plot de Retorno vs. Risco
-Calculando retorno di·rio dos papÈis                                
+Calculando retorno di√°rio dos pap√©is                                
 
     retornos_carteira = na.omit(ROC(nova_carteira))
 
-Retorno consolidado da carteira (essa funÁ„o considera como default pesos iguais para cada papel)                            
+Retorno consolidado da carteira (essa fun√ß√£o considera como default pesos iguais para cada papel)                            
     rendimento_carteira = Return.portfolio(retornos_carteira)
 
-MÈdia dos retornos di·rios                                
+M√©dia dos retornos di√°rios                                
 
     meant = apply(retornos_carteira, 2, function(x) mean(x))
 
-# Volatilidade ou desvio-padr„o dos retornos di·rios             
+# Volatilidade ou desvio-padr√£o dos retornos di√°rios             
 
     sdev = apply(retornos_carteira, 2, function(x) sd(x))
 
-Data frame contendo mÈdia dos retornos di·rios e volatilidade para todos os papÈis da nossa carteira             
+Data frame contendo m√©dia dos retornos di√°rios e volatilidade para todos os pap√©is da nossa carteira             
     tovar = data.frame(t(rbind(meant, sdev)))
 
     
     ggplot(tovar, aes(x=sdev, y=meant)) +
       geom_text(aes(label = rownames(tovar), colour = sdev, size = meant),check_overlap = F)+
-      xlab('Volatilidade ou Desvio-Padr„o') + ylab('MÈdia dos Retornos')
+      xlab('Volatilidade ou Desvio-Padr√£o') + ylab('M√©dia dos Retornos')
 
 {{< figure src="3.png" width="80%" >}}
+
+Exemplo de an√°lise: podemos observar que RADL3 apresentou um retorno m√©dio maior com uma vol menor que CSNA3. Logicamente, apresentando uma melhor rela√ß√£o risco-retorno que CSNA3. 
