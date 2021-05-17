@@ -2,15 +2,17 @@
 title: "Part I - Commoditiy Hedging"
 author: "Rafael Palazzi"
 date: "17/05/2021"
-output:
-  html_document:
-    df_print: paged
+output: 
   pdf_document:
-    citation_package: natbib
+    #toc: true
+    #number_sections: true
+    #includes:
+      #in_header: header.tex
+      citation_package: 'natbib'
 geometry: margin=1in
 fontfamily: mathpazo
 fontsize: 11pt
-bibliography: references.bib
+bibliography: 'references.bib'
 ---
 
 ```{r setup, include=FALSE}
