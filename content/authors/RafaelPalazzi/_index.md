@@ -14,7 +14,7 @@ role: PhD candidate
 
 # Organizations/Affiliations
 organizations:
-- name: Pontifícia Universidade Cat?lica do Rio de Janeiro (PUC-Rio)
+- name: Pontifícia Universidade Católica do Rio de Janeiro (PUC-Rio)
   url: "https://www.puc-rio.br"
 
 bio:
