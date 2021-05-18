@@ -38,21 +38,10 @@ bibliography: references.bib
 
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-def.chunk.hook  <- knitr::knit_hooks$get("chunk")
-knitr::knit_hooks$set(chunk = function(x, options) {
-  x <- def.chunk.hook(x, options)
-  ifelse(options$size != "normalsize", paste0("\\", options$size,"\n\n", x, "\n\n \\normalsize"), x)
-})
 
-file.rename(from="Head Ratio.md", 
-               to="README.md") 
-```
 
 
 ## Load some packages
-```{r, echo=T, eval=T, results='asis', fig.width=8, fig.height=4, fig.align='center', out.width="1\\linewidth", warning=FALSE, message=FALSE, size='small'}
 
 library(tidyverse)
 library(quantmod)
@@ -124,7 +113,6 @@ dd1 %>%
 - In the commodity markets is common to use Futures contracts to hedge the Spot price. If a producers/exporters want to hedge their production, for example, then they would sell Futures contracts; if a buyers/importers want to hedge their position in the futures markets, then they would buy futures contracts. In this sense, the hedge ratio indicates the level of risk a producer/exporter are exposed. 
 
 
-```{r }
 # Time series - zoo
 data.z = zoo(dd[,-1], as.Date(dd[,1], format="%Y/%m/%d"))
 S = data.z[,"Cash Price",drop=FALSE]
@@ -151,7 +139,6 @@ stargazer(N, type = "text", title="N of Contracts", rownames = FALSE,
 - The risk manager's role is to mitigate the volatility by hedging the underlying asset or avoiding the deviation from the expected value.   
 - There are a few risk metrics to measure the uncertainty in the futures contracts. @Chan2019 created a package that computes 26 financial risk measures. Thus, we applied the function to our example (soybean hedging).
 
-```{r }
 
 ### We use the Soybean Future contract (F) for hedging the Spot price (S)
 rh = riskR::risk.hedge(lS,lF,alpha=c(0.05, 0.01), beta = 1, p=2)
