@@ -3,7 +3,7 @@ title: "Passeio aleatório e Modelo binomial usando R"
 
 categories: []
 
-date: '2021-05-17T00:00:00Z' 
+date: '2021-05-18T00:00:00Z' 
 
 draft: no
 
