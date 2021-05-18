@@ -127,7 +127,7 @@ Risk Metrics.
 Estimating optimal hedging ratios based on risk measures (see, Chan (2019)).
 
 - The risk manager's role is to mitigate the volatility by hedging the underlying asset or avoiding the deviation from the expected value.   
-- There are a few risk metrics to measure the uncertainty in the futures contracts. @Chan2019 created a package that computes 26 financial risk measures. Thus, we applied the function to our example (soybean hedging).
+- There are a few risk metrics to measure the uncertainty in the futures contracts. Chan (2019) created a package that computes 26 financial risk measures. Thus, we applied the function to our example (soybean hedging).
 
 
 We use the Soybean Future contract (F) for hedging the Spot price (S).
