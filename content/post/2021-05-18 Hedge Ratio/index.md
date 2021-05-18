@@ -1,5 +1,5 @@
 ---
-title: "Passeio aleatório e Modelo binomial usando R"
+title: "Hedge Ratio"
 
 categories: []
 
@@ -25,7 +25,7 @@ summary: null
 tags: 
 - Tratamento de Dados
 - Modelo Binomial
-- Passeio Aleatório
+- Passeio AleatÃ³rio
 
 authors:
 - ArnaldoNascimento
