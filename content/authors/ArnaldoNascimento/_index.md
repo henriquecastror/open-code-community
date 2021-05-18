@@ -14,15 +14,15 @@ role: Analista
 
 # Organizations/Affiliations
 organizations:
-- name: Finep – Inovação e Pesquisa
+- name: Finep â€“ InovaÃ§Ã£o e Pesquisa
   url: "https://www.finep.gov.br"
 
 bio:
 
 interests:
-- Economia e Finanças Comportamentais
-- Teoria da Decisão
-- Modelagem matemática em economia e finanças
+- Economia e FinanÃ§as Comportamentais
+- Teoria da DecisÃ£o
+- Modelagem matemÃ¡tica em economia e finanÃ§as
 
 education:
   courses:
@@ -69,5 +69,6 @@ user_groups:
 
 ---
 
-Atualmente, sou analista na Finep – Inovação e Pesquisa e Professor do Quadro Externo do Departamento de Administração [IAG PUC-Rio](https://iag.puc-rio.br/) (Rio de Janeiro, Brasil). Eu leciono modelagem estocástica, otimização financeira e economia/finanças comportamentais. Se você quiser saber mais sobre mim, você pode visitar meu site pessoal https://sites.google.com/view/arnaldonascimento//.
+Atualmente, sou analista na Finep â€“ InovaÃ§Ã£o e Pesquisa e Professor do Quadro Externo do Departamento de AdministraÃ§Ã£o [IAG PUC-Rio](https://iag.puc-rio.br/) (Rio de Janeiro, Brasil). Eu leciono modelagem estocÃ¡stica, otimizaÃ§Ã£o financeira e economia/finanÃ§as comportamentais. Se vocÃª quiser saber mais sobre mim, vocÃª pode visitar meu site pessoal https://sites.google.com/view/arnaldonascimento//.
 
+ 
