@@ -48,7 +48,7 @@ Carregando os parâmetros: fator de subida (xp), fator de descida (xm), valor in
     n <- 100                    
     path <- 10
 
-Construindo o vetor de probabilidades aleatórias (a) e inicializando o vetor de ganho/perda (e) em cada passo e o vetor do valor acumulado em cada passo (S).
+Construindo o vetor do valor acumulado a cada passo. Aqui basta escolher qual modelo quer simular, passeio aleatório (processo aditivo) ou o modelo binomial (processo multiplicativo). No exemplo abaixo, estamos rodando o modelo binomial.
 
     a <- runif(n, min = 0, max = 1)                    
     e <- matrix(nrow = 1, ncol = n-1, NA)               
@@ -71,6 +71,7 @@ Plotando o primeiro caminho.
 
     plot(c(1:n), S, type = "l", xlab = "n", ylab = "S", xlim = c(0,n), ylim = c(min(S),max(S)))
     
+{{< figure src="RandomWalk.png" width="80%" >}}  
 
 
 Construindo e plotando os demais caminhos. Aqui também pode-se escolher entre os dois modelos.
@@ -90,5 +91,8 @@ Construindo e plotando os demais caminhos. Aqui também pode-se escolher entre o
     }
     
     
-{{< figure src="RandomWalk.png" width="80%" >}}  
+{{< figure src="Binomial.png" width="80%" >}}  
 
+É importante notar que o vetor de probabilidades (a <- runif(n, min = 0, max = 1)) é gerado aleatoriamente com uma distribuição uniforme. Isso significa que as seeds sugeridas anteriormente, resultaram em gráficos semelhantes aos apresentados neste post, mas não exatamente iguais a eles.
+
+Alterando os parâmetros dos modelos, podemos construir simulações com tendências de subida, por exemplo, utilizando pp<- 0.8. Um bom exercício é modificar os parâmetros e plotar os gráficos para entender como cada parâmetro influencia cada modelo.
