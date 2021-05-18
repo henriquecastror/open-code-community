@@ -1,6 +1,6 @@
 ---
 # Display name
-title: Rafael Palazzi (membro desde 2021/04)
+title: Rafael Palazzi (membro desde 2021/05)
 
 # Username (this should match the folder name)
 authors:
