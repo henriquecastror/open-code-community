@@ -75,7 +75,7 @@ Extract the Soybean prices from Quandl
 
  Spread Futures vs Spot price.
 
-- Let's assume the \texttt{Basis} as only the spread  between *Spot* and *Future* price.
+- Let's assume the *Basis as only the spread  between *Spot* and *Future* price.
 
 - Supposing you want to hedge a Cash Price position (Spot) with a Future contract (F) in the Chicago Mercantile Exchange (CME). 
 
@@ -95,10 +95,10 @@ Build ggplot.
 
 
  Hedge Ratio.
-- The hedge ratio is a measure that compares a financial asset to a hedging instrument. The measurement indicates the risk of a shift in the hedging instrument. 
+- The hedge ratio is a measure that compares a financial asset to a hedging instrument. The measurement indicates the risk of a shift in the hedging instrument (Lien (2016)). 
 \begin{align} H^* = \rho \frac{\sigma_S}{\sigma_F} \end{align} 
 
-\begin{align} H_{mv}= \frac{Cov(\Delta S_t, \Delta f_t)}{Var(\Delta f_t)} \end{align} Lien (2016)
+\begin{align} H_{mv}= \frac{Cov(\Delta S_t, \Delta f_t)}{Var(\Delta f_t)} \end{align} 
 
 - In the commodity markets is common to use Futures contracts to hedge the Spot price. If a producers/exporters want to hedge their production, for example, then they would sell Futures contracts; if a buyers/importers want to hedge their position in the futures markets, then they would buy futures contracts. In this sense, the hedge ratio indicates the level of risk a producer/exporter are exposed. 
 
@@ -137,7 +137,7 @@ We use the Soybean Future contract (F) for hedging the Spot price (S).
               no.space = TRUE, column.sep.width = '4pt', title="Risk Metrics")
 
 
-# Descriptions
+Descriptions
 - Risk measures (Standard Deviation (StD)
 - Value at Risk (VaR)
 - Expected Loss (EL)
