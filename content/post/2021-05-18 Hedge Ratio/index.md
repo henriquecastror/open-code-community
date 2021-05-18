@@ -39,7 +39,7 @@ bibliography: references.bib
 ---
 
 # Introduction
-This is a series of short articles to discuss the tools to manage risk in the commodity markets using \emph{R}. My goal is to show how can we optimize the hedging strategy using commodities contracts - futures and options. 
+This is a series of short articles to discuss the tools to manage risk in the commodity markets using **R**. My goal is to show how can we optimize the hedging strategy using commodities contracts - futures and options. 
 
 Load some packages.
 
