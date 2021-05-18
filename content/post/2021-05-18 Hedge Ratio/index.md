@@ -28,7 +28,7 @@ tags:
 - Passeio Aleatório
 
 authors:
-- ArnaldoNascimento
+- RafaelPalazzi
 
 bibliography: references.bib  
 
