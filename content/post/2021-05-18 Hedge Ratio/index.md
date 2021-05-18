@@ -43,17 +43,17 @@ bibliography: references.bib
 
 ## Load some packages
 
-library(tidyverse)
-library(quantmod)
-library(zoo)
-library(ggplot2)
-library(Quandl)
-library(lubridate)
-library(ggthemes)
-library(reshape)
-library(riskR)
-library(stargazer)
-library(tinytex)
+    library(tidyverse)
+    library(quantmod)
+    library(zoo)
+    library(ggplot2)
+    library(Quandl)
+    library(lubridate)
+    library(ggthemes)
+    library(reshape)
+    library(riskR)
+    library(stargazer)
+    library(tinytex)
 ```
 \newpage
 
