@@ -68,7 +68,7 @@ where $r$ is the continuously compound interest rate at instant t and maturity $
 {{< figure src="1.png" width="80%" >}}
 
 
-Extract the Soybean prices from Quandl
+Extract the Soybean prices from Quandl.
 
     soy = Quandl("TFGRAIN/SOYBEANS")
     soy_f = soy  %>%
