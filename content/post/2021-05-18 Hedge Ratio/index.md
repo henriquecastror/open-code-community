@@ -30,6 +30,7 @@ tags:
 authors:
 - ArnaldoNascimento
 
+bibliography: references.bib  
 
 ---
 
