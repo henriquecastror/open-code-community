@@ -95,7 +95,7 @@ Build ggplot.
 
 
  Hedge Ratio.
-- The hedge ratio is a measure that compares a financial asset to a hedging instrument. The measurement indicates the risk of a shift in the hedging instrument (Lien (2016)). 
+- The hedge ratio is a measure that compares a financial asset to a hedging instrument. The measurement indicates the risk of a shift in the hedging instrument (Lien,2016). 
 \begin{align} H^* = \rho \frac{\sigma_S}{\sigma_F} \end{align} 
 
 \begin{align} H_{mv}= \frac{Cov(\Delta S_t, \Delta f_t)}{Var(\Delta f_t)} \end{align} 
