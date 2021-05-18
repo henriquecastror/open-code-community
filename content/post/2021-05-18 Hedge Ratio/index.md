@@ -38,10 +38,10 @@ bibliography: references.bib
 
 ---
 
+# Introduction
+This is a series of short articles to discuss the tools to manage risk in the commodity markets using \emph{R}. My goal is to show how can we optimize the hedging strategy using commodities contracts - futures and options. 
 
-
-
-## Load some packages
+Load some packages
 
     library(tidyverse)
     library(quantmod)
@@ -56,11 +56,10 @@ bibliography: references.bib
     library(tinytex)
 
 
-# Introduction
-This is a series of short articles to discuss the tools to manage risk in the commodity markets using \emph{R}. My goal is to show how can we optimize the hedging strategy using commodities contracts - futures and options. 
+
 
 ## Forward-Spot relationship 
--The relationship between the forward  and the spot price, assuming no-arbitrage, can be describe as follows (@Geman2005):
+-The relationship between the forward  and the spot price, assuming no-arbitrage, can be describe as follows Geman (2005):
 \begin{align} f ^T (t) = S(t)e^{(r-y)(T-t)} \end{align} 
 where $r$ is the continuously compound interest rate at instant t and maturity $T$, and $y$ is the convenience yield.
 
@@ -76,14 +75,15 @@ Extract the Soybean prices from Quandl
     dd= soy_f[,c(1:2, 6)]
 
 
-## Spread Futures vs Spot price
+ Spread Futures vs Spot price
 
-- Let's assume the \texttt{Basis} as only the spread  between \texttt{Spot} and \texttt{Future} price.
+- Let's assume the \texttt{Basis} as only the spread  between *Spot* and *Future* price.
 
 - Supposing you want to hedge a Cash Price position (Spot) with a Future contract (F) in the Chicago Mercantile Exchange (CME). 
 
 
-### Build ggplot 
+Build ggplot 
+    
     dd1= melt(dd,id=c("Date"))
 
     dd1 %>%
@@ -96,15 +96,16 @@ Extract the Soybean prices from Quandl
       theme(legend.text = element_text(size = 8, colour = "grey10"))
 
 
-## Hedge Ratio
+ Hedge Ratio
 - The hedge ratio is a measure that compares a financial asset to a hedging instrument. The measurement indicates the risk of a shift in the hedging instrument. 
 \begin{align} H^* = \rho \frac{\sigma_S}{\sigma_F} \end{align} 
 
-\begin{align} H_{mv}= \frac{Cov(\Delta S_t, \Delta f_t)}{Var(\Delta f_t)} \end{align} (@Lien2016)
+\begin{align} H_{mv}= \frac{Cov(\Delta S_t, \Delta f_t)}{Var(\Delta f_t)} \end{align} Lien (2016)
 
 - In the commodity markets is common to use Futures contracts to hedge the Spot price. If a producers/exporters want to hedge their production, for example, then they would sell Futures contracts; if a buyers/importers want to hedge their position in the futures markets, then they would buy futures contracts. In this sense, the hedge ratio indicates the level of risk a producer/exporter are exposed. 
 
-# Time series - zoo
+Time series - zoo
+    
     data.z = zoo(dd[,-1], as.Date(dd[,1], format="%Y/%m/%d"))
     S = data.z[,"Cash Price",drop=FALSE]
     F = data.z[,"Futures",drop=FALSE]
@@ -124,20 +125,22 @@ stargazer(N, type = "text", title="N of Contracts", rownames = FALSE,
           colnames = FALSE)
 
 
-## Risk Metrics
-### Estimating optimal hedging ratios based on risk measures (see @Chan2019)
+Risk Metrics
+Estimating optimal hedging ratios based on risk measures (see @Chan2019)
 
 - The risk manager's role is to mitigate the volatility by hedging the underlying asset or avoiding the deviation from the expected value.   
 - There are a few risk metrics to measure the uncertainty in the futures contracts. @Chan2019 created a package that computes 26 financial risk measures. Thus, we applied the function to our example (soybean hedging).
 
 
 ### We use the Soybean Future contract (F) for hedging the Spot price (S)
-rh = riskR::risk.hedge(lS,lF,alpha=c(0.05, 0.01), beta = 1, p=2)
-stargazer(rh,type="text",font.size = 'tiny',
-          no.space = TRUE, column.sep.width = '4pt', title="Risk Metrics")
+
+    rh = riskR::risk.hedge(lS,lF,alpha=c(0.05, 0.01), beta = 1, p=2)
+    stargazer(rh,type="text",font.size = 'tiny',
+              no.space = TRUE, column.sep.width = '4pt', title="Risk Metrics")
 
 
-^[Risk measures (Standard Deviation (StD), Value at Risk (VaR), Expected Loss (EL), Expected Loss Deviation (ELD), Expected Shortfall (ES), Shortfall Deviation Risk (SDR), Expectile
+# Variable descriptions
+Risk measures (Standard Deviation (StD), Value at Risk (VaR), Expected Loss (EL), Expected Loss Deviation (ELD), Expected Shortfall (ES), Shortfall Deviation Risk (SDR), Expectile
 Value at Risk (EVaR), Deviation Expectile Value at Risk (DEVaR), Entropic (ENT), Deviation Entropic (DENT), Maximum Loss (ML)) ]
 
 
