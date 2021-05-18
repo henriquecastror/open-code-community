@@ -98,6 +98,7 @@ Build ggplot.
                           values = c("Cash Price"="darkblue", "Futures"="red"))+
       theme(legend.text = element_text(size = 8, colour = "grey10"))
 
+{{< figure src="4.png" width="80%" >}}
 
  Hedge Ratio.
 - The hedge ratio is a measure that compares a financial asset to a hedging instrument. The measurement indicates the risk of a shift in the hedging instrument (Lien,2016). 
