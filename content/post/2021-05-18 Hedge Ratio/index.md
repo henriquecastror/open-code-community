@@ -23,9 +23,9 @@ subtitle: null
 summary: null
 
 tags: 
-- Tratamento de Dados
-- Modelo Binomial
-- Passeio Aleatório
+- Hedge Ration
+- Commodities
+- Quantdl
 
 authors:
 - RafaelPalazzi
