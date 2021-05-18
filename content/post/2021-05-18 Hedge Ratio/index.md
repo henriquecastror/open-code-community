@@ -151,4 +151,8 @@ Descriptions
 
 
 # References 
+Chan, S., & Nadarajah, S. (2019). Risk: An R Package for Financial Risk Measures. Computational Economics, 53(4), 1337–1351. https://doi.org/10.1007/s10614-018-9806-9
 
+Geman, H. (2005). Commodities and commodity derivatives. In J. W. & Sons (Ed.), Modeling and Pricing for Agriculturals, Metals and … (p. 419). John Wiley \\& Sons.
+
+Lien, D., Shrestha, K., & Wu, J. (2016). Quantile Estimation of Optimal Hedge Ratio. Journal of Futures Markets, 36(2), 194–214. https://doi.org/https://doi.org/10.1002/fut.21712
