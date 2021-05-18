@@ -78,7 +78,7 @@ Extract the Soybean prices from Quandl.
 
  Spread Futures vs Spot price.
 
-- Let's assume the *Basis as only the spread  between *Spot* and *Future* price.
+- Let's assume the *Basis* as only the spread  between *Spot* and *Future* price.
 
 - Supposing you want to hedge a Cash Price position (Spot) with a Future contract (F) in the Chicago Mercantile Exchange (CME). 
 
