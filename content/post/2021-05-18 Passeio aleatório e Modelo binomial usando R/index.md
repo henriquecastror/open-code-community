@@ -1,5 +1,5 @@
 ---
-title: "Passeio aleatÛrio e Modelo binomial usando R"
+title: "Passeio aleat√≥rio e Modelo binomial usando R"
 
 categories: []
 
@@ -25,7 +25,7 @@ summary: null
 tags: 
 - Tratamento de Dados
 - Modelo Binomial
-- Passeio AleatÛrio
+- Passeio Aleat√≥rio
 
 authors:
 - ArnaldoNascimento
@@ -36,11 +36,11 @@ authors:
 
 
 ---
-## Passeio aleatÛrio e Modelo binomial usando R
+## Passeio aleat√≥rio e Modelo binomial usando R
 
-A motivaÁ„o desse post È mostrar como construir dois modelos b·sicos mas muito instrutivos em simulaÁıes estoc·sticas. S„o eles, o Passeio AleatÛrio, modelo que serve como base para diversos processos estoc·sticos e o Modelo Binomial, que È uma discretizaÁ„o do movimento geomÈtrico browniano com Ûtima performance computacional.
+A motiva√ß√£o desse post √© mostrar como construir dois modelos b√°sicos mas muito instrutivos em simula√ß√µes estoc√°sticas. S√£o eles, o Passeio Aleat√≥rio, modelo que serve como base para diversos processos estoc√°sticos e o Modelo Binomial, que √© uma discretiza√ß√£o do movimento geom√©trico browniano com √≥tima performance computacional.
 
-Carregando os par‚metros: fator de subida (xp), fator de descida (xm), valor inicial (S0), probabilidade de subida (pp), probabilidade de descida (pm), n˙mero de passos (n) e n˙mero de caminhos a serem plotados em cada simulaÁ„o (path).
+Carregando os par√¢metros: fator de subida (xp), fator de descida (xm), valor inicial (S0), probabilidade de subida (pp), probabilidade de descida (pm), n√∫mero de passos (n) e n√∫mero de caminhos a serem plotados em cada simula√ß√£o (path).
 
     xp <- 1.1; xm <- 0.9         
     S0 <- 0.5                   
@@ -48,7 +48,7 @@ Carregando os par‚metros: fator de subida (xp), fator de descida (xm), valor ini
     n <- 100                    
     path <- 10
 
-Construindo o vetor de probabilidades aleatÛrias (a) e inicializando o vetor de ganho/perda (e) em cada passo e o vetor do valor acumulado em cada passo (S).
+Construindo o vetor de probabilidades aleat√≥rias (a) e inicializando o vetor de ganho/perda (e) em cada passo e o vetor do valor acumulado em cada passo (S).
 
     a <- runif(n, min = 0, max = 1)                    
     e <- matrix(nrow = 1, ncol = n-1, NA)               
@@ -60,7 +60,7 @@ Construindo o vetor de ganho/perda.
       if (a[i]>pp) e[i] <- xm else e[i] <- xp           
     }
 
-Construindo o vetor do valor acumulado a cada passo. Aqui basta escolher qual modelo quer simular, passeio aleatÛrio (processo aditivo) ou o modelo binomial (processo multiplicativo)
+Construindo o vetor do valor acumulado a cada passo. Aqui basta escolher qual modelo quer simular, passeio aleat√≥rio (processo aditivo) ou o modelo binomial (processo multiplicativo)
 
     for (i in 2:n) {
         #S[i] <- S[i-1]+e[i-1]                         
@@ -73,7 +73,7 @@ Plotando o primeiro caminho.
     
 
 
-Construindo e plotando os demais caminhos. Aqui tambÈm pode-se escolher entre os dois modelos.
+Construindo e plotando os demais caminhos. Aqui tamb√©m pode-se escolher entre os dois modelos.
 
     for (j in 1:path) {                                 # building different paths
       a <- runif(n, min = 0, max = 1)
@@ -90,4 +90,5 @@ Construindo e plotando os demais caminhos. Aqui tambÈm pode-se escolher entre os
     }
     
     
-{{< figure src="RandomWalk.png" width="80%" >}}       
+{{< figure src="RandomWalk.png" width="80%" >}}  
+
