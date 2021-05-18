@@ -62,8 +62,11 @@ Load some packages.
 where $r$ is the continuously compound interest rate at instant t and maturity $T$, and $y$ is the convenience yield.
 
 - We call backwardation when $(r-y) < 0$, the forward curve is a decreasing function of maturity.
+{{< figure src="3.png" width="80%" >}}
 
 - The contango sitaution is when $(r-y) > 0$, the forward curve is an increasing function of maturity.  
+{{< figure src="1.png" width="80%" >}}
+
 
 Extract the Soybean prices from Quandl
 
@@ -78,6 +81,8 @@ Extract the Soybean prices from Quandl
 - Let's assume the *Basis as only the spread  between *Spot* and *Future* price.
 
 - Supposing you want to hedge a Cash Price position (Spot) with a Future contract (F) in the Chicago Mercantile Exchange (CME). 
+
+{{< figure src="2.png" width="80%" >}}
 
 
 Build ggplot.
@@ -137,7 +142,7 @@ We use the Soybean Future contract (F) for hedging the Spot price (S).
               no.space = TRUE, column.sep.width = '4pt', title="Risk Metrics")
 
 
-Descriptions
+Descriptions:
 - Risk measures (Standard Deviation (StD)
 - Value at Risk (VaR)
 - Expected Loss (EL)
@@ -151,8 +156,8 @@ Descriptions
 
 
 # References 
-Chan, S., & Nadarajah, S. (2019). Risk: An R Package for Financial Risk Measures. Computational Economics, 53(4), 1337–1351. https://doi.org/10.1007/s10614-018-9806-9
+- Chan, S., & Nadarajah, S. (2019). Risk: An R Package for Financial Risk Measures. Computational Economics, 53(4), 1337–1351. https://doi.org/10.1007/s10614-018-9806-9
 
-Geman, H. (2005). Commodities and commodity derivatives. In J. W. & Sons (Ed.), Modeling and Pricing for Agriculturals, Metals and … (p. 419). John Wiley \\& Sons.
+- Geman, H. (2005). Commodities and commodity derivatives. In J. W. & Sons (Ed.), Modeling and Pricing for Agriculturals, Metals and … (p. 419). John Wiley \\& Sons.
 
-Lien, D., Shrestha, K., & Wu, J. (2016). Quantile Estimation of Optimal Hedge Ratio. Journal of Futures Markets, 36(2), 194–214. https://doi.org/https://doi.org/10.1002/fut.21712
+- Lien, D., Shrestha, K., & Wu, J. (2016). Quantile Estimation of Optimal Hedge Ratio. Journal of Futures Markets, 36(2), 194–214. https://doi.org/https://doi.org/10.1002/fut.21712
