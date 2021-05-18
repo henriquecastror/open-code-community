@@ -138,16 +138,16 @@ We use the Soybean Future contract (F) for hedging the Spot price (S).
 
 
 # Descriptions
-1) Risk measures (Standard Deviation (StD)
-2) Value at Risk (VaR)
-3) Expected Loss (EL)
-4) Expected Loss Deviation (ELD)
-5) Expected Shortfall (ES)
-6) Shortfall Deviation Risk (SDR) Expectile Value at Risk (EVaR)
-7) Deviation Expectile Value at Risk (DEVaR)
-8) Entropic (ENT)
-9) Deviation Entropic (DENT)
-10) Maximum Loss (ML)
+- Risk measures (Standard Deviation (StD)
+- Value at Risk (VaR)
+- Expected Loss (EL)
+- Expected Loss Deviation (ELD)
+- Expected Shortfall (ES)
+- Shortfall Deviation Risk (SDR) Expectile Value at Risk (EVaR)
+- Deviation Expectile Value at Risk (DEVaR)
+- Entropic (ENT)
+- Deviation Entropic (DENT)
+- Maximum Loss (ML)
 
 
 # References 
