@@ -30,12 +30,8 @@ tags:
 authors:
 - ArnaldoNascimento
 
-
 ---
 
-
-
----
 ## Passeio aleatório e Modelo binomial usando R
 
 A motivação desse post é mostrar como construir dois modelos básicos mas muito instrutivos em simulações estocásticas. São eles, o Passeio Aleatório, modelo que serve como base para diversos processos estocásticos e o Modelo Binomial, que é uma discretização do movimento geométrico browniano com ótima performance computacional.
