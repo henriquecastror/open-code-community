@@ -34,10 +34,6 @@ authors:
 
 
 ---
-
-
-
----
 ##  Análise de risco e retorno de ações usando o R
 
 Nesse post iremos analisar a relação de risco e retorno de ações usando o R. A teoria de finanças prediz que quanto maior o risco de uma empresa, maior será seu retorno. Mas será que essa relação é verificada nos dados? 
