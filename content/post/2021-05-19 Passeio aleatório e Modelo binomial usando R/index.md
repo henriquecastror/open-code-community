@@ -66,6 +66,7 @@ Construindo o vetor do valor acumulado a cada passo. Aqui basta escolher qual mo
 
 
 Construindo o vetor de ganho/perda.
+
     for (i in 1:(n-1)) {
       if (a[i]>pp) e[i] <- xm else e[i] <- xp           
     }
@@ -112,7 +113,7 @@ A figura abaixo representa um exemplo de simulação com 10 caminhos possíveis 
     n <- 200                     
     path <- 10 
 
-{{< figure src="RandowWalk.png" width="80%" >}}
+{{< figure src="RandomWalk.png" width="80%" >}}
 
 Nossa próxima figura representa um exemplo de simulação com 10 caminhos possíveis e 100 passos para o Modelo Binomial. A figura foi gerada com a seguinte seed:
 
