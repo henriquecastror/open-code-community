@@ -113,7 +113,7 @@ Most crypto currencies reached their peaks recently. The graph below shows the t
          
 {{< figure src="1.png" width="80%" >}}
 
-Bitcoin reached its all-time peak of \$ 63503.46  on April 13, 2021 and was trading at $45275 on May 18, 2021, a ~29% correction. For Ethereum, the peak was $4168 on May 11, and the price is currently hovering around $3500, a 16% fall. Binance Coin dropped from a peak of $675 on May 3rd to about $524 (22% fall). Finally, DOGE reached a peak of $0.68 on May 7 and is currently trading at 0.49 (a ~27% correction). The values can be obtained with the code below (although this is not very efficient).
+Bitcoin reached its all-time peak of 63503.46  on April 13, 2021 and was trading at $45275 on May 18, 2021, a ~29% correction. For Ethereum, the peak was 4168 on May 11, and the price is currently hovering around 3500, a 16% fall. Binance Coin dropped from a peak of $675 on May 3rd to about $524 (22% fall). Finally, DOGE reached a peak of 0.68 on May 7 and is currently trading at 0.49 (a ~27% correction). The values can be obtained with the code below (although this is not very efficient).
 
     select_coins <- c("BTC", "ETH", "BNB", "DOGE")
     max_inds <- apply(coin_prices[, select_coins], 2, which.max)
