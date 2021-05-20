@@ -3,7 +3,7 @@ title: "Drawdown in Cryptoland"
 
 categories: []
 
-date: '2021-05-18T00:00:00Z' 
+date: '2021-05-20T00:00:00Z' 
 
 draft: no
 
