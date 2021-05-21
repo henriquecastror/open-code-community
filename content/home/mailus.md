@@ -44,15 +44,11 @@ subtitle = ""
 
 
 <div style="text-align: center;">
-<p>test
-<em>emphasized test</em></p>
+<p>👉 Para enviar sua demanda clique [aqui](mailto:opencodecom@gmail.com).</p>
+<p👉 Saiba como contribuir [aqui](https://opencodecom.net/contact/).</p>
 </div>
 
 
-
-👉 Para enviar sua demanda clique [aqui](mailto:opencodecom@gmail.com).
-👉 Saiba como contribuir [aqui](https://opencodecom.net/contact/).
-<p align="center">
 
 
 
