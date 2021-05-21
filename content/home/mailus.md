@@ -45,6 +45,6 @@ subtitle = ""
 
 
 👉 Clique [aqui](mailto:opencodecom@gmail.com).
-
+👉 Saiba como contribuir [aqui](https://opencodecom.net/contact/).
 
 
