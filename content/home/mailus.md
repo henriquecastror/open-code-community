@@ -49,9 +49,8 @@ subtitle = ""
 
 
 
-See my book of random notes including journal's rankings, literature, and others TBA.
 
-👉 Check it [here](https://twitter.com/opencodecom).
+👉 Clique [aqui](https://twitter.com/opencodecom).
 
 
 
