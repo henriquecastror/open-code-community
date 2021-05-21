@@ -50,7 +50,7 @@ subtitle = ""
 
 
 
-👉 Clique [aqui](opencodecom@gmail.com).
+👉 Clique [aqui]((mailto:opencodecom@gmail.com)).
 
 
 
