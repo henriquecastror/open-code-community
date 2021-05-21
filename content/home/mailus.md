@@ -45,7 +45,7 @@ subtitle = ""
 
 
 <p>👉 Para enviar sua demanda clique [aqui](mailto:opencodecom@gmail.com).</p>
-<p👉 Saiba como contribuir [aqui](https://opencodecom.net/contact/).</p>
+<p>👉 Saiba como contribuir [aqui](https://opencodecom.net/contact/).</p>
 
 
 
