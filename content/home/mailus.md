@@ -43,10 +43,10 @@ subtitle = ""
 
 
 
-{{% center %}}
+<center>
 👉 Para enviar sua demanda clique [aqui](mailto:opencodecom@gmail.com).
 👉 Saiba como contribuir [aqui](https://opencodecom.net/contact/).
-{{% /center %}}
+</center>
 
 
 
