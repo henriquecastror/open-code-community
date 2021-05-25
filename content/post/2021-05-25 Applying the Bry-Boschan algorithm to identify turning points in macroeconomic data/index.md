@@ -1,11 +1,9 @@
 ---
-  
-  title: "Erros padrão robustos e clusterização dos erros padrão"
+title: "â€¢	Applying the Bry-Boschan algorithm to identify turning points in macroeconomic data"
 
 categories: []
 
-# MUDE APENAS ANO DIA E MES PARA O DIA QUE VOCE NOS ENVIOU
-date: '2021-05-24T00:00:00Z' 
+date: '2021-05-25T00:00:00Z' 
 
 draft: no
 
@@ -15,25 +13,24 @@ gallery_item: null
 
 image:
   caption: 
-  focal_point: 
-  preview_only: 
-  
-  projects: []
+  focal_point: Top
+  preview_only: no
+
+projects: []
 
 subtitle: null
 
 summary: null
 
-# DIGITE NA LISTA ABAIXO OS TRACKS DO SEU CODIGO
 tags: 
-  - Open Data
-
-# DIGITE NA LISTA ABAIXO O NOME DE TODOS OS AUTORES SEM ESPACOS
+- Open Data
+- Open Code
 authors:
-  - LucasSchwarz
+- JeffersonColombo
 
 
 ---
+
   ## Applying the Bry-Boschan algorithm to identify turning points in macroeconomic data
   
   Identifying turning points in aggregate economic series represents a topic of great practical and academic interest, at least since the seminal work of Burns and Mitchell (1946). How do we know if the economy is in a recession?  How do we know when it has ended? Can we establish a chronology of recessions and expansions for a given economy? 
