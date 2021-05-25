@@ -77,6 +77,7 @@ If not already installed, one should download the SBBQ package, written by Phili
 ### Step #2:  Logarithmic transformation at the underlying series.
 
     gen lnNAEXKP01BRQ652S = 100*ln(NAEXKP01BRQ652S)
+    
 ### Step #3: Applying the BB algorithm
 
     sbbq lnNAEXKP01BRQ652S, w(2) p(2) cycle(5)
@@ -119,13 +120,13 @@ Now its time to analyze the results of the BB algorithm by comparing the recessi
 
 The resulting Figure is the one presented below:
 
-{{< figure src="3.png" width="100%" >}}
+{{< figure src="3.png" width="80%" >}}
 
 The shaded areas represent recession periods identified by the proposed algorithm. As expected, these periods coincide with falling GDP (i.e., negative real growth rates). We observe recessions in the following periods: 1998Q1-1998Q4, 2001Q2-2001Q4, 2003Q1-2003Q2, 2008Q4-2009Q1, 2014Q2-2016Q4, 2020Q1-2020Q2.
 
-However, one question remains: how accurate is the chronology of recessions dated by the B.B. algorithm? One way to assess such accuracy is to compare it with the one released by the Brazilian Economic Cycle Dating Committee (CODACE). Using the last release from the committee (https://portalibre.fgv.br/en/codace), from June 29, 2020, we get the following picture: 
+However, one question remains: how accurate is the chronology of recessions dated by the B.B. algorithm? One way to assess such accuracy is to compare it with the one released by the Brazilian Economic Cycle Dating Committee (CODACE). Using the [last release from the committee](https://portalibre.fgv.br/en/codace), from June 29, 2020, we get the following picture: 
 
-{{< figure src="4.png" width="100%" >}}
+{{< figure src="4.png" width="80%" >}}
 
 The series analyzed by CODACE starts in 1980, thus being different from ours (beginning in 1996). Focusing on 1996 onwards (for comparison purposes), one will find that CODACE points out six recessions: around 1998-1999, 2001, 2003, 2008-2009, 2014-2016, and 2020. Those dates seem to coincide with ours! However, to check how much they overlap, we must take a closer look at both chronologies:
 
