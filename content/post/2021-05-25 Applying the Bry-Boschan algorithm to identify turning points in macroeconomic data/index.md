@@ -44,7 +44,9 @@ Furthermore, following Harding and Pagan (2002), we rely on the classical defini
 Now, we apply the referred methodology using Stata 15. One can apply the same procedure using other statistical software (e.g., package "BCDating" in R).
 -	We start our exercise by downloading the quarterly Brazilian GDP at constant prices and seasonally adjusted from FRED (series I.D. = NAEXKP01BRQ652S) at Stata 15:
 
-      import fred NAEXKP01BRQ652S, clear
+     
+        import fred NAEXKP01BRQ652S, clear
+     
   -	After that, we set the data to time series' structure, using the FRED's auto-generated time variable "daten":
 
         tsset daten
