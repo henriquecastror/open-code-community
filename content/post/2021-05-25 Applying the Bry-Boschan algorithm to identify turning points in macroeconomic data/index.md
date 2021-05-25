@@ -1,5 +1,5 @@
 ---
-title: "•	Applying the Bry-Boschan algorithm to identify turning points in macroeconomic data"
+title: "	Applying the Bry-Boschan algorithm to identify turning points in macroeconomic data"
 
 categories: []
 
