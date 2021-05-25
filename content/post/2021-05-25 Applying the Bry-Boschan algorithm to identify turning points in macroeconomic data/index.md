@@ -114,16 +114,23 @@ The series analyzed by CODACE starts in 1980, thus being different from ours (be
 Wow, what a tremendous overlap! Except for the first recession (where our algorithm suggests the recession would have ended one quarter earlier), all else coincides. Moreover, our exercise reveals another important feature: we did not find any false positive (a situation where the algorithm indicates a recession not confirmed by the benchmark). Overall, our empirical exercise suggests that applying the B.B. algorithm on the Brazilian Quarterly GDP (seasonally adjusted) captures the chronology of economic recessions in a very accurate way compared to our benchmark (CODACE). 
 Such a good performance of the B.B. indicator is not a surprise. Colombo and Lazzari (2020) find the same evidence. Based on such an excellent performance of the algorithm, they apply the same procedure on the states' monthly index of economic activity (IBC-R from the Central Bank of Brazil) and find that the 2014-2016 great economic recession in Brazil was considerable heterogeneous across the Brazilian states (in terms of duration and magnitude). Their results might be replicated using the uploaded data in Colombo (2021).
 
-## References
+# References 
+- Bracke, P. (2012). SBBQ: Stata module to implement the Harding and Pagan (2002) business cycle dating algorithm.
 
--Bracke, P. (2012). SBBQ: Stata module to implement the Harding and Pagan (2002) business cycle dating algorithm.
--Bry, G., & Boschan, C. (1971). Programmed selection of cyclical turning points. In Cyclical analysis of time series: Selected procedures and computer programs (pp. 7-63). NBER.
-Economic Cycle Dating Committee - CODACE (2020). Announcement of the beginning of a recessionary phase in brazil in early 2020. Available at: https://portalibre.fgv.br/sites/default/files/2020-06/brazilian-economic-cycle-dating-committee-announcement-on-06_29_2020-1.pdf. Retrieved May 24, 2021.
--Colombo, J. A., & Lazzari, M. R. (2020). Same, but different? A state-level chronology of the 2014-2016 Brazilian economic recession and comparisons with the GFC and (early data on) COVID-19''. Economics Bulletin, 40(3), 2445-2456.
--Colombo, Jefferson (2021), "Data for: Same, but different? A state-level chronology of the 2014-2016 Brazilian economic recession and comparisons with the GFC and (early data on) COVID-19.", Mendeley Data, V1, doi: 10.17632/m6jx255stv.1
--Harding, D., & Pagan, A. (2002). Dissecting the cycle: a methodological investigation. Journal of monetary economics, 49(2), 365-381.
--Marcellino, M. (2006). Leading indicators. Handbook of Economic Forecasting, 1, 879-960.
-OECD (2001). OECD Leading Indicator Website, Glossary. https://stats.oecd.org/glossary/detail.asp?ID=244#:~:text=The%20'classical%20cycle'%20refers%20to,the%20output%2Dgap%20(eg.&text=GDP%20growth%20rate). Retrieved May 24, 2021.
+- Bry, G., & Boschan, C. (1971). Programmed selection of cyclical turning points. In Cyclical analysis of time series: Selected procedures and computer programs (pp. 7-63). NBER.
+
+- Economic Cycle Dating Committee – CODACE (2020). Announcement of the beginning of a recessionary phase in brazil in early 2020. Available at: https://portalibre.fgv.br/sites/default/files/2020-06/brazilian-economic-cycle-dating-committee-announcement-on-06_29_2020-1.pdf. Retrieved May 24, 2021.
+
+- Colombo, J. A., & Lazzari, M. R. (2020). Same, but different? A state-level chronology of the 2014-2016 Brazilian economic recession and comparisons with the GFC and (early data on) COVID-19''. Economics Bulletin, 40(3), 2445-2456.
+
+- Colombo, Jefferson (2021), “Data for: Same, but different? A state-level chronology of the 2014-2016 Brazilian economic recession and comparisons with the GFC and (early data on) COVID-19.”, Mendeley Data, V1, doi: 10.17632/m6jx255stv.1
+
+- Harding, D., & Pagan, A. (2002). Dissecting the cycle: a methodological investigation. Journal of monetary economics, 49(2), 365-381.
+
+- Marcellino, M. (2006). Leading indicators. Handbook of Economic Forecasting, 1, 879-960.OECD (2001). OECD Leading Indicator Website, Glossary. https://stats.oecd.org/glossary/detail.asp?ID=244#:~:text=The%20'classical%20cycle'%20refers%20to,the%20output%2Dgap%20(eg.&text=GDP%20growth%20rate). Retrieved May 24, 2021.
+
+
+
 
 
 
