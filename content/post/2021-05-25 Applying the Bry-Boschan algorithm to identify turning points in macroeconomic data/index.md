@@ -40,7 +40,11 @@ In this short note, we apply Harding and Pagan's (2002) quarterly approximation 
 Furthermore, following Harding and Pagan (2002), we rely on the classical definition of cycle - the one that refers to the behavior of the level of a variable (as opposed to the growth or the growth rate of business cycles). Definitions of the business cycles can be found at OECD (2001). Besides being simple and straightforward, the B.B. algorithm almost replicates the chronology of recession and expansions compared with the NBER dating (Marcellino, 2006).
 Now, we apply the referred methodology using Stata 15. One can apply the same procedure using other statistical software (e.g., package "BCDating" in R).
 -	We start our exercise by downloading the quarterly Brazilian GDP at constant prices and seasonally adjusted from FRED (series I.D. = NAEXKP01BRQ652S) at Stata 15:
+
+      import fred NAEXKP01BRQ652S, clear
   -	After that, we set the data to time series' structure, using the FRED's auto-generated time variable "daten":
+
+        tsset daten
   -	Before proceeding to the analysis, one may want to divide the data (in R$) by 1,000,000,000, so we can interpret the numbers as Billions of Reais.
 
          replace NAEXKP01BRQ652S = NAEXKP01BRQ652S/1000000000
@@ -62,11 +66,11 @@ If not already installed, one should download the SBBQ package, written by Phili
 
 -	Step #2:  Logarithmic transformation at the underlying series.
 
-    gen lnNAEXKP01BRQ652S = 100*ln(NAEXKP01BRQ652S)
+        gen lnNAEXKP01BRQ652S = 100*ln(NAEXKP01BRQ652S)
 
 -	Step #3: Applying the BB algorithm
 
-    sbbq lnNAEXKP01BRQ652S, w(2) p(2) cycle(5)
+       sbbq lnNAEXKP01BRQ652S, w(2) p(2) cycle(5)
 
 As we discussed before, we use 2, 2 and 5 quarters for the symmetric window, minimum phase duration, and minimum cycle duration, respectively.
 - Step #4: Transforming the result into a Recession Dummy (1 = rec, 0 = expansion)
