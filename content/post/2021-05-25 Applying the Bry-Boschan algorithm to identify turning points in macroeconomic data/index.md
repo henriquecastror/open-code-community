@@ -63,6 +63,11 @@ Below I report the results from the summarize command. From 1996Q1 to 2020Q4, th
 {{< figure src="1.png" width="100%" >}}
 
 -	Before using the B.B. algorithm, we transform the daily date variable into its quarterly counterpart and format it accordingly:
+
+      gen yq = qofd(daten)
+      format yq %tq
+
+
 -	Now we proceed step-by-step to apply the B.B. algorithm for quarterly data as in Harding and Pagan (2002):
 -  Step #1: Downloading the user-written SBBQ package
 If not already installed, one should download the SBBQ package, written by Philippe Bracke (London School of Economics, U.K.):
@@ -122,6 +127,7 @@ The series analyzed by CODACE starts in 1980, thus being different from ours (be
 {{< figure src="5.png" width="80%" >}}
 
 Wow, what a tremendous overlap! Except for the first recession (where our algorithm suggests the recession would have ended one quarter earlier), all else coincides. Moreover, our exercise reveals another important feature: we did not find any false positive (a situation where the algorithm indicates a recession not confirmed by the benchmark). Overall, our empirical exercise suggests that applying the B.B. algorithm on the Brazilian Quarterly GDP (seasonally adjusted) captures the chronology of economic recessions in a very accurate way compared to our benchmark (CODACE). 
+
 Such a good performance of the B.B. indicator is not a surprise. Colombo and Lazzari (2020) find the same evidence. Based on such an excellent performance of the algorithm, they apply the same procedure on the states' monthly index of economic activity (IBC-R from the Central Bank of Brazil) and find that the 2014-2016 great economic recession in Brazil was considerable heterogeneous across the Brazilian states (in terms of duration and magnitude). Their results might be replicated using the uploaded data in Colombo (2021).
 
 # References 
