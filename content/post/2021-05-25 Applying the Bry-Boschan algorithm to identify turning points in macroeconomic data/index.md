@@ -35,7 +35,8 @@ authors:
   
   Identifying turning points in aggregate economic series represents a topic of great practical and academic interest, at least since the seminal work of Burns and Mitchell (1946). How do we know if the economy is in a recession?  How do we know when it has ended? Can we establish a chronology of recessions and expansions for a given economy? 
   To answer questions like these, one must rely on either a purely qualitative analysis (judgment of individuals) or a statistical method to identify turning points in a given time series. Of course, the latter may be (and probably should be) combined with qualitative assessments. Worldwide, one can observe formal organizations that date the business cycles in countries such as the U.S. (National Bureau of Economic Analysis - NBER), Euro Area (Centre for Economic Policy Research - CEPR), and Brazil (Brazilian Business Cycle Dating Committee - CODACE).
-In this short note, we apply Harding and Pagan's (2002) quarterly approximation to the Bry-Boschan (B.B.) algorithm (Bry and Boschan, 1971) to identify turning points at the Brazilian quarterly GDP seasonally adjusted series. As Colombo and Lazzari (2020) describe, the B.B. algorithm is a way of automatizing the cycle dating procedure according to the tradition of the NBER. In a nutshell, the method considers some rules imposed on the behavior of the series to classify peaks and troughs. A recession occurs from peak to trough, and an expansion occurs from trough to peak. First, a window is chosen to identify local maxima (y_(t-k),.,y_(t-1)<y_t>y_(t+1),.,y_(t+k)) and minima (y_(t-k),.,y_(t-1)> y_t<y_(t+1),.,y_(t+k) ) in the reference series (parameter k). Second, a minimum period is required for the duration of a phase of the cycle (peak to trough or trough to peak - parameter p). Third, the algorithm also requires a parameter for the minimum duration of the complete cycle (peak to peak or trough to trough - parameter c). In our exercise, we follow Harding and Pagan (2002) and use k = 2, p = 2, and c = 5 quarters. 
+In this short note, we apply Harding and Pagan's (2002) quarterly approximation to the Bry-Boschan (B.B.) algorithm (Bry and Boschan, 1971) to identify turning points at the Brazilian quarterly GDP seasonally adjusted series. As Colombo and Lazzari (2020) describe, the B.B. algorithm is a way of automatizing the cycle dating procedure according to the tradition of the NBER. In a nutshell, the method considers some rules imposed on the behavior of the series to classify peaks and troughs. A recession occurs from peak to trough, and an expansion occurs from trough to peak. First, a window is chosen to identify local maxima ($y_{t-k},.,y_{t-1}<y_{t}>y_{t+1},.,y_{t+k}$)) and minima ($y_{t-k},.,y_
+t-1}> y_{t}<y_{t+1},.,y_{t+k}$) in the reference series (parameter k). Second, a minimum period is required for the duration of a phase of the cycle (peak to trough or trough to peak - parameter p). Third, the algorithm also requires a parameter for the minimum duration of the complete cycle (peak to peak or trough to trough - parameter c). In our exercise, we follow Harding and Pagan (2002) and use k = 2, p = 2, and c = 5 quarters. 
 Furthermore, following Harding and Pagan (2002), we rely on the classical definition of cycle - the one that refers to the behavior of the level of a variable (as opposed to the growth or the growth rate of business cycles). Definitions of the business cycles can be found at OECD (2001). Besides being simple and straightforward, the B.B. algorithm almost replicates the chronology of recession and expansions compared with the NBER dating (Marcellino, 2006).
 Now, we apply the referred methodology using Stata 15. One can apply the same procedure using other statistical software (e.g., package "BCDating" in R).
 -	We start our exercise by downloading the quarterly Brazilian GDP at constant prices and seasonally adjusted from FRED (series I.D. = NAEXKP01BRQ652S) at Stata 15:
@@ -49,7 +50,7 @@ replace NAEXKP01BRQ652S = NAEXKP01BRQ652S/1000000000
 
 Below I report the results from the summarize command. From 1996Q1 to 2020Q4, the average quarterly GDP of Brazil (in Brazilian Reais of 2000) was R$250.5 billion, ranging from 175.57 (1996Q1) to 312.52 (2019Q4). 
 
-{{< figure src="Fig1.png" width="100%" >}}
+{{< figure src="1.png" width="100%" >}}
 
 -	Before using the B.B. algorithm, we transform the daily date variable into its quarterly counterpart and format it accordingly:
 -	Now we proceed step-by-step to apply the B.B. algorithm for quarterly data as in Harding and Pagan (2002):
@@ -73,7 +74,7 @@ After running the sbbq command, the package automatically creates a new variable
 
     list yq lnNAEXKP01BRQ652S_point if inlist(lnNAEXKP01BRQ652S_point,1,-1)
 
-{{< figure src="Fig2.png" width="100%" >}}
+{{< figure src="2.png" width="100%" >}}
   
 As we can see, there are six peaks and six troughs identified. However, before graphing the results, one must transform the x_point variable into a binary variable equal to one (if in a recessionary phase) or zero (otherwise). We do that by generating a variable called "gdp_rec":
 
@@ -100,15 +101,15 @@ Now its time to analyze the results of the BB algorithm by comparing the recessi
 
 
 The resulting Figure is the one presented below:
-{{< figure src="Fig3.png" width="100%" >}}
+{{< figure src="3.png" width="100%" >}}
 
 The shaded areas represent recession periods identified by the proposed algorithm. As expected, these periods coincide with falling GDP (i.e., negative real growth rates). We observe recessions in the following periods: 1998Q1-1998Q4, 2001Q2-2001Q4, 2003Q1-2003Q2, 2008Q4-2009Q1, 2014Q2-2016Q4, 2020Q1-2020Q2.
 However, one question remains: how accurate is the chronology of recessions dated by the B.B. algorithm? One way to assess such accuracy is to compare it with the one released by the Brazilian Economic Cycle Dating Committee (CODACE). Using the last release from the committee (https://portalibre.fgv.br/en/codace), from June 29, 2020, we get the following picture: 
-{{< figure src="Fig4.png" width="100%" >}}
+{{< figure src="4.png" width="100%" >}}
 
 The series analyzed by CODACE starts in 1980, thus being different from ours (beginning in 1996). Focusing on 1996 onwards (for comparison purposes), one will find that CODACE points out six recessions: around 1998-1999, 2001, 2003, 2008-2009, 2014-2016, and 2020. Those dates seem to coincide with ours! However, to check how much they overlap, we must take a closer look at both chronologies:
 
-{{< figure src="Fig3.png" width="100%" >}}
+{{< figure src="5.png" width="100%" >}}
 
 Wow, what a tremendous overlap! Except for the first recession (where our algorithm suggests the recession would have ended one quarter earlier), all else coincides. Moreover, our exercise reveals another important feature: we did not find any false positive (a situation where the algorithm indicates a recession not confirmed by the benchmark). Overall, our empirical exercise suggests that applying the B.B. algorithm on the Brazilian Quarterly GDP (seasonally adjusted) captures the chronology of economic recessions in a very accurate way compared to our benchmark (CODACE). 
 Such a good performance of the B.B. indicator is not a surprise. Colombo and Lazzari (2020) find the same evidence. Based on such an excellent performance of the algorithm, they apply the same procedure on the states' monthly index of economic activity (IBC-R from the Central Bank of Brazil) and find that the 2014-2016 great economic recession in Brazil was considerable heterogeneous across the Brazilian states (in terms of duration and magnitude). Their results might be replicated using the uploaded data in Colombo (2021).
