@@ -3,7 +3,7 @@ title: "Table Heatmap no R - Temperatura do IPCA"
 
 categories: []
 
-date: '2021-05-25T00:00:00Z' 
+date: '2021-05-26T00:00:00Z' 
 
 draft: no
 
