@@ -34,7 +34,7 @@ authors:
 ---
 ##Temperatura do IPCA.
 
-Esse post foi motivado por um tweet da economista chefe do Banco Inter, [Rafaela  Vitoria]( https://twitter.com/rvitoria/status/1392130287824510983) . A Rafaela postou table heatmap do IPCA.  Observar-se a aceleração do IPCA nos últimos meses. Como é interessante para reports esse gráfico, fizemos o código para captar os dados do IPCA pelo package [BETS]( https://cran.r-project.org/web/packages/BETS/BETS.pdf), tratar os dados e plotar o table heat map.
+Esse post foi motivado por um tweet da economista chefe do Banco Inter, [Rafaela  Vitoria]( https://twitter.com/rvitoria/status/1392130287824510983). A Rafaela postou table heatmap do IPCA.  Observar-se a aceleraÃ§Ã£o do IPCA nos Ãºltimos meses. Como Ã© interessante para reports esse table, fizemos o cÃ³digo para captar os dados do IPCA pelo package [BETS]( https://cran.r-project.org/web/packages/BETS/BETS.pdf), tratar os dados e construir o table heatmap.
 Carregar os pacotes
 
     library(BETS)
@@ -43,14 +43,14 @@ Carregar os pacotes
     library(tidyverse)
     library(lubridate)
 
-Esse passo é importante para identificarmos qual code do IPCA, caso o leitor esteja curioso com outros tipos de series que o BETS fornece.
+Esse passo Ã© importante para identificarmos qual code do IPCA, caso o leitor esteja curioso com outros tipos de series que o BETS fornece.
 
-    # Identificar qual é o código que queremos
+    # Identificar qual Ã© o cÃ³digo que queremos
     list = BETSsearch()
     # Pegar o IPCA
     IPCA = BETSget(10764, from = "2010-01-01", data.frame = TRUE, frequency = NULL)
 
-Uma informação interessante, colocamos o parâmetro data.frame = TRUE para tratamos o dado do dpylr.
+Uma informaÃ§Ã£o interessante, colocamos o parÃ¢metro data.frame = TRUE para tratamos o dado do dpylr.
 Tratando os dados.
     
     IPCA = IPCA %>% 
@@ -82,7 +82,7 @@ Contruindo o table heatmap.
         source_note = md("<div align = 'right'>Fonte: BETS, FGV.</div>")
       ) %>%
       tab_source_note(
-        source_note = md("<div align = 'right'>Elaboração: Gerson Junior e Felipe Queiroz.</div>")
+        source_note = md("<div align = 'right'>ElaboraÃ§Ã£o: Gerson Junior e Felipe Queiroz.</div>")
       ) %>%
       fmt(
         columns = 2:13,
