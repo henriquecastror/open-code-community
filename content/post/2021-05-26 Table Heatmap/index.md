@@ -32,7 +32,7 @@ authors:
 
 
 ---
-##Temperatura do IPCA.
+## Temperatura do IPCA.
 
 Esse post foi motivado por um tweet da economista chefe do Banco Inter, [Rafaela  Vitoria]( https://twitter.com/rvitoria/status/1392130287824510983). A Rafaela postou table heatmap do IPCA.  Observar-se a aceleração do IPCA nos últimos meses. Como é interessante para reports esse table, fizemos o código para captar os dados do IPCA pelo package [BETS]( https://cran.r-project.org/web/packages/BETS/BETS.pdf), tratar os dados e construir o table heatmap.
 Carregar os pacotes
