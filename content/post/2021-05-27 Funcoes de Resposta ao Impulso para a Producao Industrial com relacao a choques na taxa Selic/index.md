@@ -4,7 +4,8 @@ title: "Funções de Resposta ao Impulso para a Produção Industrial com relaç
 
 categories: []
 
-date: '2021-05-26T00:00:00Z' 
+# MUDE APENAS ANO DIA E MES PARA O DIA QUE VOCE NOS ENVIOU
+date: '2021-05-25T00:00:00Z' 
 
 draft: no
 
@@ -65,12 +66,14 @@ As bibliotecas necessárias são:
     library(seasonal) # dessazonalização
     library(readxl) # leitura de excel
     library(sidrar) # dados do IBGE
-    library(rbcb) # dados do BCB
     library(ipeadatar) # dados do ipeadata
+    library(rbcb) # dados do BCB. Este pacote não está disponível no CRAN, para instalar use devtools::install_github('wilsonfreitas/rbcb')
     library(fredr) # dados do FRED
     library(urca) # testes de raiz unitária e cointegração
     library(vars) # modelagem de VAR
     library(gridExtra) # juntar gráficos em um grid
+    
+    
     
 Tema padrão para os gráficos:
 
@@ -137,7 +140,7 @@ Produção industrial (fonte: IBGE):
       pim_2 <-
       '/t/3653/n1/all/v/3134/p/all/c544/129314,129315,129316/d/v3134%201' %>%
       get_sidra(api = .) %>%
-      dplyr::mutate(date = parse_date(`Mês (Código)`, format = '%Y%m')) %>%
+      mutate(date = parse_date(`Mês (Código)`, format = '%Y%m')) %>%
       dplyr::select(date, "Seções e atividades industriais (CNAE 2.0)", Valor) %>%
       pivot_wider(names_from = "Seções e atividades industriais (CNAE 2.0)", values_from = Valor)
 
@@ -154,9 +157,9 @@ Produção industrial (fonte: IBGE):
 Inflação (fonte: IBGE):
 
     IPCA_SA <- get_sidra(api = "/t/118/n1/all/v/all/p/all/d/v306%202") %>% 
-      dplyr::mutate(date = parse_date(`Mês (Código)`, format = '%Y%m')) %>% 
+      mutate(date = parse_date(`Mês (Código)`, format = '%Y%m')) %>% 
       dplyr::select(date, IPCA_M = Valor) %>%  
-      dplyr::filter(date >= as.Date("2002-01-01"))
+      filter(date >= as.Date("2002-01-01"))
     
 Taxa de câmbio (fonte: BCB):
 
@@ -173,15 +176,16 @@ Concessões de crédito (aplicamos também o método X13-ARIMA-SEATS para dessaz
     code <- c(credito = 21277)
     credito <- rbcb::get_series(code, "2002-01-01") # baixa os dados do SGS do BCB
     credito <- credito %>% 
-     dplyr::mutate(credito_sa = final(seas(ts(credito, start = c(2002, 1), frequency = 12)))) %>% # dessazonalização
+     mutate(credito_sa = final(seas(ts(credito, start = c(2002, 1), frequency = 12)))) %>% # dessazonalização
      dplyr::select(date, credito_sa)
 
     credito$credito_sa <- as.numeric(credito$credito_sa)
 
 
 FEDFUNDS (fonte: FRED):
+Para baixar os dados do FRED, é necessário especificar a chave do API. Veja como obter [aqui](https://research.stlouisfed.org/docs/api/api_key.html).
 
-    fredr_set_key("1234567890abcdefg") # inserir chave do API do FRED (veja detalhes do pacote)
+    fredr_set_key("1234567890abcdefg") # Insira aqui a sua chave do API do FRED
     
     fedfunds <- fredr(
       series_id = "FEDFUNDS",
@@ -215,7 +219,7 @@ Risco Brasil (fonte: JP Morgan, via ipeadata):
       arrange(date) %>% 
       filter(date >= as.Date("2002-01-01"), date <= as.Date("2021-03-01"))
       
-Indicadora de recessão para o Brasil (fonte: CODACE/FGV):
+Indicadora de recessão para o Brasil (fonte: CODACE/FGV). Baise o excel {{% staticref "rececoes_codace.xlsx" "newtab" %}} aqui{{% /staticref %}}:
 
     dummy_recession <- read_excel("rececoes_codace.xlsx")
     dummy_recession$date <- as.Date(dummy_recession$date)
@@ -229,7 +233,7 @@ Juntando os dados em uma tabela para as endógenas e uma para as exógenas:
       left_join(usd, by = 'date') %>%
       left_join(credito, by = 'date') %>%
       left_join(money, by = 'date') %>% 
-     dplyr::mutate(
+     mutate(
       log_money_supply = log(money_supply),
       log_credito_sa = log(credito_sa),
       log_cambio = log(cambio)
@@ -481,3 +485,143 @@ A resposta mais negativa pode ser observada no subsetor de Bens de Capital, suge
 A produção de Bens de Consumo Duráveis é, assim como a produção de Bens de Capital, fortemente impactada pela inovação na taxa de juros, refletindo a sua grande dependência nas condições de financiamento da economia, por se tratar de bens com maior valor unitário. Assim, da mesma forma que empresas reduzem sua demanda por Bens de Capital por conta de uma deterioração das circunstâncias de financiamento, as famílias reduzem a sua demanda geral por Bens de Consumo Duráveis. Por outro lado, a produção geral de Bens de Consumo Não Duráveis é praticamente não afetada pelo choque na taxa de juros, mostrando uma relativa insensibilidade à política monetária, uma vez que  considera bens mais relacionados ao consumo de subsistência dos agentes da economia.
 
 # References
+
+
+@techreport{ataBCB2021Maio,
+ title = "Ata da Reuni�o 238 do Comit� de Pol�tica Monet�ria",
+author={{Banco Central do Brasil}},
+ publisher = {Banco Central do Brasil},
+ type = "Ata de reuni�o",
+ year = "2021",
+ month = "May",
+ URL = "https://www.bcb.gov.br/publicacoes/atascopom/05052021",
+}
+
+@techreport{ataBCB2021Marco,
+ title = "Ata da Reuni�o 237 do Comit� de Pol�tica Monet�ria",
+author={{Banco Central do Brasil}},
+ type = "Ata de reuni�o",
+ publisher = {Banco Central do Brasil},
+ year = "2021",
+ month = "March",
+ URL = "https://www.bcb.gov.br/publicacoes/atascopom/17032021",
+}
+
+
+%  Bernanke e Blinder (1992)
+@article{bernanke1992,
+ ISSN = {00028282},
+ URL = {http://www.jstor.org/stable/2117350},
+ abstract = {We show that the interest rate on Federal funds is extremely informative about future movements of real macroeconomic variables. Then we argue that the reason for this forecasting success is that the funds rate sensitively records shocks to the supply of bank reserves; that is, the funds rate is a good indicator of monetary policy actions. Finally, using innovations to the funds rate as a measure of changes in policy, we present evidence consistent with the view that monetary policy works at least in part through "credit" (i.e., bank loans) as well as through "money" (i.e., bank deposits).},
+ author = {Ben S. Bernanke and Alan S. Blinder},
+ journal = {The American Economic Review},
+ number = {4},
+ pages = {901--921},
+ publisher = {American Economic Association},
+ title = {The Federal Funds Rate and the Channels of Monetary Transmission},
+ volume = {82},
+ year = {1992}
+}
+
+%   Christiano, Eichenbaum e Evans (1996)
+@article{evans1996,
+ ISSN = {00346535, 15309142},
+ URL = {http://www.jstor.org/stable/2109845},
+ abstract = {This paper assesses the impact of a monetary policy shock on the U.S. economy. Our measures of contractionary monetary policy shocks are associated with (i) a fall in various monetary aggregates and a rise in the federal funds rate, (ii) declines in different measures of real activity, (iii) sharp declines in commodity prices and a delayed decline in the GDP price deflator. In addition, net funds raised by the business sector increases for roughly a year, after which it falls. Finally, we find that households do not adjust their financial assets and liabilities for several quarters after a monetary shock.},
+ author = {Lawrence J. Christiano and Martin Eichenbaum and Charles Evans},
+ journal = {The Review of Economics and Statistics},
+ number = {1},
+ pages = {16--34},
+ publisher = {The MIT Press},
+ title = {The Effects of Monetary Policy Shocks: Evidence from the Flow of Funds},
+ volume = {78},
+ year = {1996}
+}
+
+%   Bernanke e Mihov (1998)
+@article{bernanke1998,
+ ISSN = {00335533, 15314650},
+ URL = {http://www.jstor.org/stable/2586876},
+ abstract = {We develop a model-based, VAR methodology for measuring innovations in monetary policy and their macroeconomic effects. Using this framework, we are able to compare existing approaches to measuring monetary policy shocks and derive a new measure of policy innovations based directly on (possibly timevarying) estimates of the central bank's operating procedures. We also propose a new measure of the overall stance of policy (including the endogenous or systematic component) that is consistent with our approach.},
+ author = {Ben S. Bernanke and Ilian Mihov},
+ journal = {The Quarterly Journal of Economics},
+ number = {3},
+ pages = {869--902},
+ publisher = {Oxford University Press},
+ title = {Measuring Monetary Policy},
+ volume = {113},
+ year = {1998}
+}
+
+
+% Dedola e Lipi 2005
+@article{dedola2005,
+title = "The monetary transmission mechanism: Evidence from the industries of five OECD countries",
+journal = "European Economic Review",
+volume = "49",
+number = "6",
+pages = "1543 - 1569",
+year = "2005",
+issn = "0014-2921",
+doi = "https://doi.org/10.1016/j.euroecorev.2003.11.006",
+url = "http://www.sciencedirect.com/science/article/pii/S0014292103001569",
+author = "Luca Dedola and Francesco Lippi",
+keywords = "Monetary policy transmission, Balance sheet data",
+abstract = "This paper studies the monetary transmission mechanism using disaggregated industry data from five industrialized countries. Our goal is to document the cross-industry heterogeneity of monetary policy effects and relate it to industry characteristics suggested by monetary transmission theories. Sizable and significant cross-industry differences in the effects of monetary policy are found. Such differences swamp the hardly detectable cross-country variability. Sectoral output responses to monetary policy shocks are systematically related to the industry output durability, financing requirements, borrowing capacity and firm size. These findings are consistent with a quantitatively non-negligible role of financial frictions in the monetary transmission."
+}
+
+% teste ADF
+@article{ADF1981,
+ ISSN = {00129682, 14680262},
+ URL = {http://www.jstor.org/stable/1912517},
+ abstract = {Let the time series Yt satisfy $Y_{t}=\alpha +\rho Y_{t-1}+e_{t}$, where Y1 is fixed and the et are normal independent (0, ?? 2) random variables. The likelihood ratio test of the hypothesis that (??, ??) = (0, 1) is investigated and a limit representation for the test statistic is presented. Percentage points for the limiting distribution and for finite sample distributions are estimated. The distribution of the least squares estimator of ?? is also discussed. A similar investigation is conducted for the model containing a time trend.},
+ author = {David A. Dickey and Wayne A. Fuller},
+ journal = {Econometrica},
+ number = {4},
+ pages = {1057--1072},
+ publisher = {[Wiley, Econometric Society]},
+ title = {Likelihood Ratio Statistics for Autoregressive Time Series with a Unit Root},
+ volume = {49},
+ year = {1981}
+}
+
+
+% teorema da representatividade de granger
+@article{granger1987,
+ ISSN = {00129682, 14680262},
+ URL = {http://www.jstor.org/stable/1913236},
+ abstract = {The relationship between co-integration and error correction models, first suggested in Granger (1981), is here extended and used to develop estimation procedures, tests, and empirical examples. If each element of a vector of time series xt first achieves stationarity after differencing, but a linear combination $\alpha ^{\prime }x_{t}$ is already stationary, the time series xt are said to be co-integrated with co-integrating vector ??. There may be several such co-integrating vectors so that ?? becomes a matrix. Interpreting $\alpha ^{\prime }x_{t}=0$ as a long run equilibrium, co-integration implies that deviations from equilibrium are stationary, with finite variance, even though the series themselves are nonstationary and have infinite variance. The paper presents a representation theorem based on Granger (1983), which connects the moving average, autoregressive, and error correction representations for co-integrated systems. A vector autoregression in differenced variables is incompatible with these representations. Estimation of these models is discussed and a simple but asymptotically efficient two-step estimator is proposed. Testing for co-integration combines the problems of unit root tests and tests with parameters unidentified under the null. Seven statistics are formulated and analyzed. The critical values of these statistics are calculated based on a Monte Carlo simulation. Using these critical values, the power properties of the tests are examined and one test procedure is recommended for application. In a series of examples it is found that consumption and income are co-integrated, wages and prices are not, short and long interest rates are, and nominal GNP is co-integrated with M2, but not M1, M3, or aggregate liquid assets.},
+ author = {Robert F. Engle and C. W. J. Granger},
+ journal = {Econometrica},
+ number = {2},
+ pages = {251--276},
+ publisher = {[Wiley, Econometric Society]},
+ title = {Co-Integration and Error Correction: Representation, Estimation, and Testing},
+ volume = {55},
+ year = {1987}
+}
+
+% teste de correla��o serial
+@book{lutkepohl2006,
+author = {L�tkepohl, Helmut},
+title = {New Introduction to Multiple Time Series Analysis},
+year = {2006},
+isbn = {3540262393},
+publisher = {Springer Publishing Company, Incorporated}
+}
+
+% Cointegration test
+@Article{johansen1991,
+  author={Johansen, Soren},
+  title={{Estimation and Hypothesis Testing of Cointegration Vectors in Gaussian Vector Autoregressive Models}},
+  journal={Econometrica},
+  year=1991,
+  volume={59},
+  number={6},
+  pages={1551-1580},
+  month={November},
+  keywords={},
+  doi={},
+  abstract={ This paper contains the likelihood analysis of vector autoregressive models allowing for cointegration. The author derives the likelihood ratio test for cointegrating rank and finds it asymptotic distribution. He shows that the maximum likelihood estimator of the cointegrating relations can be found by reduced rank regression and derives the likelihood ratio test of structural hypotheses about these relations. The author shows that the asymptotic distribution of the maximum likelihood estimator is mixed Gaussian, allowing inference for hypotheses on the cointegrating relation to be conducted using the Chi(\&quot; squared\&quot;) distribution. Copyright 1991 by The Econometric Society.},
+  url={https://ideas.repec.org/a/ecm/emetrp/v59y1991i6p1551-80.html}
+}
