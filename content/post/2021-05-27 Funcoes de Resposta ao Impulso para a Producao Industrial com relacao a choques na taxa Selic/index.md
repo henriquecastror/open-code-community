@@ -219,7 +219,7 @@ Risco Brasil (fonte: JP Morgan, via ipeadata):
       arrange(date) %>% 
       filter(date >= as.Date("2002-01-01"), date <= as.Date("2021-03-01"))
       
-Indicadora de recessão para o Brasil (fonte: CODACE/FGV). Baise o excel {{% staticref "rececoes_codace.xlsx" "newtab" %}} aqui{{% /staticref %}}:
+Indicadora de recessão para o Brasil (fonte: CODACE/FGV). Baixe o excel {{% staticref "files/rececoes_codace.xlsx" "newtab" %}} aqui{{% /staticref %}}:
 
     dummy_recession <- read_excel("rececoes_codace.xlsx")
     dummy_recession$date <- as.Date(dummy_recession$date)
