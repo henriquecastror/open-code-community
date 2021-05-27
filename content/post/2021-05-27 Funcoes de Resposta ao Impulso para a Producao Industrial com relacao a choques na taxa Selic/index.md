@@ -5,7 +5,7 @@ title: "Funções de Resposta ao Impulso para a Produção Industrial com relaç
 categories: []
 
 # MUDE APENAS ANO DIA E MES PARA O DIA QUE VOCE NOS ENVIOU
-date: '2021-05-25T00:00:00Z' 
+date: '2021-05-27T00:00:00Z' 
 
 draft: no
 
