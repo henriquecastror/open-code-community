@@ -487,3 +487,24 @@ A produção de Bens de Consumo Duráveis é, assim como a produção de Bens de
 # References
 
 
+Banco Central do Brasil. 2021a. "Ata Da Reunião 237 Do Comitê de Política Monetária." Ata de reunião. Banco Central do Brasil. https://www.bcb.gov.br/publicacoes/atascopom/17032021.
+
+---. 2021b. "Ata Da Reunião 238 Do Comitê de Política Monetária." Ata de reunião. Banco Central do Brasil. https://www.bcb.gov.br/publicacoes/atascopom/05052021.
+
+Bernanke, Ben S., and Alan S. Blinder. 1992. "The Federal Funds Rate and the Channels of Monetary Transmission." The American Economic Review 82 (4): 901-21. http://www.jstor.org/stable/2117350.
+
+Bernanke, Ben S., and Ilian Mihov. 1998. "Measuring Monetary Policy." The Quarterly Journal of Economics 113 (3): 869-902. http://www.jstor.org/stable/2586876.
+
+Christiano, Lawrence J., Martin Eichenbaum, and Charles Evans. 1996. "The Effects of Monetary Policy Shocks: Evidence from the Flow of Funds." The Review of Economics and Statistics 78 (1): 16-34. http://www.jstor.org/stable/2109845.
+
+Dedola, Luca, and Francesco Lippi. 2005. "The Monetary Transmission Mechanism: Evidence from the Industries of Five OECD Countries." European Economic Review 49 (6): 1543-69. https://doi.org/https://doi.org/10.1016/j.euroecorev.2003.11.006.
+
+Dedola, Luca, and Francesco Lippi. 2005. "The Monetary Transmission Mechanism: Evidence from the Industries of Five OECD Countries." European Economic Review 49 (6): 1543-69. https://doi.org/https://doi.org/10.1016/j.euroecorev.2003.11.006.
+
+Dickey, David A., and Wayne A. Fuller. 1981. "Likelihood Ratio Statistics for Autoregressive Time Series with a Unit Root." Econometrica 49 (4): 1057-72. http://www.jstor.org/stable/1912517.
+
+Engle, Robert F., and C. W. J. Granger. 1987. "Co-Integration and Error Correction: Representation, Estimation, and Testing." Econometrica 55 (2): 251-76. http://www.jstor.org/stable/1913236.
+
+Johansen, Soren. 1991. "Estimation and Hypothesis Testing of Cointegration Vectors in Gaussian Vector Autoregressive Models." Econometrica 59 (6): 1551-80. https://ideas.repec.org/a/ecm/emetrp/v59y1991i6p1551-80.html.
+
+Lütkepohl, Helmut. 2006. New Introduction to Multiple Time Series Analysis. Springer Publishing Company, Incorporated.
