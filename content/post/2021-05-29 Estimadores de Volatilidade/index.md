@@ -113,7 +113,7 @@ Selecionando apenas as colunas de interesse (open,low,high,close), que correspon
 
     df
 
-{{< figure library="true" src="4.png" width="100%" >}}
+{{< figure library="true" src="4.png" width="80%" >}}
 
 Nas funções abaixo, "df" é o dataframe com dados de abertura, mínima, máxima e fechamento e "n" é a janela móvel usada para o cálculo da volatilidade. O termo "np.sqrt(252)*100" anualiza os resultados.
 df["close"] é a coluna do Dataframe com os dados de fechamento diário.
@@ -175,12 +175,12 @@ Plotando os estimadores separadamente para o período selecionado:
 
     df1.plot(subplots=True, figsize=(20,12)); plt.legend(loc='best')
 
-{{< figure library="true" src="8.png" width="100%" >}}
+{{< figure library="true" src="8.png" width="110%" >}}
 
 Plotando os estimadores em um mesmo gráfico para o período selecionado:
         
         df1.plot(subplots=False, figsize=(20,8)); plt.legend(loc='best')
         
-{{< figure library="true" src="9.png" width="100%" >}}
+{{< figure library="true" src="9.png" width="110%" >}}
 
 
