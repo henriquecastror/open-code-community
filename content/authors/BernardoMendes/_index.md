@@ -12,7 +12,7 @@ authors:
 superuser: false
 
 # Role/position
-role: Gestor de Portf�lio
+role: Gestor de Portfólio
 
 
 # Short bio (displayed in user profile at end of posts)
@@ -24,8 +24,8 @@ interests:
 
 education:
   courses:
-  - course: P�s-gradua��o em Ci�ncias de Dados para Finan�as e Economia
-    institution: Funda��o Get�lio Vargras
+  - course: Pós-graduação em Ciências de Dados para Finanças e Economia
+    institution: Fundação Getúlio Vargras
     year: 2022
 
 # Social/Academic Networking
@@ -53,3 +53,4 @@ user_groups:
 - Colaboradores
 
 ---
+Com foco primário na gestão de risco, construo portfólios quantitativos do tipo Single Solution Strategies, modelo de gestão em que se combina uma alocação comprada em Ações (Smart Beta) com outras estratégias de baixa aderência, mas que geram valor a um Portfólio, como Trend Following ou compra de Volatilidade, melhorando as características de risco/retorno ao capturar a interação entre as partes do Portfólio. É Gestor de Portfólio CGA e Analista Certificado CNPI. Em Junho/21 inicia o CQF (Certificate in Quantitative Finance).
