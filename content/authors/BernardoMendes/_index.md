@@ -1,6 +1,7 @@
+
 ---
 # Display name
-title: Bernado Mendes (membro desde 2021/05)
+title: Bernando Mendes (membro desde 2021/05)
 
 # Username (this should match the folder name)
 authors:
@@ -11,19 +12,20 @@ authors:
 superuser: false
 
 # Role/position
-role: Gestor de Portfólio 
-
-# Organizations/Affiliations
-organizations:
+role: Gestor de PortfÃ³lio
 
 
 # Short bio (displayed in user profile at end of posts)
 bio: 
 
+interests:
+- Asset pricing
+- Portfolio management
+
 education:
   courses:
-  - course: Pós-graduação em Ciências de Dados para Finanças e Economia 
-    institution: Fundação Getúlio Vargas
+  - course: PÃ³s-graduaÃ§Ã£o em CiÃªncias de Dados para FinanÃ§as e Economia
+    institution: FundaÃ§Ã£o GetÃºlio Vargras
     year: 2022
 
 # Social/Academic Networking
@@ -31,10 +33,14 @@ education:
 #   For an email link, use "fas" icon pack, "envelope" icon, and a link in the
 #   form "mailto:your-email@example.com" or "#contact" for contact widget.
 
+social:
+- icon: google-scholar
+  icon_pack: ai
+  link: https://scholar.google.com/citations?user=bbgB49g0N2cC&hl=pt-BR
 
 - icon: twitter
- icon_pack: fab
- link: https://twitter.com/berchades
+  icon_pack: fab
+  link: https://twitter.com/berchades
   
 - icon: linkedin
   icon_pack: fab
@@ -51,4 +57,3 @@ user_groups:
 - Colaboradores
 
 ---
-
