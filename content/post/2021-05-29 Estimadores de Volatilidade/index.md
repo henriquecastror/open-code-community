@@ -27,7 +27,7 @@ tags:
 - Open Code
 
 authors:
-- BernandoMendes
+- BernardoMendes
 
 
 ---
