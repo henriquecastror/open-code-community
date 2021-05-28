@@ -32,7 +32,6 @@ authors:
 
 ---
 
----
 ## Estimadores da Volatilidade
 Para medir a volatilidade histórica, é comum calcular o desvio padrão dos retornos diários. No entanto, essa é uma medida que desconsidera as dinâmicas intraday. Imagine, por exemplo, uma ação que tenha fechamento do dia atual igual ao fechamento do dia anterior, mas que durante o dia oscilou 5%. Nessa situação, o indicador close-to-close não medirá a volatilidade com eficiência. Dessa forma, surgiram vários estimadores, cada um com seus pontos fortes e fracos, que auxiliam no cálculo da verdadeira volatilidade histórica.
 Alguns desses estimadores são:
