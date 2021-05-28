@@ -85,12 +85,12 @@ Importando as cotações do Ibovespa de 01/06/2014 até 01/05/2021, com periodic
 pandas.core.frame.DataFrame
 Número de linhas e colunas:
 
-    		df.shape
-    		(1707, 6)
+    df.shape
+    (1707, 6)
 
 Verificando se há valores nulos:
 
-    		df.isnull().sum()
+    df.isnull().sum()
     low         0
     open        0
     high        0
@@ -104,14 +104,14 @@ Verificando se há valores nulos:
 
 Primeiras linhas do DataFrame:
 		
-    		df.head()
+    df.head()
 
 {{< figure library="true" src="2.png" width="100%" >}}
 Selecionando apenas as colunas de interesse (open,low,high,close), que correspondem aos dados de abertura, mínima, máxima e fechamento, respectivamente.
 		
-    		df=df[["open","low","high","close"]]
+    df=df[["open","low","high","close"]]
 
-         df
+    df
 
 {{< figure library="true" src="4.png" width="100%" >}}
 
@@ -122,17 +122,16 @@ df['low'] é a coluna do Dataframe com os dados de mínima diária.
 df['open'] é a coluna do Dataframe com os dados de abertura diária.
 
     def close_to_close(df,n):
-      df["C/C(-1)-1"]=df['close']/df['close'].shift(1)-1
-      df["Close-to-Close"]=df["C/C(-1)-1"].rolling(n).std()*np.sqrt(252)*100
-      return df["Close-to-Close"]
-    
+    df["C/C(-1)-1"]=df['close']/df['close'].shift(1)-1
+    df["Close-to-Close"]=df["C/C(-1)-1"].rolling(n).std()*np.sqrt(252)*100
+    return df["Close-to-Close"]
     
     def Garman_Klass(df,n):
-      df["log^2(H/L)"]=(np.log(df['high']/df['low']))**2
-      df["log^2(C/O)"]=(np.log(df['close']/df['open']))**2
-      df["GK"]=0.5*df["log^2(H/L)"]-(2*np.log(2)-1)*df["log^2(C/O)"]
-      df["Garman-Klass"]=((df["GK"].rolling(n).mean())**0.5)*np.sqrt(252)*100
-      return df["Garman-Klass"]
+    df["log^2(H/L)"]=(np.log(df['high']/df['low']))**2
+    df["log^2(C/O)"]=(np.log(df['close']/df['open']))**2
+    df["GK"]=0.5*df["log^2(H/L)"]-(2*np.log(2)-1)*df["log^2(C/O)"]
+    df["Garman-Klass"]=((df["GK"].rolling(n).mean())**0.5)*np.sqrt(252)*100
+    return df["Garman-Klass"]
     
     def Parkinson(df,n):
       df["log^2(H/L)"]=(np.log(df['high']/df['low']))**2
@@ -140,44 +139,48 @@ df['open'] é a coluna do Dataframe com os dados de abertura diária.
       return df["Parkinson"]
     
     def Yang_And_Zang(df,n):
-      df["o"]=np.log(df["open"]/df['close'].shift(1))
-      df["u"]=np.log(df["high"]/df["open"])
-      df["d"]=np.log(df["low"]/df["open"])
-      df["c"]=np.log(df["close"]/df["open"])
-      df["RS"]=np.log(df["high"]/df["close"])*np.log(df["high"]/df["open"])+np.log(df["low"]/df["close"])*np.log(df["low"]/df["open"])
-      k=0.34/(1.34+(n+1)/(n-1))
-      df["Yang And Zang"]=(((df["o"].rolling(20).std())**2+k*(df["c"].rolling(n).std())**2+(1-k)*df["RS"].rolling(n).mean())**0.5)*np.sqrt(252)*100
-      return df["Yang And Zang"]
+    df["o"]=np.log(df["open"]/df['close'].shift(1))
+    df["u"]=np.log(df["high"]/df["open"])
+    df["d"]=np.log(df["low"]/df["open"])
+    df["c"]=np.log(df["close"]/df["open"])
+    df["RS"]=np.log(df["high"]/df["close"])*np.log(df["high"]/df["open"])+np.log(df["low"]/df["close"])*np.log(df["low"]/df["open"])
+    k=0.34/(1.34+(n+1)/(n-1))
+    df["Yang And Zang"]=(((df["o"].rolling(20).std())**2+k*(df["c"].rolling(n).std())**2+(1-k)*df["RS"].rolling(n).mean())**0.5)*np.sqrt(252)*100
+    return df["Yang And Zang"]
     
     def GKYZ(df,n):
-      df["o"]=np.log(df["open"]/df["close"].shift(1))
-      df["c"]=np.log(df["close"]/df["open"])
-      df["log^2(H/L)"]=(np.log(df['high']/df['low']))**2
-      df["GKYZ"]=np.sqrt(((df["o"]**2)+0.5*df["log^2(H/L)"]-(2*np.log(2)-1)*(df["c"]**2)).rolling(n).mean())*np.sqrt(252)*100
-      return df["GKYZ"]
+    df["o"]=np.log(df["open"]/df["close"].shift(1))
+    df["c"]=np.log(df["close"]/df["open"])
+    df["log^2(H/L)"]=(np.log(df['high']/df['low']))**2
+    df["GKYZ"]=np.sqrt(((df["o"]**2)+0.5*df["log^2(H/L)"]-(2*np.log(2)-1)*(df["c"]**2)).rolling(n).mean())*np.sqrt(252)*100
+    return df["GKYZ"]
 
 Concatenando o resultado das funções, todas com n=30 dias, em um DataFrame e retornando o valor da última linha
 
-df1=pd.concat([close_to_close(df,30),Parkinson(df,30),Garman_Klass(df,30),Rogers_Satchell(df,30),GKYZ(df,30),Yang_And_Zang(df,30)],axis=1)
+    df1=pd.concat([close_to_close(df,30),Parkinson(df,30),Garman_Klass(df,30),Rogers_Satchell(df,30),GKYZ(df,30),Yang_And_Zang(df,30)],axis=1)
 
-df1[-1:]
+    df1[-1:]
 
 {{< figure library="true" src="6.png" width="100%" >}}
 
 
     df1.dropna(inplace=True)
 
-		df1
+    df1
 
 {{< figure library="true" src="7.png" width="100%" >}}
 
 
 Plotando os estimadores separadamente para o período selecionado:
 
-df1.plot(subplots=True, figsize=(20,12)); plt.legend(loc='best')
+    df1.plot(subplots=True, figsize=(20,12)); plt.legend(loc='best')
 
 {{< figure library="true" src="8.png" width="100%" >}}
 
 Plotando os estimadores em um mesmo gráfico para o período selecionado:
-		df1.plot(subplots=False, figsize=(20,8)); plt.legend(loc='best')
+        
+        df1.plot(subplots=False, figsize=(20,8)); plt.legend(loc='best')
+        
+{{< figure library="true" src="9.png" width="100%" >}}
+
 
