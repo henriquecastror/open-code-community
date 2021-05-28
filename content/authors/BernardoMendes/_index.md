@@ -5,36 +5,39 @@ title: Bernardo Mendes (membro desde 2021/05)
 # Username (this should match the folder name)
 authors:
 - BernardoMendes
+
 # Is this the primary user of the site?
 superuser: false
 
 # Role/position
 role: Gestor de Portfólio
 
-
+# Organizations/Affiliations
+organizations:
+- name: Fundação Getulio Vargas
+  url: "https://portal.fgv.br/"
 
 bio:
 
 interests:
-- portfolio Management
-- Finanças
-
+- Portfolio Management
+- Métodos Empíricos em Economia e Finanças
+- Ciência de Dados
 
 education:
   courses:
-  - course: Pós-Graduação em Ciências de Dados para Finanças e Economia
+  - course: Pós-Graduação em Ciências de Dados 
     institution: FGV
     year: 2022
 
 
 # Social/Academic Networking
 
+social:
 
 - icon: linkedin
   icon_pack: fab
   link: https://www.linkedin.com/in/bernardo-mendes-cga-cnpi-8a0651195/
-
-
 
   
 # Highlight the author in author lists? (true/false)
