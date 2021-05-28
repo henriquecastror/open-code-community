@@ -1,11 +1,11 @@
 
 ---
 # Display name
-title: Bernando Mendes (membro desde 2021/05)
+title: Bernardo Mendes (membro desde 2021/05)
 
 # Username (this should match the folder name)
 authors:
-- BernadoMendes
+- BernardoMendes
 
 
 # Is this the primary user of the site?
