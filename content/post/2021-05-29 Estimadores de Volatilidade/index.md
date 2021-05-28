@@ -35,12 +35,14 @@ authors:
 ## Estimadores da Volatilidade
 Para medir a volatilidade histórica, é comum calcular o desvio padrão dos retornos diários. No entanto, essa é uma medida que desconsidera as dinâmicas intraday. Imagine, por exemplo, uma ação que tenha fechamento do dia atual igual ao fechamento do dia anterior, mas que durante o dia oscilou 5%. Nessa situação, o indicador close-to-close não medirá a volatilidade com eficiência. Dessa forma, surgiram vários estimadores, cada um com seus pontos fortes e fracos, que auxiliam no cálculo da verdadeira volatilidade histórica.
 Alguns desses estimadores são:
-Close-to-Close (C): É a medida de volatilidade histórica mais comum, utiliza apenas dados de fechamento.
+
+- Close-to-Close (C): É a medida de volatilidade histórica mais comum, utiliza apenas dados de fechamento.
 Parkinson (HL) O primeiro estimador de volatilidade mais avançado surgiu em 1980, criado por Parkinson. Em vez de usar os preços de fechamento, utiliza as máximas e mínimas. Um ponto fraco do estimador é a premissa de mercados contínuos, o que leva a subestimar a volatilidade, pois movimentos como Gaps entre dias diferentes são ignorados.
-Garman-Klass (OHLC): Esse estimador é uma extensão de Parkinson, adicionando os preços de abertura e fechamento em seus cálculos. Como Gaps entre os dias são ignorados, também subestima a volatilidade.
-Garman-Klass-Yang-Zhang (OHLC): É uma extensão do estimador anterior, pois considera os saltos entre a abertura de um dia em relação ao fechamento do dia anterior.
-Rogers-Satchell (OHLC): O estimador de Rogers-Satchell foi criado no início da década de 90. É capaz de medir adequadamente a volatilidade com drift diferente de zero. No entanto, ainda não lida com saltos, subestimando a volatilidade.
-Yang-Zhang (OHLC): Em 2000, Yang-Zhang criaram o estimador mais poderoso, que lida tanto com Gaps de abertura quanto com drift diferente de zero. Seu cálculo envolve a soma da volatilidade do fechamento até a abertura do dia seguinte com a média ponderada do estimador de Rogers-Satchell e da volatilidade da abertura até o fechamento de um mesmo dia.
+- Garman-Klass (OHLC): Esse estimador é uma extensão de Parkinson, adicionando os preços de abertura e fechamento em seus cálculos. Como Gaps entre os dias são ignorados, também subestima a volatilidade.
+- Garman-Klass-Yang-Zhang (OHLC): É uma extensão do estimador anterior, pois considera os saltos entre a abertura de um dia em relação ao fechamento do dia anterior.
+- Rogers-Satchell (OHLC): O estimador de Rogers-Satchell foi criado no início da década de 90. É capaz de medir adequadamente a volatilidade com drift diferente de zero. No entanto, ainda não lida com saltos, subestimando a volatilidade.
+- Yang-Zhang (OHLC): Em 2000, Yang-Zhang criaram o estimador mais poderoso, que lida tanto com Gaps de abertura quanto com drift diferente de zero. Seu cálculo envolve a soma da volatilidade do fechamento até a abertura do dia seguinte com a média ponderada do estimador de Rogers-Satchell e da volatilidade da abertura até o fechamento de um mesmo dia.
+
 Nesse estudo, calculei a volatilidade em janelas móveis de 30 dias para o ibovespa desde junho/2014 até abril/2021.
 Importação do pacote do Yahoo e selecionando o código do Ibovespa:
 
