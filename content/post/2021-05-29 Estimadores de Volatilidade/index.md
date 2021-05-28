@@ -108,7 +108,7 @@ Primeiras linhas do DataFrame:
 		
     df.head()
 
-{{< figure library="true" src="2.png" width="100%" >}}
+{{< figure library="true" src="3.png" width="100%" >}}
 Selecionando apenas as colunas de interesse (open,low,high,close), que correspondem aos dados de abertura, mínima, máxima e fechamento, respectivamente.
 		
     df=df[["open","low","high","close"]]
