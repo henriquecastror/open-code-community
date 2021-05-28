@@ -1,10 +1,9 @@
- ---
-
+---
 title: "Estimadores da Volatilidade"
 
 categories: []
 
-date: '2021-05-28T00:00:00Z'
+date: '2021-05-28T00:00:00Z' 
 
 draft: no
 
@@ -28,26 +27,28 @@ tags:
 - Open Code
 
 authors:
-- BernadoMendes
+- BernandoMendes
 
 
 ---
+
+---
 ## Estimadores da Volatilidade
-Para medir a volatilidade histÛrica, È comum calcular o desvio padr„o dos retornos di·rios. No entanto, essa È uma medida que desconsidera as din‚micas intraday. Imagine, por exemplo, uma aÁ„o que tenha fechamento do dia atual igual ao fechamento do dia anterior, mas que durante o dia oscilou 5%. Nessa situaÁ„o, o indicador close-to-close n„o medir· a volatilidade com eficiÍncia. Dessa forma, surgiram v·rios estimadores, cada um com seus pontos fortes e fracos, que auxiliam no c·lculo da verdadeira volatilidade histÛrica.
-Alguns desses estimadores s„o:
-Close-to-Close (C): … a medida de volatilidade histÛrica mais comum, utiliza apenas dados de fechamento.
-Parkinson (HL) O primeiro estimador de volatilidade mais avanÁado surgiu em 1980, criado por Parkinson. Em vez de usar os preÁos de fechamento, utiliza as m·ximas e mÌnimas. Um ponto fraco do estimador È a premissa de mercados contÌnuos, o que leva a subestimar a volatilidade, pois movimentos como Gaps entre dias diferentes s„o ignorados.
-Garman-Klass (OHLC): Esse estimador È uma extens„o de Parkinson, adicionando os preÁos de abertura e fechamento em seus c·lculos. Como Gaps entre os dias s„o ignorados, tambÈm subestima a volatilidade.
-Garman-Klass-Yang-Zhang (OHLC): … uma extens„o do estimador anterior, pois considera os saltos entre a abertura de um dia em relaÁ„o ao fechamento do dia anterior.
-Rogers-Satchell (OHLC): O estimador de Rogers-Satchell foi criado no inÌcio da dÈcada de 90. … capaz de medir adequadamente a volatilidade com drift diferente de zero. No entanto, ainda n„o lida com saltos, subestimando a volatilidade.
-Yang-Zhang (OHLC): Em 2000, Yang-Zhang criaram o estimador mais poderoso, que lida tanto com Gaps de abertura quanto com drift diferente de zero. Seu c·lculo envolve a soma da volatilidade do fechamento atÈ a abertura do dia seguinte com a mÈdia ponderada do estimador de Rogers-Satchell e da volatilidade da abertura atÈ o fechamento de um mesmo dia.
-Nesse estudo, calculei a volatilidade em janelas mÛveis de 30 dias para o ibovespa desde junho/2014 atÈ abril/2021.
-ImportaÁ„o do pacote do Yahoo e selecionando o cÛdigo do Ibovespa:
+Para medir a volatilidade hist√≥rica, √© comum calcular o desvio padr√£o dos retornos di√°rios. No entanto, essa √© uma medida que desconsidera as din√¢micas intraday. Imagine, por exemplo, uma a√ß√£o que tenha fechamento do dia atual igual ao fechamento do dia anterior, mas que durante o dia oscilou 5%. Nessa situa√ß√£o, o indicador close-to-close n√£o medir√° a volatilidade com efici√™ncia. Dessa forma, surgiram v√°rios estimadores, cada um com seus pontos fortes e fracos, que auxiliam no c√°lculo da verdadeira volatilidade hist√≥rica.
+Alguns desses estimadores s√£o:
+Close-to-Close (C): √â a medida de volatilidade hist√≥rica mais comum, utiliza apenas dados de fechamento.
+Parkinson (HL) O primeiro estimador de volatilidade mais avan√ßado surgiu em 1980, criado por Parkinson. Em vez de usar os pre√ßos de fechamento, utiliza as m√°ximas e m√≠nimas. Um ponto fraco do estimador √© a premissa de mercados cont√≠nuos, o que leva a subestimar a volatilidade, pois movimentos como Gaps entre dias diferentes s√£o ignorados.
+Garman-Klass (OHLC): Esse estimador √© uma extens√£o de Parkinson, adicionando os pre√ßos de abertura e fechamento em seus c√°lculos. Como Gaps entre os dias s√£o ignorados, tamb√©m subestima a volatilidade.
+Garman-Klass-Yang-Zhang (OHLC): √â uma extens√£o do estimador anterior, pois considera os saltos entre a abertura de um dia em rela√ß√£o ao fechamento do dia anterior.
+Rogers-Satchell (OHLC): O estimador de Rogers-Satchell foi criado no in√≠cio da d√©cada de 90. √â capaz de medir adequadamente a volatilidade com drift diferente de zero. No entanto, ainda n√£o lida com saltos, subestimando a volatilidade.
+Yang-Zhang (OHLC): Em 2000, Yang-Zhang criaram o estimador mais poderoso, que lida tanto com Gaps de abertura quanto com drift diferente de zero. Seu c√°lculo envolve a soma da volatilidade do fechamento at√© a abertura do dia seguinte com a m√©dia ponderada do estimador de Rogers-Satchell e da volatilidade da abertura at√© o fechamento de um mesmo dia.
+Nesse estudo, calculei a volatilidade em janelas m√≥veis de 30 dias para o ibovespa desde junho/2014 at√© abril/2021.
+Importa√ß√£o do pacote do Yahoo e selecionando o c√≥digo do Ibovespa:
 
     from yahooquery import Ticker
     ibov = Ticker("^bvsp")
 
-Fazendo o upload das fÛrmulas dos estimadores:
+Fazendo o upload das f√≥rmulas dos estimadores:
 
     from google.colab import files
     uploaded = files.upload()
@@ -55,7 +56,7 @@ Fazendo o upload das fÛrmulas dos estimadores:
 
 Saving estimadoresvol.jpg to estimadoresvol.jpg
 
-CÛdigo para mostrar a imagem:
+C√≥digo para mostrar a imagem:
 
     import cv2
     from google.colab.patches import cv2_imshow
@@ -68,27 +69,27 @@ CÛdigo para mostrar a imagem:
 
 {{< figure library="true" src="1.png" width="100%" >}}
 
-Na Imagem, F È igual ‡ frequÍncia de retornos em um ano (252 para retornos di·rios, por exemplo).
+Na Imagem, F √© igual √† frequ√™ncia de retornos em um ano (252 para retornos di√°rios, por exemplo).
 {{< figure library="true" src="2.png" width="100%" >}}
 
 
 C - Dados de Fechamento
-H - Dados de M·xima
-L - Dados de MÌnima
+H - Dados de M√°xima
+L - Dados de M√≠nima
 O - Dados de Abertura
-EficiÍncia: Compara a vari‚ncia de um estimador em relaÁ„o ‡ vari‚ncia do estimador Close-to-Close.
+Efici√™ncia: Compara a vari√¢ncia de um estimador em rela√ß√£o √† vari√¢ncia do estimador Close-to-Close.
 Mais detalhes podem ser encontrados no material: https://dynamiproject.files.wordpress.com/2016/01/measuring_historic_volatility.pdf
-Importando as cotaÁıes do Ibovespa de 01/06/2014 atÈ 01/05/2021, com periodicidade di·ria. Observe que os dados s„o colocados em um dataframe.
+Importando as cota√ß√µes do Ibovespa de 01/06/2014 at√© 01/05/2021, com periodicidade di√°ria. Observe que os dados s√£o colocados em um dataframe.
 
     df=ibov.history(start="2014-06-01",end="2021-05-01",interval='1d') type(df)
 
 pandas.core.frame.DataFrame
-N˙mero de linhas e colunas:
+N√∫mero de linhas e colunas:
 
     		df.shape
     		(1707, 6)
 
-Verificando se h· valores nulos:
+Verificando se h√° valores nulos:
 
     		df.isnull().sum()
     low         0
@@ -107,7 +108,7 @@ Primeiras linhas do DataFrame:
     		df.head()
 
 {{< figure library="true" src="2.png" width="100%" >}}
-Selecionando apenas as colunas de interesse (open,low,high,close), que correspondem aos dados de abertura, mÌnima, m·xima e fechamento, respectivamente.
+Selecionando apenas as colunas de interesse (open,low,high,close), que correspondem aos dados de abertura, m√≠nima, m√°xima e fechamento, respectivamente.
 		
     		df=df[["open","low","high","close"]]
 
@@ -115,11 +116,11 @@ Selecionando apenas as colunas de interesse (open,low,high,close), que correspon
 
 {{< figure library="true" src="4.png" width="100%" >}}
 
-Nas funÁıes abaixo, "df" È o dataframe com dados de abertura, mÌnima, m·xima e fechamento e "n" È a janela mÛvel usada para o c·lculo da volatilidade. O termo "np.sqrt(252)*100" anualiza os resultados.
-df["close"] È a coluna do Dataframe com os dados de fechamento di·rio.
-df['high'] È a coluna do Dataframe com os dados de m·xima di·ria.
-df['low'] È a coluna do Dataframe com os dados de mÌnima di·ria.
-df['open'] È a coluna do Dataframe com os dados de abertura di·ria.
+Nas fun√ß√µes abaixo, "df" √© o dataframe com dados de abertura, m√≠nima, m√°xima e fechamento e "n" √© a janela m√≥vel usada para o c√°lculo da volatilidade. O termo "np.sqrt(252)*100" anualiza os resultados.
+df["close"] √© a coluna do Dataframe com os dados de fechamento di√°rio.
+df['high'] √© a coluna do Dataframe com os dados de m√°xima di√°ria.
+df['low'] √© a coluna do Dataframe com os dados de m√≠nima di√°ria.
+df['open'] √© a coluna do Dataframe com os dados de abertura di√°ria.
 
     def close_to_close(df,n):
       df["C/C(-1)-1"]=df['close']/df['close'].shift(1)-1
@@ -156,7 +157,7 @@ df['open'] È a coluna do Dataframe com os dados de abertura di·ria.
       df["GKYZ"]=np.sqrt(((df["o"]**2)+0.5*df["log^2(H/L)"]-(2*np.log(2)-1)*(df["c"]**2)).rolling(n).mean())*np.sqrt(252)*100
       return df["GKYZ"]
 
-Concatenando o resultado das funÁıes, todas com n=30 dias, em um DataFrame e retornando o valor da ˙ltima linha
+Concatenando o resultado das fun√ß√µes, todas com n=30 dias, em um DataFrame e retornando o valor da √∫ltima linha
 
 df1=pd.concat([close_to_close(df,30),Parkinson(df,30),Garman_Klass(df,30),Rogers_Satchell(df,30),GKYZ(df,30),Yang_And_Zang(df,30)],axis=1)
 
@@ -172,12 +173,12 @@ df1[-1:]
 {{< figure library="true" src="7.png" width="100%" >}}
 
 
-Plotando os estimadores separadamente para o perÌodo selecionado:
+Plotando os estimadores separadamente para o per√≠odo selecionado:
 
 df1.plot(subplots=True, figsize=(20,12)); plt.legend(loc='best')
 
 {{< figure library="true" src="8.png" width="100%" >}}
 
-Plotando os estimadores em um mesmo gr·fico para o perÌodo selecionado:
+Plotando os estimadores em um mesmo gr√°fico para o per√≠odo selecionado:
 		df1.plot(subplots=False, figsize=(20,8)); plt.legend(loc='best')
 
