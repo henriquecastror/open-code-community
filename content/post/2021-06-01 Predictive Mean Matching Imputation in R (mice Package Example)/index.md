@@ -188,7 +188,7 @@ If the correlation between our true and imputed values is high, we can tell that
       geom_smooth(method = ""lm"",
                   formula = y ~ x)
 
-{{< figure library="true" src="1.png" width="100%" >}}
+{{< figure library="true" src="2.png" width="100%" >}}
 
 
 As you can see, the correlation shown in the previous scatterplot is fairly high. Looks good!
