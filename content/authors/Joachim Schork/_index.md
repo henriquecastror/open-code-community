@@ -17,12 +17,6 @@ organizations:
 - name:  founder, Statistics Globe
   url: "https://statisticsglobe.com/"
 
-# Short bio (displayed in user profile at end of posts)
-bio:
-
-interests:
-
-
 education:
   courses:
   - course: M.Sc. in Statistics 
