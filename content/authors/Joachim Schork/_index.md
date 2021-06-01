@@ -1,10 +1,10 @@
 ---
 # Display name
-title: Joachim Schork (membro desde 2021/05)
+title:Joachim Schork (membro desde 2021/05)
 
 # Username (this should match the folder name)
 authors:
--JoachimSchork
+- JoachimSchork
 
 # Is this the primary user of the site?
 superuser: false
