@@ -1,6 +1,6 @@
 ---
 # Display name
-title: Joachim Schork (membro desde 2021/06)
+title: Joachim Schork (membro desde 2021/05)
 
 # Username (this should match the folder name)
 authors:
