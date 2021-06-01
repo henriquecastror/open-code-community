@@ -31,8 +31,6 @@ authors:
 
 
 ---
-
----
 ## Predictive Mean Matching Imputation in R (mice Package Example)
 
 In this article, I'll illustrate how to impute missing values using predictive mean matching imputation in the R programming language.
