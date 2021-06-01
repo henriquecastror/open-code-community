@@ -28,7 +28,6 @@ tags:
 
 authors:
 - JoachimSchork
-- 
 
 ---
 ## Predictive Mean Matching Imputation in R (mice Package Example)
