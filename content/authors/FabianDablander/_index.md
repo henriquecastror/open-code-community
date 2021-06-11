@@ -1,44 +1,49 @@
-
 ---
 # Display name
-title: FabianDablander (membro desde 2021/06)
+title: Fabian Dablander  (membro desde 2021/06)
 
 # Username (this should match the folder name)
 authors:
-- FabianDablander
-
+- FabianDablander 
 
 # Is this the primary user of the site?
 superuser: false
 
 # Role/position
-role:  PhD Student Methods & Statistics
+role: PhD Student Methods & Statistics
+
+# Organizations/Affiliations
+organizations:
 
 
-# Short bio (displayed in user profile at end of posts)
-bio: 
+bio:
+
+interests:
+
+
+education:
 
 
 # Social/Academic Networking
-# For available icons, see: https://sourcethemes.com/academic/docs/page-builder/#icons
-#   For an email link, use "fas" icon pack, "envelope" icon, and a link in the
-#   form "mailto:your-email@example.com" or "#contact" for contact widget.
 
-- icon: twitter
+social:
+- icon: blogger
+  icon_pack: fab
+  link: https://fabiandablander.com/menu/about.html
+  
+- icon: Twitter
   icon_pack: fab
   link: https://twitter.com/fdabl
-
+    
 # Highlight the author in author lists? (true/false)
 highlight_name: false
-
-# Organizational groups that you belong to (for People widget)
-#   Set this to `[]` or comment out if you are not using People widget.
 
 user_groups:
 - Colaboradores
 
 ---
-I began my academic journey in Graz, Austria, where I studied Psychology and Philosophy. Dissatisfied with both, I looked for a more formal way to study the human mind and behaviour and ended up in Tübingen, Germany, pursuing a Masters degree in Cognitive Science.
+
+I began my academic journey in Graz, Austria, where I studied Psychology and Philosophy. Dissatisfied with both, I looked for a more formal way to study the human mind and behaviour and ended up in TÃ¼bingen, Germany, pursuing a Masters degree in Cognitive Science.
 
 For my thesis, I stepped out the ivory tower academia can sometimes be and worked with a car company on evaluating artificial driver models in their traffic simulation. While that was fun, academia is fun too, and so I started a PhD at the Department of Psychological Methods, University of Amsterdam, in December 2017. Broadly speaking, I am working on topics related to Bayesian inference and testing, dynamical systems, causal inference, and time-series analysis.
 
