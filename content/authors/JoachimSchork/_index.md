@@ -44,6 +44,10 @@ social:
   icon_pack: fab
   link: https://www.youtube.com/c/statisticsglobe
 
+- icon: facebook
+  icon_pack: fab
+  link: https://www.youtube.com/c/statisticsglobe
+
 - icon: twitter
   icon_pack: fab
   link: https://twitter.com/JoachimSchork
