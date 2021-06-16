@@ -4,7 +4,7 @@
 
 # Username (this should match the folder name)
 authors:
-  - MarcosHReichert
+  - MarcosHenriqueReichert
 
 # Is this the primary user of the site?
 superuser: false
@@ -32,7 +32,7 @@ year: 2019
 
 social:
   
-  - icon: envelope
+- icon: envelope
 icon_pack: fas
 link: 'mailto:marcoshenriquereichert@gmail.com'
 
