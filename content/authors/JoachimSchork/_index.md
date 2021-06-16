@@ -40,6 +40,9 @@ social:
 #  icon_pack: ai
 #  link: https://www.scopus.com/authid/detail.uri?authorId=56179864100
 
+- icon: youtube
+  icon_pack: fab
+  link: https://www.youtube.com/channel/UChtMXL8EISLcdjmm33nsKpw
 
 - icon: twitter
   icon_pack: fab
