@@ -45,11 +45,10 @@ social:
   icon_pack: fab
   link: https://twitter.com/JoachimSchork
   
-  - icon: youtube
+ - icon: youtube
   icon_pack: fab
   link: https://www.youtube.com/channel/UChtMXL8EISLcdjmm33nsKpw
 
- 
 - icon: linkedin
   icon_pack: fab
   link: https://www.linkedin.com/company/75547611/admin/
