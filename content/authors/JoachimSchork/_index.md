@@ -55,9 +55,6 @@ social:
   link: https://www.linkedin.com/company/75547611/admin/
   label: My LinkedIn
  
-- icon: facebook
-  icon_pack: fab
-  link: https://www.facebook.com/statisticsglobecom/
 
   
 # https://jpswalsh.github.io/academicons/
@@ -83,4 +80,4 @@ user_groups:
 
 
 ---
-Joachim is a statistician, R programmer, and the founder of the Statistics Globe education platform. You can find more tutorials of Joachim by visiting his homepage https://statisticsglobe.com/ or his YouTube channel https://www.youtube.com/c/statisticsglobe. 
+Joachim is a statistician, R programmer, and the founder of the Statistics Globe education platform. You can find more tutorials of Joachim by visiting his homepage https://statisticsglobe.com/ or his YouTube channel https://www.youtube.com/c/statisticsglobe. Facebbok ((https://www.facebook.com/statisticsglobecom/))
