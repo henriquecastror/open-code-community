@@ -45,13 +45,20 @@ social:
   icon_pack: fab
   link: https://twitter.com/JoachimSchork
   
+  - icon: youtube
+  icon_pack: fab
+  link: https://www.youtube.com/channel/UChtMXL8EISLcdjmm33nsKpw
 
  
 - icon: linkedin
   icon_pack: fab
   link: https://www.linkedin.com/company/75547611/admin/
   label: My LinkedIn
-  
+ 
+- icon: facebook
+  icon_pack: fab
+  link: https://www.facebook.com/statisticsglobecom/
+
   
 # https://jpswalsh.github.io/academicons/
 
