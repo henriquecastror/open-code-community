@@ -34,9 +34,9 @@ authors:
 
 In this article, I'll illustrate how to impute missing values using predictive mean matching imputation in the R programming language.
 
-This article aims at explaining the application of the predictive mean matching method in R, and does not explain its theoretical concept. However, you may click the following link in case you want to learn more about the theory behind predictive mean matching imputation.
+This article aims at explaining the application of the predictive mean matching method in R, and does not explain its theoretical concept. However, you may click the following link in case you want to learn more about the [theory behind predictive mean matching imputation](https://statisticsglobe.com/predictive-mean-matching-imputation-method/).
 
-The article is structured into two sections. In Section 1, we'll create some example data with missing values (i.e. NA values in R), and we'll analyze these data to illustrate the missing value structure of our data.
+The article is structured into two sections. In Section 1, we'll create some example data with missing values (i.e. [NA values in R](https://statisticsglobe.com/r-na/)), and we'll analyze these data to illustrate the missing value structure of our data.
 
 Section 2 shows how to impute our missing values using predictive mean matching imputation. At the end of this section, we'll also evaluate whether the imputed values are close to the truth.
 
@@ -96,7 +96,7 @@ Fortunately, the correlations are relatively high, indicating that we can predic
 
 Since we know the true values of the missing cases in our data (remember, we have inserted the missing values ourselves), we can visualize the structure of our missing values in a graphic.
 
-For this visualization, we will use the ggplot2 package. In order to draw our data using the ggplot2 package, we first have to install and load ggplot2:
+For this visualization, we will use the [ggplot2 package](https://ggplot2.tidyverse.org/). In order to draw our data using the ggplot2 package, we first have to install and load ggplot2:
 
 
     install.packages(""ggplot2"")                                   # Install ggplot2 package
@@ -123,7 +123,7 @@ As shown in Figure 1, the previous syntax has created a scatterplot containing t
 
 This visualization also shows that our missing values follow a pattern, i.e. the higher the values in x1, the more likely it is that a missing value occurs in y. In other words: there are more red dots on the right side of the plot.
 
-Such patterns can be described based on so-called response mechanisms. In our case, the response mechanism is MAR (Missing At Random). You can learn more about the different response mechanisms here.
+Such patterns can be described based on so-called response mechanisms. In our case, the response mechanism is MAR (Missing At Random). You can learn more about the different response mechanisms [here](https://statisticsglobe.com/missing-data/).
 
 So far so good, but how can we replace those NA values with estimated imputed values? That's what I'm going to show you next!
 
@@ -135,7 +135,7 @@ So far so good, but how can we replace those NA values with estimated imputed va
 
 This section shows how to substitute the missing values in our data using the predictive mean matching method.
 
-For this, we first have to install and load the mice package to R:
+For this, we first have to install and load the [mice package](https://cran.r-project.org/web/packages/mice/mice.pdf) to R:
 
     
     install.packages(""mice"")                                      # Install & load mice
