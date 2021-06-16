@@ -32,7 +32,7 @@ tags:
 # DIGITE NA LISTA ABAIXO O NOME DE TODOS OS AUTORES SEM ESPACOS
 authors:
   - MarceloPerlin
-  - Marcos Henrique Reichert
+  - MarcosHenriqueReichert
   - Lucas Mussoi Almeida
 
 
