@@ -14,11 +14,11 @@ role: Doutorando de Finanças
 
 # Organizations/Affiliations
 organizations:
-  - name: Universidade Federal do Rio Grande do Sul
-url: "https://www.ufrgs.br"
+- name: Universidade Federal do Rio Grande do Sul
+  url: "https://www.ufrgs.br"
 
-bio:
-  interests:
+
+interests:
   - Métodos Empíricos em Finanças
 
 education:
