@@ -196,3 +196,18 @@ In case you may want to learn more about NA values in R, I recommend watching th
 
 https://www.youtube.com/watch?v=q8eR2suCyGk
 
+
+About the Author
+
+This article has been written by Joachim Schork. Joachim is a statistician, R programmer, and the founder of the Statistics Globe education platform. You can find more tutorials of Joachim by visiting his homepage https://statisticsglobe.com/ or his YouTube channel https://www.youtube.com/c/statisticsglobe. 
+
+
+
+
+
+
+
+Social media links for the Colaboradores page:
+https://twitter.com/JoachimSchork
+https://www.linkedin.com/company/75547611/admin/
+https://www.facebook.com/statisticsglobecom/
