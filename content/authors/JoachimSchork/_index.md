@@ -42,7 +42,7 @@ social:
 
 - icon: youtube
   icon_pack: fab
-  link: https://www.youtube.com/channel/UChtMXL8EISLcdjmm33nsKpw
+  link: https://www.youtube.com/c/statisticsglobe
 
 - icon: twitter
   icon_pack: fab
