@@ -42,7 +42,7 @@ Section 2 shows how to impute our missing values using predictive mean matching 
 
 Let's dive into it!
 
-Creating Example Data
+## Creating Example Data
 
 As first step of this tutorial, we have to create some example data that we can use in the imputation process later on. The following R code creates a data frame with three predictor variables (i.e. x1, x2, and x3) as well as one target variable with missing values (i.e. y).
 
@@ -104,10 +104,10 @@ For this visualization, we will use the [ggplot2 package](https://ggplot2.tidyve
 
 Next, we can draw a ggplot2 scatterplot illustrating the relationship between our target variable y and one of our predictors (i.e. x1). First, we have to store the data we want to draw in a new data frame:
 
-data_true <- data.frame(y = y_true,                             # Data with true values & x1
-                        x1 = data$x1,
-                        status = ""Observed"")
-data_true$status[is.na(data$y)] <- ""Missing""
+    data_true <- data.frame(y = y_true,                             # Data with true values & x1
+                            x1 = data$x1,
+                            status = ""Observed"")
+    data_true$status[is.na(data$y)] <- ""Missing""
 
 And then, we can plot our data as follows:
 
@@ -117,7 +117,7 @@ And then, we can plot our data as follows:
                color = status)) +
       geom_point()
 
-{{< figure library="true" src="1.png" width="100%" >}}
+{{< figure library="true" src="2.png" width="100%" >}}
 
 As shown in Figure 1, the previous syntax has created a scatterplot containing the values of y and x1. The observed values are shown in green and the true (but missing) values are shown in red.
 
@@ -185,7 +185,7 @@ If the correlation between our true and imputed values is high, we can tell that
       geom_smooth(method = ""lm"",
                   formula = y ~ x)
 
-{{< figure library="true" src="2.png" width="100%" >}}
+{{< figure library="true" src="1.png" width="100%" >}}
 
 
 As you can see, the correlation shown in the previous scatterplot is fairly high. Looks good!
