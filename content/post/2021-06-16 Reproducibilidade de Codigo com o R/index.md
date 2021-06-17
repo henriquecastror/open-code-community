@@ -33,7 +33,7 @@ tags:
 authors:
   - MarceloPerlin
   - MarcosHenriqueReichert
-  - Lucas Mussoi Almeida
+  - LucasMussoi
 
 
 ---
