@@ -2,7 +2,7 @@
 title: Lucas Mussoi Almeida (membro desde 2021/06)
 
 authors:
-  - LucasMussoi
+- LucasMussoi
 
 superuser: false
 
@@ -15,13 +15,13 @@ organizations:
 bio:
   
 interests:
-  - Métodos Empíricos em Finanças
+- Métodos Empíricos em Finanças
 
 education:
   courses:
-    - course: Mestrado Engenharia Mecânica
-      institution: UFRGS
-      year: 2019
+  - course: Mestrado Engenharia Mecânica
+    institution: UFRGS
+    year: 2019
 
 social:
 - icon: envelope
@@ -35,7 +35,7 @@ social:
 highlight_name: false
 
 user_groups:
-  - Colaboradores
+- Colaboradores
 
 ---
   
