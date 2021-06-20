@@ -3,7 +3,7 @@ title: "Recreating the momentum factor (WML) with Brazilian stocks (in R)"
 
 categories: []
 
-date: '2021-16-18T00:00:00Z' 
+date: '2021-06-18T00:00:00Z' 
 
 draft: no
 
