@@ -162,7 +162,7 @@ Now we classify stocks by terciles, create the long and short portfolios and cal
     	wml <- na.omit(ndf) %>% group_by(yearmon) %>% 
       		summarise(wml=mean(mret[tercile==3])-mean(mret[tercile==1])) %>% ungroup() %>% mutate(cwml=cumprod(1+wml))
 
-Voil‡! Our momentum factor is created. Now let's compare it to the actual NEFIN data. As we don't have the listing date of a company, note that the third eligibility criteria is quite different than the original. Also, the initial tickers may be distinct between this code and the one used by NEFIN.
+Voil√†! Our momentum factor is created. Now let's compare it to the actual NEFIN data. As we don't have the listing date of a company, note that the third eligibility criteria is quite different than the original. Also, the initial tickers may be distinct between this code and the one used by NEFIN.
 	
     	nefin <- get_risk_factors(factors = 'WML',agg = 'daily')
     	nefin <- nefin %>% mutate(ref.date=as.Date(paste(year,'-',month,'-',day,sep = '')))
@@ -190,7 +190,7 @@ How about that? The rationale of developing the momentum factor is similar to ot
 
 Suggestions for improving the code or comments at general are more than welcome at [email](hpramos4@gmail) or at [LinkedIn](https://br.linkedin.com/in/henrique-p-ramos).
 
-## References
+## References 
 
 CARHART, Mark M. On persistence in mutual fund performance. The Journal of finance, v. 52, n. 1, p. 57-82, 1997.
 
