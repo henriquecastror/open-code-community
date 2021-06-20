@@ -3,7 +3,7 @@ title: "Recreating the momentum factor (WML) with Brazilian stocks (in R)"
 
 categories: []
 
-date: '2021-16-11T00:00:00Z' 
+date: '2021-16-18T00:00:00Z' 
 
 draft: no
 
@@ -33,13 +33,13 @@ authors:
 
 ---
 
-Financial literature has been developing and testing factors that help explain the cross section of stock returns for a long time. In a nutshell, the momentum factor (also known as winners minus losers – WML) is the tendency for rising asset prices to continue rising, as well as falling prices to continue falling. The WML factor was firstly studied by Jagadeesh and Titman (1993) and Carhart (1997). 
+Financial literature has been developing and testing factors that help explain the cross section of stock returns for a long time. In a nutshell, the momentum factor (also known as winners minus losers WML) is the tendency for rising asset prices to continue rising, as well as falling prices to continue falling. The WML factor was firstly studied by Jagadeesh and Titman (1993) and Carhart (1997). 
 
 This is one of the several factors that help explain asset returns. Factor investing has been gaining grounds in the Brazilian market. Many quantitative mutual funds use a myriad of factors and systematic trading strategies trying to generate alpha and manage risk for their portfolios. 
 
-In this post, let’s recriate the momentum factor for stocks listed at the B3 exchange (Brazil) using R. The idea is to create a portfolio that is long in stocks with rising prices and short in stocks with falling prices given a time period. This is pretty simple, however handling the data **before** creating long and short portfolios may be tricky. That’s why I have written this post: if you get the hang of it, it is possible to replicate, or create, any other factor. Whether your are an academic or a practitioner, it may be helpful. In my opinion, after reading many academic papers about portfolio construction sometimes it is not clear how the authors code the many filters used to construct the factors. So, I hope this post help others that may have the same thoughts.
+In this post, let's recriate the momentum factor for stocks listed at the B3 exchange (Brazil) using R. The idea is to create a portfolio that is long in stocks with rising prices and short in stocks with falling prices given a time period. This is pretty simple, however handling the data **before** creating long and short portfolios may be tricky. That is why I have written this post: if you get the hang of it, it is possible to replicate, or create, any other factor. Whether your are an academic or a practitioner, it may be helpful. In my opinion, after reading many academic papers about portfolio construction sometimes it is not clear how the authors code the many filters used to construct the factors. So, I hope this post help others that may have the same thoughts.
 
-As a guide to construct the WML factor, we will use the [NEFIN-USP methodology](http://nefin.com.br/Metodologia/Methodology.pdf) page. First, let’s clear our workspace and load the required packages. Two special notes: 1) the new version of the ‘BatchGetSymbols’ package of Marcelo Perlin has a nice function to go parallel in fetching financial data. 2) The ‘nefindata’ allows us to get NEFIN-USP data. The package has already been used in this [post]( https://opencodecom.net/post/2021-04-28-aplicacao-de-hierarchical-risk-parity-hrp-nos-fatores-de-risco-da-bolsa-brasileira/). Also, our code imports a list of tickers containing active and inactive tickers for companies listed in B3 (former BM&FBovespa). These tickers were gathered at Economatica®.
+As a guide to construct the WML factor, we will use the [NEFIN-USP methodology](http://nefin.com.br/Metodologia/Methodology.pdf) page. First, let's clear our workspace and load the required packages. Two special notes: 1) the new version of the 'BatchGetSymbols' package of Marcelo Perlin has a nice function to go parallel in fetching financial data. 2) The 'nefindata' allows us to get NEFIN-USP data. The package has already been used in this [post]( https://opencodecom.net/post/2021-04-28-aplicacao-de-hierarchical-risk-parity-hrp-nos-fatores-de-risco-da-bolsa-brasileira/). Also, our code imports a list of tickers containing active and inactive tickers for companies listed in B3 (former BM&FBovespa). These tickers were gathered at Economatica.
 
     	rm(list=ls()) ### clear workspace, memory and close open plots
     	gc()
@@ -162,7 +162,7 @@ Now we classify stocks by terciles, create the long and short portfolios and cal
     	wml <- na.omit(ndf) %>% group_by(yearmon) %>% 
       		summarise(wml=mean(mret[tercile==3])-mean(mret[tercile==1])) %>% ungroup() %>% mutate(cwml=cumprod(1+wml))
 
-Voilà! Our momentum factor is created. Now let’s compare it to the actual NEFIN data. As we don’t have the listing date of a company, note that the third eligibility criteria is quite different than the original. Also, the initial tickers may be distinct between this code and the one used by NEFIN.
+Voilà! Our momentum factor is created. Now let's compare it to the actual NEFIN data. As we don't have the listing date of a company, note that the third eligibility criteria is quite different than the original. Also, the initial tickers may be distinct between this code and the one used by NEFIN.
 	
     	nefin <- get_risk_factors(factors = 'WML',agg = 'daily')
     	nefin <- nefin %>% mutate(ref.date=as.Date(paste(year,'-',month,'-',day,sep = '')))
@@ -177,7 +177,7 @@ Voilà! Our momentum factor is created. Now let’s compare it to the actual NEFIN 
     
     	print(cor(fdf$wml,fdf$nefin_wml))
 
-The correlation between data is pretty decent (0.9447842). Let’s plot the cumulative return of $1 invested in the strategy:
+The correlation between data is pretty decent (0.9447842). Let's plot the cumulative return of $1 invested in the strategy:
 
     	ldf <- melt(data = fdf,id.vars = 'yearmon') # long format for ggplot
     	p <- ggplot(filter(ldf,variable %in% c('cwml','cnefin_wml'))) + geom_line(aes(y=value,x=yearmon,group=variable,color=variable))
