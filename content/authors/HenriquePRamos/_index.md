@@ -1,4 +1,4 @@
-﻿---
+---
 # Display name
 title: Henrique P. Ramos  (membro desde 2021/06)
 
@@ -13,27 +13,20 @@ superuser: false
 role: Professor of Finance
 
 organizations: 
--name: UFRGS (Federal University of Rio Grande do Sul)
- url: "www.ufrgs.br/escoladeadministracao"
-	
-
-bio:
+- name: UFRGS (Federal University of Rio Grande do Sul)
+  url: "www.ufrgs.br/escoladeadministracao"
 
 interests: 
--R
--Empirical finance
--Liquidity
--Risk
-
+- R
+- Empirical finance
+- Liquidity
+- Risk
 
 education: 
  courses:
- -course: Doctorate in Finance, 
-  institution: UFRGS
-  year: 2020
-
-
-# Social/Academic Networking
+ - course: Doctorate in Finance, 
+   institution: UFRGS
+   year: 2020
 
 social:
 -icon: envelope
@@ -44,7 +37,6 @@ social:
  icon_pack: fas
  link: http://lattes.cnpq.br/6786002623181635
     
-# Highlight the author in author lists? (true/false)
 highlight_name: false
 
 user_groups:
