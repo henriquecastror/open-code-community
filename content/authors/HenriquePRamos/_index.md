@@ -13,8 +13,8 @@ superuser: false
 role: Professor of Finance
 
 organizations: 
--name: UFRGS - Federal University of Rio Grande do Sul
- url: "www.ufrgs.br/escoladeadministracao""
+-name: UFRGS (Federal University of Rio Grande do Sul)
+ url: "www.ufrgs.br/escoladeadministracao"
 	
 
 bio:
