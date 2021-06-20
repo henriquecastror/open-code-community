@@ -4,7 +4,7 @@ title: "Como usar o Selenium no R"
 categories: [R, webscrapping, Selenium]
 
 # MUDE APENAS ANO DIA E MES PARA O DIA QUE VOCE NOS ENVIOU
-date: '2021-06-20T00:00:00Z' 
+date: '2021-06-21T00:00:00Z' 
 
 draft: no
 
@@ -32,8 +32,8 @@ tags:
   
 # DIGITE NA LISTA ABAIXO O NOME DE TODOS OS AUTORES SEM ESPACOS
 authors:
-  - MarcosHReichert
-  - MarceloSchererPerlin
+  - MarcosHenriqueReichert
+  - MarceloPerlin
   - LucasMussoi
 
 
