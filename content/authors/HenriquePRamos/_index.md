@@ -29,13 +29,13 @@ education:
    year: 2020
 
 social:
--icon: envelope
- icon_pac: fas
- link: 'mailto:hpramos4@gmail.com'
+- icon: envelope
+  icon_pac: fas
+  link: 'mailto:hpramos4@gmail.com'
 
--icon: lattes
- icon_pack: fas
- link: http://lattes.cnpq.br/6786002623181635
+- icon: lattes
+  icon_pack: fas
+  link: http://lattes.cnpq.br/6786002623181635
     
 highlight_name: false
 
