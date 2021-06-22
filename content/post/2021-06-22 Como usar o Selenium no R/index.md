@@ -30,7 +30,6 @@ tags:
   - Selenium
   - Webscrapping
   
-# DIGITE NA LISTA ABAIXO O NOME DE TODOS OS AUTORES SEM ESPACOS
 authors:
   - MarcosHenriqueReichert
   - MarceloPerlin
