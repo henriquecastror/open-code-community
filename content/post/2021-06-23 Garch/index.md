@@ -252,14 +252,12 @@ Para estimar os modelos da família ARCH, vamos considerar diversas especificaç
 
 De acordo com nosso critério de seleção de modelos, a combinação do GARCH padrão mais a modelagem do choque pela distribuição t-student é mais recorrente, sendo escolhida sete vezes em 18 ativos considerados.
 
-{{< table >}}
 | Disk 0 | Disk 1 | Disk 2 | Disk 3 |
 |:------:|:------:|:------:|:-------:|
 |   A1   |   A2   |   A3   | Ap(1-3) |
 |   A4   |   A5   |   A6   | Ap(4-6) |
 |   B1   |   B2   |   B3   | Bp(1-3) |
 |   B4   |   B5   |   B6   | Bp(4-6) |
-{{< table />}}
 
 
 Por último, vamos plotar todas as séries de volatilidade dos retornos estimadas em um só gráfico para avaliar a evolução deste componente ao longo do tempo. Embora alguns papéis sejam mais voláteis em determinados instantes de tempo, observe que a volatilidade durante o momento mais agudo da crise do Covid-19, em meados de fevereiro de 2020, foi muito mais acentuada e com impacto bastante uniforme sobre todos os ativos selecionados.
