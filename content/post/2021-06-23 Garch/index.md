@@ -270,7 +270,8 @@ De acordo com nosso critério de seleção de modelos, a combinação do GARCH p
 | sGARCH-std    | CSNA3.SA | -3.801952 |
 | sGARCH-std    | TOTS3.SA | -4.865413 |
 | sGARCH-std    | MDIA3.SA | -5.053061 |
-
+| sGARCH-std    | EZTC3.SA | -4.588863 |
+| sGARCH-std    | FLRY3.SA | -5.069654 
 
 Por último, vamos plotar todas as séries de volatilidade dos retornos estimadas em um só gráfico para avaliar a evolução deste componente ao longo do tempo. Embora alguns papéis sejam mais voláteis em determinados instantes de tempo, observe que a volatilidade durante o momento mais agudo da crise do Covid-19, em meados de fevereiro de 2020, foi muito mais acentuada e com impacto bastante uniforme sobre todos os ativos selecionados.
 
