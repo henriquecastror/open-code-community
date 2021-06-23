@@ -169,7 +169,7 @@ A autocorrelação presente no quadrado dos retornos de séries financeiras suge
 Diante desses fatos, é preciso que se faça a modelagem da variância utilizando especificações adequadas que capturam os fatos estilizados das séries de retorno, tais como os modelos de heterocedasticidade condicional do tipo GARCH.
 
 
-Para estimar os modelos da família ARCH, vamos considerar diversas especificações com a ordem do GARCH (1,1), uma vez que é bem documentado na literatura <<https://onlinelibrary.wiley.com/doi/full/10.1002/jae.800>> que dificilmente uma especificação com ordem diferente deverá ser mais eficiente do que esta. Nosso objetivo difere do paper mencionado, pois este tem foco na previsão, enquanto nosso interesse reside em apenas fazer a seleção de modelos baseando-se no critério de informação de Schwarz, embora o package **rugarch** ofereça outros três critérios distintos. Observe, no decorrer do código, que estabelecemos um critério de seleção automática das especificações para cada ticker.
+Para estimar os modelos da família ARCH, vamos considerar diversas especificações com a ordem do GARCH (1,1), uma vez que é bem documentado na [literatura](https://onlinelibrary.wiley.com/doi/full/10.1002/jae.800) que dificilmente uma especificação com ordem diferente deverá ser mais eficiente do que esta. Nosso objetivo difere do paper mencionado, pois este tem foco na previsão, enquanto nosso interesse reside em apenas fazer a seleção de modelos baseando-se no critério de informação de Schwarz, embora o package **rugarch** ofereça outros três critérios distintos. Observe, no decorrer do código, que estabelecemos um critério de seleção automática das especificações para cada ticker.
 
     date <- daily_returns %>%
       select(ref.date) %>% 
