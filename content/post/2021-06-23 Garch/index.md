@@ -53,7 +53,7 @@ E\left(r_{t}^{2} \mid \mathbf{I}_{t-1}\right)=\sigma_{t}^{2}=\omega+\sum_{i=1}^{
 $$
 onde $r_{t}$ são os retornos indexados em $t=1, \ldots, T $, $\sigma_{t}$ é o componente de volatilidadee $\varepsilon_{t}$ são os choques, que tipicamente assumem normalidade $\varepsilon_{t} \ticksim N(0,1)$.
 
-Em nosso exercício, vamos apresentar uma forma fácil para estimar diversas especificações dessa natureza. Para tanto, vamos usar uma estratégia semelhante ao artigo <<https://arxiv.org/pdf/1410.8504.pdf>>, estimando, para cada ticker, quarenta especificações derivadas da combinação de cinco modelos dessa classe, mais a modelagem de $\varepsilon_{t}$ considerando oito distribuições distintas.Pegando carona com meu xará Victor Gomes, vou utilizar os mesmos ativos mencionados no post <<https://opencodecom.net/post/2021-05-17-analise-de-risco-e-retorno-de-acoes-usando-o-r/>>. Vamos considerar uma amostra que considera um período superior a sete anos, o que deve ser suficiente para se ter uma boa ideia de como a volatilidade se comporta para ativos do mercado de ações brasileiro. 
+Em nosso exercício, vamos apresentar uma forma fácil para estimar diversas especificações dessa natureza. Para tanto, vamos usar uma estratégia semelhante ao [artigo](https://arxiv.org/pdf/1410.8504.pdf), estimando, para cada ticker, quarenta especificações derivadas da combinação de cinco modelos dessa classe, mais a modelagem de $\varepsilon_{t}$ considerando oito distribuições distintas.Pegando carona com meu xará Victor Gomes, vou utilizar os mesmos ativos mencionados no [post](https://opencodecom.net/post/2021-05-17-analise-de-risco-e-retorno-de-acoes-usando-o-r/). Vamos considerar uma amostra que considera um período superior a sete anos, o que deve ser suficiente para se ter uma boa ideia de como a volatilidade se comporta para ativos do mercado de ações brasileiro. 
 
     library(BatchGetSymbols)
     library(rugarch)
@@ -75,7 +75,7 @@ Em nosso exercício, vamos apresentar uma forma fácil para estimar diversas esp
       select(c(ref.date,ticker,ret.closing.prices)) %>% 
       pivot_wider(id_cols = ref.date,names_from = ticker,values_from = ret.closing.prices)
 
-De acordo com algumas surveys <<https://www.sciencedirect.com/science/article/pii/S1573441205800182>>, é bem documentado na literatura de finanças empíricas que a taxa de retorno de séries financeiras exibem certos atributos como caudas pesadas, agrupamento de volatilidade e efeito de alavancagem. Tomemos como exemplo o ticker **PETR4.SA**, conforme mostra as figuras abaixo:
+De acordo com algumas [surveys](https://www.sciencedirect.com/science/article/pii/S1573441205800182), é bem documentado na literatura de finanças empíricas que a taxa de retorno de séries financeiras exibem certos atributos como caudas pesadas, agrupamento de volatilidade e efeito de alavancagem. Tomemos como exemplo o ticker **PETR4.SA**, conforme mostra as figuras abaixo:
 
     plot.returns <- ggplot(daily_returns) +
       geom_line(aes(x = ref.date, y = PETR4.SA)) +
