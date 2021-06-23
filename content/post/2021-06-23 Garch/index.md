@@ -252,24 +252,14 @@ Para estimar os modelos da família ARCH, vamos considerar diversas especificaç
 
 De acordo com nosso critério de seleção de modelos, a combinação do GARCH padrão mais a modelagem do choque pela distribuição t-student é mais recorrente, sendo escolhida sete vezes em 18 ativos considerados.
 
-    | Specification | Ticker   | BIC       |
-    |---------------|----------|-----------|
-    | apARCH-std    | CIEL3.SA | -4.711838 |
-    | apARCH-std    | CVCB3.SA | -4.541972 |
-    | eGARCH-jsu    | USIM5.SA | -3.895312 |
-    | eGARCH-std    | PETR4.SA | -4.261241 |
-    | eGARCH-std    | EMBR3.SA | -4.837635 |
-    | eGARCH-std    | ABEV3.SA | -5.564423 |
-    | gjrGARCH-std  | EQTL3.SA | -5.437899 |
-    | gjrGARCH-std  | LREN3.SA | -4.910334 |
-    | gjrGARCH-std  | RADL3.SA | -5.055834 |
-    | gjrGARCH-std  | RENT3.SA | -4.736320 |
-    | sGARCH-jsu    | OIBR3.SA | -3.585446 |
-    | sGARCH-std    | VALE3.SA | -4.468457 |
-    | sGARCH-std    | WEGE3.SA | -5.126926 |
-    | sGARCH-std    | CSNA3.SA | -3.801952 |
-    | sGARCH-std    | TOTS3.SA | -4.865413 |
-    | sGARCH-std    | MDIA3.SA | -5.053061 |
+{{< table >}}
+| Disk 0 | Disk 1 | Disk 2 | Disk 3 |
+|:------:|:------:|:------:|:-------:|
+|   A1   |   A2   |   A3   | Ap(1-3) |
+|   A4   |   A5   |   A6   | Ap(4-6) |
+|   B1   |   B2   |   B3   | Bp(1-3) |
+|   B4   |   B5   |   B6   | Bp(4-6) |
+{{< table />}}
 
 
 Por último, vamos plotar todas as séries de volatilidade dos retornos estimadas em um só gráfico para avaliar a evolução deste componente ao longo do tempo. Embora alguns papéis sejam mais voláteis em determinados instantes de tempo, observe que a volatilidade durante o momento mais agudo da crise do Covid-19, em meados de fevereiro de 2020, foi muito mais acentuada e com impacto bastante uniforme sobre todos os ativos selecionados.
