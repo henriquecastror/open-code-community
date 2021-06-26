@@ -30,7 +30,7 @@ design:
 
 ---
 
-## Junte-se a nós (English follows)
+# Junte-se a nós (English follows)
 
 Essa comunidade é aberta a quem quiser ajudar no seu desenvolvimento e compartilhar códigos. Se você quer ter seu nome incluído na lista de Colaboradores, mande seu código para nós.
 
