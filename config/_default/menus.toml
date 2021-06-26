@@ -9,11 +9,11 @@
   weight = 10
 
 [[main]]
-  name = "Colaboradores"
+  name = "Colaboradores/Contributors"
   url = "people"
   weight = 30
 
 [[main]]
-  name = "Contribua"
+  name = "Contribua/Contribute"
   url = "contact"
   weight = 60

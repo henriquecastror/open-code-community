@@ -9,7 +9,7 @@ headless: true
 # Order that this section appears on the page.
 weight: 10
 
-title: Junte-se a nós
+title: Junte-se a nós/ Join us
 subtitle:
 
 content:
@@ -29,6 +29,8 @@ design:
   columns: '1'
 
 ---
+
+**English follows**
 
 Essa comunidade é aberta a quem quiser ajudar no seu desenvolvimento e compartilhar códigos. Se você quer ter seu nome incluído na lista de Colaboradores, mande seu código para nós.
 
@@ -52,5 +54,29 @@ Pelo momento, estamos aceitando códigos em R, Python e Stata. Você pode escrev
 
 Nossa expectativa de resposta é de alguns dias. Para garantir que os códigos postados estejam corretos, um colaborador  atual irá validar o código enviado por você. Assim, para manter seu nome na lista de colaboradores, contamos com sua ajuda em avaliar alguns códigos enviados.
 
+
+ 
+**Join us**
+ 
+This community welcomes any and everyone willing to help with its development sharing codes. If you want to add your name to the contributors' list, send us your code.
+
+We do not have staff and we manage the website with our own effort. So if you want to share a code, please use the templates below. If you send us something too different, we may not be able to share it promptly.
+Please, follow these steps:
+
+1 Write your code using this {{% staticref "files/post_index.md" "newtab" %}} template{{% /staticref %}}. You can send us a .txt or a .md file. Unfortunately, we cannot accept .rmd files yet.
+
+2) Write your author's page using this {{% staticref "files/autor_index.md" "newtab" %}} template{{% /staticref %}}. You can send us a .txt or a .md file. Unfortunately, we cannot accept .rmd files yet.
+
+3) Send us all images that your code generates as .png.
+
+4) Send us a picture of your face as .png. Please, our preference is for small .png files.
+
+5) For now, we are accepting codes in R, Python, and Stata. You will see some codes in Portuguese. The reason is that a big part of our team is from Brazil and is willing to help students that do not feel comfortable with English. But, materials in English are very welcomed too. 
+
+We believe we can reply to you in a couple of days. To guarantee that your code is good, some contributors may run to check it. Thus, we count on you to revise codes in the future.
+
+Send us your materials to: opencodecom@gmail.com
+
+**We are looking forward to receiving your code.**
 
  
