@@ -39,7 +39,7 @@ authors:
 
 Primeiramente é preciso deixar seu banco de dados remoto. É possível criar uma conta e hospedar gratuitamente por aqui: https://www.freemysqlhosting.net/.
 
-{{< figure src=“File_1.png” width=“80%” >}}
+{{< figure src="File_1.png" width="100%" >}}
 
 Esse é o host, o nome da base, nome do usário e a senha, que chega por e-mail.
 
@@ -59,7 +59,7 @@ Conectamos com a base remota.
     conn <- RMySQL::dbConnect(RMySQL::MySQL(),
                       user = "sql4421522",
                       host = "sql4.freemysqlhosting.net",
-                      password = keyring::key_get("my-database",                               "myusername"),
+                      password = keyring::key_get("my-database","myusername"),
                       port = 3306)
                       
 Vamos adicionar a famosa base de dados mtcars, built in do R, na nossa base remota.
