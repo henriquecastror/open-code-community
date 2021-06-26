@@ -11,7 +11,7 @@ weight: 10  # Order that this section will appear.
 
 title: "Open Code Community"
 
-subtitle: ""
+subtitle: 
 
 hero_media: welcome.jpg
 
@@ -24,4 +24,8 @@ advanced:
   css_class:
 ---
 
-Somos um grupo de pesquisadores e programadores, entusiastas por Ciência Aberta, com o objetivo de compartilhar códigos de forma livre para toda a comunidade. Nosso objetivo é ajudar estudantes de doutorado, mestrado e profissionais de mercado com a elaboração de seus códigos e análises. Se você deseja contribuir ao projeto, compartilhe seu código.
+Somos um grupo de entusiastas por programação e Ciência Aberta com o objetivo de compartilhar códigos para toda a comunidade. Nosso objetivo é ajudar estudantes e profissionais de mercado com a elaboração de seus códigos e análises. Se você deseja contribuir ao projeto, compartilhe seu código.
+
+***
+
+We are a group of programming and Open Science enthusiasts aiming to share codes for the entire community. Our goal is to help students and  professionals with the development of their codes and analyses. If you are willing to contribute to this project, share your code.

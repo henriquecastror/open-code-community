@@ -9,7 +9,7 @@ headless: true
 # Order that this section appears on the page.
 weight: 68
 
-title: Conheça os colaboradores
+title: Conheça os colaboradores & Meet the Contributors
 subtitle:
 
 content:
@@ -23,6 +23,7 @@ content:
   - Visitors
   - Alumni
   - Colaboradores
+  
 design:
   show_interests: false
   show_role: true
