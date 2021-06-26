@@ -30,7 +30,7 @@ design:
 
 ---
 
-## Instru珲es em Portug阺 (English follows)
+## Junte-se a n贸s (English follows)
 
 Essa comunidade 茅 aberta a quem quiser ajudar no seu desenvolvimento e compartilhar c贸digos. Se voc锚 quer ter seu nome inclu铆do na lista de Colaboradores, mande seu c贸digo para n贸s.
 
@@ -55,8 +55,9 @@ Pelo momento, estamos aceitando c贸digos em R, Python e Stata. Voc锚 pode escrev
 Nossa expectativa de resposta 茅 de alguns dias. Para garantir que os c贸digos postados estejam corretos, um colaborador  atual ir谩 validar o c贸digo enviado por voc锚. Assim, para manter seu nome na lista de colaboradores, contamos com sua ajuda em avaliar alguns c贸digos enviados.
 
 
+***
  
-## Join us
+# Join us
  
 This community welcomes any and everyone willing to help with its development sharing codes. If you want to add your name to the contributors' list, send us your code.
 

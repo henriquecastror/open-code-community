@@ -5,7 +5,7 @@ headless = true  # This file represents a page section.
 active = true  # Activate this widget? true/false
 weight = 95  # Order that this section will appear.
 
-title = "Mande sua Demanda"
+title = "Mande sua Demanda & Contact us"
 subtitle = ""
 
 [design]
@@ -44,9 +44,9 @@ subtitle = ""
 
 
 
-👉 Para enviar sua demanda clique/Send us your demands [aqui/here](mailto:opencodecom@gmail.com).
+👉 Para enviar sua demanda clique [aqui](mailto:opencodecom@gmail.com). Send us your demands [/here](mailto:opencodecom@gmail.com).
 
-👉 Saiba como contribuir/Learn how to contribute [aqui/here](https://opencodecom.net/contact/).
+👉 Saiba como contribuir[aqui](https://opencodecom.net/contact/). Learn how to contribute [here](https://opencodecom.net/contact/).
 
 
 
