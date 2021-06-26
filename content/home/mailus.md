@@ -44,9 +44,9 @@ subtitle = ""
 
 
 
-👉 Para enviar sua demanda clique [aqui](mailto:opencodecom@gmail.com).
+👉 Para enviar sua demanda clique/Send us your demands [aqui/here](mailto:opencodecom@gmail.com).
 
-👉 Saiba como contribuir [aqui](https://opencodecom.net/contact/).
+👉 Saiba como contribuir/Learn how to contribute [aqui/here](https://opencodecom.net/contact/).
 
 
 

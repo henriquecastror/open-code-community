@@ -9,7 +9,7 @@ headless: true
 # Order that this section appears on the page.
 weight: 10
 
-title: Junte-se a n贸s/ Join us
+title: Junte-se a n贸s/Join us
 subtitle:
 
 content:
@@ -30,7 +30,7 @@ design:
 
 ---
 
-**English follows**
+## Instru珲es em Portug阺 (English follows)
 
 Essa comunidade 茅 aberta a quem quiser ajudar no seu desenvolvimento e compartilhar c贸digos. Se voc锚 quer ter seu nome inclu铆do na lista de Colaboradores, mande seu c贸digo para n贸s.
 
@@ -56,7 +56,7 @@ Nossa expectativa de resposta 茅 de alguns dias. Para garantir que os c贸digos p
 
 
  
-**Join us**
+## Join us
  
 This community welcomes any and everyone willing to help with its development sharing codes. If you want to add your name to the contributors' list, send us your code.
 
@@ -74,8 +74,6 @@ Please, follow these steps:
 5) For now, we are accepting codes in R, Python, and Stata. You will see some codes in Portuguese. The reason is that a big part of our team is from Brazil and is willing to help students that do not feel comfortable with English. But, materials in English are very welcomed too. 
 
 We believe we can reply to you in a couple of days. To guarantee that your code is good, some contributors may run to check it. Thus, we count on you to revise codes in the future.
-
-Send us your materials to: opencodecom@gmail.com
 
 **We are looking forward to receiving your code.**
 
