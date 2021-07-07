@@ -1,5 +1,6 @@
 ---
 
+
 title: Victor Eduardo da Motta (membro desde 2021/07)
 
 authors:
@@ -7,10 +8,10 @@ authors:
 
 superuser: false
 
-role: Professor de MÈtodos Quantitativos
+role: Professor de M√©todos Quantitativos
 
 organizations:
-- name: Escola de AdministraÁ„o de Empresas de S„o Paulo de S√£o Paulo (FGV-EAESP)
+- name: Escola de Administra√ß√£o de Empresas de S√£o Paulo de S√É¬£o Paulo (FGV-EAESP)
   url: "https://eaesp.fgv.br/professor/victor-eduardo-motta"
 
 bio: 
@@ -22,7 +23,7 @@ interests:
 
 education:
   courses:
-  - course: Doutorado em administraÁ„o
+  - course: Doutorado em administra√ß√£o
     institution: Pennsylvania State University
     year: 2016
 
@@ -39,5 +40,5 @@ user_groups:
 
 ---
 
-Possui experiÍncia internacional em gest„o no setor da hospitalidade, graduaÁ„o em economia e matem·tica pela King University, mestrado em economia aplicada e doutorado em administraÁ„o, com concentraÁ„o em finanÁas corporativas e microeconomia aplicada e minor em estatistica, pela Pennsylvania State University. Interesse de pesquisa se concentra em intermediaÁ„o financeira e acesso ao crÈdito das pequena e mÈdia empresas (PMEs), an·lise de redes sociais em microfinanÁas e gest„o financeira em mercados de alimentos locais e regionais.
+Possui experi√™ncia internacional em gest√£o no setor da hospitalidade, gradua√ß√£o em economia e matem√°tica pela King University, mestrado em economia aplicada e doutorado em administra√ß√£o, com concentra√ß√£o em finan√ßas corporativas e microeconomia aplicada e minor em estatistica, pela Pennsylvania State University. Interesse de pesquisa se concentra em intermedia√ß√£o financeira e acesso ao cr√©dito das pequena e m√©dia empresas (PMEs), an√°lise de redes sociais em microfinan√ßas e gest√£o financeira em mercados de alimentos locais e regionais.
 
