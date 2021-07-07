@@ -64,7 +64,7 @@ This community welcomes any and everyone willing to help with its development sh
 We do not have staff and we manage the website with our own effort. So if you want to share a code, please use the templates below. If you send us something too different, we may not be able to share it promptly.
 Please, follow these steps:
 
-1 Write your code using this {{% staticref "files/post_index.md" "newtab" %}} template{{% /staticref %}}. You can send us a .txt or a .md file. Unfortunately, we cannot accept .rmd files yet.
+1) Write your code using this {{% staticref "files/post_index.md" "newtab" %}} template{{% /staticref %}}. You can send us a .txt or a .md file. Unfortunately, we cannot accept .rmd files yet.
 
 2) Write your author's page using this {{% staticref "files/autor_index.md" "newtab" %}} template{{% /staticref %}}. You can send us a .txt or a .md file. Unfortunately, we cannot accept .rmd files yet.
 
