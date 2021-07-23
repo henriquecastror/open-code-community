@@ -1,6 +1,6 @@
 ---
 
-title: "Como baixar e zipar CSV utilizando Python"
+title: "ntegrando Google Colab e Yahoo Finance (compactação e download de cotações em formato CSV)""
 
 categories: []
 
