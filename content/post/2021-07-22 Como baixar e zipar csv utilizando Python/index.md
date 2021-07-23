@@ -1,6 +1,6 @@
 ---
 
-title: "Integrando Google Colab e Yahoo Finance (compactação e download de cotações em formato CSV)""
+title: "Integrando Google Colab e Yahoo Finance (compactação e download de cotações em formato CSV)"
 
 categories: []
 
