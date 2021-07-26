@@ -40,8 +40,8 @@ authors:
 ---
 <div align="justify">
 
-Nesse post iremos ensinar algumas funções do pacote dplyr e ggplot2, respectivamente usados para manipulação de dados e elaboração de gráficos.
-
+Nesse post iremos ensinar algumas funções do pacote dplyr, usado para manipulação de dados.
+  
 O objetivo é que esse post sirva como introdução e material de consulta para os iniciantes em R. 
 
 Utilizaremos o pacote gapminder como fonte dos dados que manipularemos. Esse é um pacote que contém dados socioeconômicos para diversos países em diversos anos, o que nos possibilita realizar as principais tarefas de manipulação de dados com o R: filter e mutate.
