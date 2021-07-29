@@ -64,12 +64,9 @@ Iremos tratar os dados, alterando formatos de datas.
 
 Fazendo uma matriz com 12 observações. Usaremos 12 meses como exercício. No caso iremos fazer 12 meses anteriores a data de hoje. Exemplo: Hoje é 12/05/2021. Portanto,  o mês e ano será 05/21, como são 12 observações anteriores, teremos 04/21 e assim sucessivamente.
    
-    # Matriz de 12 observações (12 meses)
-    data_month_12= matrix(0,12,1)
-    for (i in 1:12){
-        data_month_12[i] = data_month-i+1;
-        
-    }
+    data_month_12 <- seq(as.Date("2020-07-01"),  as.Date(data), by = "months")
+
+    data_month_12 = paste0(year(data_month_12),format(data_month_12,"%m"))
 
     #cria url com endereco para pegar os dados de dados diários (12 meses)
     address<-paste0("http://dados.cvm.gov.br/dados/FI/DOC/INF_DIARIO/DADOS/inf_diario_fi_",data_month_12,".csv")
