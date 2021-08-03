@@ -107,5 +107,5 @@ user_groups:
 
 ---
 
-Atualmente, sou Professor de Finanças na [FGV/EAESP](https://eaesp.fgv.br) (São Paulo, Brasil). Eu ensino finanças corporativas, governança corporativa, e políticas financeiras em todos os níveis de ensino. Se você quiser saber mais sobre mim, você pode me contatar em hcm@iag.puc-rio.br ou você pode visitar meu site pessoal https://henriquemartins.net/.
+Atualmente, sou Professor de Finanças na [FGV/EAESP](https://eaesp.fgv.br) (São Paulo, Brasil). Eu ensino finanças corporativas, governança corporativa, e políticas financeiras em todos os níveis de ensino. Se você quiser saber mais sobre mim, você pode me contatar em henrique.martins@fgv.br ou você pode visitar meu site pessoal https://henriquemartins.net/.
 
