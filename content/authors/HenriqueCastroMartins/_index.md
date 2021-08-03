@@ -14,8 +14,8 @@ role: Professor de Finanças
 
 # Organizations/Affiliations
 organizations:
-- name: Pontifícia Universidade Católica do Rio de Janeiro (PUC-Rio)
-  url: "https://www.puc-rio.br"
+- name: Fundação Getúlio Vargas (FGV/EAESP)
+  url: "https://eaesp.fgv.br/en/faculty/henrique-castro-martins"
 
 # Short bio (displayed in user profile at end of posts)
 bio:
@@ -50,7 +50,7 @@ social:
   
 - icon: envelope
   icon_pack: fas
-  link: 'mailto:hcm@iag.puc-rio.br'
+  link: 'mailto:henrique.martins@fgv.br'
 
 - icon: lattes
   icon_pack: ai
@@ -80,9 +80,9 @@ social:
   icon_pack: fab
   link: https://www.linkedin.com/in/henriquecastror/
   
-- icon: youtube
-  icon_pack: fab
-  link: https://www.youtube.com/channel/UCS9ws4WEedza36NRimBZXeg?view_as=subscriber
+#- icon: youtube
+#  icon_pack: fab
+#  link: https://www.youtube.com/channel/UCS9ws4WEedza36NRimBZXeg?view_as=subscriber
   
 #- icon: twitter
 #  icon_pack: fab
@@ -107,5 +107,5 @@ user_groups:
 
 ---
 
-Atualmente, sou Professor de Finanças do Quadro Principal do Departamento de Administração [IAG PUC-Rio](https://iag.puc-rio.br/) (Rio de Janeiro, Brasil). Eu ensino finanças corporativas, governança corporativa, e políticas financeiras em todos os níveis de ensino. Se você quiser saber mais sobre mim, você pode me contatar em hcm@iag.puc-rio.br ou você pode visitar meu site pessoal https://henriquemartins.net/.
+Atualmente, sou Professor de Finanças na [FGV/EAESP](https://eaesp.fgv.br) (São Paulo, Brasil). Eu ensino finanças corporativas, governança corporativa, e políticas financeiras em todos os níveis de ensino. Se você quiser saber mais sobre mim, você pode me contatar em henrique.martins@fgv.br ou você pode visitar meu site pessoal https://henriquemartins.net/.
 
