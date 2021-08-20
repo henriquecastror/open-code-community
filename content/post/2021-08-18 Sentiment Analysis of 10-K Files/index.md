@@ -36,7 +36,7 @@ authors:
 
 
 
-In this code, we are going to develop a sentiment analysis algorithm to count the frequency of negative words on 10-K files. We will use Python to write the code.
+
 
 # Downloading 10-K files
 
