@@ -411,3 +411,13 @@ The data generated here can be used in many different settings. For instance, qu
 - Do investors react to suttle changes in the tone of financial reports?
 - Can the textual analysis of financial reports improve the prediction of bankruptcy events?
 - Do managers strategically manipulate the tone of the 10-K files?
+
+
+
+::: {.infobox .caution data-latex="{caution}"}
+**Cite this work!**
+
+Dahan, V. (2021, August 19). Sentiment Analysis of 10-K Files [Blog post]. Retrieved from <https://opencodecom.net/post/2021-08-18-sentiment-analysis-of-10-k-files/>
+
+:::
+
