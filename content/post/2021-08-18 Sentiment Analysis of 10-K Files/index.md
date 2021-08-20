@@ -1,36 +1,26 @@
 ---
-
 title: "Sentiment Analysis of 10-K Files"
-
-date: '2021-08-20T00:00:00Z' 
-
+date: '2021-08-20T00:00:00Z'
 draft: no
-
-featured: no
-
+output:
+  word_document: default
+  pdf_document: default
 gallery_item: null
-
 image:
-  caption: 
-  focal_point: 
-  preview_only: 
-
+  caption: null
+  focal_point: null
+  preview_only: null
 projects: []
-
 subtitle: null
-
 summary: null
-
 tags:
 - 10-K
 - Sentiment Analysis
 - Negative Dictionary
 - Textual Analysis
 - Python
-
-authors:
-- VictorDahan
-
+authors: VictorDahan
+featured: no
 ---
 
 
