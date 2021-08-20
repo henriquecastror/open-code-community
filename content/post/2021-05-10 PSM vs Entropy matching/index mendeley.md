@@ -1,35 +1,27 @@
 ---
-authors:
-- HenriqueCastroMartins
-
+title: "Propensity-score matching (PSM) vs. Entropy matching"
 categories: []
-
-date: "2021-05-10"
-
-draft: false
-
-featured: false
-
-gallery_item:
-
+date: '2021-05-10'
+output:
+  pdf_document: default
+  word_document: default
+  html_document:
+    df_print: paged
+featured: no
+gallery_item: null
 image:
-  caption: 
+  caption: null
   focal_point: right
-  preview_only: false
-
+  preview_only: no
 projects: []
-
 subtitle: Henrique C. Martins (henrique.martins@fgv.br)
-
-summary: 
-
+summary: null
 tags:
 - Master
 - PhD
 - Causal Inference
-
-title: Propensity-score matching (PSM) vs. Entropy matching
-
+authors: HenriqueCastroMartins
+draft: no
 ---
 
 
