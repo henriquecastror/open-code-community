@@ -6,18 +6,12 @@ title: Henrique Castro Martins (since 2021/03)
 authors:
 - HenriqueCastroMartins
 
-# Is this the primary user of the site?
-superuser: false
-
 # Role/position
 role: Professor de Finanças
 
-# Organizations/Affiliations
 organizations:
 - name: Pontifícia Universidade Católica do Rio de Janeiro (PUC-Rio)
   url: "https://www.puc-rio.br"
-
-bio:
 
 interests:
 - Finanças Corporativas
@@ -31,8 +25,6 @@ education:
     institution: UFRGS
     year: 2016
     
-# Social/Academic Networking
-
 social:
 - icon: browser
   icon_pack: fas
@@ -86,11 +78,11 @@ social:
   icon_pack: fab
   link: https://facebook.com/henriquecastror
   
-# Highlight the author in author lists? (true/false)
-highlight_name: false
-
 user_groups:
 - Colaboradores
+
+superuser: false
+highlight_name: false
 
 ---
 

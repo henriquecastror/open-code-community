@@ -19,7 +19,7 @@ image:
 
 projects: []
 
-subtitle: Um exercício simples de comparação 
+subtitle: Por Henrique C. Martins (henrique.martins@fgv.br) 
 
 summary: 
 
