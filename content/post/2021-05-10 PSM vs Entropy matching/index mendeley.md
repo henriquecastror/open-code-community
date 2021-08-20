@@ -19,7 +19,7 @@ image:
 
 projects: []
 
-subtitle: 
+subtitle: Henrique C. Martins (henrique.martins@fgv.br)
 
 summary: 
 
