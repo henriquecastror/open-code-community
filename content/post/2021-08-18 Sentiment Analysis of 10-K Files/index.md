@@ -35,12 +35,6 @@ authors:
 
 
 
-{{% callout note %}}
-
-**Please, cite this work:**
-
-Dahan, V. (2021, August 19). Sentiment Analysis of 10-K Files [Blog post]. Retrieved from <https://opencodecom.net/post/2021-08-18-sentiment-analysis-of-10-k-files/>
-{{% /callout %}}
 
 
 
