@@ -35,6 +35,15 @@ authors:
 
 
 
+{{% callout note %}}
+
+**Please, cite this work:**
+
+Dahan, V. (2021, August 19). Sentiment Analysis of 10-K Files [Blog post]. Retrieved from <https://opencodecom.net/post/2021-08-18-sentiment-analysis-of-10-k-files/>
+{{% /callout %}}
+
+
+
 # Downloading 10-K files
 
 In this section we are going to download 100 10-K files from the SEC Edgar website. To do that, we need to download an index file from the following website: [https://www.sec.gov/Archives/edgar/full-index/2021/QTR1/](https://www.sec.gov/Archives/edgar/full-index/2021/QTR1/). The file is called "company.idx" and has the names, date, and link from all financial reports in 2021.
@@ -176,7 +185,7 @@ Creating a function to read the 10 randomly selected 10-K txt files.
     			str_txt = txt_file.read()
     			return str_txt
 
-title: Here we start the actual cleaning of the text.
+# Here we start the actual cleaning of the text.
 
 It may seem a bit complicated, however, the steps do not change much for other types of text, so once you master it, you are good to deal with any kind of textual analysis.
 
@@ -419,5 +428,8 @@ The data generated here can be used in many different settings. For instance, qu
 
 
 {{% callout note %}}
+
+**Please, cite this work:**
+
 Dahan, V. (2021, August 19). Sentiment Analysis of 10-K Files [Blog post]. Retrieved from <https://opencodecom.net/post/2021-08-18-sentiment-analysis-of-10-k-files/>
 {{% /callout %}}
