@@ -40,7 +40,7 @@ With this file in hand, we are going to write a command to download the first 10
 </div>
 
 
-
+ 
 
 
 Now are going to look for the link information. We first look for the 100 first lines that represent 10-K files.
