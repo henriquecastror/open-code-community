@@ -1,5 +1,5 @@
 ---
-title: Lucas Mussoi Almeida (membro desde 2021/06)
+title: Lucas Mussoi Almeida (since 2021/06)
 
 authors:
 - LucasMussoi

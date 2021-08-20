@@ -1,6 +1,6 @@
 ---
 # Display name
-title: Arnaldo Nascimento (membro desde 2021/05)
+title: Arnaldo Nascimento (since 2021/05)
 
 # Username (this should match the folder name)
 authors:

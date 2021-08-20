@@ -1,6 +1,6 @@
 ---
 # Display name
-title: Igor Moreira (membro desde 2021/05)
+title: Igor Moreira (since 2021/05)
 
 # Username (this should match the folder name)
 authors:

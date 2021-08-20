@@ -39,7 +39,7 @@ social:
 
 superuser: false
 
-title: Marcelo S. Perlin (membro desde 2021/04)
+title: Marcelo S. Perlin (since 2021/04)
 
 user_groups:
 - Colaboradores

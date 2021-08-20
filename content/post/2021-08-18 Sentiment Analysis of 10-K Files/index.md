@@ -2,8 +2,6 @@
 
 title: "Sentiment Analysis of 10-K Files"
 
-
-
 date: '2021-08-20T00:00:00Z' 
 
 draft: no
@@ -39,7 +37,7 @@ authors:
 
 # Downloading 10-K files
 
-In this section we are going to download 100 10-K files from the SEC Edgar website. To do that, we need to download an index file from the following website: https://www.sec.gov/Archives/edgar/full-index/2021/QTR1/. The file is called "company.idx" and has the names, date, and link from all financial reports in 2021.
+In this section we are going to download 100 10-K files from the SEC Edgar website. To do that, we need to download an index file from the following website: [https://www.sec.gov/Archives/edgar/full-index/2021/QTR1/](https://www.sec.gov/Archives/edgar/full-index/2021/QTR1/). The file is called "company.idx" and has the names, date, and link from all financial reports in 2021.
 
 With this file in hand, we are going to write a command to download the first 100 10-K files that appear on the list.
 
@@ -264,7 +262,7 @@ Here we will remove punctuations and symbols (e.g., \\n, ☐, ☒, \xa0, ●)
 
 
 			
-$ Tokenization
+# Tokenization
 
 Here we will tokenize the text and do some more cleaning. Tokenizing means separating each word in the text. It is a crucial step given that we want to calculate the frequency of negative words, so we do not want to deal with the text itself, but with each word separately.
 
@@ -295,7 +293,7 @@ To make this code easier for beginners, I will not run the two following steps t
 
 For this analysis, I will use the dictionary of negative words created by Loughran and Mcdonald.
 
-The file with the dictionary can be downloaded from many different websites. I recommend downloading from this website: https://sraf.nd.edu/textual-analysis/resources/#Master%20Dictionary.
+The file with the dictionary can be downloaded from many different websites. I recommend downloading from this website: [https://sraf.nd.edu/textual-analysis/resources/#Master%20Dictionary](https://sraf.nd.edu/textual-analysis/resources/#Master%20Dictionary).
 
 They have some instructions on how to use the dictionary, but just to make things a bit easier, you can edit the excel file to keep only the words that represent a negative sentiment, and delete all the others. Moreover, we just need the words, so you can remove all other columns from the excel file after you deleted words that are not flagged as negative.
 

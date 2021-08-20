@@ -1,6 +1,6 @@
 ---
 # Display name
-title: Victor Gomes (membro desde 2021/05)
+title: Victor Gomes (since 2021/05)
 
 # Username (this should match the folder name)
 authors:

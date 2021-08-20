@@ -1,6 +1,6 @@
 ---
 # Display name
-title: Victor Dahan (membro desde 2021/08)
+title: Victor Dahan (since 2021/08)
 
 # Username (this should match the folder name)
 authors:

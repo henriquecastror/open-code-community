@@ -1,6 +1,6 @@
 ---
 # Display name
-title: Alexandre Rubesam (membro desde 2021/04)
+title: Alexandre Rubesam (since 2021/04)
 
 # Username (this should match the folder name)
 authors:

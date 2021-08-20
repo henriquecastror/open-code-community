@@ -1,6 +1,6 @@
 ---
 
-title: Víctor Henriques (membro desde 2021/03)
+title: Víctor Henriques (since 2021/03)
 
 authors:
 - VictorHenriques

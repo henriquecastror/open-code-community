@@ -1,6 +1,6 @@
 ---
 # Display name
-title: Felipe Queiroz (membro desde 2021/05)
+title: Felipe Queiroz (since 2021/05)
 
 # Username (this should match the folder name)
 authors:

@@ -1,6 +1,6 @@
 ---
 # Display name
-title: Lucas Schwarz (membro desde 2021/05)
+title: Lucas Schwarz (since 2021/05)
 
 # Username (this should match the folder name)
 authors:

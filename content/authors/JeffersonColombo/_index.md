@@ -1,6 +1,6 @@
 ---
 # Display name
-title: Jéfferson Colombo (membro desde 2021/05)
+title: Jéfferson Colombo (since 2021/05)
 
 # Username (this should match the folder name)
 authors:

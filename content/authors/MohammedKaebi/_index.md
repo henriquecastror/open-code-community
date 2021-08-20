@@ -1,6 +1,6 @@
 ---
 # Display name
-title: Mohammed Kaebi (membro desde 2021/05)
+title: Mohammed Kaebi (since 2021/05)
 
 # Username (this should match the folder name)
 authors:

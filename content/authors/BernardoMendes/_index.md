@@ -1,6 +1,6 @@
 ---
 # Display name
-title: Bernardo Mendes (membro desde 2021/05)
+title: Bernardo Mendes (since 2021/05)
 
 # Username (this should match the folder name)
 authors:

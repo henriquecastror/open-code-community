@@ -1,6 +1,6 @@
 ---
 # Display name
-title: Luis Felipe de Miranda Arthur (membro desde 2021/05)
+title: Luis Felipe de Miranda Arthur (since 2021/05)
 
 # Username (this should match the folder name)
 authors:

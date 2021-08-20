@@ -1,6 +1,6 @@
 ---
 # Display name
-title: Gabriel Boechat (membro desde 2021/03)
+title: Gabriel Boechat (since 2021/03)
 
 # Username (this should match the folder name)
 authors:

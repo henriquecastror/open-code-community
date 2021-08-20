@@ -1,7 +1,7 @@
 ---
 
 
-title: Victor Eduardo da Motta (membro desde 2021/07)
+title: Victor Eduardo da Motta (since 2021/07)
 
 authors:
 - VictorMotta

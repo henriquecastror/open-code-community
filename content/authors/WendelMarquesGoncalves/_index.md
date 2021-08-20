@@ -1,6 +1,6 @@
 ---
 # Display name
-title: Wendel Marques (membro desde 2021/06)
+title: Wendel Marques (since 2021/06)
 
 # Username (this should match the folder name)
 authors:

@@ -1,6 +1,6 @@
 ---
 # Display name
-title: Henrique P. Ramos  (membro desde 2021/06)
+title: Henrique P. Ramos  (since 2021/06)
 
 # Username (this should match the folder name)
 authors:

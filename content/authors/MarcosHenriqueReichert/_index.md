@@ -1,6 +1,6 @@
 ---
 # Display name
-title: Marcos Henrique Reichert (membro desde 2021/06)
+title: Marcos Henrique Reichert (since 2021/06)
 
 # Username (this should match the folder name)
 authors:

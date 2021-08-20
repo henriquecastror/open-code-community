@@ -1,6 +1,6 @@
 ---
 # Display name
-title: Fabian Dablander  (membro desde 2021/06)
+title: Fabian Dablander  (since 2021/06)
 
 # Username (this should match the folder name)
 authors:

@@ -1,6 +1,6 @@
 ---
 # Display name
-title: Arthur Wachslicht (membro desde 2021/04)
+title: Arthur Wachslicht (since 2021/04)
 
 # Username (this should match the folder name)
 authors:

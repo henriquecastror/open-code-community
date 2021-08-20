@@ -1,7 +1,7 @@
 
 ---
 # Display name
-title: Gerson Júnior (membro desde 2021/03)
+title: Gerson Júnior (since 2021/03)
 
 # Username (this should match the folder name)
 authors:

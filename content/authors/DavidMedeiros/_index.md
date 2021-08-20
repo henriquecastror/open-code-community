@@ -1,6 +1,6 @@
 ---
 # Display name
-title: David Medeiros (membro desde 2021/05)
+title: David Medeiros (since 2021/05)
 
 # Username (this should match the folder name)
 authors:
