@@ -55,4 +55,7 @@ user_groups:
 
 ---
 
-I am a Ph.D. Student in Finance at the University of Southern California. My research interests involve corporate governance issues such as investors' activism and the impacts of ESG investing on board roles.  Feel free to reach out if you have any question about my codes!! [My Email](victordahan@gmail.com)
+I am a Ph.D. Student in Finance at the University of Southern California. My research interests involve corporate governance issues such as investors' activism and the impacts of ESG investing on board roles.  Feel free to reach out if you have any question about my codes!! [My Email](mailto:victordahan@gmail.com)
+
+
+
