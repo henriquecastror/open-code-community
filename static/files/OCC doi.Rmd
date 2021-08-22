@@ -1,0 +1,52 @@
+---
+title: "**Instructions to generate DOI (Digital Object Identifier) to your post**"
+author: "Open Code Com ([opencodecom.net](https://opencodecom.net/))"
+date: "`r Sys.Date()`" 
+output: pdf_document
+---
+
+
+
+This is a document to help you create a DOI (permanent Digital Object Identifier) to get recognition for your work published at **[opencodecom.net](https://opencodecom.net/)**.
+
+1) After your work is posted on our website, send an email to **[opencodecom@gmail.com](mailto:opencodecom@gmail.com)** and ask us for instructions.
+
+2) We will send you a link to download a folder containing the files your post generated on our website. This folder may contain files different than those that you first sent us.
+
+3) Go to **[https://dataverse.harvard.edu/](https://dataverse.harvard.edu/)** and create an account.
+
+4) Press "Add data" -> "Create Dataset"
+
+5) Type your information.
+    
+    - In _Title_, please type the title of your post followed by "published at the Open Code Community" (for exemple: _PSM vs Entropy matching published at the "Open Code Community"_).
+    - In _Description_, please include the link to your post on our website. 
+    - Complete the remaining required information. Don't forget to include your ORCID.
+    - Add the folder we have sent you. **Please, make sure all files are added**.
+    - Hit "save dataset"
+    
+6) After you save your dataset, you need to hit the "Publish Dataset" button.
+
+7) Send us the full citation that is generated. We will do the rest.
+
+
+
+We will do our best to include your DOI in your post asap, but you will need to allow us some days to complete all steps.
+
+
+
+    
+
+# About PlumX
+
+Notice that PlumX recognize all sorts of metrics, including:
+
+    - Citations (by academic published papers)
+    - Social Media
+    - And others
+
+
+Thus, if you want to increase the exposition of your work, **share the link of your post in your social media (we share it in ours).**
+
+
+**Thank you for sharing your work through us.**
