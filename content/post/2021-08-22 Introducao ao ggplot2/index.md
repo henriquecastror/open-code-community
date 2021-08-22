@@ -4,8 +4,7 @@ title: "Introdução ao ggplot2"
 
 categories: []
 
-# MUDE APENAS ANO DIA E MES PARA O DIA QUE VOCE NOS ENVIOU
-date: '2021-05-21' 
+date: '2021-08-22' 
 
 draft: no
 
@@ -24,7 +23,6 @@ subtitle: null
 
 summary: null
 
-# DIGITE NA LISTA ABAIXO OS TRACKS DO SEU CODIGO
 tags: 
 - Open Data
 - R
