@@ -424,7 +424,7 @@ A função **ggsave()** do próprio ggplot2 é a melhor ferramenta para isso. Ab
 
 **Please, cite this work:**
 
-Queiroz, Felipe; Medeiros, David (2021), "Introdu��o ao ggplot2 published at the "Open Code Community"", Mendeley Data, V1, doi: 10.17632/4jmxk67rrn.1
+Queiroz, Felipe; Medeiros, David (2021), "Introdução ao ggplot2 published at the "Open Code Community"", Mendeley Data, V1, doi: 10.17632/4jmxk67rrn.1
 
 {{% /callout %}}
            
