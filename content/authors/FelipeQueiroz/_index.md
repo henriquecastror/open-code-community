@@ -10,7 +10,7 @@ authors:
 superuser: false
 
 # Role/position
-role: Granduando em Ciências Economicas (PUC-Rio)
+role: Graduando em Ciências Econômicas (PUC-Rio)
 
 # Organizations/Affiliations
 organizations:

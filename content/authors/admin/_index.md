@@ -37,6 +37,12 @@ social:
   link: https://www.linkedin.com/company/opencodecom
   display:
     header: true    
+
+- icon: instagram
+  icon_pack: fab
+  link: https://www.instagram.com/opencodecom/
+  display:
+    header: true  
   
 # Enter email to display Gravatar (if Gravatar enabled in Config)
 email: "opencodecom@gmail.com"
