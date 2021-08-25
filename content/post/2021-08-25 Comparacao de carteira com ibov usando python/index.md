@@ -1,9 +1,9 @@
 ---
-title: "Análise de risco e retorno de ações usando o R"
+title: "Comparaçao de carteira com IBOV usando Python"
 
 categories: []
 
-date: '2021-05-17T00:00:00Z' 
+date: '2021-08-25' 
 
 draft: no
 
@@ -23,8 +23,6 @@ subtitle: null
 summary: null
 
 tags: 
-- Open Data
-- Open Code
 - Tratamento de Dados
 - Risco
 - Retorno
@@ -34,9 +32,9 @@ authors:
 
 
 ---
-``python
 
-```
+Nesse post, vou mostrar como fazer como comparar uma carteira qualquer com o IBOV utilizando o python. 
+
 
 # 1. Instalando e importando bibliotecas
 
