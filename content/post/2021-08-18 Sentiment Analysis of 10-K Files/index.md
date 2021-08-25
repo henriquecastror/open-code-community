@@ -425,5 +425,6 @@ The data generated here can be used in many different settings. For instance, qu
 
 **Please, cite this work:**
 
-Dahan, V. (2021, August 19). Sentiment Analysis of 10-K Files [Blog post]. Retrieved from <https://opencodecom.net/post/2021-08-18-sentiment-analysis-of-10-k-files/>
+Dahan, Victor (2021), "Sentiment Analysis of 10-K Files published at the "Open Code Community"", Mendeley Data, V1, doi: 10.17632/8nv274mp7s.1
+
 {{% /callout %}}
