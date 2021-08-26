@@ -43,34 +43,6 @@ Nesse post, vou mostrar como fazer como comparar uma carteira qualquer com o IBO
 !pip install yfinance
 ```
 
-    Collecting yfinance
-      Downloading yfinance-0.1.63.tar.gz (26 kB)
-    Requirement already satisfied: pandas>=0.24 in /usr/local/lib/python3.7/dist-packages (from yfinance) (1.1.5)
-    Requirement already satisfied: numpy>=1.15 in /usr/local/lib/python3.7/dist-packages (from yfinance) (1.19.5)
-    Requirement already satisfied: requests>=2.20 in /usr/local/lib/python3.7/dist-packages (from yfinance) (2.23.0)
-    Requirement already satisfied: multitasking>=0.0.7 in /usr/local/lib/python3.7/dist-packages (from yfinance) (0.0.9)
-    Collecting lxml>=4.5.1
-      Downloading lxml-4.6.3-cp37-cp37m-manylinux2014_x86_64.whl (6.3 MB)
-    [K     |████████████████████████████████| 6.3 MB 7.6 MB/s 
-    [?25hRequirement already satisfied: python-dateutil>=2.7.3 in /usr/local/lib/python3.7/dist-packages (from pandas>=0.24->yfinance) (2.8.2)
-    Requirement already satisfied: pytz>=2017.2 in /usr/local/lib/python3.7/dist-packages (from pandas>=0.24->yfinance) (2018.9)
-    Requirement already satisfied: six>=1.5 in /usr/local/lib/python3.7/dist-packages (from python-dateutil>=2.7.3->pandas>=0.24->yfinance) (1.15.0)
-    Requirement already satisfied: chardet<4,>=3.0.2 in /usr/local/lib/python3.7/dist-packages (from requests>=2.20->yfinance) (3.0.4)
-    Requirement already satisfied: idna<3,>=2.5 in /usr/local/lib/python3.7/dist-packages (from requests>=2.20->yfinance) (2.10)
-    Requirement already satisfied: urllib3!=1.25.0,!=1.25.1,<1.26,>=1.21.1 in /usr/local/lib/python3.7/dist-packages (from requests>=2.20->yfinance) (1.24.3)
-    Requirement already satisfied: certifi>=2017.4.17 in /usr/local/lib/python3.7/dist-packages (from requests>=2.20->yfinance) (2021.5.30)
-    Building wheels for collected packages: yfinance
-      Building wheel for yfinance (setup.py) ... [?25l[?25hdone
-      Created wheel for yfinance: filename=yfinance-0.1.63-py2.py3-none-any.whl size=23918 sha256=b47f6ee170708a5c0acf9247519fa8bc6a88dc92cbc46ee214ab1c2a02222f94
-      Stored in directory: /root/.cache/pip/wheels/fe/87/8b/7ec24486e001d3926537f5f7801f57a74d181be25b11157983
-    Successfully built yfinance
-    Installing collected packages: lxml, yfinance
-      Attempting uninstall: lxml
-        Found existing installation: lxml 4.2.6
-        Uninstalling lxml-4.2.6:
-          Successfully uninstalled lxml-4.2.6
-    Successfully installed lxml-4.6.3 yfinance-0.1.63
-    
 
 
 ```python
@@ -86,41 +58,30 @@ import numpy as np
 
 # 2. Importando dados
 
-Repare que vou importar também os dados da cotação do dólar. Posteriormente vou converter a cotação do Ethereum para reais, por isso que estou trazendo a cotação do dólar.
+Repare que vou importar também os dados da cotação do dólar. Posteriormente vou converter a cotação do Ethereum para reais, por isso que estou trazendo a cotação do dólar. Ou seja, multiplicar a cotação de Dolar-Real pelo preço do ETH em dólar para obter o preço do ETH em real.
 
-
+Criando o vetor dos tickers.
 ```python
 ativos = ['PETR4.SA','VALE3.SA', 'WEGE3.SA', 
           'RADL3.SA', 'OIBR3.SA','KNRI11.SA',
           'SMAL11.SA','AAPL34.SA','IVVB11.SA','ETH-USD','USDBRL=X']
 ```
 
+Criando uma data de inicio e de fim da captação de dados.
 
 ```python
 inicio = '2020-05-01'
 fim = '2021-08-24'
 ```
 
-
+Criando o data.frame dos preços.
 ```python
 precos = pd.DataFrame()
 
+Baixando as cotações
 for i in ativos:
   precos[i] = yf.download(i, start = inicio, end = fim)['Adj Close']
 ```
-
-    [*********************100%***********************]  1 of 1 completed
-    [*********************100%***********************]  1 of 1 completed
-    [*********************100%***********************]  1 of 1 completed
-    [*********************100%***********************]  1 of 1 completed
-    [*********************100%***********************]  1 of 1 completed
-    [*********************100%***********************]  1 of 1 completed
-    [*********************100%***********************]  1 of 1 completed
-    [*********************100%***********************]  1 of 1 completed
-    [*********************100%***********************]  1 of 1 completed
-    [*********************100%***********************]  1 of 1 completed
-    [*********************100%***********************]  1 of 1 completed
-    
 
 Vamos converter a cotação do Ethereum para reais:
 
@@ -141,7 +102,7 @@ precos = precos.drop(columns=['ETH-USD', 'USDBRL=X'])
 precos.to_csv('Dados.csv', sep = ';', decimal=',')
 ```
 
-Vamos normalizar o preço dos ativos para visualizar seus desempenhos
+Vamos normalizar o preço dos ativos para visualizar seus desempenhos.
 
 
 ```python
@@ -1343,7 +1304,7 @@ PL_normalizado[['IBOV', 'PL Total']].plot(figsize = (10,10));
     
 ![png](output_52_0.png)
     
-
+Podemos observar que nossa carteira teórica, montada por aqueles ativos bate o IBOV. Esse exercício de montar carteiras a partir de um racional, e olhar como ela teria se comportado se chama backtest. Portanto, pelo nosso backtest, nossa carteira bate o IBOV.
 
 
 ```python
