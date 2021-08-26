@@ -119,3 +119,15 @@ Caso o download falhe por algum motivo, basta clicar com o botão direito no arq
    
 {{< figure library="true" src="3.png" width="100%" >}}
 
+
+
+
+{{% callout note %}}
+
+**Please, cite this work:**
+
+Mendes, Bernardo  (2021), "Integrando Google Colab e Yahoo Finance (compactação e download de cotações em formato CSV) published at the "Open Code Community"", Mendeley Data, V1, doi: 10.17632/r58pyjyvbx.1
+
+{{% /callout %}}
+           
+

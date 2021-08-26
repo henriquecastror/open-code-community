@@ -192,3 +192,15 @@ Ao executarmos o código acima, vemos que a Oceania possuio o mais alto valor me
 Esperamos que vocês tenham aproveitado essa breve introdução ao **dplyr**. Há muito mais informações amplamente disponiveis na Internet para que você aprofunde seus conhecimentos. Contudo, caso queira saber mais de algum tópico específico, mande um e-mail para algum dos autores para que possamos fazer um novo post abordando melhor esse assunto!
 </div>
 
+
+
+
+{{% callout note %}}
+
+**Please, cite this work:**
+
+Queiroz, Felipe; Medeiros, David (2021), "Introduçã ao dplyr published at the "Open Code Community"", Mendeley Data, V1, doi: 10.17632/wpgpcfxxbs.1
+
+{{% /callout %}}
+           
+
