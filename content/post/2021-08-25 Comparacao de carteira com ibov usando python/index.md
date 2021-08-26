@@ -1,5 +1,5 @@
 ---
-title: "Comparaçao de carteira com IBOV usando Python"
+title: "Comparação de carteira com IBOV usando Python"
 
 categories: []
 
@@ -1318,6 +1318,6 @@ Podemos observar que nossa carteira teórica, montada pelos ativos descritos ant
 
 **Please, cite this work:**
 
-Gomes, Victor (2021), "Comparaçao de carteira com Ibov usando python published at the "Open Code Community" ", Mendeley Data, V1, doi: 10.17632/49knfhr5t5.1
+Gomes, Victor (2021), “Comparação de carteira com Ibov usando python published at the "Open Code Community" ”, Mendeley Data, V1, doi: 10.17632/49knfhr5t5.1
 
 {{% /callout %}}
