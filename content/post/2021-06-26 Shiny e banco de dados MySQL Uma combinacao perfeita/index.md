@@ -124,3 +124,14 @@ Bom, dando F5 no app, é possível ver que foi inserido uma nova linha com as in
 Essa é a magia, conectar seu app em um banco de dados remoto, fazer alterações e o app atualizar instantaneamente sem precisar fazer um novo deploy.
 
 
+
+
+{{% callout note %}}
+
+**Please, cite this work:**
+
+Marques, Wendel (2021), "Shiny e banco de dados MySQL: Uma combinação perfeita published at the "Open Code Community"", Mendeley Data, V1, doi: 10.17632/shktskbhgy.1
+
+{{% /callout %}}
+           
+
