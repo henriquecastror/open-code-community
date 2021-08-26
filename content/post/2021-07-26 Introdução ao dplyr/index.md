@@ -190,7 +190,7 @@ Ao executarmos o código acima, vemos que a Oceania possuio o mais alto valor me
 
 <div align="center"><div align="justify">
 Esperamos que vocês tenham aproveitado essa breve introdução ao **dplyr**. Há muito mais informações amplamente disponiveis na Internet para que você aprofunde seus conhecimentos. Contudo, caso queira saber mais de algum tópico específico, mande um e-mail para algum dos autores para que possamos fazer um novo post abordando melhor esse assunto!
-</div>
+
 
 
 
