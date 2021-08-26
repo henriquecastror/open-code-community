@@ -15,7 +15,7 @@ menu_title = "#fff"
 
 # Home sections
 home_section_odd =  "hsla(231, 15%, 20%, 1)"
-home_section_even = "hsla(231, 15%, 20%, 1)"
+home_section_even = "hsla(231, 15%, 19%, 1)"
 
 
 ##################################
