@@ -1304,7 +1304,7 @@ PL_normalizado[['IBOV', 'PL Total']].plot(figsize = (10,10));
     
 ![png](output_52_0.png)
     
-Podemos observar que nossa carteira teórica, montada por aqueles ativos bate o IBOV. Esse exercício de montar carteiras a partir de um racional, e olhar como ela teria se comportado se chama backtest. Portanto, pelo nosso backtest, nossa carteira bate o IBOV.
+Podemos observar que nossa carteira teórica, montada pelos ativos descritos anteriomentes e seus respectivos pesos, bate o IBOV (tem um retorno maior). Esse exercício de montar carteiras a partir de um racional, e olhar como ela teria se comportado no passado, se chama backtest. Portanto, pelo nosso backtest, nossa carteira bate o IBOV.
 
 
 ```python
