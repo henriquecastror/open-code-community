@@ -663,7 +663,6 @@ Obtendo dados do IBOV para comparar com a nossa carteira
 ibov = yf.download('^BVSP', start = inicio, end = fim)
 ```
 
-    [*********************100%***********************]  1 of 1 completed
     
 
 
