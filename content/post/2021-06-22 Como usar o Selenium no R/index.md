@@ -259,3 +259,14 @@ fechado o R ou usado o código:
 
 Sendo assim, está terminada a demonstração de como criar um robô básico
 e usar as funcionalidades do RSelenium.
+
+
+
+{{% callout note %}}
+
+**Please, cite this work:**
+
+Reichert, Marcos Henrique; Perlin, Marcerlo; Almeida, Lucas Mussoi (2021), "Como usar o Selenium no R published at the "Open Code Community"", Mendeley Data, V1, doi: 10.17632/th46283599.1
+
+{{% /callout %}}
+           

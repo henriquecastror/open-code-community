@@ -268,3 +268,18 @@ literatura que aborda não somente o uso, mas os algoritmos por trás das
 funções aqui utlizadas. A importância de estudos que interpretem as
 características linguísticas regionais se sobressai, ainda mais, em um
 país de tamanha dimensão como o Brasil.
+
+
+
+
+
+
+{{% callout note %}}
+
+**Please, cite this work:**
+
+Almeida, Lucas Mussoi; Perlin, Marcelo; Reichert, Marcos Henrique (2021), "Tokenization e stemming em l�ngua portuguesa de discursos presidenciais published at the "Open Code Community"", Mendeley Data, V1, doi: 10.17632/k5myphbwwj.1
+
+{{% /callout %}}
+           
+           

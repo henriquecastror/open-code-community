@@ -299,3 +299,14 @@ Conforme discutido anteriormente, a volatilidade dos retornos de séries finance
 {{< figure library="true" src="3.png" width="100%" >}}
 
 
+
+
+
+{{% callout note %}}
+
+**Please, cite this work:**
+
+Henriques, Victor (2021), "Modelagem de Volatilidade via GARCH Models published at the "Open Code Community"", Mendeley Data, V1, doi: 10.17632/s3nzk8zwk7.1
+
+{{% /callout %}}
+           
