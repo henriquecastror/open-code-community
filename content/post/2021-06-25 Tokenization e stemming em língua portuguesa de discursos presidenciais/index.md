@@ -278,7 +278,7 @@ país de tamanha dimensão como o Brasil.
 
 **Please, cite this work:**
 
-Almeida, Lucas Mussoi; Perlin, Marcelo; Reichert, Marcos Henrique (2021), "Tokenization e stemming em l�ngua portuguesa de discursos presidenciais published at the "Open Code Community"", Mendeley Data, V1, doi: 10.17632/k5myphbwwj.1
+Almeida, Lucas Mussoi; Perlin, Marcelo; Reichert, Marcos Henrique (2021), "Tokenization e stemming em língua portuguesa de discursos presidenciais published at the "Open Code Community"", Mendeley Data, V1, doi: 10.17632/k5myphbwwj.1
 
 {{% /callout %}}
            
