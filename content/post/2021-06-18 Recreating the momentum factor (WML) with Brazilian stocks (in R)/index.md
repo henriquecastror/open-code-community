@@ -196,3 +196,12 @@ CARHART, Mark M. On persistence in mutual fund performance. The Journal of finan
 
 JEGADEESH, Narasimhan; TITMAN, Sheridan. Returns to buying winners and selling losers: Implications for stock market efficiency
 
+
+
+{{% callout note %}}
+
+**Please, cite this work:**
+
+Ramos, Henrique (2021), "Recreating the momentum factor (WML) with Brazilian stocks (in R) published at the "Open Code Community"", Mendeley Data, V1, doi: 10.17632/hhkfr7g2pb.1
+
+{{% /callout %}}

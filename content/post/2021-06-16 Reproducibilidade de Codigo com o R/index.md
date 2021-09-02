@@ -279,3 +279,15 @@ reproducibilidade no R, o próprio CRAN tem uma [página
 especial](https://cran.r-project.org/web/views/ReproducibleResearch.html)
 sobre o tópico. Lá encontrarás diversos outros pacotes voltados a
 reproducibilidade e não citados aqui.
+
+
+
+{{% callout note %}}
+
+**Please, cite this work:**
+
+Perlin, Marcelo; Reichert, Marcos Henrique; Mussoi, Lucas (2021), "Reproducibilidade de C�digo com o R published at the "Open Code Community"", Mendeley Data, V1, doi: 10.17632/scpb9gnsgm.1
+
+{{% /callout %}}
+
+

@@ -249,3 +249,16 @@ The analysis code for the causal effect of the later avalanche of tweets is show
         axis.title = element_text(size = axis_size),
         plot.title = element_text(size = title_size, hjust = 0.50)
       )
+      
+      
+ 
+{{% callout note %}}
+
+**Please, cite this work:**
+
+Dablander, Fabian (2021), "Causal effect of Elon Musk tweets on Dogecoin price published at the "Open Code Community"", Mendeley Data, V1, doi: 10.17632/z349j4tx8y.1     
+
+{{% /callout %}}
+
+
+      
