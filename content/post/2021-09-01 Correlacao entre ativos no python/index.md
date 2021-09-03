@@ -42,13 +42,12 @@ Primeiro, o que é covariância? É uma medida do grau de interdependência entr
 $$rho_{XY} = corr (X, Y) = \dfrac{cov(X,Y)}{\sigma_X \cdot \sigma_Y }$$
 
 Legenda: 
-\begin{itemize}
-	\item $corr(X,Y) = \rho_{XY}$ é o coeficiente de correlação de Pearson
 
-	\item $cov(X,Y)$ é a covariância entre $X$ e $Y$
 
-	\item $\sigma_X$ e $\sigma_Y$ são os desvios padrões de $X$ e $Y$ 
-\end{itemize}
+	- $corr(X,Y) = \rho_{XY}$ é o coeficiente de correlação de Pearson
+	- $cov(X,Y)$ é a covariância entre $X$ e $Y$
+	- $\sigma_X$ e $\sigma_Y$ são os desvios padrões de $X$ e $Y$ 
+
 
 Então, o coeficiente de correlação de Pearson é a normalização da covariância, variando entre $-1$ e $1$. 
 
