@@ -134,7 +134,7 @@ $$ Var(P) = \sum_{j=1}^{n} \sum_{i=1}^{n} (\omega_i \cdot \sigma_i) \cdot(\omega
 
 Contudo, a soma dupla pode ser vista como uma multiplicação de matrizes.
 
-\[
+$$
     \begin{pmatrix}
     \omega_1 \cdot \sigma_1 & \omega_2 \cdot \sigma_2 & \ldots & \omega_n \cdot \sigma_n
     \end{pmatrix} 
@@ -149,7 +149,7 @@ Contudo, a soma dupla pode ser vista como uma multiplicação de matrizes.
     \begin{pmatrix}
     \omega_1 \cdot \sigma_1 \\ \omega_2 \cdot \sigma_2 \\ ...\\ \omega_n \cdot \sigma_n
     \end{pmatrix} 
-\]
+$$
 
 $$ Var(P) = M^t_p \cdot M_{corr} \cdot M_p $$
 
