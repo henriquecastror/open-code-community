@@ -58,15 +58,15 @@ Por fim, se o coeficiente é $0$, não existe uma dependência linear. Isso não
 
 Vale ressaltar que correlação não implica casualidade. Também, falando matematicamente, correlação não é transitiva, ou seja, se $A$ é positivamente correlacionado com $B$ e $B$ é positivamente correlacionado com $C$, não implica que $A$ é positivamente correlacionado com $C$.
 
-# # # \textbf{Importando as bibliotecas}
-	
+### Importando as bibliotecas
+
     import yfinance as yf
     import pandas as pd 
     import numpy as np
     import statsmodels.api as sm #### biblioteca para plotar correlacao
     import matplotlib.pyplot as plt
 
-# # # \textbf{Extraindo os dados}
+### Extraindo os dados
 
 Vamos utilizar a biblioteca yfinance para exportar os preços de fechamento de ativos. Para os ativos, escolhi ETFs americanos setoriais, de modo a exemplificar a correlação entre setores da economia.
 
@@ -117,7 +117,7 @@ Finalmente, após obtermos o dataframe da rentabilidade, podemos calcular a matr
 
 {{< figure src="Cod3.png" width="100%" >}}  
 
-# # # \textbf{Calculando a variância e a volatilidade de uma carteira hipotética}
+### Calculando a variância e a volatilidade de uma carteira hipotética
 
 Primeiro, vamos definir o portfólio. 
 
