@@ -31,7 +31,7 @@ tags:
 
 # DIGITE NA LISTA ABAIXO O NOME DE TODOS OS AUTORES SEM ESPACOS
 authors:
-- MariaClaraL.Werneck
+- MariaClaraWerneck
 
 ---
 
