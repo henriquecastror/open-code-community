@@ -39,7 +39,7 @@ Neste post, vamos mostrar como analisar a correlação entre ativos usando Pytho
 
 Primeiro, o que é covariância? É uma medida do grau de interdependência entre duas variávies aleatórias. No nosso caso, estamos considerando que os preços de fechamento dos ativos são variáveis aleatórias. A relação da correlação ou, mais especificamente, coeficiente de correlação de Pearson com a covariância é a seguinte:
 
-\[\rho_{XY} = corr (X, Y) = \dfrac{cov(X,Y)}{\sigma_X \cdot \sigma_Y }\]
+$$rho_{XY} = corr (X, Y) = \dfrac{cov(X,Y)}{\sigma_X \cdot \sigma_Y }$$
 
 Legenda: 
 \begin{itemize}
@@ -71,6 +71,7 @@ Vale ressaltar que correlação não implica casualidade. Também, falando matem
 Vamos utilizar a biblioteca yfinance para exportar os preços de fechamento de ativos. Para os ativos, escolhi ETFs americanos setoriais, de modo a exemplificar a correlação entre setores da economia.
 
     etf_lista = ['SPY', 'GLD', 'XLE', 'XLF', 'XLI', 'XLP']
+    
     ## extrair dados de uma vez com yf.download
     etf = ' '.join(etf_lista)
     df  = yf.download (etf, 
@@ -121,15 +122,15 @@ Finalmente, após obtermos o dataframe da rentabilidade, podemos calcular a matr
 
 Primeiro, vamos definir o portfólio. 
 
-\[ \textrm{Portfólio:} \; P = \sum_{i=1}^{n} \omega_i \cdot X_i \; \textrm{em que}\; \omega_i \; \textrm{é o peso de cada ativo} \; X_i \]
+$$ \textrm{Portfólio:} \; P = \sum_{i=1}^{n} \omega_i \cdot X_i \; \textrm{em que}\; \omega_i \; \textrm{é o peso de cada ativo} \; X_i $$
 
 A partir da definição de variância e correlação, podemos obter:
 
-\[ Var(P) = Var( \sum_{i=1}^{n} \omega_i \cdot X_i) = \sum_{1 \leq i, j \leq n}^{} \omega_i \cdot \omega_j \cdot cov(X_i, X_j) \]
+$$ Var(P) = Var( \sum_{i=1}^{n} \omega_i \cdot X_i) = \sum_{1 \leq i, j \leq n}^{} \omega_i \cdot \omega_j \cdot cov(X_i, X_j) $$
 
-\[ Var(P) = \sum_{1 \leq i, j \leq n}^{} \omega_i \cdot \omega_j \cdot \rho_{X_iX_j} \cdot \sigma_i \cdot \sigma_j \]
+$$ Var(P) = \sum_{1 \leq i, j \leq n}^{} \omega_i \cdot \omega_j \cdot \rho_{X_iX_j} \cdot \sigma_i \cdot \sigma_j $$
 
-\[ Var(P) = \sum_{j=1}^{n} \sum_{i=1}^{n} (\omega_i \cdot \sigma_i) \cdot(\omega_j  \cdot \sigma_j )\cdot \rho_{X_iX_j} \]
+$$ Var(P) = \sum_{j=1}^{n} \sum_{i=1}^{n} (\omega_i \cdot \sigma_i) \cdot(\omega_j  \cdot \sigma_j )\cdot \rho_{X_iX_j} $$
 
 Contudo, a soma dupla pode ser vista como uma multiplicação de matrizes.
 
@@ -150,7 +151,7 @@ Contudo, a soma dupla pode ser vista como uma multiplicação de matrizes.
     \end{pmatrix} 
 \]
 
-\[ Var(P) = M^t_p \cdot M_{corr} \cdot M_p \] 
+$$ Var(P) = M^t_p \cdot M_{corr} \cdot M_p $$
 
 Então, a variância do portfólio pode ser calculada pela multiplicação da matriz do peso de cada holding pela seu respectivo desvio padrão (ou volatilidade) e da matriz de correlação (a famosa matriz desse post - no caso a do meio). Vamos para o código!
 
