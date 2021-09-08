@@ -143,11 +143,10 @@ Primeiro, vamos definir o portfólio.
 
 A partir da definição de variância e correlação, podemos obter:
 
-\[ Var(P) = Var( \sum_{i=1}^{n} \omega_i \cdot X_i) = \sum_{1 \leq i, j \leq n}^{} \omega_i \cdot \omega_j \cdot cov(X_i, X_j) \]
+\begin{align} Var(P) = Var( \sum_{i=1}^{n} \omega_i \cdot X_i) = \sum_{1 \leq i, j \leq n}^{} \omega_i \cdot \omega_j \cdot cov(X_i, X_j) \end{align} 
 
-\[ Var(P) = \sum_{1 \leq i, j \leq n}^{} \omega_i \cdot \omega_j \cdot \rho_{X_iX_j} \cdot \sigma_i \cdot \sigma_j \]
-
-\[ Var(P) = \sum_{j=1}^{n} \sum_{i=1}^{n} (\omega_i \cdot \sigma_i) \cdot(\omega_j  \cdot \sigma_j )\cdot \rho_{X_iX_j} \]
+\begin{align} Var(P) = \sum_{1 \leq i, j \leq n}^{} \omega_i \cdot \omega_j \cdot \rho_{X_iX_j} \cdot \sigma_i \cdot \sigma_j \end{align} 
+\begin{align} Var(P) = \sum_{j=1}^{n} \sum_{i=1}^{n} (\omega_i \cdot \sigma_i) \cdot(\omega_j  \cdot \sigma_j )\cdot \rho_{X_iX_j} \end{align} 
 
 Contudo, a soma dupla pode ser vista como uma multiplicação de matrizes.
 
