@@ -56,7 +56,7 @@ Por fim, se o coeficiente é $0$, não existe uma dependência linear. Isso não
 
 Vale ressaltar que correlação não implica casualidade. Também, falando matematicamente, correlação não é transitiva, ou seja, se $A$ é positivamente correlacionado com $B$ e $B$ é positivamente correlacionado com $C$, não implica que $A$ é positivamente correlacionado com $C$.
 
-# Importando as bibliotecas
+## Importando as bibliotecas
 	
     import yfinance as yf
     import pandas as pd 
