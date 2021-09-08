@@ -39,14 +39,16 @@ Neste post, vamos mostrar como analisar a correlação entre ativos usando Pytho
 
 Primeiro, o que é covariância? É uma medida do grau de interdependência entre duas variávies aleatórias. No nosso caso, estamos considerando que os preços de fechamento dos ativos são variáveis aleatórias. A relação da correlação ou, mais especificamente, coeficiente de correlação de Pearson com a covariância é a seguinte:
 
-$$rho_{XY} = corr (X, Y) = \dfrac{cov(X,Y)}{\sigma_X \cdot \sigma_Y }$$
+\[ \rho_{XY} = corr (X, Y) = \dfrac{cov(X,Y)}{\sigma_X \cdot \sigma_Y }\]
 
 Legenda: 
+\begin{itemize}
+	\item $corr(X,Y) = \rho_{XY}$ é o coeficiente de correlação de Pearson
 
-- $corr(X,Y) = \rho_{XY}$ é o coeficiente de correlação de Pearson
-- $cov(X,Y)$ é a covariância entre $X$ e $Y$
-- $\sigma_X$ e $\sigma_Y$ são os desvios padrões de $X$ e $Y$ 
+	\item $cov(X,Y)$ é a covariância entre $X$ e $Y$
 
+	\item $\sigma_X$ e $\sigma_Y$ são os desvios padrões de $X$ e $Y$ 
+\end{itemize}
 
 Então, o coeficiente de correlação de Pearson é a normalização da covariância, variando entre $-1$ e $1$. 
 
@@ -56,20 +58,19 @@ Por fim, se o coeficiente é $0$, não existe uma dependência linear. Isso não
 
 Vale ressaltar que correlação não implica casualidade. Também, falando matematicamente, correlação não é transitiva, ou seja, se $A$ é positivamente correlacionado com $B$ e $B$ é positivamente correlacionado com $C$, não implica que $A$ é positivamente correlacionado com $C$.
 
-### Importando as bibliotecas
-
+# # # \textbf{Importando as bibliotecas}
+	
     import yfinance as yf
     import pandas as pd 
     import numpy as np
     import statsmodels.api as sm #### biblioteca para plotar correlacao
     import matplotlib.pyplot as plt
 
-### Extraindo os dados
+# # # \textbf{Extraindo os dados}
 
 Vamos utilizar a biblioteca yfinance para exportar os preços de fechamento de ativos. Para os ativos, escolhi ETFs americanos setoriais, de modo a exemplificar a correlação entre setores da economia.
 
     etf_lista = ['SPY', 'GLD', 'XLE', 'XLF', 'XLI', 'XLP']
-    
     ## extrair dados de uma vez com yf.download
     etf = ' '.join(etf_lista)
     df  = yf.download (etf, 
@@ -116,40 +117,23 @@ Finalmente, após obtermos o dataframe da rentabilidade, podemos calcular a matr
 
 {{< figure src="Cod3.png" width="100%" >}}  
 
-### Calculando a variância e a volatilidade de uma carteira hipotética
+# # # \textbf{Calculando a variância e a volatilidade de uma carteira hipotética}
 
 Primeiro, vamos definir o portfólio. 
 
-$$ \textrm{Portfólio:} \; P = \sum_{i=1}^{n} \omega_i \cdot X_i \; \textrm{em que}\; \omega_i \; \textrm{é o peso de cada ativo} \; X_i $$
+{{< figure src="Fig2.png" width="80%" >}}  
 
 A partir da definição de variância e correlação, podemos obter:
 
-$$ Var(P) = Var( \sum_{i=1}^{n} \omega_i \cdot X_i) = \sum_{1 \leq i, j \leq n}^{} \omega_i \cdot \omega_j \cdot cov(X_i, X_j) $$
+\[ Var(P) = Var( \sum_{i=1}^{n} \omega_i \cdot X_i) = \sum_{1 \leq i, j \leq n}^{} \omega_i \cdot \omega_j \cdot cov(X_i, X_j) \]
 
-$$ Var(P) = \sum_{1 \leq i, j \leq n}^{} \omega_i \cdot \omega_j \cdot \rho_{X_iX_j} \cdot \sigma_i \cdot \sigma_j $$
+\[ Var(P) = \sum_{1 \leq i, j \leq n}^{} \omega_i \cdot \omega_j \cdot \rho_{X_iX_j} \cdot \sigma_i \cdot \sigma_j \]
 
-$$ Var(P) = \sum_{j=1}^{n} \sum_{i=1}^{n} (\omega_i \cdot \sigma_i) \cdot(\omega_j  \cdot \sigma_j )\cdot \rho_{X_iX_j} $$
+\[ Var(P) = \sum_{j=1}^{n} \sum_{i=1}^{n} (\omega_i \cdot \sigma_i) \cdot(\omega_j  \cdot \sigma_j )\cdot \rho_{X_iX_j} \]
 
 Contudo, a soma dupla pode ser vista como uma multiplicação de matrizes.
 
-$$
-    \begin{pmatrix}
-    \omega_1 \cdot \sigma_1 & \omega_2 \cdot \sigma_2 & \ldots & \omega_n \cdot \sigma_n
-    \end{pmatrix} 
-    \cdot
-    \begin{pmatrix}
-    \rho_{1,1} & \rho_{1,2} & \ldots & \rho_{1,n} \\
-    \rho_{2,1} & \rho_{2,2} &  \ldots & \rho_{2,n} \\
-    \vdots & \vdots & \ddots & \vdots  \\
-    \rho_{n,1} & \rho_{n,2} &  \ldots & \rho_{n,n} \\
-    \end{pmatrix} 
-    \cdot
-    \begin{pmatrix}
-    \omega_1 \cdot \sigma_1 \\ \omega_2 \cdot \sigma_2 \\ ...\\ \omega_n \cdot \sigma_n
-    \end{pmatrix} 
-$$
-
-$$ Var(P) = M^t_p \cdot M_{corr} \cdot M_p $$
+{{< figure src="Fig4.png" width="80%" >}}  
 
 Então, a variância do portfólio pode ser calculada pela multiplicação da matriz do peso de cada holding pela seu respectivo desvio padrão (ou volatilidade) e da matriz de correlação (a famosa matriz desse post - no caso a do meio). Vamos para o código!
 
@@ -166,7 +150,7 @@ Assim, calculamos a variância da carteira. Para calcular o desvio padrão do po
     port_dvp = np.sqrt(port_var)
     port_dvp
 
-{{< figure src="Cod4.png" width="100%" >}}  
+{{< figure src="Cod4.png" width="60%" >}}  
 
 Alternativamente, poderíamos ter calculado a volatilidade da carteira de outra forma. Considere o produto de matriz entre as rentabilidades de cada ativo e o peso de cada ativo na carteira. Assim, teremos o quanto nossa carteira rendeu por dia. Podemos usar a função std para calcular o desvio padrão da nossa carteira.
 
@@ -175,13 +159,13 @@ Alternativamente, poderíamos ter calculado a volatilidade da carteira de outra 
     carteira_dvp = carteira.std()
     carteira_dvp[0]
 
-{{< figure src="Cod5.png" width="100%" >}}  
+{{< figure src="Cod5.png" width="60%" >}}  
 
 Será que os dois valores calculados são iguais?
 
     carteira_dvp[0] - port_dvp
 
-{{< figure src="Cod6.png" width="100%" >}}
+{{< figure src="Cod6.png" width="60%" >}}
 
 A ordem do erro está em $10^{-15}$, ou seja, dentro da expectativa dos erros de aproximações.
 
