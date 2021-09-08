@@ -64,7 +64,7 @@ Vale ressaltar que correlação não implica casualidade. Também, falando matem
     import statsmodels.api as sm #### biblioteca para plotar correlacao
     import matplotlib.pyplot as plt
 
-## Extraindo os dados}
+### Extraindo os dados
 
 Vamos utilizar a biblioteca yfinance para exportar os preços de fechamento de ativos. Para os ativos, escolhi ETFs americanos setoriais, de modo a exemplificar a correlação entre setores da economia.
 
