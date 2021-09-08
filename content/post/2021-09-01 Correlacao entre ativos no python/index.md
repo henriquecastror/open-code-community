@@ -34,7 +34,7 @@ authors:
 - MariaClaraWerneck
 
 ---
-
+## Calculando a variância e a volatilidade de uma carteira hipotética
 Neste post, vamos mostrar como analisar a correlação entre ativos usando Python. Também montaremos uma carteira hipotética, indicando como utilizar a matriz de correlação para calcular a volatilidade da carteira. Iremos comparar esse método com a forma de obter a informação direto a partir das rentabilidades de cada holding.
 
 Primeiro, o que é covariância? É uma medida do grau de interdependência entre duas variávies aleatórias. No nosso caso, estamos considerando que os preços de fechamento dos ativos são variáveis aleatórias. A relação da correlação ou, mais especificamente, coeficiente de correlação de Pearson com a covariância é a seguinte:
