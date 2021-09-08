@@ -39,7 +39,7 @@ Neste post, vamos mostrar como analisar a correlação entre ativos usando Pytho
 
 Primeiro, o que é covariância? É uma medida do grau de interdependência entre duas variávies aleatórias. No nosso caso, estamos considerando que os preços de fechamento dos ativos são variáveis aleatórias. A relação da correlação ou, mais especificamente, coeficiente de correlação de Pearson com a covariância é a seguinte:
 
-\[ \rho_{XY} = corr (X, Y) = \dfrac{cov(X,Y)}{\sigma_X \cdot \sigma_Y }\]
+\begin{align} \rho_{XY} = corr (X, Y) = \dfrac{cov(X,Y)}{\sigma_X \cdot \sigma_Y }\end{align} 
 
 Legenda: 
 \begin{itemize}
