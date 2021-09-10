@@ -21,7 +21,8 @@ education:
   - course: Industrial Engineering
     institution: UFRGS
     year: 2022
-    
+
+social:    
 - icon: envelope
   icon_pack: fas
   link: 'mailto:maike.mota@yahoo.com'
