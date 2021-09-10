@@ -1,17 +1,14 @@
 ---
-# Display name
 title: Maike Ronald Mota (since 2021/08)
 
-# Username (this should match the folder name)
 authors:
 - MaikeMota
 
-# Role/position
 role: Risk Analyst
 
 organizations:
 - name: Carlos Lee Participações
-  url:N/A
+  url:
 
 interests:
 - Risk analysis
@@ -41,6 +38,7 @@ user_groups:
 - Colaboradores
 
 superuser: false
+
 highlight_name: false
 
 ---
