@@ -1,6 +1,6 @@
 ---
 
-title: "Volatilidade Histórica Parkinson - python"
+title: "Volatilidade Histórica Parkinson - Python"
 
 categories: []
 
@@ -40,7 +40,7 @@ A próxima questão é: existe na literatura alguma forma de considerar a volati
 
 Michael Parkinson em 1980, tem como objetivo estimar a volatilidade de uma série temporal a partir dos preços de High e Low nos fornecendo a seguinte equação:
 
-{{< figure src="Fig1.png" width="100%" >}} 
+{{< figure src="Fig1.png" width="80%" >}} 
 
 Novidade para alguns, assunto batido para outros, mas a intenção é sempre alcançar os desavisados. Caso você ainda utilize a vol histórica fica a dica de implementação.
 
