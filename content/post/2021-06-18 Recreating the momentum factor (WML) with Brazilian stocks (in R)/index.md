@@ -33,6 +33,11 @@ authors:
 
 ---
 
+<script type="text/javascript" src="//cdn.plu.mx/widget-popup.js"></script>
+
+<a href="https://plu.mx/plum/a/?doi=10.17632%2Fhhkfr7g2pb.1" data-popup="right" data-size="large" class="plumx-plum-print-popup" data-site="plum" data-hide-when-empty="true">Recreating the momentum factor (WML) with Brazilian stocks (in R) published at the &amp;quot;Open Code Community&amp;quot;</a>
+
+
 Financial literature has been developing and testing factors that help explain the cross section of stock returns for a long time. In a nutshell, the momentum factor (also known as winners minus losers WML) is the tendency for rising asset prices to continue rising, as well as falling prices to continue falling. The WML factor was firstly studied by Jagadeesh and Titman (1993) and Carhart (1997). 
 
 This is one of the several factors that help explain asset returns. Factor investing has been gaining grounds in the Brazilian market. Many quantitative mutual funds use a myriad of factors and systematic trading strategies trying to generate alpha and manage risk for their portfolios. 

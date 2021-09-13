@@ -32,7 +32,14 @@ authors:
 ---
 
 
+<script type="text/javascript" src="//cdn.plu.mx/widget-popup.js"></script>
+
+<a href="https://plu.mx/plum/a/?doi=10.17632%2Fz349j4tx8y.1" data-popup="right" data-size="large" class="plumx-plum-print-popup" data-site="plum" data-hide-when-empty="true">Causal effect of Elon Musk tweets on Dogecoin price published at the &amp;quot;Open Code Community&amp;quot;</a>
+
+
+
 ## Causal effect of Elon Musk tweets on Dogecoin price
+
 If you think of Dogecoin - the cryptocurrency based on a meme - you can't help but also think of Elon Musk. That guy loves the doge, and every time he tweets about it, the price goes up. While we all know that [correlation is not causation](https://fabiandablander.com/r/Causal-Inference.html), we might still be able to quantify the causal effect of Elon Musk's tweets on the price of Dogecoin. Sounds adventurous? That's because it is! So buckle up before scrolling down.
 ## Tanking Tesla
 Elon Musk is notorious for being able to swing markets. In a great blog post from last year, Alex Hayes used the S&P500 as a control to estimate the causal effect of the tweet below on Tesla's stock price. He used the excellent [CausalImpact](https://google.github.io/CausalImpact/) R package developed by Brodersen et al. (2015). I quickly reproduced his analysis, see below and the Post Scriptum.

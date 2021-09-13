@@ -37,6 +37,14 @@ authors:
 
 
 ---
+
+<script type="text/javascript" src="//cdn.plu.mx/widget-popup.js"></script>
+
+
+
+<a href="https://plu.mx/plum/a/?doi=10.17632%2Fth46283599.1" data-popup="right" data-size="large" class="plumx-plum-print-popup" data-site="plum" data-hide-when-empty="true">Como usar o Selenium no R published at the &amp;quot;Open Code Community&amp;quot;</a>
+
+
 ## Uso do RSelenium
 
 Uma das ferramentas mais comuns para a criação de robôs automatizados é

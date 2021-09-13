@@ -38,6 +38,12 @@ authors:
 
 ---
 
+<script type="text/javascript" src="//cdn.plu.mx/widget-popup.js"></script>
+
+<a href="https://plu.mx/plum/a/?doi=10.17632%2Fscpb9gnsgm.1" data-popup="right" data-size="large" class="plumx-plum-print-popup" data-site="plum" data-hide-when-empty="true">Reproducibilidade de C�digo com o R published at the &amp;quot;Open Code Community&amp;quot;</a>
+
+
+
 Uma pesquisa baseada em dados é reproduzível quando outros cientistas
 conseguem replicar os seus resultados. O benefício para a ciência é
 óbvio: diferentes pesquisadores podem repetir experimentos
