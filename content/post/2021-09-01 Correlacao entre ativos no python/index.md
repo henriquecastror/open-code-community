@@ -167,3 +167,12 @@ Será que os dois valores calculados são iguais?
 A ordem do erro está em $10^{-15}$, ou seja, dentro da expectativa dos erros de aproximações.
 
 Ambos os métodos são rápidos. Porém, o primeiro também permite visualizar a correlação entre os ativos, o que permite uma análise de se e quanto você está exposto ao risco.
+
+
+{{% callout note %}}
+
+**Please, cite this work:**
+
+Werneck, Maria Clara (2021), "Correlação entre Ativos no Python published at the "Open Code Community"", Mendeley Data, V1, doi: 10.17632/xxjvhwbz6x.1
+{{% /callout %}}
+

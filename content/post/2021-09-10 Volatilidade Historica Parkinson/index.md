@@ -66,4 +66,15 @@ Segue o código completo no github: https://github.com/MaikeRM/volatilidade_park
 Referências
 
 [1] E. Sinclair, Volatility Trading, John Wiley & Sons, 2008
-    
+
+
+
+{{% callout note %}}
+
+**Please, cite this work:**
+
+Mota, Maike (2021), "Volatilidade Histórica Parkinson published at the "Open Code Community"", Mendeley Data, V1, doi: 10.17632/52wrtmtsrh.1    
+
+{{% /callout %}}
+
+
