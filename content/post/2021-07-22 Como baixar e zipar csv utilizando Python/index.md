@@ -36,6 +36,13 @@ authors:
 
 ---
 
+<script type="text/javascript" src="//cdn.plu.mx/widget-popup.js"></script>
+
+<a href="https://plu.mx/plum/a/?doi=10.17632%2Fr58pyjyvbx.1" data-popup="right" data-size="large" class="plumx-plum-print-popup" data-site="plum" data-hide-when-empty="true">Integrando Google Colab e Yahoo Finance (compactaÁ„o e download de cotaÁıes em formato CSV) published at the &amp;quot;Open Code Community&amp;quot;</a>
+
+
+
+
 
 Nesse script, vamos fazer o download das cota√ß√µes de ativos financeiros e compactar em um arquivo zip, integrando o Yahoo Finance com o Google Colab. As aplica√ß√µes s√£o in√∫meras. No meu caso, uso esse arquivo para alimentar o RRG Desktop diariamente.
 

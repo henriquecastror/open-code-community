@@ -33,6 +33,12 @@ authors:
 
 ---
 
+<script type="text/javascript" src="//cdn.plu.mx/widget-popup.js"></script>
+
+<a href="https://plu.mx/plum/a/?doi=10.17632%2F49knfhr5t5.1" data-popup="right" data-size="large" class="plumx-plum-print-popup" data-site="plum" data-hide-when-empty="true">Comparação de carteira com Ibov usando python published at the &amp;quot;Open Code Community&amp;quot;</a>
+
+
+
 Nesse post, vou mostrar como fazer como comparar uma carteira qualquer com o IBOV utilizando o python. 
 
 

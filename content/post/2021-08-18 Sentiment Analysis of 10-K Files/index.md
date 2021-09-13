@@ -33,6 +33,11 @@ authors:
 
 ---
 
+<script type="text/javascript" src="//cdn.plu.mx/widget-popup.js"></script>
+
+<a href="https://plu.mx/plum/a/?doi=10.17632%2F8nv274mp7s.1" data-popup="right" data-size="large" class="plumx-plum-print-popup" data-site="plum" data-hide-when-empty="true">Sentiment Analysis of 10-K Files published at the &amp;quot;Open Code Community&amp;quot;</a>
+
+
 
 In this code we are going to develop a sentiment analysis algorithm to count the frequency of negative words on 10-K files. We will use Python to write the code.
 
