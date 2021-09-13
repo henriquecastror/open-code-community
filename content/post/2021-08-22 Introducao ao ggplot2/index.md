@@ -37,6 +37,10 @@ authors:
 
 
 ---
+
+<a href="https://plu.mx/plum/a/?doi=10.17632%2F4jmxk67rrn.1" data-popup="right" data-size="large" class="plumx-plum-print-popup" data-site="plum" data-hide-when-empty="true">Introdu��o ao ggplot2 published at the &amp;quot;Open Code Community&amp;quot;</a>
+
+
 <div align="justify">
 
 Nesse post iremos ensinar algumas funções do pacote ggplot2 para a elaboração de gráficos. Esse post tem a intenção de ser introdutório, para aqueles que estão começando no R ou nos gráficos no R. 
