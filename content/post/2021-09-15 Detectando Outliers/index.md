@@ -51,11 +51,11 @@ Se $F_s$ > 0,6, uma série ajustada sazonalmente é calculada:
 
 Um limite de força sazonal é usado aqui porque a estimativa de S_t provavelmente será super ajustada e muito barulhenta se a sazonalidade subjacente for muito fraca (ou inexistente), potencialmente mascarando quaisquer outliers por tê-los absorvidos no componente sazonal.
 
-Se $Fs$< 0,6, ou se os dados são observados anualmente ou com menos frequência, simplesmente definimos y_t^* = y_t.
+Se $Fs$< 0,6, ou se os dados são observados anualmente ou com menos frequência, simplesmente definimos $y_t^* = y_t$.
 
 Em seguida, nós reestimamos o componente de tendência a partir dos valores de y_t. Para séries temporais não sazonais, como dados anuais, isso é necessário, pois não temos a estimativa de tendência da decomposição STL. Mas mesmo que tenhamos calculado uma decomposição STL, podemos não tê-la usado se $F_s$< 0,6.
 
-O componente de tendência T_t é estimado aplicando o o Friedman's super smoother (via supsmu ()) aos dados y_t^*. Esta função foi testada em muitos dados e tende a funcionar bem em uma ampla gama de problemas.
+O componente de tendência T_t é estimado aplicando o o Friedman's super smoother (via supsmu()) aos dados $y_t^*$. Esta função foi testada em muitos dados e tende a funcionar bem em uma ampla gama de problemas.
 
 Procuramos outliers na série restante estimada:
 
