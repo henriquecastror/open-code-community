@@ -48,7 +48,8 @@ Como resultado, o efeito da doença foi menor do que o esperado para o período 
 com esses ativos terminando o período acima do rendimento da IBOVESPA. 
 Destaca-se que a janela do evento foi do dia 30 de agosto ao dia 8 de setembro.
 
-PACOTES
+# PACOTES
+
 A seguir são apresentados os pacotes utilizados para a qpesquisa 
 		
     	library(quantmod)
@@ -59,7 +60,8 @@ A seguir são apresentados os pacotes utilizados para a qpesquisa
     	library(gridExtra)
     	library(knitr) 
 
-Retorno do Ibovespa
+# Retorno do Ibovespa
+
 Primeiramente, analisa-se o retorno do IBOVESPA. Destaca-se que o índice teve um 
 comportamento com variações pouco significativas durante o período, com exceção do dia 8 de setembro, 
 o que ocorreu, provavelmente, devido à instabilidade política brasileira.  
@@ -77,9 +79,9 @@ o que ocorreu, provavelmente, devido à instabilidade política brasileira.
 
 {{< figure src="RetIbov.png" width="80%" >}} 
 
-Retorno dos Ativos 
-Agora, calcula-se o retorno das ações das empresas: 1)JBS (JBSS3); 2)Marfrig (MLFG3); 
-3)BRF (BRFS3); 4)Minerva Foods (BEEF3), durante a janela do evento.
+#Retorno dos Ativos 
+
+Agora, calcula-se o retorno das ações das empresas: 1) JBS (JBSS3); 2) Marfrig (MLFG3); 3)BRF (BRFS3); 4) Minerva Foods (BEEF3), durante a janela do evento.
 
     	MRFG3 = getSymbols.yahoo("MRFG3.SA", from = '2021-8-30', to = '2021-9-9', auto.assign = F)[,6]
     	BEEF3 = getSymbols.yahoo("BEEF3.SA", from = '2021-8-30', to = '2021-9-9', auto.assign = F)[,6]
@@ -94,10 +96,10 @@ Agora, calcula-se o retorno das ações das empresas: 1)JBS (JBSS3); 2)Marfrig (
     	
     	Ret_BRFS3 = dailyReturn(BRFS3) * 100
 
-Comparação IBOVESPA e Ativos
-Agora, para fazer a comparação entre as ações das empresas e o IBOVESPA, deve-se 
-organizar as bases de dados em Data Frames. Além disso, cria-se uma variável com datas específicas. 
-Ainda, disponibiliza-se as tabelas de retornos dos ativos.
+
+# Comparação IBOVESPA e Ativos
+
+Agora, para fazer a comparação entre as ações das empresas e o IBOVESPA, deve-se organizar as bases de dados em Data Frames. Além disso, cria-se uma variável com datas específicas. Ainda, disponibiliza-se as tabelas de retornos dos ativos.
 
     	Dias_semana = format(as.Date(c('2021-08-30', '2021-08-31', '2021-09-01',
                                    '2021-09-02', '2021-09-03', '2021-09-06', '2021-09-08'), format="%Y-%m-%d"))
@@ -116,7 +118,8 @@ Ainda, disponibiliza-se as tabelas de retornos dos ativos.
     	Ret_JBSS3$Data = Dias_semana
     	Ret_MRFG3$Data = Dias_semana
 
-Gráfico
+# Gráfico
+
 Por fim, utiliza-se o pacote GGplot2 para o desenvolvimento de gráficos comparativos.
 
 
