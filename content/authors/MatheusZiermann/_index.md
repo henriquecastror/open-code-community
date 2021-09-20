@@ -56,4 +56,4 @@ highlight_name: false
 
 ---
 
-Atualmente realizo mestrado em Teoria Econômica na UEM (Maringá - PR) sendo que minha pesquisa está relacionada a EficiÊncia das Instituições de Microfinanças com a utilização da Análise Envoltória de Dados (DEA). Trabalho com Inteligência de Mercado desenvolvendo aplicações com o QlikSense. Utilizo a análise de dados em pesquisas relacionadas a finanças, mercados de capitais e economia. Estou sempre a disposição para trocar conhecimentos!
+Atualmente realizo mestrado em Teoria Econômica na UEM (Maringá - PR) sendo que minha pesquisa está relacionada a Eficiência das Instituições de Microfinanças com a utilização da Análise Envoltória de Dados (DEA). Trabalho com Inteligência de Mercado desenvolvendo aplicações com o QlikSense. Utilizo a análise de dados em pesquisas relacionadas a finanças, mercados de capitais e economia. Estou sempre a disposição para trocar conhecimentos!
