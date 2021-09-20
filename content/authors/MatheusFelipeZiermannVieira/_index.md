@@ -1,12 +1,11 @@
 ---
-# Display name
 title: Matheus Felipe Ziermann Vieria (since 2021/09)
 
 # Username (this should match the folder name)
 authors:
-- MatheusFelipeZiermannVieira
+- MatheusZiermann
 
-# Role/position
+
 role: Assitente de Inteligência de Mercado
 
 organizations:
@@ -27,49 +26,19 @@ education:
     year: 2022
     
 social:
-- icon: browser
-  icon_pack: fas
-  link: https:
-  
+
 - icon: envelope
   icon_pack: fas
   link: 'matheusziermann@gmail.com'
-
-- icon: lattes
-  icon_pack: ai
-  link:
-
-- icon: google-scholar
-  icon_pack: ai
-  link: 
-
-- icon: orcid
-  icon_pack: ai
-  link: 
 
 - icon: Rpubs
   icon_pack: ai
   link: https://rpubs.com/MatheusZiermann25
 
-- icon: researchgate
-  icon_pack: ai
-  link: 
-
-- icon: dataverse
-  icon_pack: ai
-  link: 
   
 - icon: linkedin
   icon_pack: fab
   link: https://www.linkedin.com/in/matheus-ziermann-9b354bb0//
-  
-- icon: youtube
-  icon_pack: fab
-  link: 
-  
-- icon: twitter
-  icon_pack: fab
-  link: 
   
 - icon: instagram
   icon_pack: fab
