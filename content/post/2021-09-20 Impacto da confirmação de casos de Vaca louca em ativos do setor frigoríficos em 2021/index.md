@@ -48,7 +48,7 @@ Como resultado, o efeito da doença foi menor do que o esperado para o período 
 com esses ativos terminando o período acima do rendimento da IBOVESPA. 
 Destaca-se que a janela do evento foi do dia 30 de agosto ao dia 8 de setembro.
 
-# PACOTES
+## Pacotes
 
 A seguir são apresentados os pacotes utilizados para a qpesquisa 
 		
@@ -60,7 +60,7 @@ A seguir são apresentados os pacotes utilizados para a qpesquisa
     	library(gridExtra)
     	library(knitr) 
 
-# Retorno do Ibovespa
+## Retorno do Ibovespa
 
 Primeiramente, analisa-se o retorno do IBOVESPA. Destaca-se que o índice teve um 
 comportamento com variações pouco significativas durante o período, com exceção do dia 8 de setembro, 
@@ -79,7 +79,7 @@ o que ocorreu, provavelmente, devido à instabilidade política brasileira.
 
 {{< figure src="RetIbov.png" width="80%" >}} 
 
-#Retorno dos Ativos 
+## Retorno dos Ativos 
 
 Agora, calcula-se o retorno das ações das empresas: 1) JBS (JBSS3); 2) Marfrig (MLFG3); 3)BRF (BRFS3); 4) Minerva Foods (BEEF3), durante a janela do evento.
 
@@ -97,7 +97,7 @@ Agora, calcula-se o retorno das ações das empresas: 1) JBS (JBSS3); 2) Marfrig
     	Ret_BRFS3 = dailyReturn(BRFS3) * 100
 
 
-# Comparação IBOVESPA e Ativos
+## Comparação IBOVESPA e Ativos
 
 Agora, para fazer a comparação entre as ações das empresas e o IBOVESPA, deve-se organizar as bases de dados em Data Frames. Além disso, cria-se uma variável com datas específicas. Ainda, disponibiliza-se as tabelas de retornos dos ativos.
 
@@ -118,7 +118,7 @@ Agora, para fazer a comparação entre as ações das empresas e o IBOVESPA, dev
     	Ret_JBSS3$Data = Dias_semana
     	Ret_MRFG3$Data = Dias_semana
 
-# Gráfico
+## Gráfico
 
 Por fim, utiliza-se o pacote GGplot2 para o desenvolvimento de gráficos comparativos.
 
