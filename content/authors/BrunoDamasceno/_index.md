@@ -11,30 +11,26 @@ role: Graduando
 
 # Organizations/Affiliations
 organizations:
-- name:  Universidade Estadual de Maringá
+- name:  Universidade Estadual de MaringÃ¡
   url: "http://www.uem.br/"
 
 bio:
 
 interests:
-- Finanças Corporativas
+- FinanÃ§as Corporativas
 - Microeconomia
 - Macroeconomia
-- Estatística
+- EstatÃ­stica
 - Data Science
 
 
 education:
   courses:
-  - course: Ciências Econômicas
+  - course: CiÃªncias EconÃ´micas
     institution: UEM
     year: 2021
 
-
-# Social/Academic Networking
-
 social:
-
 - icon: envelope
   icon_pack: fas
   link: 'brunopieda123@gmail@outlook.com'
@@ -64,4 +60,4 @@ user_groups:
 
 ---
 
-Sou estudante do ultimo ano do curso de ciências econômicas na Universidade Estadual de Maringá (UEM). Dediquei meu tempo na graduação em descobrir as aplicações do estudo da economia e em conseguir experiência internacional. Nesse contexto, participei de projetos como empresa júnior e Liga de investimentos e fiz pesquisa em temas ligados à finanças públicas, microeconomia e ao impacto da covid-19 nos estados brasileiros.
+Sou estudante do ultimo ano do curso de ciÃªncias econÃ´micas na Universidade Estadual de MaringÃ¡ (UEM). Dediquei meu tempo na graduaÃ§Ã£o em descobrir as aplicaÃ§Ãµes do estudo da economia e em conseguir experiÃªncia internacional. Nesse contexto, participei de projetos como empresa jÃºnior e Liga de investimentos e fiz pesquisa em temas ligados Ã  finanÃ§as pÃºblicas, microeconomia e ao impacto da covid-19 nos estados brasileiros.
