@@ -1,43 +1,59 @@
 ---
-# Display name
-title: Bernardo Mendes (since 2021/05)
+title: Bruno Piedade Damasceno (since 2021/09)
 
-# Username (this should match the folder name)
 authors:
-- BernardoMendes
+- Brunoamasceno
 
-# Is this the primary user of the site?
 superuser: false
 
 # Role/position
-role: Gestor de PortfÃ³lio
+role: Graduando
 
 # Organizations/Affiliations
 organizations:
-- name: FundaÃ§Ã£o Getulio Vargas
-  url: "https://portal.fgv.br/"
+- name:  Universidade Estadual de Maringá
+  url: "http://www.uem.br/"
 
 bio:
 
 interests:
-- Portfolio Management
-- MÃ©todos EmpÃ­ricos em Economia e FinanÃ§as
-- CiÃªncia de Dados
+- Finanças Corporativas
+- Microeconomia
+- Macroeconomia
+- Estatística
+- Data Science
+
 
 education:
   courses:
-  - course: PÃ³s-GraduaÃ§Ã£o em CiÃªncias de Dados 
-    institution: FGV
-    year: 2022
+  - course: Ciências Econômicas
+    institution: UEM
+    year: 2021
 
 
 # Social/Academic Networking
 
 social:
 
+- icon: envelope
+  icon_pack: fas
+  link: 'brunopieda123@gmail@outlook.com'
+
+- icon: Rpubs
+  icon_pack: ai
+  link: https://rpubs.com/DamascenoBruno
+
 - icon: linkedin
   icon_pack: fab
-  link: https://www.linkedin.com/in/bernardo-mendes-cga-cnpi-8a0651195/
+  link: https://www.linkedin.com/in/bruno-piedade-damasceno/
+  
+- icon: instagram
+  icon_pack: fab
+  link: https://www.instagram.com/brunopiedade_123/
+
+- icon: facebook
+  icon_pack: fab
+  link: https://www.facebook.com/bruno.damasceno.355
 
   
 # Highlight the author in author lists? (true/false)
@@ -48,4 +64,4 @@ user_groups:
 
 ---
 
-Com foco primÃ¡rio na gestÃ£o de risco, construo portfÃ³lios quantitativos do tipo Single Solution Strategies, modelo de gestÃ£o em que se combina uma alocaÃ§Ã£o comprada em AÃ§Ãµes (Smart Beta) com outras estratÃ©gias de baixa aderÃªncia, mas que geram valor a um PortfÃ³lio, como Trend Following ou compra de Volatilidade, melhorando as caracterÃ­sticas de risco/retorno ao capturar a interaÃ§Ã£o entre as partes do PortfÃ³lio. Ã‰ Gestor de PortfÃ³lio CGA e Analista Certificado CNPI. Em Junho/21 inicia o CQF (Certificate in Quantitative Finance).
+Sou estudante do ultimo ano do curso de ciências econômicas na Universidade Estadual de Maringá (UEM). Dediquei meu tempo na graduação em descobrir as aplicações do estudo da economia e em conseguir experiência internacional. Nesse contexto, participei de projetos como empresa júnior e Liga de investimentos e fiz pesquisa em temas ligados à finanças públicas, microeconomia e ao impacto da covid-19 nos estados brasileiros.
