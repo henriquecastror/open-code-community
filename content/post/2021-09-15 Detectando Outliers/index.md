@@ -5,7 +5,7 @@ categories: []
 
 date: '2021-09-16' 
 
-draft: yes
+draft: no
 
 featured: no
 
@@ -103,3 +103,6 @@ A função tsclean () remove outliers identificados dessa maneira e os substitui
 {{< figure src="2.png" width="80%" >}}
 
 O ponto azul mostra a substituição do outlier, as linhas vermelhas mostram a substituição dos valores ausentes.
+
+O post em inglês se encontra no link:
+https://www.r-bloggers.com/2021/08/detecting-time-series-outliers/
