@@ -148,6 +148,9 @@ main_menu = {enable = true, align = "r", show_logo = true, highlight_active_link
 # Enable in-built social sharing buttons? (true/false)
 sharing = true
 
+# Display next/previous section pager? (true/false)
+section_pager = true
+
 # Show a copyright license from creativecommons.org in the site footer?
 # Page specific copyright licenses are also possible by adding this option to a page's front matter.
 copyright_license = {enable = false, allow_derivatives = false, share_alike = true, allow_commercial = false, notice = "This work is licensed under {license}"}
