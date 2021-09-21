@@ -50,7 +50,7 @@ social:
   link: https://scholar.google.co.uk/citations?user=vamErfkAAAAJ
 
 - icon: twitter
-  icon_pack: fab
+icon_pack: fab
 link: https://twitter.com/robjhyndman
  
 # Enter email to display Gravatar (if Gravatar enabled in Config)
