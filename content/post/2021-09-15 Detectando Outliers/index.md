@@ -22,7 +22,6 @@ subtitle: null
 
 summary: null
 
-# DIGITE NA LISTA ABAIXO OS TRACKS DO SEU CODIGO
 tags: 
 - Outliers
 
@@ -31,11 +30,14 @@ authors:
 - RobHyndman
 
 ---
+
 A função tsoutliers () do pacote forecasting do R é útil para identificar anomalias em uma série temporal. No entanto, não está devidamente documentado em nenhum lugar. Esta postagem visa preencher essa lacuna.
+
 A função começou como uma resposta em [CrossValidated](https://stats.stackexchange.com/questions/1142/simple-algorithm-for-online-outlier-detection-of-a-generic-time-series/1153#1153) e depois foi adicionada ao pacote forecasting, dado que achei que poderia ser útil para outras pessoas. Desde então, ele foi atualizado e tornou-se mais confiável.
+
 O procedimento decompõe a série temporal em tendência, sazonalidade e componentes remanescentes:
 
-\begin{align} y_t = T_t + S_t + R_t\end{align} 
+$$y_t = T_t + S_t + R_t$$
 
 O componente sazonal é opcional e pode conter vários padrões sazonais correspondentes aos períodos sazonais dos dados. A ideia é remover qualquer sazonalidade e tendência nos dados e, em seguida, descobrir os outliers nas séries restantes, $R_t$.
 
@@ -43,11 +45,11 @@ Para dados observados com mais frequência do que anualmente, usamos uma abordag
 
 Em seguida, a força da sazonalidade é medida usando:
 
-\begin{align} F_s = 1 - \dfrac{Var(y_t-T-S_t)}{Var(y_t - T_t) }\end{align}
+$$F_s = 1 - \dfrac{Var(y_t-T-S_t)}{Var(y_t - T_t)}$$
 
 Se $F_s$ > 0,6, uma série ajustada sazonalmente é calculada:
 
-\begin{align} y^t_t = y_t - S_t\end{align}
+$$y^t_t = y_t - S_t$$
 
 Um limite de força sazonal é usado aqui porque a estimativa de S_t provavelmente será super ajustada e muito barulhenta se a sazonalidade subjacente for muito fraca (ou inexistente), potencialmente mascarando quaisquer outliers por tê-los absorvidos no componente sazonal.
 
@@ -59,7 +61,8 @@ O componente de tendência T_t é estimado aplicando o o Friedman's super smooth
 
 Procuramos outliers na série restante estimada:
 
-\begin{align} r_t^^ = y_t^* - t^_T \end{align}
+$$r_t^^ = y_t^* - t^_T$$
+
 
 Se Q1 denota o 25º percentil e Q3 denota o 75º percentil dos valores restantes, então o intervalo interquartil é definido como IQR = Q3 ??? Q1. As observações são rotuladas como outliers se forem menores que Q1-3 × IQR ou maiores que Q3 + 3 × IQR. Esta é a definição usada por [Tukey (1977, p44)](https://www.amazon.com.br/dp/0134995457?geniuslink=true) em sua proposta original de boxplot para valores "distantes".
 
@@ -68,7 +71,8 @@ Se os valores restantes são normalmente distribuídos, então a probabilidade d
 Quaisquer outliers identificados desta maneira são substituídos por valores interpolados linearmente usando as observações vizinhas, e o processo é repetido.
 
 
-Exemplo: dados de ouro
+### Exemplo: dados de ouro
+
 Os dados do preço do ouro contêm os preços diários do ouro pela manhã em dólares americanos de 1 ° de janeiro de 1985 a 31 de março de 1989. Os dados me foram fornecidos por um cliente que queria que eu fizesse uma previsão do preço do ouro. (Eu disse a ele que seria quase impossível superar uma previsão ingênua). Os dados são mostrados a seguir.
 
     library(fpp2)
