@@ -9,7 +9,7 @@
   weight = 10
 
 [[main]]
-  name = "Contributors"
+  name = "Team"
   url = "people"
   weight = 30
 
