@@ -61,7 +61,7 @@ O componente de tendência T_t é estimado aplicando o o Friedman's super smooth
 
 Procuramos outliers na série restante estimada:
 
-$$r_t^^ = y_t^* - t^_T$$
+$$\hat{r_t} = y_t^* - \hat{t_T}$$
 
 
 Se Q1 denota o 25º percentil e Q3 denota o 75º percentil dos valores restantes, então o intervalo interquartil é definido como IQR = Q3 ??? Q1. As observações são rotuladas como outliers se forem menores que Q1-3 × IQR ou maiores que Q3 + 3 × IQR. Esta é a definição usada por [Tukey (1977, p44)](https://www.amazon.com.br/dp/0134995457?geniuslink=true) em sua proposta original de boxplot para valores "distantes".
