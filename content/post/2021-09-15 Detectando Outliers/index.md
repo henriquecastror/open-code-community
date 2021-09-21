@@ -45,7 +45,7 @@ Para dados observados com mais frequência do que anualmente, usamos uma abordag
 
 Em seguida, a força da sazonalidade é medida usando:
 
-$$F_s = 1 - \dfrac{Var(y_t-\hat{T}_t-\hat{S}_t)}{Var(y_t - \hat{T}_t)}$$
+$$F_s = 1 - \dfrac{Var(y_t-\hat{T}_t-\hat{S}_t)}{Var(y_t -\hat{T}_t)}$$
 
 Se $F_s$ > 0,6, uma série ajustada sazonalmente é calculada:
 
@@ -61,7 +61,7 @@ O componente de tendência T_t é estimado aplicando o o Friedman's super smooth
 
 Procuramos outliers na série restante estimada:
 
-$$\hat{R}_t = y_t^* - \hat{T}_T$$
+$$\hat{R}_t = y_t^* - \hat{T}_t$$
 
 
 Se Q1 denota o 25º percentil e Q3 denota o 75º percentil dos valores restantes, então o intervalo interquartil é definido como IQR = Q3 - Q1. As observações são rotuladas como outliers se forem menores que Q1-3 × IQR ou maiores que Q3 + 3 × IQR. Esta é a definição usada por [Tukey (1977, p44)](https://www.amazon.com.br/dp/0134995457?geniuslink=true) em sua proposta original de boxplot para valores "distantes".
