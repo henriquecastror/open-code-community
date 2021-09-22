@@ -105,4 +105,5 @@ A função tsclean () remove outliers identificados dessa maneira e os substitui
 O ponto azul mostra a substituição do outlier, as linhas vermelhas mostram a substituição dos valores ausentes.
 
 O post em inglês se encontra no link:
-https://www.r-bloggers.com/2021/08/detecting-time-series-outliers/
+https://robjhyndman.com/hyndsight/tsoutliers/
+s/
