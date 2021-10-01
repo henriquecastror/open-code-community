@@ -1,11 +1,11 @@
 ---
 
-title: "RETORNO DAS AÇÕES DA APPLE COM O LANÇAMENTO DO IPHONE 13"
+title: "RETORNO DAS AÃ‡Ã•ES DA APPLE COM O LANÃ‡AMENTO DO IPHONE 13"
 
 categories: []
 
 # MUDE APENAS ANO DIA E MES PARA O DIA QUE VOCE NOS ENVIOU
-date: '2021-010-01T00:00:00Z' 
+date: '2021-10-01T00:00:00Z' 
 
 draft: no
 
@@ -40,9 +40,9 @@ authors:
 
 ---
 
-No último dia 14/09 a Apple apresentou os novos Iphone 13 ao mundo. 
-Foram estimados os retornos esperados das ações da Apple desde o lançamento do Iphone 12 (20/10/2020) até o novo lançamento, através da aplicação de uma regressão simples no R. 
-Como resultado, tínhamos que o Retorno Estimado para o dia, caso não houvesse o evento, seria de -0,86%. Entretanto o Retorno Efetivo das ações foi de -0,96%.
+No Ãºltimo dia 14/09 a Apple apresentou os novos Iphone 13 ao mundo. 
+Foram estimados os retornos esperados das aÃ§Ãµes da Apple desde o lanÃ§amento do Iphone 12 (20/10/2020) atÃ© o novo lanÃ§amento, atravÃ©s da aplicaÃ§Ã£o de uma regressÃ£o simples no R. 
+Como resultado, tÃ­nhamos que o Retorno Estimado para o dia, caso nÃ£o houvesse o evento, seria de -0,86%. Entretanto o Retorno Efetivo das aÃ§Ãµes foi de -0,96%.
 
 Pacotes
 A seguir, os pacotes que foram utilizados para o trabalho:
@@ -53,34 +53,34 @@ A seguir, os pacotes que foram utilizados para o trabalho:
     	library(moderndive)
     	library(dplyr)  
 
-Variação 
-Para o trabalho, considerou-se as Variações do Ativo da Apple e do índice S&P500 para o período entre 13 de Setembro de 2020 e 15 de Setembro de 2021. 
-O objetivo é entender a relação das duas variáveis e como o lançamento do Iphone 13 afetou o retorno do ativo estudado.
+VariaÃ§Ã£o 
+Para o trabalho, considerou-se as VariaÃ§Ãµes do Ativo da Apple e do Ã­ndice S&P500 para o perÃ­odo entre 13 de Setembro de 2020 e 15 de Setembro de 2021. 
+O objetivo Ã© entender a relaÃ§Ã£o das duas variÃ¡veis e como o lanÃ§amento do Iphone 13 afetou o retorno do ativo estudado.
     
-    	#Cotação Apple
+    	#CotaÃ§Ã£o Apple
     	Apple = getSymbols.yahoo("AAPL", from = '2020-9-13',to = '2021-9-15', auto.assign = F)[,6]
     
-    	#Cotação S&P
+    	#CotaÃ§Ã£o S&P
     	SP500 = getSymbols.yahoo("^GSPC", from = '2020-9-13',to = '2021-9-15', auto.assign = F)[,6]
 
-Gráfico Apple
-Primeiramente, estuda-se o gráfico do valor das ações da Apple. Nesse caso, percebe-se um crescimento considerável durante todo o período. 
-Destaca-se que no mês de abril de 2021 o Ativo teve uma queda muito grande do seu valor, que foi revertida com uma forte alta a partir de junho de 2021
+GrÃ¡fico Apple
+Primeiramente, estuda-se o grÃ¡fico do valor das aÃ§Ãµes da Apple. Nesse caso, percebe-se um crescimento considerÃ¡vel durante todo o perÃ­odo. 
+Destaca-se que no mÃªs de abril de 2021 o Ativo teve uma queda muito grande do seu valor, que foi revertida com uma forte alta a partir de junho de 2021
 
     	plot(Apple)
 
 {{< figure src="Apple.png" width="80%" >}} 
 
-Gráfico S&P500
-Agora, analisa-se o gráfico do índice S&P500. Contata-se que o índice teve uma trajetória consideravelmente mais estável que a variável anterior. As semelhanças com o gráfico anterior são a tendência de alta que foi mantida e uma pequena queda no final do tempo analisado.
-É importante comentar que os ativos da Apple têm um grande peso no calculo do S&P500 (fonte: https://www.suno.com.br/noticias/sp-500-cai-cpi-eua-iphone-apple-aapl34/)
+GrÃ¡fico S&P500
+Agora, analisa-se o grÃ¡fico do Ã­ndice S&P500. Contata-se que o Ã­ndice teve uma trajetÃ³ria consideravelmente mais estÃ¡vel que a variÃ¡vel anterior. As semelhanÃ§as com o grÃ¡fico anterior sÃ£o a tendÃªncia de alta que foi mantida e uma pequena queda no final do tempo analisado.
+Ã‰ importante comentar que os ativos da Apple tÃªm um grande peso no calculo do S&P500 (fonte: https://www.suno.com.br/noticias/sp-500-cai-cpi-eua-iphone-apple-aapl34/)
 
     	plot(SP500)
 
 {{< figure src="S&P500.png" width="80%" >}} 
 
 Retorno
-Objetivando o desenvolvimento das demais análises, calculou-se os retornos das variáveis estudadas.
+Objetivando o desenvolvimento das demais anÃ¡lises, calculou-se os retornos das variÃ¡veis estudadas.
     
     	#Calculando Retorno Apple
     	Ret_Apple = dailyReturn(Apple) * 100
@@ -89,10 +89,10 @@ Objetivando o desenvolvimento das demais análises, calculou-se os retornos das v
     	Ret_SP500 = dailyReturn(SP500) * 100
 
 Base de dados
-Ainda, foram necessários ajustes na base de dados para o desenvolvimento do estudo. 
-Em um primeiro momento, transformou-se as bases de dados em data frame para ter uma melhor organização ao editá-las. 
-Depois, foi necessário criar uma coluna de datas para fazer a junção dos dados frames utilizados. 
-Por fim, na nova base criada após a junção das outras duas, as colunas e as linhas foram renomeadas.
+Ainda, foram necessÃ¡rios ajustes na base de dados para o desenvolvimento do estudo. 
+Em um primeiro momento, transformou-se as bases de dados em data frame para ter uma melhor organizaÃ§Ã£o ao editÃ¡-las. 
+Depois, foi necessÃ¡rio criar uma coluna de datas para fazer a junÃ§Ã£o dos dados frames utilizados. 
+Por fim, na nova base criada apÃ³s a junÃ§Ã£o das outras duas, as colunas e as linhas foram renomeadas.
     
     	#Transformar em data.frame
     	Ret_SP500=data.frame(Ret_SP500)
@@ -113,7 +113,7 @@ Por fim, na nova base criada após a junção das outras duas, as colunas e as linh
     	rownames(Principal) = Principal$Dias
 
 Estimativa
-Foi calculada uma regressão simples para estimar os retornos dos ativos da Apple a partir do S&P500. Utilizou-se o pacote Moderndive.
+Foi calculada uma regressÃ£o simples para estimar os retornos dos ativos da Apple a partir do S&P500. Utilizou-se o pacote Moderndive.
     
     	#Reg
     	Reg = lm(Apple~SP500, data = Principal)
@@ -122,8 +122,8 @@ Foi calculada uma regressão simples para estimar os retornos dos ativos da Apple
     	#Utilizar a coluna ID como coluna de Datas
     	Reg_Points$ID = Principal$Dias
 
-Gráficos Comparativos
-Utilizando ggplot2, foram feitos os gráficos comparativos.
+GrÃ¡ficos Comparativos
+Utilizando ggplot2, foram feitos os grÃ¡ficos comparativos.
 
     	ggplot(data=Reg_Points)+geom_line(mapping = aes(group = 1, x=ID, y = Apple_hat, color = "Retorno_Estimado"))+
      	geom_point(mapping = aes(group = 1, x=ID, y = Apple, color ="Retorno_Efetivo"))+
@@ -144,7 +144,7 @@ Utilizando ggplot2, foram feitos os gráficos comparativos.
 {{< figure src="AppleXS&P500.png" width="80%" >}}
 
 Retorno com evento
-Também, foi calculado o retorno das ações da Apple na data específica do evento estudado.
+TambÃ©m, foi calculado o retorno das aÃ§Ãµes da Apple na data especÃ­fica do evento estudado.
 
     	#Definindo Janela do Evento
     	event.window = Principal[nrow(Principal), c("Apple","SP500")]
@@ -163,7 +163,7 @@ Também, foi calculado o retorno das ações da Apple na data específica do evento 
     	event.window
 
 Resultados
-Podemos concluir, a partir da análise do gráfico, que o ativo e o índice estudados apresentam tendências de longo prazo próximas, mas quando analisamos o curto prazo, constatou-se trajetórias distintas. 
-No caso do dia do lançamento do Iphone 13, estimou-se que, sem o evento, o retorno esperado do dia seria de -0,86%, mas considerando o evento o retorno efetivo das ações foi de -0,96%.
-Entretanto, esse é um fenômeno que vem ocorrendo nos lançamentos dos últimos anos. É verificado um momento de alta antes dos períodos de lançamento e um queda nas datas próximas ao evento, seguindo novamente com a elevação do preço das ações.
+Podemos concluir, a partir da anÃ¡lise do grÃ¡fico, que o ativo e o Ã­ndice estudados apresentam tendÃªncias de longo prazo prÃ³ximas, mas quando analisamos o curto prazo, constatou-se trajetÃ³rias distintas. 
+No caso do dia do lanÃ§amento do Iphone 13, estimou-se que, sem o evento, o retorno esperado do dia seria de -0,86%, mas considerando o evento o retorno efetivo das aÃ§Ãµes foi de -0,96%.
+Entretanto, esse Ã© um fenÃ´meno que vem ocorrendo nos lanÃ§amentos dos Ãºltimos anos. Ã‰ verificado um momento de alta antes dos perÃ­odos de lanÃ§amento e um queda nas datas prÃ³ximas ao evento, seguindo novamente com a elevaÃ§Ã£o do preÃ§o das aÃ§Ãµes.
 	
