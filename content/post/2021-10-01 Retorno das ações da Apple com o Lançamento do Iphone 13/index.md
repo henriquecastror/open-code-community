@@ -134,7 +134,7 @@ Utilizando ggplot2, foram feitos os gráficos comparativos.
     
 {{< figure src="Ret_Est.Ret_Efe.png" width="80%" >}}
     
-    	ggplot(data=Reg_Points)+geom_line(mapping = aes(group = 1, x=ID, y =Apple, color = "Apple"))+
+    	  ggplot(data=Reg_Points)+geom_line(mapping = aes(group = 1, x=ID, y =Apple, color = "Apple"))+
       	geom_point(mapping = aes(group = 1, x=ID, y = SP500, color ="S&P500"))+
       	theme_bw() +
       	labs(x = "Data", y = "Retorno",  title = 'Retorno Apple X S&P500')+
@@ -163,7 +163,7 @@ Também, foi calculado o retorno das ações da Apple na data específica do eve
     	options(digits = 3)
     	event.window
 
-Resultados
+Resultados:
 Podemos concluir, a partir da análise do gráfico, que o ativo e o índice estudados apresentam tendências de longo prazo próximas, mas quando analisamos o curto prazo, constatou-se trajetórias distintas. 
 No caso do dia do lançamento do Iphone 13, estimou-se que, sem o evento, o retorno esperado do dia seria de -0,86%, mas considerando o evento o retorno efetivo das ações foi de -0,96%.
 Entretanto, esse é um fenômeno que vem ocorrendo nos lançamentos dos últimos anos. É verificado um momento de alta antes dos períodos de lançamento e um queda nas datas próximas ao evento, seguindo novamente com a elevação do preço das ações.
