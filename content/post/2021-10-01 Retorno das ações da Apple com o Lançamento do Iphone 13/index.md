@@ -132,7 +132,7 @@ Utilizando ggplot2, foram feitos os gráficos comparativos.
       	theme(axis.text.x = element_text(angle = 90), plot.title = element_text(hjust = 0.5))+
       	scale_colour_manual("Legenda",breaks = c("Retorno_Estimado", "Retorno_Efetivo"), values = c('black', 'red'))
     
-    {{< figure src="Ret_Est.Ret_Efe.png" width="80%" >}}
+{{< figure src="Ret_Est.Ret_Efe.png" width="80%" >}}
     
     	ggplot(data=Reg_Points)+geom_line(mapping = aes(group = 1, x=ID, y =Apple, color = "Apple"))+
       	geom_point(mapping = aes(group = 1, x=ID, y = SP500, color ="S&P500"))+
@@ -140,6 +140,7 @@ Utilizando ggplot2, foram feitos os gráficos comparativos.
       	labs(x = "Data", y = "Retorno",  title = 'Retorno Apple X S&P500')+
       	theme(axis.text.x = element_text(angle = 90), plot.title = element_text(hjust = 0.5))+
       	scale_colour_manual("Legenda",breaks = c("Apple", "S&P500"), values = c('black', 'blue'))
+
 
 {{< figure src="AppleXS&P500.png" width="80%" >}}
 
