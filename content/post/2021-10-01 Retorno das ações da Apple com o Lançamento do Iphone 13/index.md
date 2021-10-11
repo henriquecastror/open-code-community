@@ -1,6 +1,6 @@
 ---
 
-title: "Retorno das ações da Apple com o Lançamento da Apple"
+title: "Retorno das ações da Apple com o Lançamento do Iphone 13"
 
 categories: []
 
