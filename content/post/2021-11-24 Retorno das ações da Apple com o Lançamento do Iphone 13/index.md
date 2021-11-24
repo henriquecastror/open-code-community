@@ -49,7 +49,7 @@ Nesse contexto, fez-se um levantamento do comportamento dos ativos do Banco Inte
 concorrente que atua no mesmo mercado e com modelo de negócio semelhante ao Nubank. Para tanto, utilizou-se a linguagem de programação
 Python e o banco de dados do Yahoo Finance.
 
-Pacotes
+
 A seguir, os pacotes que foram utilizados para o trabalho:
 
 	#Abrir pacotes
@@ -92,6 +92,7 @@ do BIDI11, ocasionada principalmente pela política do Banco Central em elevar a
 o que impacta negativamente empresas de base tecnológicas.
 
 Volatilidade e retorno das ações
+
 Calcular retorno
 
 	vetor = ny.array(df_int)
