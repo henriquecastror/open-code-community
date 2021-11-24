@@ -91,9 +91,7 @@ por seis. Entretando, após esse período houve uma queda considerável no valor
 do BIDI11, ocasionada principalmente pela política do Banco Central em elevar a taxa de juros para combater a inflação,
 o que impacta negativamente empresas de base tecnológicas.
 
-Volatilidade e retorno das ações
-
-Calcular retorno
+Volatilidade e retorno das ações. Calculando o retorno
 
 	vetor = ny.array(df_int)
 	retorno = (vetor[1:572]-vetor[0:571])/vetor[0:571]
