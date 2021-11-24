@@ -150,7 +150,7 @@ Gráfico de volume de negociações
 
 O maior volume de negociações observado ocorreu nem maio de 2020. É interessante comentar a redução da volatilidade 
 do ativo após esse perído. Além disso, destaca-se que a ação vem apresentando um crescimento no volume das negociações,
-mostrando um aumento do interesse dos investidores no Banco Inter
+mostrando um aumento do interesse dos investidores no Banco Inter.
 
 Cenários
 
