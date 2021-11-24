@@ -122,11 +122,11 @@ Volatilidade Histórica de Parkinson
 
 Gráfico volatilidade
 	
-    plt.style.use('bmh')
-	  parhv.plot(figsize = (15,10), linewidth = 1.5);
-	  plt.pyplot.title("Volatilidade Histórica de Parkinson", fontsize=25)
-	  plt.pyplot.ylabel(' ', fontsize=15)
-	  plt.pyplot.xlabel('', fontsize=15)
+        plt.style.use('bmh')
+        parhv.plot(figsize = (15,10), linewidth = 1.5);
+        plt.pyplot.title("Volatilidade Histórica de Parkinson", fontsize=25)
+        plt.pyplot.ylabel(' ', fontsize=15)
+        plt.pyplot.xlabel('', fontsize=15)
 
 {{< figure src="volatilidade.jpeg" width="80%" >}} 
 
