@@ -118,11 +118,12 @@ Gráfico retorno
 	
 Volatilidade Histórica de Parkinson
 
-	  parhv = ny.sqrt(572 / (4 * 22 * ny.log(2)) *
+	    parhv = ny.sqrt(572 / (4 * 22 * ny.log(2)) *
   		pd.DataFrame.rolling(ny.log(bidi11.loc[:, 'High'] / bidi11.loc[:, 'Low']) ** 2, window=22).sum())
 
 Gráfico volatilidade
-	plt.style.use('bmh')
+	
+  plt.style.use('bmh')
 	parhv.plot(figsize = (15,10), linewidth = 1.5);
 	plt.pyplot.title("Volatilidade Histórica de Parkinson", fontsize=25)
 	plt.pyplot.ylabel(' ', fontsize=15)
