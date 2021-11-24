@@ -5,7 +5,7 @@ title: "O Potencial das ações do Nubank a partir do desempenho do BIDI11"
 categories: []
 
 # MUDE APENAS ANO DIA E MES PARA O DIA QUE VOCE NOS ENVIOU
-date: '2021-11-24T00:00:00Z' 
+date: '2021-11-23T00:00:00Z' 
 
 draft: no
 
