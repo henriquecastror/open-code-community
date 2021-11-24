@@ -42,7 +42,7 @@ authors:
 
 A fintech Nubank marcou seu IPO para dezembro de 2021. Esse fato está sendo muito 
 discutido pelos profissionais das finanças, visto que o período de reserva das BDRs
-foi aberto no dia 17 de novembro e será enserrado no dia 7 de 
+foi aberto no dia 17 de novembro e será encerrado no dia 7 de 
 dezembro, surge a pergunta: as ações do Nubank seria uma boa oportunidade de 
 investimento?
 Nesse contexto, fez-se um levantamento do comportamento dos ativos do Banco Inter (BIDI11), um 
