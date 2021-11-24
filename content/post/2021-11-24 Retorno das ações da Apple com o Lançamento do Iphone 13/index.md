@@ -65,7 +65,7 @@ A seguir, os pacotes que foram utilizados para o trabalho:
   	import matplotlib
   	matplotlib.style.use('ggplot')
 
-Coletados dados do BIDI11 do Yahoo Finance
+Coletados dados do BIDI11 do Yahoo Finance.
 
 	bidi11 = dd.DataReader('BIDI11.SA', data_source = 'yahoo', start='04/30/2018', end = '11/23/2021')
 	df_int = bidi11["Adj Close"]
