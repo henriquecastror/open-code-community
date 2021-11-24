@@ -82,7 +82,7 @@ Preços da ação BIDI11.SA
 	plt.pyplot.ylabel('', fontsize=15)
 	plt.pyplot.xlabel('', fontsize=15)
 
-{{< figure src="cotacao.fechamento.png" width="80%" >}} 
+{{< figure src="cotacao.fechamento.jpeg" width="80%" >}} 
 
 Observando o gráfico de preços das ações do Banco Inter, constata-se 
 que o valor desses ativos aumentou consideravelmente até 2021. Percebe-se ainda que, 
@@ -114,7 +114,7 @@ Gráfico retorno
 	plt.pyplot.ylabel(' ', fontsize=15)
 	plt.pyplot.xlabel(' ', fontsize=15)
 
-{{< figure src="retorno.png" width="80%" >}} 
+{{< figure src="retorno.jpeg" width="80%" >}} 
 	
 Volatilidade Histórica de Parkinson
 
@@ -123,13 +123,13 @@ Volatilidade Histórica de Parkinson
 
 Gráfico volatilidade
 	
-  plt.style.use('bmh')
-	parhv.plot(figsize = (15,10), linewidth = 1.5);
-	plt.pyplot.title("Volatilidade Histórica de Parkinson", fontsize=25)
-	plt.pyplot.ylabel(' ', fontsize=15)
-	plt.pyplot.xlabel('', fontsize=15)
+    plt.style.use('bmh')
+	  parhv.plot(figsize = (15,10), linewidth = 1.5);
+	  plt.pyplot.title("Volatilidade Histórica de Parkinson", fontsize=25)
+	  plt.pyplot.ylabel(' ', fontsize=15)
+	  plt.pyplot.xlabel('', fontsize=15)
 
-{{< figure src="volatilidade.png" width="80%" >}} 
+{{< figure src="volatilidade.jpeg" width="80%" >}} 
 
 
 Obsevando os dados de volatilidade e de retorno das ações em conjunto, pode-se chegar a
@@ -147,7 +147,7 @@ Gráfico de volume de negociações
 	plt.pyplot.xlabel(' ', fontsize=15)
 
 
-{{< figure src="volume.png" width="80%" >}} 
+{{< figure src="volume.jpeg" width="80%" >}} 
 
 O maior volume de negociações observado ocorreu nem maio de 2020. É interessante comentar a redução da volatilidade 
 do ativo após esse perído. Além disso, destaca-se que a ação vem apresentando um crescimento no volume das negociações,
