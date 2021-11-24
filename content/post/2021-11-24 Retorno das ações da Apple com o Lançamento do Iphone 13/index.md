@@ -1,6 +1,6 @@
 ---
 
-title: "O Potencial das aÁıes do Nubank a partir do desempenho do BIDI11"
+title: "O Potencial das a√ß√µes do Nubank a partir do desempenho do BIDI11"
 
 categories: []
 
@@ -40,15 +40,13 @@ authors:
 
 ---
 
-
-
-A fintech Nubank marcou seu IPO para dezembro de 2021. Esse fato est· sendo muito 
-discutido pelos profissionais das finanÁas, visto que o perÌodo de reserva das BDRs
-foi aberto no dia 17 de novembro e ser· enserrado no dia 7 de 
-dezembro, surge a pergunta: as aÁıes do Nubank seria uma boa oportunidade de 
+A fintech Nubank marcou seu IPO para dezembro de 2021. Esse fato est√° sendo muito 
+discutido pelos profissionais das finan√ßas, visto que o per√≠odo de reserva das BDRs
+foi aberto no dia 17 de novembro e ser√° enserrado no dia 7 de 
+dezembro, surge a pergunta: as a√ß√µes do Nubank seria uma boa oportunidade de 
 investimento?
 Nesse contexto, fez-se um levantamento do comportamento dos ativos do Banco Inter (BIDI11), um 
-concorrente que atua no mesmo mercado e com modelo de negÛcio semelhante ao Nubank. Para tanto, utilizou-se a linguagem de programaÁ„o
+concorrente que atua no mesmo mercado e com modelo de neg√≥cio semelhante ao Nubank. Para tanto, utilizou-se a linguagem de programa√ß√£o
 Python e o banco de dados do Yahoo Finance.
 
 Pacotes
@@ -62,38 +60,38 @@ A seguir, os pacotes que foram utilizados para o trabalho:
 	import math
 	import statistics as st
 
-	#Carregando pacotes para definir estilo dos gr·ficos
-	%matplotlib inline
-	import matplotlib
-	matplotlib.style.use('ggplot')
+  	#Carregando pacotes para definir estilo dos gr√°ficos
+	  %matplotlib inline
+  	import matplotlib
+  	matplotlib.style.use('ggplot')
 
 Coletados dados do BIDI11 do Yahoo Finance
 
 	bidi11 = dd.DataReader('BIDI11.SA', data_source = 'yahoo', start='04/30/2018', end = '11/23/2021')
 	df_int = bidi11["Adj Close"]
 
-Visualizando as informaÁıes
+Visualizando as informa√ß√µes
 
 	display(bidi11)
 
-PreÁos da aÁ„o BIDI11.SA
+Pre√ßos da a√ß√£o BIDI11.SA
 
  	plt.style.use('bmh')
 	bidi11['Adj Close'].plot(figsize=(15, 10), linewidth=2.5)
-	plt.pyplot.title("PreÁo de fechamento ajustado BIDI11", fontsize=25)
+	plt.pyplot.title("Pre√ßo de fechamento ajustado BIDI11", fontsize=25)
 	plt.pyplot.ylabel('', fontsize=15)
 	plt.pyplot.xlabel('', fontsize=15)
 
 {{< figure src="cotacao.fechamento.png" width="80%" >}} 
 
-Observando o gr·fico de preÁos das aÁıes do Banco Inter, constata-se 
-que o valor desses ativos aumentou consideravelmente atÈ 2021. Percebe-se ainda que, 
-entre o Ìnicio de 2021 atÈ metade do mesmo ano, o preÁo das aÁıes foi multiplicado
-por seis. Entretando, apÛs esse perÌodo houve uma queda consider·vel no valor dos ativos
-do BIDI11, ocasionada principalmente pela polÌtica do Banco Central em elevar a taxa de juros para combater a inflaÁ„o,
-o que impacta negativamente empresas de base tecnolÛgicas.
+Observando o gr√°fico de pre√ßos das a√ß√µes do Banco Inter, constata-se 
+que o valor desses ativos aumentou consideravelmente at√© 2021. Percebe-se ainda que, 
+entre o √≠nicio de 2021 at√© metade do mesmo ano, o pre√ßo das a√ß√µes foi multiplicado
+por seis. Entretando, ap√≥s esse per√≠odo houve uma queda consider√°vel no valor dos ativos
+do BIDI11, ocasionada principalmente pela pol√≠tica do Banco Central em elevar a taxa de juros para combater a infla√ß√£o,
+o que impacta negativamente empresas de base tecnol√≥gicas.
 
-Volatilidade e retorno das aÁıes
+Volatilidade e retorno das a√ß√µes
 Calcular retorno
 
 	vetor = ny.array(df_int)
@@ -108,7 +106,7 @@ Adicionando o vetor como coluna na base
 	bidi11['retorno'] = retorno
 	print(bidi11)
 
-Gr·fico retorno
+Gr√°fico retorno
 
 	plt.style.use('bmh')
 	bidi11['retorno'].plot(figsize=(15, 10), linewidth=2.5)
@@ -118,43 +116,43 @@ Gr·fico retorno
 
 {{< figure src="retorno.png" width="80%" >}} 
 	
-Volatilidade HistÛrica de Parkinson
+Volatilidade Hist√≥rica de Parkinson
 
-	parhv = ny.sqrt(572 / (4 * 22 * ny.log(2)) *
+	  parhv = ny.sqrt(572 / (4 * 22 * ny.log(2)) *
   		pd.DataFrame.rolling(ny.log(bidi11.loc[:, 'High'] / bidi11.loc[:, 'Low']) ** 2, window=22).sum())
 
-Gr·fico volatilidade
+Gr√°fico volatilidade
 	plt.style.use('bmh')
 	parhv.plot(figsize = (15,10), linewidth = 1.5);
-	plt.pyplot.title("Volatilidade HistÛrica de Parkinson", fontsize=25)
+	plt.pyplot.title("Volatilidade Hist√≥rica de Parkinson", fontsize=25)
 	plt.pyplot.ylabel(' ', fontsize=15)
 	plt.pyplot.xlabel('', fontsize=15)
 
 {{< figure src="volatilidade.png" width="80%" >}} 
 
 
-Obsevando os dados de volatilidade e de retorno das aÁıes em conjunto, pode-se chegar a
-conclusıes interessantes. Tem-se ue os perÌodos de maior volatilidade, tambÈm foram os que apresentaram maiores retornos.
-AlÈm disso, observou-se quem os momentos de maiores retornos positivos, foram seguidos pelos maiores retornos negativos.
+Obsevando os dados de volatilidade e de retorno das a√ß√µes em conjunto, pode-se chegar a
+conclus√µes interessantes. Tem-se ue os per√≠odos de maior volatilidade, tamb√©m foram os que apresentaram maiores retornos.
+Al√©m disso, observou-se quem os momentos de maiores retornos positivos, foram seguidos pelos maiores retornos negativos.
 Nesse sentido, percebe-se o comportamento especulativo dos investidores ao buscarem retornos de seus investimento no curto prazo. 
 
 
-Gr·fico de volume de negociaÁıes
+Gr√°fico de volume de negocia√ß√µes
 
 	plt.style.use('bmh')
 	bidi11['Volume'].plot(figsize=(15, 10), linewidth=2.5)
-	plt.pyplot.title("Volume de NegociaÁıes BIDI11", fontsize=25)
+	plt.pyplot.title("Volume de Negocia√ß√µes BIDI11", fontsize=25)
 	plt.pyplot.ylabel(' ', fontsize=15)
 	plt.pyplot.xlabel(' ', fontsize=15)
 
 
 {{< figure src="volume.png" width="80%" >}} 
 
-O maior volume de negociaÁıes observado ocorreu nem maio de 2020. … interessante comentar a reduÁ„o da volatilidade 
-do ativo apÛs esse perÌdo. AlÈm disso, destaca-se que a aÁ„o vem apresentando um crescimento no volume das negociaÁıes,
+O maior volume de negocia√ß√µes observado ocorreu nem maio de 2020. √â interessante comentar a redu√ß√£o da volatilidade 
+do ativo ap√≥s esse per√≠do. Al√©m disso, destaca-se que a a√ß√£o vem apresentando um crescimento no volume das negocia√ß√µes,
 mostrando um aumento do interesse dos investidores no Banco Inter
 
-Cen·rios
+Cen√°rios
 
 	media = st.mean(retorno)
 	desvio = st.mean(retorno)
@@ -163,13 +161,13 @@ Cen·rios
 	print(otimista, pessimista)
 
 
-Buscando entender o retorno futuro dessa aÁ„o, calculou-se os cen·rios otimista e pessimista
-para 95% de confianÁa com a estimativa do retorno mÈdio. Assim, obteve-se o retorno mÈdio esperado
-de 0,28% em um cen·rio otimista e de 0,24% em um cen·rio pessimista. 
+Buscando entender o retorno futuro dessa a√ß√£o, calculou-se os cen√°rios otimista e pessimista
+para 95% de confian√ßa com a estimativa do retorno m√©dio. Assim, obteve-se o retorno m√©dio esperado
+de 0,28% em um cen√°rio otimista e de 0,24% em um cen√°rio pessimista. 
 
-Considerando que o Banco Inter e o Nubank s„o empresas semelhantes, as aÁıes do Nubank tem o 
+Considerando que o Banco Inter e o Nubank s√£o empresas semelhantes, as a√ß√µes do Nubank tem o 
 potencial de apresentar retornos consideraveis aos seus investidores. Entretanto, deve-se considerar que no caso do BIDI11
-as aÁıes eram negociadas exclusivamente no mercado brasileiro, enquanto as aÁıes do Nubank ser„o negociadas no 
+as a√ß√µes eram negociadas exclusivamente no mercado brasileiro, enquanto as a√ß√µes do Nubank ser√£o negociadas no 
 Mercado Americano o que pode alterar o comportamento entre os dois ativos.
 
-*Essa an·lise n„o È uma recomendaÁ„o de compra*
+*Essa an√°lise n√£o √© uma recomenda√ß√£o de compra*
