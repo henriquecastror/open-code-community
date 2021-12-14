@@ -1,6 +1,6 @@
 ---
 
-title: "VariaÃÂ§ÃÂµes do teorema central do limite para matrizes aleatÃÂ³rias: de nÃÂºcleos atÃÂ´micos a filtragem de matrizes de correlaÃÂ§ÃÂ£o"
+title: "Variações do teorema central do limite para matrizes aleatÃÂ³rias: de nÃÂºcleos atÃÂ´micos a filtragem de matrizes de correlaÃÂ§ÃÂ£o"
 
 categories: []
 
