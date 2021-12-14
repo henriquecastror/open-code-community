@@ -29,7 +29,7 @@ tags:
 - python
 - otmizaÃ§Ã£o
 - autovalores
-- histÃ³ria da ciÃªncia
+- histÃ³ria da iÃªncia
 authors:
 - devmessias
 
