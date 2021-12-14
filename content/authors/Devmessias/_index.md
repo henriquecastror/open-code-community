@@ -10,20 +10,20 @@ authors:
 role: PhD candidate
 
 organizations:
-- name: Universidade de S�o Paulo
+- name: Universidade de São Paulo
   url: "http://www.saocarlos.usp.br/"
 
 interests:
 - Grafos
-- Teoria espectral & matrizes aleat�rias
-- Aprendizado de M�quina & An�lise de dados
+- Teoria espectral & matrizes aleatórias
+- Aprendizado de Máquina & Análise de dados
 - XAI
-- Transporte �timo 
+- Transporte Ótimo 
 - Geometria
 
 education:
   courses:
-  - course: Doutorando em grafos e aprendizado de m�quina
+  - course: Doutorando em grafos e aprendizado de máquina
     institution: USP
     year: 2022
     
@@ -56,4 +56,4 @@ highlight_name: false
 
 ---
 
-Antes de ensinar computadores trabalhei ensinando matem�tica e f�sica para alunos do ensino m�dio em escolas e cursinhos comunit�rios. Hoje pesquiso na área de grafos, matrizes aleat�rias e aprendizado de m�quina. Contribuo para desenvolvimento de software livre e sou um dos fundadores da comunidade python triângulo. Github [http://github.com/devmessias](http://github.com/devmessias).
+Antes de ensinar computadores trabalhei ensinando matemática e física para alunos do ensino médio em escolas e cursinhos comunitários. Hoje pesquiso na área de grafos, matrizes aleatórias e aprendizado de máquina. Contribuo para desenvolvimento de software livre e sou um dos fundadores da comunidade python triângulo. Github [http://github.com/devmessias](http://github.com/devmessias).
