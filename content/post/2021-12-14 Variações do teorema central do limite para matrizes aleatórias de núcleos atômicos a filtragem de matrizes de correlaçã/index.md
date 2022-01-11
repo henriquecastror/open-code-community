@@ -219,7 +219,7 @@ np.linalg.eigh(normalRMT(n=100))[0]
 for i in range(100)
 ])
 ```
-
+ 
 Na decáda de 50 não havia poder computacional
 suficiente para realizar investigações númericas, mas você pode facilmente investigar como os autovalores se distribuem usando seu computador e gerando os histogramas
 
