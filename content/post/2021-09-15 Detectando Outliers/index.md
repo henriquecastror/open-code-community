@@ -106,7 +106,6 @@ O ponto azul mostra a substituição do outlier, as linhas vermelhas mostram a s
 
 O post em inglês se encontra no link:
 https://robjhyndman.com/hyndsight/tsoutliers/
-s/
 
 
 

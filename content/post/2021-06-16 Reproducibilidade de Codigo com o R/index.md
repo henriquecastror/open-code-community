@@ -40,7 +40,7 @@ authors:
 
 <script type="text/javascript" src="//cdn.plu.mx/widget-popup.js"></script>
 
-<a href="https://plu.mx/plum/a/?doi=10.17632%2Fscpb9gnsgm.1" data-popup="right" data-size="large" class="plumx-plum-print-popup" data-site="plum" data-hide-when-empty="true">Reproducibilidade de CÛdigo com o R published at the &amp;quot;Open Code Community&amp;quot;</a>
+<a href="https://plu.mx/plum/a/?doi=10.17632%2Fscpb9gnsgm.1" data-popup="right" data-size="large" class="plumx-plum-print-popup" data-site="plum" data-hide-when-empty="true">Reproducibilidade de C?digo com o R published at the &amp;quot;Open Code Community&amp;quot;</a>
 
 
 
@@ -292,7 +292,7 @@ reproducibilidade e n√£o citados aqui.
 
 **Please, cite this work:**
 
-Perlin, Marcelo; Reichert, Marcos Henrique; Mussoi, Lucas (2021), "Reproducibilidade de CÛdigo com o R published at the "Open Code Community"", Mendeley Data, V1, doi: 10.17632/scpb9gnsgm.1
+Perlin, Marcelo; Reichert, Marcos Henrique; Mussoi, Lucas (2021), "Reproducibilidade de C√≥digo com o R published at the "Open Code Community"", Mendeley Data, V1, doi: 10.17632/scpb9gnsgm.1
 
 {{% /callout %}}
 
