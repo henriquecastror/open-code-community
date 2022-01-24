@@ -175,3 +175,14 @@ Ainda sobre o BBB, temos talvez o maior fenômeno entre os participantes, uma vi
 
 Enfim, você pode brincar, buscar outras palavras, fica ai nosso post. 
 
+
+
+
+{{% callout note %}}
+
+**Please, cite this work:**
+
+Martins, Henrique; Junior, Gerson (2022), “Exemplos de busca de tendências do Google Trend published at Open Code Community”, Mendeley Data, V1, doi: 10.17632/t2wmgv352k.1
+
+{{% /callout %}}
+
