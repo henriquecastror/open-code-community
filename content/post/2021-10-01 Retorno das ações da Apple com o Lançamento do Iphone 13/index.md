@@ -176,7 +176,7 @@ Entretanto, esse é um fenômeno que vem ocorrendo nos lançamentos dos últimos
 
 **Please, cite this work:**
 
-Ziermann , Matheus; Damasceno, Bruno  (2022), "Retorno das a��es da Apple com o Lan�amento do Iphone 13 published at "Open Code community"", Mendeley Data, V1, doi: 10.17632/ycrmpsbrtm.1	
+Ziermann , Matheus; Damasceno, Bruno  (2022), “Retorno das ações da Apple com o Lançamento do Iphone 13 published at "Open Code community"”, Mendeley Data, V1, doi: 10.17632/ycrmpsbrtm.1
 
 {{% /callout %}}
 
