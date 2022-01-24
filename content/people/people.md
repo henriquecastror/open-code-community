@@ -22,7 +22,9 @@ content:
   - Administration
   - Visitors
   - Alumni
+  - Fundadores
   - Colaboradores
+  
   
 design:
   show_interests: false

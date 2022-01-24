@@ -103,7 +103,7 @@ email: ""
 highlight_name: false
 
 user_groups:
-- Colaboradores
+- Fundadores
 
 ---
 
