@@ -290,3 +290,14 @@ menor volatilidade entre os fatores citados.
 
     ##   Rm_minus_Rf       SMB       HML      WML       IML  Portfolio
     ## 1   0.2374784 0.1437963 0.1321334 0.157687 0.1445289 0.07077947
+
+
+
+
+{{% callout note %}}
+
+**Please, cite this work:**
+
+Wachslicht, Arthur (2022), “Aplicação de Hierarchical Risk Parity (HRP) nos Fatores de Risco da Bolsa Brasileira published at Open Code Community”, Mendeley Data, V1, doi: 10.17632/yzvt7wmn3r.1
+
+{{% /callout %}}

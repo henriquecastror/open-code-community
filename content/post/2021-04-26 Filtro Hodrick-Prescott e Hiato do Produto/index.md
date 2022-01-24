@@ -180,3 +180,16 @@ gdp_s_filter %>%
   theme_grey()
 ```
 {{< figure src="7.png" width="80%" >}}
+
+
+
+
+
+{{% callout note %}}
+
+**Please, cite this work:**
+
+Henriques, Victor (2022), “Filtro Hodrick-Prescott e Hiato do Produto published at Open Code Community”, Mendeley Data, V1, doi: 10.17632/6vy3v47xb7.1
+
+{{% /callout %}}
+
