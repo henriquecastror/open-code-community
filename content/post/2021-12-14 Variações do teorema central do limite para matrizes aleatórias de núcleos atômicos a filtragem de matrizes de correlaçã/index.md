@@ -801,3 +801,14 @@ VocÃª poderÃ¡ encontrar alguns trabalhos e posts descrevendo o uso de matrizes a
 
 - [17] S. Rome, "Eigen-vesting II. Optimize Your Portfolio With Optimization," Scott Rome, Mar. 22, 2016. http://srome.github.io//Eigenvesting-II-Optimize-Your-Portfolio-With-Optimization/ (accessed Dec. 05, 2021).
 - [18] "11.1 Portfolio Optimization - MOSEK Fusion API for Python 9.3.10." https://docs.mosek.com/latest/pythonfusion/case-studies-portfolio.html (accessed Dec. 05, 2021).
+
+
+
+
+{{% callout note %}}
+
+**Please, cite this work:**
+
+Messias, Bruno (2022), "Variações do teorema central do limite para matrizes aleatórias: de núcleos atômicos a filtragem de matrizes de correlação published at the "Open Code Community"", Mendeley Data, V1, doi: 10.17632/jwykn349hp.1
+
+{{% /callout %}}
