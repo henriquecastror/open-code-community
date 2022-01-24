@@ -25,14 +25,15 @@ subtitle: null
 summary: null
  
 tags:
-- portfolio
-- correlaÃ§Ã£o
-- matrizes aleatÃ³rias
+- portfólio
+- correlação
+- matrizes aleatórias
 - teoria espectral
 - python
-- otmizaÃ§Ã£o
+- otmização
 - autovalores
-- histÃ³ria da ciÃªncia
+- história da ciência
+
 authors:
 - devmessias
 
