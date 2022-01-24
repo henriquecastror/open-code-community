@@ -161,6 +161,12 @@ Such a good performance of the B.B. indicator is not a surprise. Colombo and Laz
 
 
 
+{{% callout note %}}
 
+**Please, cite this work:**
+
+Colombo, Jéfferson (2022), “Applying the Bry-Boschan algorithm to identify turning points in macroeconomic data published at Open Code Community”, Mendeley Data, V1, doi: 10.17632/xmtgm7smnk.1
+
+{{% /callout %}}
 
 
