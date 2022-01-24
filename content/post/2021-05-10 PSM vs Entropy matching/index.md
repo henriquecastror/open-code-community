@@ -172,4 +172,12 @@ Thanks for passing by.
 
 
 
+{{% callout note %}}
+
+**Please, cite this work:**
+
+Martins, Henrique (2022), “Propensity-score matching (PSM) vs. Entropy matching published at Open Code Community”, Mendeley Data, V1, doi: 10.17632/xf87v5kxdb.1
+
+{{% /callout %}}
+
 

@@ -314,3 +314,13 @@ plt.show()
 ![png](output_29_0.png)
 
 
+
+
+{{% callout note %}}
+
+**Please, cite this work:**
+
+Arthur, Luis (2022), “Simulando a performance de portfólios randomicos em 2020 published at Open Code Community”, Mendeley Data, V1, doi: 10.17632/33mvnbnt75.1
+
+{{% /callout %}}
+

@@ -118,3 +118,16 @@ Um plot com o histograma das classes dos fundos. Observação, como a variável 
 {{< figure src="1.png" width="70%" >}}
 
 Vamos começar a lançar uma série de posts sobre fundos, caso tenha alguma sugestão, envie para os autores.
+
+
+
+{{% callout note %}}
+
+**Please, cite this work:**
+
+Modeira, Igor; Junior, Gerson (2022), “Como baixar as cotas diárias dos Fundos via CVM published at Open Code Community”, Mendeley Data, V1, doi: 10.17632/f2s64wyhy5.1
+
+{{% /callout %}}
+
+
+
