@@ -161,3 +161,15 @@ Por fim, utiliza-se o pacote GGplot2 para o desenvolvimento de gráficos compara
 
 
 
+
+
+{{% callout note %}}
+
+**Please, cite this work:**
+
+Ziermann, Matheus; Damasceno, Bruno (2022), “Impacto da confirmação de casos de Vaca louca em ativos do setor frigoríficos em 2021 published at Open Code Community”, Mendeley Data, V1, doi: 10.17632/pg63m73bhc.1
+
+{{% /callout %}}
+
+
+
