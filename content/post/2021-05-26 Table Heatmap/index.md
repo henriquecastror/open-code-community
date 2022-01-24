@@ -102,3 +102,15 @@ Contruindo o table heatmap.
 <div align="center">
 {{< figure library="true" src="1.png" width="100%" >}}
 </div>
+
+
+
+{{% callout note %}}
+
+**Please, cite this work:**
+
+Junior, Gerson; Queiroz, Felipe (2022), “Table Heatmap no R - Temperatura do IPCA published at Open Code Community”, Mendeley Data, V1, doi: 10.17632/yrj7ry4z5h.1
+
+{{% /callout %}}
+
+
