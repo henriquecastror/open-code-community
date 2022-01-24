@@ -38,7 +38,7 @@ authors:
 
 <script type="text/javascript" src="//cdn.plu.mx/widget-popup.js"></script>
 
-<a href="https://plu.mx/plum/a/?doi=10.17632%2Fr58pyjyvbx.1" data-popup="right" data-size="large" class="plumx-plum-print-popup" data-site="plum" data-hide-when-empty="true">Integrando Google Colab e Yahoo Finance (compactação e download de cotações em formato CSV) published at the &amp;quot;Open Code Community&amp;quot;</a>
+<a href="https://plu.mx/plum/a/?doi=10.17632%2Fr58pyjyvbx.1" data-popup="right" data-size="large" class="plumx-plum-print-popup" data-site="plum" data-hide-when-empty="true">Integrando Google Colab e Yahoo Finance (compactaÃ§Ã£o e download de cotaÃ§Ãµes em formato CSV) published at the &amp;quot;Open Code Community&amp;quot;</a>
 
 
 

@@ -40,7 +40,7 @@ authors:
 ---
 <script type="text/javascript" src="//cdn.plu.mx/widget-popup.js"></script>
 
-<a href="https://plu.mx/plum/a/?doi=10.17632%2Fwpgpcfxxbs.1" data-popup="right" data-size="large" class="plumx-plum-print-popup" data-site="plum" data-hide-when-empty="true">Introdu��o ao dplyr published at the &amp;quot;Open Code Community&amp;quot;</a>
+<a href="https://plu.mx/plum/a/?doi=10.17632%2Fwpgpcfxxbs.1" data-popup="right" data-size="large" class="plumx-plum-print-popup" data-site="plum" data-hide-when-empty="true">Introdução ao dplyr published at the &amp;quot;Open Code Community&amp;quot;</a>
 
 
 
@@ -205,7 +205,7 @@ Esperamos que vocês tenham aproveitado essa breve introdução ao **dplyr**. H�
 
 **Please, cite this work:**
 
-Queiroz, Felipe; Medeiros, David (2021), "Introduçã ao dplyr published at the "Open Code Community"", Mendeley Data, V1, doi: 10.17632/wpgpcfxxbs.1
+Queiroz, Felipe; Medeiros, David (2021), "Introduçãao dplyr published at the "Open Code Community"", Mendeley Data, V1, doi: 10.17632/wpgpcfxxbs.1
 
 {{% /callout %}}
            
