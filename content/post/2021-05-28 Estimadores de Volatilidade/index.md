@@ -186,3 +186,15 @@ Plotando os estimadores em um mesmo gráfico para o período selecionado:
 {{< figure library="true" src="9.png" width="110%" >}}
 
 
+
+{{% callout note %}}
+
+**Please, cite this work:**
+
+Mendes, Bernardo (2022), “Estimadores de Volatilidade published at Open Code Community”, Mendeley Data, V1, doi: 10.17632/n9b8sp6xwf.1
+
+{{% /callout %}}
+
+
+
+
