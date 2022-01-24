@@ -211,3 +211,14 @@ Social media links for the Colaboradores page:
 https://twitter.com/JoachimSchork
 https://www.linkedin.com/company/75547611/admin/
 https://www.facebook.com/statisticsglobecom/
+
+
+
+{{% callout note %}}
+
+**Please, cite this work:**
+
+Schork, Joachim  (2022), “Predictive Mean Matching Imputation in R published at Open Code Community”, Mendeley Data, V1, doi: 10.17632/f83dd5h4kc.1
+
+{{% /callout %}}
+
