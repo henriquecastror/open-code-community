@@ -22,7 +22,6 @@ content:
   - Administration
   - Visitors
   - Alumni
-  - Fundadores
   - Colaboradores
   
   
