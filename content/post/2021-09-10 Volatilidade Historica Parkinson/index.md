@@ -34,6 +34,11 @@ authors:
 
 ---
 
+
+<a href="https://plu.mx/plum/a/?doi=10.17632%2F52wrtmtsrh.2" data-popup="right" data-size="large" class="plumx-plum-print-popup" data-site="plum" data-hide-when-empty="true">Volatilidade Histórica Parkinson published at the "Open Code Community"</a>
+
+
+
 Um questionamento que muito Jr. assim como eu já deve ter feito ao mensurar a volatilidade histórica: se analisarmos apenas o fechamento dos preços, perdemos dados da movimentação intradiária do papel, ou seja, se o preço de fechamento do ativo em D-1 foi 10 dinheiros, e o fechamento de hoje é 10 dinheiros a variação da vol é mínima dependendo do modelo que estiver utilizando.
 
 A próxima questão é: existe na literatura alguma forma de considerar a volatilidade intradiária? Sim, obviamente existe e há muito tempo.
