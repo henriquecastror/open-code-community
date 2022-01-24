@@ -167,3 +167,13 @@ Importando dados do IBOV para Benchmark.
 Podemos observar que a carteira estimada pela fronteira eficiente teve um desempenho melhor que a carteira de mercado, que no caso do estudo foi o Ibovespa.
 
     
+
+{{% callout note %}}
+
+**Please, cite this work:**
+
+Gomes, Victor (2022), “Fronteira Eficiente estimada por Python published at Open Code Community”, Mendeley Data, V1, doi: 10.17632/6dwbb293dw.1
+
+{{% /callout %}}
+
+
