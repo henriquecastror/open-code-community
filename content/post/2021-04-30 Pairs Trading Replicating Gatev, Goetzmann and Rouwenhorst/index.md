@@ -679,3 +679,14 @@ In this post, I replicate some results from the simple distance-based pairs trad
 
 
 
+
+
+
+{{% callout note %}}
+
+**Please, cite this work:**
+
+Rubesam, Alexandre (2022), “Pairs Trading: Replicating Gatev, Goetzmann and Rouwenhorst (2006) published at Open Code Community”, Mendeley Data, V1, doi: 10.17632/xz6c2bp5d8.1
+
+{{% /callout %}}
+
