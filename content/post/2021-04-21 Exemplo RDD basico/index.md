@@ -140,4 +140,10 @@ Aqui temos um caso bem simples e, acredito, bastante didático. Percebam que pod
 Abraços.
 
 
+{{% callout note %}}
+
+**Please, cite this work:**
+
+Martins, Henrique (2022), “Um breve exemplo de Regression Discontinuity Design (RDD) published at Open Code Community”, Mendeley Data, V1, doi: 10.17632/4442xbw5ws.1 
+{{% /callout %}}
 

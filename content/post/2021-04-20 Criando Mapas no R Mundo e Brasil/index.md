@@ -297,3 +297,13 @@ A parte mais divertida do code, a criação do gif.
 Esperamos que tenha gostado. Caso tenha algum code que julgue interessante, compartilhe conosco. Nosso trabalho depende necessariamente da interação da comunidade.
 
 Ps. Obrigado ao [Gabriel](https://www.linkedin.com/in/gabrielreisrodrigues/) por ter achado um typo em uma versão anterior do código desse post.
+
+
+{{% callout note %}}
+
+**Please, cite this work:**
+
+Junior, Gerson; Martins, Henrique (2022), “Criando Mapas no R: Mundo e Brasil published at Open Code Community”, Mendeley Data, V1, doi: 10.17632/xm5y8v33vn.1
+ 
+{{% /callout %}}
+
