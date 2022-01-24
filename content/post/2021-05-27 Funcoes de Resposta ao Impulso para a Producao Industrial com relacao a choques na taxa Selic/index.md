@@ -508,3 +508,14 @@ Engle, Robert F., and C. W. J. Granger. 1987. "Co-Integration and Error Correcti
 Johansen, Soren. 1991. "Estimation and Hypothesis Testing of Cointegration Vectors in Gaussian Vector Autoregressive Models." Econometrica 59 (6): 1551-80. https://ideas.repec.org/a/ecm/emetrp/v59y1991i6p1551-80.html.
 
 Lütkepohl, Helmut. 2006. New Introduction to Multiple Time Series Analysis. Springer Publishing Company, Incorporated.
+
+
+
+{{% callout note %}}
+
+**Please, cite this work:**
+
+Kaebi, Mohammed  (2022), “Funções de Resposta ao Impulso para a Produção Industrial com relação a choques na taxa Selic published at Open Code Community”, Mendeley Data, V1, doi: 10.17632/kr5gkryzyv.1
+
+{{% /callout %}}
+
