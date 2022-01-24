@@ -806,10 +806,4 @@ VocÃª poderÃ¡ encontrar alguns trabalhos e posts descrevendo o uso de matriz
 
 
 
-{{% callout note %}}
 
-**Please, cite this work:**
-
-Messias, Bruno (2022), "Variações do teorema central do limite para matrizes aleatórias: de núcleos atômicos a filtragem de matrizes de correlação published at the "Open Code Community"", Mendeley Data, V1, doi: 10.17632/jwykn349hp.1
-
-{{% /callout %}}
