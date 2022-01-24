@@ -129,3 +129,13 @@ Nossa próxima figura representa um exemplo de simulação com 10 caminhos poss�
 É importante notar que o vetor de probabilidades (a) é gerado aleatoriamente com uma distribuição uniforme. Isso significa que as seeds sugeridas anteriormente, resultaram em gráficos semelhantes aos apresentados neste post, mas não exatamente iguais a eles.
 
 Alterando os parâmetros dos modelos, podemos construir simulações com tendências de subida, por exemplo, utilizando pp <- 0.8. Um bom exercício é modificar os parâmetros e plotar os gráficos para entender como cada parâmetro influencia cada modelo.
+
+
+{{% callout note %}}
+
+**Please, cite this work:**
+
+Nascimento, Arnaldo (2022), “Passeio aleatório e Modelo binomial usando R published at Open Code Community”, Mendeley Data, V1, doi: 10.17632/bbz7kzw2j9.1
+
+{{% /callout %}}
+

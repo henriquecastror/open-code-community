@@ -184,3 +184,17 @@ It's clear that very high maximum DDs are common to almost all coins. In fact, n
 
 # Conclusion
 Cryptocurrencies experience extreme levels of drawdown. In this short post, we calculate the drawdown of the largest cryptocurrencies, using historical data from 2017. No cryptocurrency in the list has a maximum drawdown lower than 80%. In contrast, the recent correction in cryptos seems relatively low, with the most popular (and largest) cryptocurrencies, like Bitcoin, Ethereum, Binance Coin, and, well, Doge.     
+
+
+
+
+
+{{% callout note %}}
+
+**Please, cite this work:**
+
+Rubesam, Alexandre; Junior, Gerson (2022), “Drawdown in Cryptoland published at Open Code Community”, Mendeley Data, V1, doi: 10.17632/cc243c63h3.1
+
+{{% /callout %}}
+
+

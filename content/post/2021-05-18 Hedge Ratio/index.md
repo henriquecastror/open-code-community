@@ -158,3 +158,14 @@ Descriptions:
 - Geman, H. (2005). Commodities and commodity derivatives. In J. W. & Sons (Ed.), Modeling and Pricing for Agriculturals, Metals and … (p. 419). John Wiley \\& Sons.
 
 - Lien, D., Shrestha, K., & Wu, J. (2016). Quantile Estimation of Optimal Hedge Ratio. Journal of Futures Markets, 36(2), 194–214. https://doi.org/https://doi.org/10.1002/fut.21712
+
+
+
+{{% callout note %}}
+
+**Please, cite this work:**
+
+ Palazzi, Rafael (2022), “Hedge Ratio published at Open Code Community”, Mendeley Data, V1, doi: 10.17632/sccbtd2y29.1
+ 
+{{% /callout %}}
+
