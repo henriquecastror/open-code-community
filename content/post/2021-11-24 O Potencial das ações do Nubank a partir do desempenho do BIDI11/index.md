@@ -174,4 +174,14 @@ Mercado Americano o que pode alterar o comportamento entre os dois ativos.
 
 
 
+{{% callout note %}}
+
+**Please, cite this work:**
+
+Ziermann , Matheus; Damasceno, Bruno  (2022), "O Potencial das ações do Nubank a partir do desempenho do BIDI11 published at the "Open Code Community"", Mendeley Data, V1, doi: 10.17632/3cm6yts2vt.1
+
+{{% /callout %}}
+
+
+
 

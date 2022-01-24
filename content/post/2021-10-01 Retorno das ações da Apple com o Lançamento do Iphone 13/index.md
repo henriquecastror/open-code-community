@@ -168,3 +168,15 @@ Podemos concluir, a partir da análise do gráfico, que o ativo e o índice estu
 No caso do dia do lançamento do Iphone 13, estimou-se que, sem o evento, o retorno esperado do dia seria de -0,86%, mas considerando o evento o retorno efetivo das ações foi de -0,96%.
 Entretanto, esse é um fenômeno que vem ocorrendo nos lançamentos dos últimos anos. É verificado um momento de alta antes dos períodos de lançamento e um queda nas datas próximas ao evento, seguindo novamente com a elevação do preço das ações.
 	
+	
+	
+	
+
+{{% callout note %}}
+
+**Please, cite this work:**
+
+Ziermann , Matheus; Damasceno, Bruno  (2022), "Retorno das a��es da Apple com o Lan�amento do Iphone 13 published at "Open Code community"", Mendeley Data, V1, doi: 10.17632/ycrmpsbrtm.1	
+
+{{% /callout %}}
+
