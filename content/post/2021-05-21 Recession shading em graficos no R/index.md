@@ -162,3 +162,15 @@ Isso nos dá como output a imagem abaixo, que é exatamente o que nós desejavam
 <div align="center">
 {{< figure library="true" src="2.png" width="100%" >}}
 </div>
+
+
+
+
+{{% callout note %}}
+
+**Please, cite this work:**
+
+Queiroz, Felipe; Medeiros, David (2022), “Recession shading em gráficos no R published at Open Code Community”, Mendeley Data, V1, doi: 10.17632/32rhv5wdyc.1
+
+{{% /callout %}}
+

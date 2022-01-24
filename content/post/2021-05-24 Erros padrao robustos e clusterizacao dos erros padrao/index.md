@@ -123,3 +123,14 @@ Para clusterizar os erros-padrão em dois níveis, devemos especificar que desej
 
 {{< figure src="Fig5.png" width="100%" >}}  
 
+
+
+
+{{% callout note %}}
+
+**Please, cite this work:**
+
+Schwarz, Lucas (2022), “Erros padrão robustos e clusterização dos erros padrão published at Open Code Community”, Mendeley Data, V1, doi: 10.17632/mbss26gz5c.1
+
+{{% /callout %}}
+

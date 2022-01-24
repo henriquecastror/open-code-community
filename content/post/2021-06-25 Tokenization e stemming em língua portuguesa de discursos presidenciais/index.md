@@ -43,7 +43,7 @@ authors:
 <script type="text/javascript" src="//cdn.plu.mx/widget-popup.js"></script>
 
 
-<a href="https://plu.mx/plum/a/?doi=10.17632%2Fk5myphbwwj.1" data-popup="right" data-size="large" class="plumx-plum-print-popup" data-site="plum" data-hide-when-empty="true">Tokenization e stemming em l�ngua portuguesa de discursos presidenciais published at the &amp;quot;Open Code Community&amp;quot;</a>
+<a href="https://plu.mx/plum/a/?doi=10.17632%2Fk5myphbwwj.1" data-popup="right" data-size="large" class="plumx-plum-print-popup" data-site="plum" data-hide-when-empty="true">Tokenization e stemming em língua portuguesa de discursos presidenciais published at the &amp;quot;Open Code Community&amp;quot;</a>
 
 As premissas que constituem a vasta gama de modelos de *Machine
 Learning* e de *Deep Learning* foram trazidas para o ramo da linguística

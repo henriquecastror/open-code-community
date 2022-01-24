@@ -39,7 +39,7 @@ authors:
 
 <script type="text/javascript" src="//cdn.plu.mx/widget-popup.js"></script>
 
-<a href="https://plu.mx/plum/a/?doi=10.17632%2Fshktskbhgy.1" data-popup="right" data-size="large" class="plumx-plum-print-popup" data-site="plum" data-hide-when-empty="true">Shiny e banco de dados MySQL: Uma combina��o perfeita published at the &amp;quot;Open Code Community&amp;quot;</a>
+<a href="https://plu.mx/plum/a/?doi=10.17632%2Fshktskbhgy.1" data-popup="right" data-size="large" class="plumx-plum-print-popup" data-site="plum" data-hide-when-empty="true">Shiny e banco de dados MySQL: Uma combinação perfeita published at the &amp;quot;Open Code Community&amp;quot;</a>
 
 Primeiramente é preciso deixar seu banco de dados remoto. É possível criar uma conta e hospedar gratuitamente por aqui: https://www.freemysqlhosting.net/.
 
