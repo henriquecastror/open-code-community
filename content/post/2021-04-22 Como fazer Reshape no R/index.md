@@ -75,5 +75,18 @@ E depois retornando - reshape wide to long
 
     df_pivt_long = df_pivot_wide  %>% pivot_longer(!DT_FIM_EXERC & !DENOM_CIA , names_to = "DS_CONTA", values_to = "VL_CONTA")
 
+
+
+
+
 {{< figure src="1.png" width="70%" >}}
 
+
+
+{{% callout note %}}
+
+**Please, cite this work:**
+
+Junior, Gerson (2022), “Como fazer Reshape no R - um exemplo com os dados da DR published at Open Code Community”, Mendeley Data, V1, doi: 10.17632/k56m9ft4tb.1
+
+{{% /callout %}}

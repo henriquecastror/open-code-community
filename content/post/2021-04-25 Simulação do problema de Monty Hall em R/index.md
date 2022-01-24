@@ -133,3 +133,14 @@ Visualização gráfica (utilizando ggplot2)
     
    
 {{< figure src="1.png" width="80%" >}}    
+
+
+
+
+{{% callout note %}}
+
+**Please, cite this work:**
+
+Boechat, Gabriel (2022), “Simulação do problema de Monty Hall em R published at Open Code Community”, Mendeley Data, V1, doi: 10.17632/99j87z3g52.1
+
+{{% /callout %}}

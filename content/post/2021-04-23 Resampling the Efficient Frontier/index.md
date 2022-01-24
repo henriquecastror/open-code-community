@@ -381,3 +381,13 @@ Does resampling help in terms of increasing the diversification along the effici
 
 This article illustrates two issues associated with mean-variance portfolio optimization. First, the portfolios tend to be extremely concentrated in only a few assets. Second, the efficient frontier is unstable when the sample period used to estimate the parameters changes, which is shown by comparing the efficient frontiers before and after the start of the Covid-19 crisis. A resampling method, which has been proposed to produce more robust estimates of the efficient frontier, is illustrated using simulations from a normal distribution or from historical returns. The resampled efficient frontier is obtained by averaging the weights obtained with each simulated sample. The resampled frontiers obtained with the two resampling methods in this example are similar, and much more diversified than the efficient frontier obtained using the full sample.
 
+
+
+{{% callout note %}}
+
+**Please, cite this work:**
+
+Rubesam, Alexandre (2022), “Resampling the Efficient Frontier: An Illustration During the Codiv-19 Pandemic published at Open Code Community”, Mendeley Data, V1, doi: 10.17632/2m3b5wx526.1
+
+{{% /callout %}}
+
