@@ -181,3 +181,14 @@ Finally, it is important to recognize that something is missing in this exercise
 I hope you like this exercise. Let me know if you have any questions.
 
 Thanks for passing by.
+
+
+
+{{% callout note %}}
+
+**Please, cite this work:**
+
+Martins, Henrique (2022), “Thinking about Randomization published at Open Code Community”, Mendeley Data, V1, doi: 10.17632/2ttnmmss6p.1
+
+{{% /callout %}}
+

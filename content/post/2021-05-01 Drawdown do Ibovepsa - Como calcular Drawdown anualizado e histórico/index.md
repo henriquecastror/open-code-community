@@ -105,3 +105,15 @@ Plotando o gráfico.
     
 {{< figure src="1.png" width="80%" >}}
 
+
+
+
+{{% callout note %}}
+
+**Please, cite this work:**
+
+Junior, Gerson (2022), “Drawdown do Ibovepsa - Como calcular Drawdown anualizado e histórico published at Open Code Community”, Mendeley Data, V1, doi: 10.17632/9y6pzn8vyr.1
+
+{{% /callout %}}
+
+
