@@ -107,3 +107,16 @@ O ponto azul mostra a substituição do outlier, as linhas vermelhas mostram a s
 O post em inglês se encontra no link:
 https://robjhyndman.com/hyndsight/tsoutliers/
 s/
+
+
+
+{{% callout note %}}
+
+**Please, cite this work:**
+
+Hyndman, Rob (2022), “Detecting time series outliers published at Open Code Community”, Mendeley Data, V1, doi: 10.17632/3wgnjs79yc.1
+
+
+{{% /callout %}}
+
+
