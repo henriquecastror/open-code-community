@@ -104,3 +104,15 @@ Se filtrar TRUE em LastFridayInMonth você obterá o df de todos as sextas-feira
 
 
 * Vale a pena entrar no grupo do facebook e do telegram do R programadores. Aprendi muito lá.
+
+
+
+
+{{% callout note %}}
+
+**Please, cite this work:**
+
+Junior, Gerson (2022), “Como extrair um dia da semana, último dia do mês de um vetor de datas published at Open Code Community”, Mendeley Data, V1, doi: 10.17632/yw784dxt42.1
+
+{{% /callout %}}
+

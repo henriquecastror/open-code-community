@@ -168,3 +168,15 @@ Data frame contendo média dos retornos diários e volatilidade para todos os pa
 {{< figure src="3.png" width="80%" >}}
 
 Exemplo de análise: podemos observar que RADL3 apresentou um retorno médio maior com uma vol menor que CSNA3. Logicamente, apresentando uma melhor relação risco-retorno que CSNA3. 
+
+
+
+{{% callout note %}}
+
+**Please, cite this work:**
+
+Gomes, Victor (2022), “Análise de risco e retorno de ações usando o R published at Open Code Community”, Mendeley Data, V1, doi: 10.17632/gvjmvbng8k.1
+
+{{% /callout %}}
+
+

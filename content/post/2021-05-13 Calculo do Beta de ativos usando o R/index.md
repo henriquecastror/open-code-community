@@ -264,4 +264,16 @@ O processo acima pode ser consolidado em uma função de fácil utilização.
     }
     
     calculo.beta(ativo = 'PETR4.SA', bmk = 'BOVA11.SA', inicio = '2015-01-01', plot = TRUE)
+
+
+
+
+
+{{% callout note %}}
+
+**Please, cite this work:**
+
+Queiroz, Felipe; Medeiros, David (2022), “Cálculo do Beta de ativos usando o R published at Open Code Community”, Mendeley Data, V1, doi: 10.17632/6sp77xd578.1
+
+{{% /callout %}}
     
