@@ -1,10 +1,10 @@
 ---
 
-title: "Beta calculado por Rolling Regression e por grupos (mês, ano)."
+title: "Beta calculado por Rolling Regression e por grupos (mÃªs, ano)."
 
 categories: []
 
-date: '2022-31-01T00:00:00Z' 
+date: '2022-30-01T00:00:00Z' 
 
 draft: no
 
@@ -25,7 +25,7 @@ summary: null
 
 tags: 
 - CAPM
-- Finance3
+- Finance
 
 authors:
 - GersonJunior
@@ -33,10 +33,10 @@ authors:
 
 ---
 
-Há diversas críticas ao modelo CAPM. Uma crítica se deve ao beta ser estático. Para contornar essa limitação, apresentamos 2 tipos de regressão no post.
+HÃ¡ diversas crÃ­ticas ao modelo CAPM. Uma crÃ­tica se deve ao beta ser estÃ¡tico. Para contornar essa limitaÃ§Ã£o, apresentamos 2 tipos de regressÃ£o no post.
 
-1) Beta por rolling regression - Utilizamos uma janela de X dados de observação e façamos uma regressão linear com dados dessa janela obtendo um beta (dados da observação 1 até X), a partir daí andamos 1 passo e regredimos mais uma vez (dados da observação 2 até  X+1) e assim sucessivamente. 
-2) Calculamos o beta por mês, semestre ou ano.
+1) Beta por rolling regression - Utilizamos uma janela de X dados de observaÃ§Ã£o e faÃ§amos uma regressÃ£o linear com dados dessa janela obtendo um beta (dados da observaÃ§Ã£o 1 atÃ© X), a partir daÃ­ andamos 1 passo e regredimos mais uma vez (dados da observaÃ§Ã£o 2 atÃ©  X+1) e assim sucessivamente. 
+2) Calculamos o beta por mÃªs, semestre ou ano.
 
 Primeiramente iremos carregar as bibliotecas.
 
@@ -51,7 +51,7 @@ Iremos baixar os dados (biblioteca quantmod) do Ibovespa e do PETR4:
     getSymbols("^BVSP", from = "2014-01-01" )
     getSymbols("PETR4.SA", from = "2014-01-01")
 
-Os dados baixados são em formato XTS e há diversos dados (ohlcv e adjusted - Open, High, Low, Close, Volume e o preço ajustado). Como queremos trabalhar com apenas com o preço ajustado e no formato data.frame, será necessário realizar os passos abaixo.
+Os dados baixados sÃ£o em formato XTS e hÃ¡ diversos dados (ohlcv e adjusted - Open, High, Low, Close, Volume e o preÃ§o ajustado). Como queremos trabalhar com apenas com o preÃ§o ajustado e no formato data.frame, serÃ¡ necessÃ¡rio realizar os passos abaixo.
 
     BVSP = data.frame(BVSP)
     BVSP = BVSP %>% select(Ibov = BVSP.Adjusted) %>%
@@ -63,7 +63,7 @@ Os dados baixados são em formato XTS e há diversos dados (ohlcv e adjusted - Ope
       mutate(date = rownames(PETR4)) %>%
       filter(!is.na(Petr4))
 
-Juntando os dois data.frames em um data.frame único e criando vetores dos retornos
+Juntando os dois data.frames em um data.frame Ãºnico e criando vetores dos retornos
 
     All_data = inner_join(PETR4,BVSP, by="date")
     All_data = All_data %>% mutate(Return_petr4 = Petr4/lag(Petr4,1)-1, 
@@ -79,9 +79,9 @@ Fazendo o roling regression nos passos a seguir:
                date_col = select(., date))) %>%
       ungroup 
 
-O argumento 100 nos diz que queremos que a janela seja 100 observações para cada regressão, e estamos regreindo o retorno da petrobras contra o retorno do Ibovespa.
+O argumento 100 nos diz que queremos que a janela seja 100 observaÃ§Ãµes para cada regressÃ£o, e estamos regreindo o retorno da petrobras contra o retorno do Ibovespa.
 
-Observe que o obtemos o valor do intercepto (alpha) e do beta. Mas queremos apenas plotar o beta, por isso estaremos filtrando os dados para beta e plotaremos em um gráfico utilizando o ggplot2. 
+Observe que o obtemos o valor do intercepto (alpha) e do beta. Mas queremos apenas plotar o beta, por isso estaremos filtrando os dados para beta e plotaremos em um grÃ¡fico utilizando o ggplot2. 
 
     Beta_alpha = Beta_alpha %>% filter(!is.na(`reg_col.(Intercept)`)) %>%
       select(date,beta = reg_col.Return_ibov)
@@ -94,7 +94,7 @@ Observe que o obtemos o valor do intercepto (alpha) e do beta. Mas queremos apen
 
 {{< figure src="1.png" width="80%" >}}
 
-Abaixo iremos fazer a regressão do beta mês a mês e iremos plotar o gráfico do beta.
+Abaixo iremos fazer a regressÃ£o do beta mÃªs a mÃªs e iremos plotar o grÃ¡fico do beta.
 
     Beta_alpha_month = All_data %>% group_by(Yearmon = as.yearmon(date)) %>%
       do(Month_regression = tidy(lm(Return_petr4 ~ Return_ibov, data = .))) %>%
@@ -111,7 +111,7 @@ Abaixo iremos fazer a regressão do beta mês a mês e iremos plotar o gráfico do b
 {{< figure src="1.png" width="80%" >}}
 
 
-Esse post pode ser bastante utilizado em TCC'S, abordando diferenças entre os betas estáticos e betas dinâmicos. 
+Esse post pode ser bastante utilizado em TCC'S, abordando diferenÃ§as entre os betas estÃ¡ticos e betas dinÃ¢micos. 
 
 
 
