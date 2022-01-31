@@ -36,10 +36,6 @@ education:
 # Social/Academic Networking
 
 #social:
-#- icon: browser
-#  icon_pack: fas
-#  link: https://henriquemartins.net/
-  
 - icon: envelope
   icon_pack: fas
   link: 'mailto:jo.viniciuspc@gmail.com'
