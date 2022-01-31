@@ -53,5 +53,5 @@ user_groups:
 
 ---
 
-Atualmente, sou estudande de graduação em Administração com ênfase na área de finanças e programação para finanças. Tenho interesse em Finanças Corporativas, Mercado de Capitais, Fusões e Aquisições e Valuation.
+Atualmente, sou estudante de graduação em Administração com ênfase na área de finanças e programação para finanças. Tenho interesse em Finanças Corporativas, Mercado de Capitais, Fusões e Aquisições e Valuation.
 
