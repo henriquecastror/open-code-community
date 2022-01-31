@@ -1,6 +1,6 @@
 ---
 # Display name
-title: Vinicius Palmezan (since 2021/03)
+title: Vinicius Palmezan (since 2022/01)
  
 # Username (this should match the folder name)
 authors:
@@ -15,7 +15,7 @@ role: Estudande de graduação em Administração
 # Organizations/Affiliations
 organizations:
 - name: Fundação Getúlio Vargas (FGV/EAESP)
-  url: 
+  url: https://eaesp.fgv.br/
   
 # Short bio (displayed in user profile at end of posts)
 bio:
