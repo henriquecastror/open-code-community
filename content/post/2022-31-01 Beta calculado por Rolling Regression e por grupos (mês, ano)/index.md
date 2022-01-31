@@ -33,7 +33,7 @@ authors:
 
 ---
 
-Há diversas críticas ao modelo CAPM. Uma crítica se deve ao beta ser estático. Para contornar essa limitação, apresentamos 2 tipos de regressão no post.
+Há diversas críticas ao modelo CAPM. Uma crítica se deve ao beta ser estático. Para contornar essa limitação, apresentamos 2 alternativas nesse post.
 
 1) Beta por rolling regression - Utilizamos uma janela de X dados de observação e façamos uma regressão linear com dados dessa janela obtendo um beta (dados da observação 1 até X), a partir daí andamos 1 passo e regredimos mais uma vez (dados da observação 2 até  X+1) e assim sucessivamente. 
 2) Calculamos o beta por mês, semestre ou ano.
