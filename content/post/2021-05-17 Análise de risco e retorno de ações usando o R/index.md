@@ -37,7 +37,9 @@ authors:
 ##  Análise de risco e retorno de ações usando o R
 
 Nesse post iremos analisar a relação de risco e retorno de ações usando o R. A teoria de finanças prediz que quanto maior o risco de uma empresa, maior será seu retorno. Mas será que essa relação é verificada nos dados? 
+
 Nesse post iremos aprender:
+
 1) Baixar dados das empresas do pacote quantmod (pacote já utilizado anteriomente).
 2) Mudança de xts para dataframe.
 3) Realizar uma função para completar NA's ('forward filling').
@@ -139,7 +141,7 @@ Data prep para plotar várias ações normalizadas em apenas um gráfico.
 
 {{< figure src="2.png" width="80%" >}}
 
-##Plot de Retorno vs. Risco
+## Plot de Retorno vs. Risco
 Calculando retorno diário dos papéis  .                              
 
     retornos_carteira = na.omit(ROC(nova_carteira))
