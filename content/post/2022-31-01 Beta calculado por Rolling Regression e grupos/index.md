@@ -4,7 +4,7 @@ title: "Beta calculado por Rolling Regression e por grupos (mês, ano)."
 
 categories: []
 
-date: '2022-30-01T00:00:00Z' 
+date: '2022-30-01' 
 
 draft: no
 
