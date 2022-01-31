@@ -108,11 +108,7 @@ Abaixo iremos fazer a regressão do beta mês a mês e iremos plotar o gráfico 
                    date_labels = "%Y")+
       ggtitle("PETR4 - Beta Rolling Window (100 observations)")
       
-{{< figure src="1.png" width="80%" >}}
+{{< figure src="2.png" width="80%" >}}
 
 
 Esse post pode ser bastante utilizado em TCC'S, abordando diferenças entre os betas estáticos e betas dinâmicos. 
-
-
-
-{{% callout note %}}
