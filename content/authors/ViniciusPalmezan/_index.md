@@ -10,7 +10,7 @@ authors:
 superuser: false
 
 # Role/position
-role: Estudande de graduação em Administração
+role: Estudante de graduação em Administração
 
 # Organizations/Affiliations
 organizations:
