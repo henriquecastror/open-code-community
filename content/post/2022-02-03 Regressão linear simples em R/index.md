@@ -1,30 +1,40 @@
 ---
+
 title: "Regresão linear simples usando R"
+
 categories: []
-date: '2022-02-02'
-output:
-  html_document: default
-  word_document: default
-  pdf_document: default
+
+date: '2022-02-03' 
+
+draft: no
+
 featured: no
+
 gallery_item: null
+
 image:
-  caption: null
+  caption: 
   focal_point: Top
   preview_only: no
+
 projects: []
+
 subtitle: null
+
 summary: null
-tags:
+
+tags: 
 - Open Data
 - R
 - Regressão linear
 - Beta
-authors: ViniciusPalmezan, HenriqueCastroMartins
-draft: no
+
+authors:
+- ViniciusPalmezan
+- HenriqueCastroMartins
+
+
 ---
-
-
 
 
 ## Introdução
