@@ -49,7 +49,7 @@ O post de hoje continuará apresentando conceitos básicos de regressão linear 
 
 Seguindo a linha da primeira publicação, continuaremos usando os dados de retorno sobre patrimônio líquido e os salários de CEOs da base ceosal1 do Wooldridge.
 
-Seguindo o exemplo 2.6 do livro, calcularemos o erro de cada observação e observaremos que esse erro varia individualmente entre as diferentes observações de ($x$).
+Seguindo o exemplo 2.6 do livro, calcularemos o erro de cada observação e observaremos que esse erro varia individualmente entre as diferentes observações de $x$.
 
 
     #base de dados
@@ -74,7 +74,7 @@ Seguindo o exemplo 2.6 do livro, calcularemos o erro de cada observação e obse
 {{< figure src="img1.png" width="80%" >}}
 
 
-Essa tabela nos ajuda a perceber que, para cada par $x-y$ de observação, temos um valor de erro específico $u_prev$. Também para cada valor de $x$, temos um valor projetado para $y$, isto é, $salario_prev$. 
+Essa tabela nos ajuda a perceber que, para cada par $x-y$ de observação, temos um valor de erro específico $u_{prev}$. Também para cada valor de $x$, temos um valor projetado para $y$, isto é, $salario_{prev}$. 
 
 
 
@@ -101,7 +101,7 @@ $$\sum_{i=1}^n\hat{u}_i=0$$
 
 ### Propriedade 2
 
-Além disso, caso pluguemos o valor médio de $x$, i.e., $\bar{x}$ no modelo de regressão, vamos achar o valor médio de $y$, i.e., $\bar{y}$..
+Além disso, caso pluguemos o valor médio de $x$, i.e., $\bar{x}$, no modelo de regressão, vamos achar o valor médio de $y$, i.e., $\bar{y}$.
 
 
 
@@ -114,7 +114,7 @@ $$\bar{y} = \hat\beta_0+\hat\beta_1.\bar{x}$$
 ## Demostração das propriedades
 
 
-abaixo, fazemos a demostração dessas duas propriedades utilizando os dados.
+Abaixo, demonstramos essas duas propriedades.
 
     data(wage1, package='wooldridge')
   
