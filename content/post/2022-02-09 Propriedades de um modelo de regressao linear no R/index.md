@@ -1,6 +1,6 @@
 ---
 
-title: "Analisando e validando um modelo de regressão linear no R."
+title: "Propriedades de um modelo de regressão linear no R"
 
 categories: []
 
@@ -40,7 +40,7 @@ authors:
 
 ## Introdução
 
-O post de hoje continuará usando os conceitos de regressão linear simples aprofundando-se tanto em suas restrições e analises quanto em previsões e erros do modelo. Vamos seguir com exemplos do cap. 2 do livro do  [Wooldridge](https://www.amazon.com.br/Introductory-Econometrics-Approach-Jeffrey-Wooldridge/dp/1337558869/ref=asc_df_1337558869/?tag=googleshopp00-20&linkCode=df0&hvadid=379712558847&hvpos=&hvnetw=g&hvrand=11053193378485117055&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=1001655&hvtargid=pla-551566270772&psc=1). 
+O post de hoje continuará apresentando conceitos básicos de regressão linear simples. Vamos seguir com exemplos do cap. 2 do livro do  [Wooldridge](https://www.amazon.com.br/Introductory-Econometrics-Approach-Jeffrey-Wooldridge/dp/1337558869/ref=asc_df_1337558869/?tag=googleshopp00-20&linkCode=df0&hvadid=379712558847&hvpos=&hvnetw=g&hvrand=11053193378485117055&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=1001655&hvtargid=pla-551566270772&psc=1). 
 
 
 
@@ -71,7 +71,7 @@ Seguindo o exemplo 2.6 do livro, calcularemos o erro de cada observação e obse
     
     cbind(roe, salario, salario_prev, u_prev)[1:10,]
 
-{{< figure src="img1.png" width="100%" >}}
+{{< figure src="img1.png" width="80%" >}}
 
 
 Essa tabela nos ajuda a perceber que, para cada par $x-y$ de observação, temos um valor de erro específico $u_prev$. Também para cada valor de $x$, temos um valor projetado para $y$, isto é, $salario_prev$. 
@@ -99,7 +99,7 @@ $$\sum_{i=1}^n\hat{u}_i=0$$
 
 
 
-### Propriedade 3
+### Propriedade 2
 
 Além disso, caso pluguemos o valor médio de $x$, i.e., $\bar{x}$ no modelo de regressão, vamos achar o valor médio de $y$, i.e., $\bar{y}$..
 
@@ -139,7 +139,7 @@ abaixo, fazemos a demostração dessas duas propriedades utilizando os dados.
     beta_prev[1] + beta_prev[2] * mean(educ)
 
 
-{{< figure src="img2.png" width="100%" >}}
+{{< figure src="img2.png" width="80%" >}}
 
 
 
