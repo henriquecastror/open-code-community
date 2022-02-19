@@ -142,6 +142,6 @@ Abaixo, demonstramos essas duas propriedades.
 {{< figure src="img2.png" width="80%" >}}
 
 
-
+Esperamos que esse material introdutório seja útil! 
 
 
