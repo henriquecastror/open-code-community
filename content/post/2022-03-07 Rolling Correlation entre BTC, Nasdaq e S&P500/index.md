@@ -4,7 +4,7 @@ title: "Rolling Correlation entre BTC - S&P500 e BTC-Nasdaq"
 
 categories: []
 
-date: '2021-03-06T00:00:00Z' 
+date: '2022-03-06T00:00:00Z' 
 
 draft: no
 
