@@ -1,10 +1,10 @@
 ---
-  
-  title: "Rolling Correlation de BTC contra S&P500 e Nasdaq"
+
+title: "Drawdown do Ibovepsa - Como calcular Drawdown anualizado e histórico"
 
 categories: []
 
-date: '2022-03-07T00:00:00Z' 
+date: '2021-05-01T00:00:00Z' 
 
 draft: no
 
@@ -15,7 +15,7 @@ gallery_item: null
 image:
   caption: 
   focal_point: Top
-preview_only: no
+  preview_only: no
 
 projects: []
 
@@ -24,12 +24,12 @@ subtitle: null
 summary: null
 
 tags: 
-- Crypto
-- Correlation
-- Ggplot
+- Open Data
+- Drawdown
+- Asset Allocation
 
 authors:
-  - GersonJunior
+- GersonJunior
 
 
 ---
