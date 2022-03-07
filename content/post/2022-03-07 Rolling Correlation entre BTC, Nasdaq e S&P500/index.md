@@ -35,14 +35,14 @@ authors:
 ---
 Há uma discussão do aumento da correlação do BTC contra S&P500 e Nasdaq. O próposito desse exercício é verificar se esse aumento é verídico e montar um script para acompanhamento da correlação.
 
-Primeiramente iremos carregar os pacotes, nesse script, nós usaremos o dplyr, importante para tratamento de dados; Quantmod para baixar a base de dados do Yahoo Finance; Ggplot para fazer gráficos. Inclusive para o ggplot, eu recomendo o [post](https://opencodecom.net/post/2021-08-22-introducao-ao-ggplot2/) de introdução ao ggplot2. 
-Primeiro passo é carregra as bibliotecas.
+Primeiramente iremos carregar os pacotes, nesse script, nós usaremos o dplyr, importante para tratamento de dados; Quantmod para baixar a base de dados do Yahoo Finance; Ggplot2 para fazer gráficos. Inclusive para o ggplot2, eu recomendo o [post](https://opencodecom.net/post/2021-08-22-introducao-ao-ggplot2/) de introdução ao ggplot2. 
+Primeiro passo é carregar as bibliotecas.
  
     library(dplyr)
     library(quantmod)
     library(ggplot2)
 
-Depois de carregado as bibliotecas, iremos usar a função getSymbols para baixar os dados. Para saber o code para baixar os dados, é só olhar no próprio site do yahoo, como no exemplo do BTC, ao entrar no [site](https://finance.yahoo.com/quote/BTC-USD?p=BTC-USD&.tsrc=fin-srch), verificamos que o code do BTC é BTC-USD, ou seja, Bitcoin denotado em Dólar.
+Depois de carregado as bibliotecas, iremos usar a função getSymbols para baixar os dados. Para saber o code para baixar os dados, é só olhar no próprio site do Yahoo Finance, como no exemplo do BTC, ao entrar no [site](https://finance.yahoo.com/quote/BTC-USD?p=BTC-USD&.tsrc=fin-srch), verificamos que o code do BTC é BTC-USD, ou seja, Bitcoin denotado em Dólar.
 
     getSymbols("BTC-USD")
     getSymbols("^GSPC")
