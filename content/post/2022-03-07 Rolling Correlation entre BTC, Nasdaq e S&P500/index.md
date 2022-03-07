@@ -98,13 +98,13 @@ Com os vetores no data.frame, é só realizarmos os plots. Note que no segundo g
 
     ggplot(Data, aes(data)) +  geom_line(aes(y = cor_btc_sp, colour = "Correlation")) +
     geom_line(aes(y = mean(cor_btc_sp, na.rm= T), colour = "Mean Correlation")) +  theme_bw() + 
-    ggtitle("Rolling Correlation BTC vs S&P500 - 30 obsservations")
+    ggtitle("Rolling Correlation BTC vs S&P500 - 30 observations")
 
 {{< figure src="1.png" width="80%" >}}
 
     ggplot(Data, aes(data)) +  geom_line(aes(y = cor_btc_nasdaq, colour = "Correlation")) +
     geom_line(aes(y = mean(cor_btc_nasdaq, na.rm= T), colour = "Mean Correlation")) +  theme_bw() + 
-    ggtitle("Rolling Correlation BTC vs Nasdaq - 30 obsservations")
+    ggtitle("Rolling Correlation BTC vs Nasdaq - 30 observations")
 
 {{< figure src="2.png" width="80%" >}}
 
