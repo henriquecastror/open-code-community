@@ -4,7 +4,7 @@ title: "Rolling Correlation entre BTC - S&P500 e BTC-Nasdaq"
 
 categories: []
 
-date: '2021-03-07T00:00:00Z' 
+date: '2021-03-06T00:00:00Z' 
 
 draft: no
 
@@ -69,7 +69,7 @@ Abaixo iremos criar um vetor (coluna), chamada data para os nomes das linhas, se
                            return_nasdaq = IXIC.Adjusted/lag(IXIC.Adjusted,1)-1) %>%
     select(data,return_nasdaq )
 
-Temos 3 data.frames para os dados de BTC, S&P500  e Nasdaq. Agora irei juntar esses data.frames em um data.frame único (chamado Data). Note que estamos usando inner_join, para entender a diferença, segue o pai de quem progama,stackoverflow explicando a [diferença] (https://stackoverflow.com/questions/5706437/whats-the-difference-between-inner-join-left-join-right-join-and-full-join#:~:text=INNER%20JOIN%3A%20returns%20rows%20when,matches%20in%20the%20left%20table.). É importante usar inner_join e não left_join, pois BTC tem dados para todos os dias, e os outros 2 apenas dias úteis, se fizermos left_join, terá varios NA's no vetor do retorno da Nasdaq e S&P500.
+Temos 3 data.frames para os dados de BTC, S&P500  e Nasdaq. Agora irei juntar esses data.frames em um data.frame único (chamado Data). Note que estamos usando inner_join, para entender a diferença, segue o pai de quem progama,stackoverflow explicando a [diferença](https://stackoverflow.com/questions/5706437/whats-the-difference-between-inner-join-left-join-right-join-and-full-join#:~:text=INNER%20JOIN%3A%20returns%20rows%20when,matches%20in%20the%20left%20table.). É importante usar inner_join e não left_join, pois BTC tem dados para todos os dias, e os outros 2 apenas dias úteis, se fizermos left_join, terá varios NA's no vetor do retorno da Nasdaq e S&P500.
 
     Data = inner_join(BTC,SP500, by = "data")
     Data = inner_join(Data,Nasdaq, by = "data")
