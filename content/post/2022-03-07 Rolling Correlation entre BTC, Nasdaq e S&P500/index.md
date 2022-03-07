@@ -31,8 +31,8 @@ tags:
 authors:
 - GersonJunior
 
-
 ---
+
 Há uma discussão do aumento da correlação do BTC contra S&P500 e Nasdaq. O próposito desse exercício é verificar se esse aumento é verídico e montar um script para acompanhamento da correlação.
 
 Primeiramente iremos carregar os pacotes, nesse script, nós usaremos o dplyr, importante para tratamento de dados; Quantmod para baixar a base de dados do Yahoo Finance; Ggplot2 para fazer gráficos. Inclusive para o ggplot2, eu recomendo o [post](https://opencodecom.net/post/2021-08-22-introducao-ao-ggplot2/) de introdução ao ggplot2. 
