@@ -74,7 +74,7 @@ Supondo que uma pessoa compre um título por 1000 reais e ele renda 15% ao ano, 
     #valor futuro 2, para um ano
     (fv2 <- (pv*(1+r)^2))
 
-{{< figure src="img1.png" width="60%" >}}
+{{< figure src="img1.png" width="80%" >}}
 
 
 
@@ -133,7 +133,7 @@ Suponha que exista um bond com valor de face de 1000, coupon de 10% e a maturity
     #vendo o data frame
     view(fc)
 
-{{< figure src="img3.png" width="60%" >}}
+{{< figure src="img3.png" width="50%" >}}
 
 
 
@@ -151,7 +151,7 @@ Sendo a taxa de desconto 5%.
     #soma dos fluxos de caixa, ou seja, quanto vale 0 bond.
     sum(fc$vp)
 
-{{< figure src="img4.png" width="60%" >}}
+{{< figure src="img4.png" width="65%" >}}
     
   
   
@@ -176,7 +176,7 @@ Podemos criar uma função para apenas adicionar os parâmetros e calcular quant
     
     calculadora(1000,0.1,5,0.05)
 
-{{< figure src="img5.png" width="60%" >}}
+{{< figure src="img5.png" width="65%" >}}
 
 
 
@@ -202,7 +202,7 @@ Primeiro vamos pegar o yield de um bond classificado com rating AAA e outro com 
     aaa_yield <- aaa_yield$Value / 100
     aaa_yield
 
-{{< figure src="img6.png" width="60%" >}}
+{{< figure src="img6.png" width="65%" >}}
 
     # pegando a base de dados
     baa <- Quandl('FED/RIMLPBAAR_N_M')
@@ -213,7 +213,7 @@ Primeiro vamos pegar o yield de um bond classificado com rating AAA e outro com 
     baa_yield <- baa_yield$Value / 100
     baa_yield
     
-{{< figure src="img7.png" width="60%" >}}
+{{< figure src="img7.png" width="65%" >}}
 
 Como demonstrado um título BAA tem um yield maior já que a ele possui um risco menor. 
 
@@ -233,13 +233,13 @@ Calculando valor da bond classificada como AAA:
 
     calculadora(1000,0.1,5,aaa_yield)
 
-{{< figure src="img8.png" width="60%" >}}
+{{< figure src="img8.png" width="65%" >}}
 
 Calculando valor da bond classificada como BAA:
 
     calculadora(1000,0.1,5,baa_yield)
     
-{{< figure src="img9.png" width="60%" >}}
+{{< figure src="img9.png" width="65%" >}}
 
 
 
@@ -277,7 +277,7 @@ A seguir, para entender o comportamento do preço com uma variação no yield pl
     ggplot(data=yields, aes(x=yields)) + geom_line(aes(y=preço1, colour='red')) + geom_line(aes(y=preço2, colour='blue')) + geom_point(aes(y=preço1, colour='red')) + geom_point(aes(y=preço2, colour='blue')) + theme_modern_rc() + labs(x='Yields',
     y='Valor',title = 'Titulos com diferentes maturidades')
 
-{{< figure src="img10.png" width="100%" >}}
+{{< figure src="img10.png" width="80%" >}}
 
 O título representado pela linha  vermelha possi 5 anos de maturidade e o representado pela linha azul possui 20. 
 
@@ -289,7 +289,7 @@ Podemos notar que o preço dos títulos se comportam de forma diferente para var
 
 
 
-## Usando yields mais atuais das bonds
+## Usando yields mais atuais dos bonds
 
 O código a seguir mostra como conseguir uma base de dados mais atual dos yields.
 
@@ -314,7 +314,7 @@ O código a seguir mostra como conseguir uma base de dados mais atual dos yields
     
     calculadora(1000,0.0,5,yield)
 
-{{< figure src="img12.png" width="60%" >}}
+{{< figure src="img12.png" width="65%" >}}
 
 
 
@@ -460,7 +460,7 @@ $$
     #calculando a modified duration
     (MD <- dur/(1+yield))
 
-{{< figure src="img16.png" width="60%" >}}
+{{< figure src="img16.png" width="65%" >}}
 
 
 
