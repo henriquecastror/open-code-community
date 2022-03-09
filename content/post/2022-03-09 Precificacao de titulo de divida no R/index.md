@@ -4,7 +4,7 @@ title: "Precificação de títulos de dívida no R"
 
 categories: []
 
-date: '2020-03-09' 
+date: '2022-03-09' 
 
 draft: no
 
@@ -74,7 +74,7 @@ Supondo que uma pessoa compre um título por 1000 reais e ele renda 15% ao ano, 
     #valor futuro 2, para um ano
     (fv2 <- (pv*(1+r)^2))
 
-{{< figure src="img1.png" width="100%" >}}
+{{< figure src="img1.png" width="60%" >}}
 
 
 
@@ -91,7 +91,7 @@ Fica claro que o tempo é uma variável importante na equação.
     #valor presente 2
     (pv2 <- (fv2/(1+i)^2))
 
-{{< figure src="img2.png" width="100%" >}}
+{{< figure src="img2.png" width="60%" >}}
 
 Apesar de, em ambos os casos, os recebimentos no futuro serem maior quando trazidos a valor presente, eles justamente são menores quando trazidos a valor presente. 
 
@@ -133,7 +133,7 @@ Suponha que exista um bond com valor de face de 1000, coupon de 10% e a maturity
     #vendo o data frame
     view(fc)
 
-{{< figure src="img3.png" width="100%" >}}
+{{< figure src="img3.png" width="60%" >}}
 
 
 
@@ -148,10 +148,10 @@ Sendo a taxa de desconto 5%.
     
     fc$vp <- fc$fc/(1+r)^fc$ano  
     
-    #soma dos fluxos de caixa, ou seja, quanto vale a bond.
+    #soma dos fluxos de caixa, ou seja, quanto vale 0 bond.
     sum(fc$vp)
 
-{{< figure src="img4.png" width="100%" >}}
+{{< figure src="img4.png" width="60%" >}}
     
   
   
@@ -176,7 +176,7 @@ Podemos criar uma função para apenas adicionar os parâmetros e calcular quant
     
     calculadora(1000,0.1,5,0.05)
 
-{{< figure src="img5.png" width="100%" >}}
+{{< figure src="img5.png" width="60%" >}}
 
 
 
@@ -202,7 +202,7 @@ Primeiro vamos pegar o yield de um bond classificado com rating AAA e outro com 
     aaa_yield <- aaa_yield$Value / 100
     aaa_yield
 
-{{< figure src="img6.png" width="100%" >}}
+{{< figure src="img6.png" width="60%" >}}
 
     # pegando a base de dados
     baa <- Quandl('FED/RIMLPBAAR_N_M')
@@ -213,7 +213,7 @@ Primeiro vamos pegar o yield de um bond classificado com rating AAA e outro com 
     baa_yield <- baa_yield$Value / 100
     baa_yield
     
-{{< figure src="img7.png" width="100%" >}}
+{{< figure src="img7.png" width="60%" >}}
 
 Como demonstrado um título BAA tem um yield maior já que a ele possui um risco menor. 
 
@@ -225,7 +225,7 @@ Mas como esse yield impacta o valor justo da bond?
 
 
 
-## Calculando o valor das duas bonds
+## Calculando o valor dos bonds
 
 Os valores escolhidos para o bond são 1000 de face value, 10% de coupon e 5 anos de maturidade.
 
@@ -233,13 +233,16 @@ Calculando valor da bond classificada como AAA:
 
     calculadora(1000,0.1,5,aaa_yield)
 
-{{< figure src="img8.png" width="100%" >}}
+{{< figure src="img8.png" width="60%" >}}
 
 Calculando valor da bond classificada como BAA:
 
     calculadora(1000,0.1,5,baa_yield)
     
-{{< figure src="img9.png" width="100%" >}}
+{{< figure src="img9.png" width="60%" >}}
+
+
+
 
 
 
@@ -250,41 +253,36 @@ Calculando valor da bond classificada como BAA:
 
 ## Entendendo melhor o comportamento do preço em relação ao yield
 
-A seguir, para entender o comportamento do preço com uma variação no yield plotaremos um gráfico:
+A seguir, para entender o comportamento do preço com uma variação no yield plotaremos um gráfico.
 
     #criando um data frame com diferentes yields
     yields <- seq(0.05,0.5, 0.01)
     
     yields <- data.frame(yields)
     
-    #calculando o preço das bonds
+    #calculando o preço das bonds 1
     for (i in 1:nrow(yields)){
-    yields$preço[i] <- calculadora(1000,0.1,5,yields$yields[i])
+    yields$preço1[i] <- calculadora(1000,0.1,5,yields$yields[i])
+    }
+    
+    #calculando o preço das bonds 2
+    for (i in 1:nrow(yields)){
+    yields$preço2[i] <- calculadora(1000,0.1,20,yields$yields[i])
     }
     
     #plotando grafico
-    plot(yields, type='l', color='red', main='preço x yield')
+    library(hrbrthemes)
+    library(ggplot2)
+    
+    ggplot(data=yields, aes(x=yields)) + geom_line(aes(y=preço1, colour='red')) + geom_line(aes(y=preço2, colour='blue')) + geom_point(aes(y=preço1, colour='red')) + geom_point(aes(y=preço2, colour='blue')) + theme_modern_rc() + labs(x='Yields',
+    y='Valor',title = 'Titulos com diferentes maturidades')
 
 {{< figure src="img10.png" width="100%" >}}
 
+O título representado pela linha  vermelha possi 5 anos de maturidade e o representado pela linha azul possui 20. 
 
+Podemos notar que o preço dos títulos se comportam de forma diferente para variações na taxa de juros.
 
-comparando com yield com diferentes vencimentos e suas curvas.
-
-    #criando um data frame com diferentes yields
-    yields <- seq(0.05,0.5, 0.01)
-    
-    yields <- data.frame(yields)
-    
-    #calculando o preço das bonds
-    for (i in 1:nrow(yields)){
-    yields$preço[i] <- calculadora(1000,0.1,20,yields$yields[i])
-    }
-    
-    #plotando grafico
-    plot(yields, type='l', color='red', main='preço x yield')
-
-{{< figure src="img11.png" width="100%" >}}
 
 
 
@@ -316,7 +314,8 @@ O código a seguir mostra como conseguir uma base de dados mais atual dos yields
     
     calculadora(1000,0.0,5,yield)
 
-{{< figure src="img12.png" width="100%" >}}
+{{< figure src="img12.png" width="60%" >}}
+
 
 
 
@@ -338,7 +337,21 @@ O código a seguir mostra como conseguir uma base de dados mais atual dos yields
     #plotando grafico
     plot(yield_5y, type='l', color='red', main='preço x yield')
 
-{{< figure src="img13.png" width="100%" >}}
+{{< figure src="img13.png" width="60%" >}}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -366,18 +379,6 @@ Sendo:
 
 
 
-Uma maneira de entender a duration mais facilmente é usando a fórmula da aproximação da duration:
-
-$$
-Duration_{aproximada} =\frac{(P(down)-P(up))}{(2 P\Delta y)}
-$$
-Sendo: 
-
-* $P$ o preço da bond atual
-* $P(down)$ o preço se o yield cair
-* $P(up)$ o preço se o yield subir
-* $\Delta y$ a mudança esperada no yield
-
 
 
 
@@ -385,7 +386,7 @@ Sendo:
 
 ## Calculando a duration
 
-Usando os mesmos dados para calcular a duration real.
+Usando os mesmos dados para calcular a duration.
 
     library(treasuryTR)
     
@@ -419,47 +420,13 @@ Usando os mesmos dados para calcular a duration real.
     
     duration(1000,0.1,5,yield)
 
-{{< figure src="img15.png" width="100%" >}}
+{{< figure src="img15.png" width="60%" >}}
 
 Podemos ver que ambos os valores possuem uma proximidade razoável, mas a duration aproximada tem um erro atrelado intrinsecamente a ela apesar de facilitar o cálculo.
 
 
 
 
-
-
-
-## Calculando a duration aproximada
-
-Uma forma mais simplificada de calcular a duration é através da duration aproximada.
-
-Usaremos uma variação esperada de 1% no yield, FV 1000, coupon 10%, 5 anos de maturidade e o yield de 7 dias atrás.
-
-    library(treasuryTR)
-    
-    yield_5y <- get_yields("DGS5")
-    
-    #buscando uma data atual
-    (data <- Sys.Date())
-    if (weekdays(data) == "domingo" ){
-    data <- data - 9
-    } else if (weekdays(data) == "sábado" ){
-    data <- data - 8
-    } else {
-    data <- data - 7
-    }
-    
-    yield <- as.numeric(yield_5y$DGS5[data])
-    
-    p <- calculadora(1000,0.1,5,yield)
-    
-    p_down <- calculadora(1000,0.1,5,(yield-0.01))
-    
-    p_up <- calculadora(1000,0.1,5,(yield+0.01))
-    
-    (dur <- (p_down-p_up)/(2*p*0.01))
-
-{{< figure src="img14.png" width="100%" >}}
 
 
 
@@ -493,7 +460,7 @@ $$
     #calculando a modified duration
     (MD <- dur/(1+yield))
 
-{{< figure src="img16.png" width="100%" >}}
+{{< figure src="img16.png" width="60%" >}}
 
 
 

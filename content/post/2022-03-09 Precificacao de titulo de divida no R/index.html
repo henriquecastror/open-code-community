@@ -168,9 +168,9 @@ pre code {
 
 
 <hr />
-<p>title: “Precificação de uma Bond no R”</p>
+<p>title: “Precificação de títulos de dívida no R”</p>
 <p>categories: []</p>
-<p>date: ‘2021-03-09’</p>
+<p>date: ‘2022-03-09’</p>
 <p>draft: no</p>
 <p>featured: no</p>
 <p>gallery_item: null</p>
@@ -202,7 +202,7 @@ r &lt;- 0.15
 
 #valor futuro 2, para um ano
 (fv2 &lt;- (pv*(1+r)^2))</code></pre>
-<p>{{&lt; figure src=“img1.png” width=“100%” &gt;}}</p>
+<p>{{&lt; figure src=“img1.png” width=“60%” &gt;}}</p>
 <p>Fica claro que o tempo é uma variável importante na equação.</p>
 <pre><code>#taxa de desvalorização do dinheiro
 i &lt;- 0.10
@@ -212,7 +212,7 @@ i &lt;- 0.10
 
 #valor presente 2
 (pv2 &lt;- (fv2/(1+i)^2))</code></pre>
-<p>{{&lt; figure src=“img2.png” width=“100%” &gt;}}</p>
+<p>{{&lt; figure src=“img2.png” width=“60%” &gt;}}</p>
 <p>Apesar de, em ambos os casos, os recebimentos no futuro serem maior quando trazidos a valor presente, eles justamente são menores quando trazidos a valor presente.</p>
 <p>Por isso é importante entender que quando for comparar rendimentos eles devem estar em uma base de tempo igual.</p>
 </div>
@@ -239,7 +239,7 @@ fc$ano &lt;- as.numeric(c(1, 2, 3, 4, 5))
 
 #vendo o data frame
 view(fc)</code></pre>
-<p>{{&lt; figure src=“img3.png” width=“100%” &gt;}}</p>
+<p>{{&lt; figure src=“img3.png” width=“60%” &gt;}}</p>
 </div>
 <div id="trazendo-os-fluxos-de-caixa-a-valor-presente" class="section level2">
 <h2>Trazendo os fluxos de caixa a valor presente</h2>
@@ -249,9 +249,9 @@ r &lt;- 0.05
 
 fc$vp &lt;- fc$fc/(1+r)^fc$ano  
 
-#soma dos fluxos de caixa, ou seja, quanto vale a bond.
+#soma dos fluxos de caixa, ou seja, quanto vale 0 bond.
 sum(fc$vp)</code></pre>
-<p>{{&lt; figure src=“img4.png” width=“100%” &gt;}}</p>
+<p>{{&lt; figure src=“img4.png” width=“60%” &gt;}}</p>
 </div>
 <div id="automatizando-o-valuation-da-bond" class="section level2">
 <h2>Automatizando o valuation da Bond</h2>
@@ -269,7 +269,7 @@ sum(fc$PV)
 }
 
 calculadora(1000,0.1,5,0.05)</code></pre>
-<p>{{&lt; figure src=“img5.png” width=“100%” &gt;}}</p>
+<p>{{&lt; figure src=“img5.png” width=“60%” &gt;}}</p>
 </div>
 <div id="exemplo-de-precificação-de-bonds-com-diferentes-riscos-atrelados" class="section level2">
 <h2>Exemplo de precificação de Bonds com diferentes riscos atrelados</h2>
@@ -288,7 +288,7 @@ aaa_yield &lt;- subset(aaa, aaa$Date == &quot;2016-09-30&quot;)
 
 aaa_yield &lt;- aaa_yield$Value / 100
 aaa_yield</code></pre>
-<p>{{&lt; figure src=“img6.png” width=“100%” &gt;}}</p>
+<p>{{&lt; figure src=“img6.png” width=“60%” &gt;}}</p>
 <pre><code># pegando a base de dados
 baa &lt;- Quandl(&#39;FED/RIMLPBAAR_N_M&#39;)
 
@@ -297,50 +297,47 @@ baa_yield &lt;- subset(baa, baa$Date == &quot;2016-09-30&quot;)
 
 baa_yield &lt;- baa_yield$Value / 100
 baa_yield</code></pre>
-<p>{{&lt; figure src=“img7.png” width=“100%” &gt;}}</p>
+<p>{{&lt; figure src=“img7.png” width=“60%” &gt;}}</p>
 <p>Como demonstrado um título BAA tem um yield maior já que a ele possui um risco menor.</p>
 <p>Mas como esse yield impacta o valor justo da bond?</p>
 </div>
-<div id="calculando-o-valor-das-duas-bonds" class="section level2">
-<h2>Calculando o valor das duas bonds</h2>
+<div id="calculando-o-valor-dos-bonds" class="section level2">
+<h2>Calculando o valor dos bonds</h2>
 <p>Os valores escolhidos para o bond são 1000 de face value, 10% de coupon e 5 anos de maturidade.</p>
 <p>Calculando valor da bond classificada como AAA:</p>
 <pre><code>calculadora(1000,0.1,5,aaa_yield)</code></pre>
-<p>{{&lt; figure src=“img8.png” width=“100%” &gt;}}</p>
+<p>{{&lt; figure src=“img8.png” width=“60%” &gt;}}</p>
 <p>Calculando valor da bond classificada como BAA:</p>
 <pre><code>calculadora(1000,0.1,5,baa_yield)</code></pre>
-<p>{{&lt; figure src=“img9.png” width=“100%” &gt;}}</p>
+<p>{{&lt; figure src=“img9.png” width=“60%” &gt;}}</p>
 </div>
 <div id="entendendo-melhor-o-comportamento-do-preço-em-relação-ao-yield" class="section level2">
 <h2>Entendendo melhor o comportamento do preço em relação ao yield</h2>
-<p>A seguir, para entender o comportamento do preço com uma variação no yield plotaremos um gráfico:</p>
+<p>A seguir, para entender o comportamento do preço com uma variação no yield plotaremos um gráfico.</p>
 <pre><code>#criando um data frame com diferentes yields
 yields &lt;- seq(0.05,0.5, 0.01)
 
 yields &lt;- data.frame(yields)
 
-#calculando o preço das bonds
+#calculando o preço das bonds 1
 for (i in 1:nrow(yields)){
-yields$preço[i] &lt;- calculadora(1000,0.1,5,yields$yields[i])
+yields$preço1[i] &lt;- calculadora(1000,0.1,5,yields$yields[i])
+}
+
+#calculando o preço das bonds 2
+for (i in 1:nrow(yields)){
+yields$preço2[i] &lt;- calculadora(1000,0.1,20,yields$yields[i])
 }
 
 #plotando grafico
-plot(yields, type=&#39;l&#39;, color=&#39;red&#39;, main=&#39;preço x yield&#39;)</code></pre>
+library(hrbrthemes)
+library(ggplot2)
+
+ggplot(data=yields, aes(x=yields)) + geom_line(aes(y=preço1, colour=&#39;red&#39;)) + geom_line(aes(y=preço2, colour=&#39;blue&#39;)) + geom_point(aes(y=preço1, colour=&#39;red&#39;)) + geom_point(aes(y=preço2, colour=&#39;blue&#39;)) + theme_modern_rc() + labs(x=&#39;Yields&#39;,
+y=&#39;Valor&#39;,title = &#39;Titulos com diferentes maturidades&#39;)</code></pre>
 <p>{{&lt; figure src=“img10.png” width=“100%” &gt;}}</p>
-<p>comparando com yield com diferentes vencimentos e suas curvas.</p>
-<pre><code>#criando um data frame com diferentes yields
-yields &lt;- seq(0.05,0.5, 0.01)
-
-yields &lt;- data.frame(yields)
-
-#calculando o preço das bonds
-for (i in 1:nrow(yields)){
-yields$preço[i] &lt;- calculadora(1000,0.1,20,yields$yields[i])
-}
-
-#plotando grafico
-plot(yields, type=&#39;l&#39;, color=&#39;red&#39;, main=&#39;preço x yield&#39;)</code></pre>
-<p>{{&lt; figure src=“img11.png” width=“100%” &gt;}}</p>
+<p>O título representado pela linha vermelha possi 5 anos de maturidade e o representado pela linha azul possui 20.</p>
+<p>Podemos notar que o preço dos títulos se comportam de forma diferente para variações na taxa de juros.</p>
 </div>
 <div id="usando-yields-mais-atuais-das-bonds" class="section level2">
 <h2>Usando yields mais atuais das bonds</h2>
@@ -365,7 +362,7 @@ data &lt;- data - 7
 yield &lt;- as.numeric(yield_5y$DGS5[data])
 
 calculadora(1000,0.0,5,yield)</code></pre>
-<p>{{&lt; figure src=“img12.png” width=“100%” &gt;}}</p>
+<p>{{&lt; figure src=“img12.png” width=“60%” &gt;}}</p>
 </div>
 <div id="calculando-o-preço-com-relação-ao-yield-atual" class="section level2">
 <h2>Calculando o preço com relação ao yield atual</h2>
@@ -381,7 +378,7 @@ yield_5y$preço[i] &lt;- calculadora(1000,0.0,5,yield_5y$yield[i])
 
 #plotando grafico
 plot(yield_5y, type=&#39;l&#39;, color=&#39;red&#39;, main=&#39;preço x yield&#39;)</code></pre>
-<p>{{&lt; figure src=“img13.png” width=“100%” &gt;}}</p>
+<p>{{&lt; figure src=“img13.png” width=“60%” &gt;}}</p>
 </div>
 <div id="duration" class="section level2">
 <h2>Duration</h2>
@@ -397,20 +394,10 @@ Duration = \frac{1PV(C_1)}{PV}+\frac{2PV(C_2)}{PV}+...+\frac{nPV(C_n)}{PV}
 <li><span class="math inline">\(PV(c_2)\)</span> o valor presente do cupom 2</li>
 <li><span class="math inline">\(PV\)</span> o valor presente do bond</li>
 </ul>
-<p>Uma maneira de entender a duration mais facilmente é usando a fórmula da aproximação da duration:</p>
-<p><span class="math display">\[
-Duration_{aproximada} =\frac{(P(down)-P(up))}{(2 P\Delta y)}
-\]</span> Sendo:</p>
-<ul>
-<li><span class="math inline">\(P\)</span> o preço da bond atual</li>
-<li><span class="math inline">\(P(down)\)</span> o preço se o yield cair</li>
-<li><span class="math inline">\(P(up)\)</span> o preço se o yield subir</li>
-<li><span class="math inline">\(\Delta y\)</span> a mudança esperada no yield</li>
-</ul>
 </div>
 <div id="calculando-a-duration" class="section level2">
 <h2>Calculando a duration</h2>
-<p>Usando os mesmos dados para calcular a duration real.</p>
+<p>Usando os mesmos dados para calcular a duration.</p>
 <pre><code>library(treasuryTR)
 
 yield_5y &lt;- get_yields(&quot;DGS5&quot;)
@@ -442,37 +429,8 @@ sum(fc$dur)
 }
 
 duration(1000,0.1,5,yield)</code></pre>
-<p>{{&lt; figure src=“img15.png” width=“100%” &gt;}}</p>
+<p>{{&lt; figure src=“img15.png” width=“60%” &gt;}}</p>
 <p>Podemos ver que ambos os valores possuem uma proximidade razoável, mas a duration aproximada tem um erro atrelado intrinsecamente a ela apesar de facilitar o cálculo.</p>
-</div>
-<div id="calculando-a-duration-aproximada" class="section level2">
-<h2>Calculando a duration aproximada</h2>
-<p>Uma forma mais simplificada de calcular a duration é através da duration aproximada.</p>
-<p>Usaremos uma variação esperada de 1% no yield, FV 1000, coupon 10%, 5 anos de maturidade e o yield de 7 dias atrás.</p>
-<pre><code>library(treasuryTR)
-
-yield_5y &lt;- get_yields(&quot;DGS5&quot;)
-
-#buscando uma data atual
-(data &lt;- Sys.Date())
-if (weekdays(data) == &quot;domingo&quot; ){
-data &lt;- data - 9
-} else if (weekdays(data) == &quot;sábado&quot; ){
-data &lt;- data - 8
-} else {
-data &lt;- data - 7
-}
-
-yield &lt;- as.numeric(yield_5y$DGS5[data])
-
-p &lt;- calculadora(1000,0.1,5,yield)
-
-p_down &lt;- calculadora(1000,0.1,5,(yield-0.01))
-
-p_up &lt;- calculadora(1000,0.1,5,(yield+0.01))
-
-(dur &lt;- (p_down-p_up)/(2*p*0.01))</code></pre>
-<p>{{&lt; figure src=“img14.png” width=“100%” &gt;}}</p>
 </div>
 <div id="modified-duration" class="section level2">
 <h2>Modified duration</h2>
@@ -486,7 +444,7 @@ dur &lt;- duration(1000,0.1,5,yield)
 
 #calculando a modified duration
 (MD &lt;- dur/(1+yield))</code></pre>
-<p>{{&lt; figure src=“img16.png” width=“100%” &gt;}}</p>
+<p>{{&lt; figure src=“img16.png” width=“60%” &gt;}}</p>
 <p>Esperamos que tenha gostado desse material! Obrigado pela leitura!</p>
 </div>
 
