@@ -422,7 +422,7 @@ Usando os mesmos dados para calcular a duration.
 
 {{< figure src="img15.png" width="60%" >}}
 
-Podemos ver que ambos os valores possuem uma proximidade razoável, mas a duration aproximada tem um erro atrelado intrinsecamente a ela apesar de facilitar o cálculo.
+
 
 
 
