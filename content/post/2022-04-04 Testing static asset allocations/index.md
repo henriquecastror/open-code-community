@@ -477,7 +477,7 @@ chart.CumReturns(strat_returns,
                  legend.loc = "topleft")
 ```
 
-{{< figure src="im1.png" width="60%" >}}
+{{< figure src="im1.png" width="100%" >}}
 
 ```r
 # drawdowns
@@ -485,7 +485,7 @@ chart.Drawdown(strat_returns,
                legend.loc = "bottomright")
 ```
 
-{{< figure src="im2.png" width="60%" >}}
+{{< figure src="im2.png" width="100%" >}}
 
 
 Finally, I zoom in on the recent period starting in 2020. Most strategies lose up to 10% during the first months of 2020 as the pandemic hits. Since most strategies have sizable allocations to bonds, it's not surprising to see how they have all suffered since the end of 2021, as rates start to increase.
@@ -498,7 +498,7 @@ chart.CumReturns(strat_returns["2020/"],
                  legend.loc = "topleft")
 ```
 
-{{< figure src="im3.png" width="60%" >}}
+{{< figure src="im3.png" width="100%" >}}
 
 
 ```r
@@ -506,7 +506,7 @@ chart.Drawdown(strat_returns["2020/"],
                legend.loc = "bottomright")
 ```
 
-{{< figure src="im4.png" width="60%" >}}
+{{< figure src="im4.png" width="100%" >}}
 
 
 # Conclusion
