@@ -4,7 +4,7 @@ title: "Detectando histórico de movimentos no preço de uma ação com Python"
 
 categories: []
 
-date: '2021-04-14T00:00:00Z' 
+date: '2022-04-14T00:00:00Z' 
 
 draft: no
 
@@ -310,13 +310,15 @@ A seguir seguem alguns exemplos do argumento passado e o gráfico gerado pelo al
 
     main.py FB - -10
 
-<figure src="FB.png" width="100%">
+{{< figure src="FB.png" width="100%" >}}
+
 
 ## AMD
 
     main.py AMD  + 15
 
-<figure src="AMD.png" width="100%">
+{{< figure src="AMD.png" width="100%" >}}
+
 
 # Resultado final
 
