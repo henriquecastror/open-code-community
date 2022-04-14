@@ -4,8 +4,7 @@ title: "Detectando histórico de movimentos no preço de uma ação com Python"
 
 categories: []
 
-# MUDE APENAS ANO DIA E MES PARA O DIA QUE VOCE NOS ENVIOU
-date: '2021-04-08T00:00:00Z' 
+date: '2021-04-14T00:00:00Z' 
 
 draft: no
 
