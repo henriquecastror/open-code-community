@@ -157,11 +157,11 @@ Usando uma combinação desses ativos podemos neutralizar a exposição do nosso
 
 As gregas que estamos interessados em neutralizar no portfólio atual podem ser expressos como um vetor…
 
-{{< figure src="https://miro.medium.com/max/261/1*YXIv5hw8XcmcXx_g2uC93w.png" width="15%" >}}    
+{{< figure src="https://miro.medium.com/max/261/1*YXIv5hw8XcmcXx_g2uC93w.png" width="75%" >}}    
 
 O objetivo é encontrar os pesos dos três ativos que somos capazes de negociar para neutralizar esses valores. Primeiro, vamos procurar neutralizar gama e vega, em seguida, usando o ativo subjacente, vamos neutralizar delta …
 
-{{< figure src="https://miro.medium.com/max/353/1*X4RNrGu6kJhZYyqkb27vhw.png" width="15%" >}}    
+{{< figure src="https://miro.medium.com/max/353/1*X4RNrGu6kJhZYyqkb27vhw.png" width="75%" >}}    
 
 Isso significa inverter a matriz contendo os valores das gregas para as opções negociáveis podemos encontrar os pesos apropriados…
 
@@ -233,7 +233,7 @@ Portfólio Neutro Delta, Gama e Vega
 
 
 
-# REFERÊNCIAS
+## REFERÊNCIAS
 
 enegep2009_TN_STO_104_693_13487.pdf (abepro.org.br)
 Algorithmic Portfolio Hedging. Python and Black-Scholes Pricing for… | by Roman Paolucci | Towards Data Science
