@@ -37,9 +37,17 @@ authors:
 
 ---
 
-VOCE ESCREVE TEXTO AQUI.
+{{% callout note %}}
 
-    Nota: não confie 100% no que descrevi neste artigo, busque por falhas e melhorias e, principalmente, não utilize como estratégia de investimento.
+Nota: não confie 100% no que descrevi neste artigo, busque por falhas e melhorias e, principalmente, não utilize como estratégia de investimento.
+
+{{% /callout %}}
+
+
+
+
+
+
 
 # Carteira de opções
 Ações possuem uma exposição direta tanto ao risco idiossincrático quanto ao risco sistemático.
@@ -226,7 +234,8 @@ Portfólio Neutro Delta, Gama e Vega
 
 
 
-REFERÊNCIAS
+# REFERÊNCIAS
+
 enegep2009_TN_STO_104_693_13487.pdf (abepro.org.br)
 Algorithmic Portfolio Hedging. Python and Black-Scholes Pricing for… | by Roman Paolucci | Towards Data Science
 
