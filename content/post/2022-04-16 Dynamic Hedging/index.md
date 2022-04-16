@@ -42,13 +42,8 @@ Nota: não confie 100% no que descrevi neste artigo, busque por falhas e melhori
 
 {{% /callout %}}
 
-
-
-
-
-
-
 # Carteira de opções
+
 Ações possuem uma exposição direta tanto ao risco idiossincrático quanto ao risco sistemático.
 
 Segundo Salles et al (2009) risco total na teoria de finanças, ou simplesmente o risco ou a volatilidade, de ativos, ou mercados, tem dois componentes: o risco sistemático, ou risco de mercado, e o risco específico, ou risco    idiossincrático. Enquanto o risco de mercado, denominado também risco não diversificável, é a parcela que não se elimina em portfólios eficientemente diversificados, a parcela que se refere ao risco específico de ativos, ou de mercados, pode ser minimizada, ou até eliminada, com a diversificação eficiente de um portfólio.
