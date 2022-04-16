@@ -24,7 +24,6 @@ subtitle: Python e BSM para “hedgear” uma posição em opções de PETR4
 
 summary: null
 
-# DIGITE NA LISTA ABAIXO OS TRACKS DO SEU CODIGO
 tags: 
 - Open Data
 - Options
@@ -32,7 +31,7 @@ tags:
 
 # DIGITE NA LISTA ABAIXO O NOME DE TODOS OS AUTORES SEM ESPACOS
 authors:
-- MaikeRMota
+- MaikeMota
 
 
 ---
