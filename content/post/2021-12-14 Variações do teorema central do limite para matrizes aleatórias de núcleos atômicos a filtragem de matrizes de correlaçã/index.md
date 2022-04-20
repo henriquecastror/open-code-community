@@ -42,8 +42,17 @@ authors:
 
 
 
+<script type="text/javascript" src="//cdn.plu.mx/widget-popup.js"></script>
 
 <a href="https://plu.mx/plum/a/?doi=10.17632%2Fjwykn349hp.1" data-popup="right" data-size="large" class="plumx-plum-print-popup" data-site="plum" data-hide-when-empty="true">Variações do teorema central do limite para matrizes aleatórias: de núcleos atômicos a filtragem de matrizes de correlação published at the &amp;quot;Open Code Community&amp;quot;</a>
+
+
+
+
+
+
+
+
 
 
 
