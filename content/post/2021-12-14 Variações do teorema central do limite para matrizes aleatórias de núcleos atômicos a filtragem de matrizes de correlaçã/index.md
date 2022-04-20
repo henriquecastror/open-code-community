@@ -40,6 +40,13 @@ authors:
 
 ---
 
+
+
+
+<a href="https://plu.mx/plum/a/?doi=10.17632%2Fjwykn349hp.1" data-popup="right" data-size="large" class="plumx-plum-print-popup" data-site="plum" data-hide-when-empty="true">Variações do teorema central do limite para matrizes aleatórias: de núcleos atômicos a filtragem de matrizes de correlação published at the &amp;quot;Open Code Community&amp;quot;</a>
+
+
+
 No célebre trabalho "*Can One Hear the Shape of a Drum?*"[1] Kack questiona se conhecendo o espectro (*som*) de um certo operador que define as oscilações de uma membrana (*tambor*) seria possível identificar o formato de tal membrana de maneira unívoca. Discutiremos aqui como é possível ouvir matrizes de correlação usando seu espectro e como podemos remover o ruído desse som usando resultados da teoria de matrizes aleatórias. Veremos como essa filtragem pode aprimorar algoritmos de construção de carteiras de investimentos.
 
 
