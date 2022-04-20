@@ -823,7 +823,7 @@ Você poderá encotrar alguns trabalhos e posts descrevendo o uso de matrizes al
 
 **Please, cite this work:**
 
-Messias, Bruno (2022), "Variações do teorema central do limite para matrizes aleatórias: de núcleos atômicos a filtragem de matrizes de correlação published at the "Open Code Community"", Mendeley Data, V1, doi: 10.17632/jwykn349hp.1
+Messias, Bruno (2022), "Variações do teorema central do limite para matrizes aleatórias: de núcleos atômicos a filtragem de matrizes de correlação published at the "Open Code Community"", Mendeley Data, V1, doi: 10.17632/jwykn349hp.1. [Link](https://data.mendeley.com/datasets/jwykn349hp/1).
 
 {{% /callout %}}
 

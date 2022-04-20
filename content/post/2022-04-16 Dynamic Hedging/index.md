@@ -1,6 +1,6 @@
 ---
 
-title: "Dynamic Hedging — Simples exemplo"
+title: "Dynamic Hedging"
 
 categories: []
 
